@@ -1,0 +1,86 @@
+
+hr.star-light,
+hr.star-primary {
+    margin: 25px auto 30px;
+    padding: 0;
+    max-width: 250px;
+    border: 0;
+    border-top: solid 5px;
+    text-align: center;
+}
+
+hr.star-light:after,
+hr.star-primary:after {
+    content: "\f005";
+    display: inline-block;
+    position: relative;
+    top: -.8em;
+    padding: 0 .25em;
+    font-family: FontAwesome;
+    font-size: 2em;
+}
+
+hr.star-light {
+    border-color: #FF9800;
+}
+
+hr.star-light:after {
+    color: #fff;
+    background-color: #6D4C41;
+}
+
+
+
+#estilos {
+    text-align: center;
+    color: #fff;
+    background: transparent;
+
+}
+
+#estilos .container {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+#estilos img {
+    display: block;
+
+    margin: 0 auto 20px;
+}
+
+#estilos .intro-text .name {
+    display: block;
+
+    font-family: 'Roboto', sans-serif;
+
+
+}
+
+#estilos .intro-text .skills {
+    font-size: 1.25em;
+
+}
+
+@media(min-width:768px) {
+    #estilos .container {
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+
+    #estilos .intro-text .name {
+        font-size: 4.75em;
+    }
+
+    #estilos .intro-text .skills {
+        font-size: 1.75em;
+    }
+}
+
+@media(max-width:680px) {
+    #estilos img {
+
+
+        max-width: 70%;
+    }
+}

@@ -1,0 +1,213 @@
+
+
+.hol{
+    -moz-box-shadow: 0px 5px 15px #212121;
+    -webkit-box-shadow: 0px 5px 15px #212121;
+    box-shadow: 0px 5px 15px #212121;
+}
+
+.hol2{
+    -moz-box-shadow: 0px 5px 15px #212121;
+    -webkit-box-shadow: 0px 5px 15px #212121;
+    box-shadow: 0px 5px 15px #212121;
+}
+.edit516{
+   /* -moz-box-shadow: 0px 0px 15px #FF9800;
+    -webkit-box-shadow: 0px 0px 15px #FF9800;
+    box-shadow: 0px 0px 15px #FF9800;*/
+}
+.estilos2561 .estilos2562{
+    text-align: center;
+   padding-top: 0;
+    padding-bottom: 0;
+    background-color: #8D6E63;
+}
+.estilos2562>h2, .estilos2562>p{
+    color: #ffffff;
+}
+.estilos2562>p{
+    font-size: 18px;
+}
+
+
+@media screen and (max-width: 992px) {
+    .estilos2562>h2{
+        font-size: 25px;
+    }
+    .estilos2562>p{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .estilos2562>h2{
+        font-size: 20px;
+    }
+    .estilos2562>p{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .estilos2562>h2{
+        font-size: 18px;
+    }
+    .estilos2562>p{
+        font-size: 14px;
+    }
+}
+.edit516{
+    background-color: #ffa726;
+    padding: 5px;
+    border-radius: 5px;
+    border: 0px solid #ffa726;
+    -webkit-box-shadow: 0px 38px 19px -24px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 38px 19px -24px rgba(0,0,0,0.75);
+    box-shadow: 0px 38px 19px -24px rgba(0,0,0,0.75);
+}
+.chico125{
+    padding: 0;
+}
+.color54{
+    background-color: #5D4037;
+    border: 0px;
+
+}
+.color651{
+    color: #FAFAFA;
+
+}
+.parrafo516{
+    vertical-align: middle;
+    font-size: 25px;
+    margin-top: .5%;
+    color: #ffffff;
+
+}
+.texto651{
+ color: #ffffff;
+}
+
+@media screen and (max-width: 550px) {
+    .parrafo516{
+
+        font-size: 20px;
+
+    }
+}
+
+@media screen and (max-width: 789px) {
+    .margintop{
+
+      /*  margin-top: 60px;*/
+
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .texto651{
+
+        font-size: 230%;
+
+    }
+}
+
+@media screen and (min-width: 571px) {
+    .texto651{
+
+        font-size: 320%;
+
+    }
+}
+
+@media screen and (max-width: 365px) {
+    .texto651{
+
+        font-size: 150%;
+
+    }
+}
+
+
+
+
+
+
+
+
+.fb-page{
+    margin-top: 20px;
+    margin-right: 85px;
+    float: right;
+}
+
+.ir-arriba {
+    z-index: 1;
+    display:none;
+    padding:15px;
+    /*margin: 10px;*/
+    background:#4E342E;
+    font-size:20px;
+    color:#fff;
+    cursor:pointer;
+    position: fixed;
+    bottom:20px;
+    right:10px;
+    box-shadow: 5px 7px 7px rgba(0,0,0,0.5);
+}
+
+
+/*CSS DE CATALOGO*/
+/*se renombro thumbnail por x para avitar conflictos con el panel de 3 columnas que tambien es thumbnail*/
+.x{
+    background-color: #5D4037;
+    -moz-box-shadow: 0px 5px 0px #FF9800;
+    -webkit-box-shadow: 0px 5px 0px #FF9800;
+    box-shadow: 0px 5px 0px #FF9800;
+  /*  -webkit-box-shadow: 0px 42px 21px -27px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 42px 21px -27px rgba(0,0,0,0.75);
+    box-shadow: 0px 42px 21px -27px rgba(0,0,0,0.75);*/
+    border: 2px solid #5D4037;
+}
+
+.x:hover{
+    border-color:  #ff9800;
+}
+.x .caption{
+    color: #ffffff;
+    text-align: center;
+
+}
+.x{
+    overflow: hidden;
+}
+.x>.caption>h3{
+    margin-top: 0px;
+    font-size: 22px;
+}
+.styleimg{
+    border-radius: 10px;
+}
+.divhide{
+    display: none;
+}
+@media screen and (min-width:350px) and (max-width: 768px){
+    .divhide{
+        display: inherit;
+    }
+
+}
+/*/CSS DE CATALOGO*/
+
+
+
+
+
+/*
+
+.fancybox-custom .fancybox-skin {
+    box-shadow: 100px 100px 500px #222;
+}
+
+*/
+

@@ -1,0 +1,40 @@
+
+.hol{
+    -moz-box-shadow: 0px 0px 15px 5px #E53935;
+    -webkit-box-shadow: 0px 0px 15px 5px #E53935;
+    box-shadow: 0px 0px 15px 5px #E53935;
+}
+
+.img-center {
+    margin:0 auto;
+}
+.p5{
+    font-size: 18px;
+}
+
+@media (max-width: 500px) {
+    .p5{
+        font-size: 15px;
+        font-weight: 800;
+
+    }
+    #rowpanel{
+        margin-right: 0;
+    }
+}
+
+
+.ir-arriba {
+    z-index: 1;
+    display:none;
+    padding:15px;
+    /*margin: 10px;*/
+    background:#4E342E;
+    font-size:20px;
+    color:#fff;
+    cursor:pointer;
+    position: fixed;
+    bottom:20px;
+    right:10px;
+    box-shadow: 5px 7px 7px rgba(0,0,0,0.5);
+}

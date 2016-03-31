@@ -1,0 +1,500 @@
+/*FUENTE QUE UTILIZA EL SITIO*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/*PRECARGA DE PAGINA*/
+body {
+    overflow: hidden;
+}
+/* preloader */
+#preloader {
+    position: fixed;
+    top:0; left:0;
+    right:0; bottom:0;
+    background: #000;
+    z-index: 100;
+}
+#loader {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left:50%; top:50%;
+    background: url(../../images/loader.gif) no-repeat center 0;
+    margin:-50px 0 0 -50px;
+}
+/*PRECARGA DE PAGINA*/
+
+
+
+body{
+    background-color: #8D6E63;
+    font-family: 'Montserrat', sans-serif;
+
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+a:hover,
+a:focus {
+    color: #ffffff;
+    text-decoration: none;
+}
+@media only screen and (min-width:840px)
+{
+
+    .nav-1100{
+        display:  none;
+
+    }
+
+    .compa{
+
+        height: 500px;
+    }
+    .compa0{
+        height: 500px;
+    }
+
+    .text00{
+        font-size: 50px;
+    }
+    .text11{
+        line-height: 36px;
+        width: 480px;
+        top: 300px;
+        font-size: 30px;
+    }
+    .text22{
+        top: 335px;
+        left: -12px;
+    }
+
+    header{
+        margin-top: 0px;
+        width: 100%;
+        height: 50px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    #cssmenu,
+    #cssmenu ul,
+    #cssmenu ul li,
+    #cssmenu ul li a,
+    #cssmenu #menu-button {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        list-style: none;
+        line-height: 1;
+        display: block;
+        position: relative;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+
+    }
+
+    #cssmenu:after,
+    #cssmenu > ul:after {
+        content: ".";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        line-height: 0;
+        height: 0;
+
+    }
+    #cssmenu #menu-button {
+        display: none;
+
+    }
+    #cssmenu {
+        width: auto;
+
+        line-height: 1;
+        background: #5D4037;
+    }
+    #menu-line {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 5px;
+
+        background: #FF9800;
+        -webkit-transition: all 0.25s ease-out;
+        -moz-transition: all 0.25s ease-out;
+        -ms-transition: all 0.25s ease-out;
+        -o-transition: all 0.25s ease-out;
+        transition: all 0.25s ease-out;
+    }
+    #cssmenu > ul > li {
+        float: left;
+
+    }
+    #cssmenu.align-center > ul {
+        font-size: 0px;
+        text-align: center;
+
+    }
+    #cssmenu.align-center > ul > li {
+        display: inline-block;
+        float: none;
+
+    }
+    #cssmenu.align-center ul ul {
+        text-align: left;
+
+    }
+    #cssmenu.align-right > ul > li {
+        float: right;
+
+    }
+    #cssmenu.align-right ul ul {
+        text-align: right;
+
+    }
+    #cssmenu > ul > li > a {
+        padding: 20px;
+        font-size: 12px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #ffffff;
+        -webkit-transition: color .2s ease;
+        -moz-transition: color .2s ease;
+        -ms-transition: color .2s ease;
+        -o-transition: color .2s ease;
+        transition: color .2s ease;
+
+    }
+    #cssmenu > ul > li:hover > a,
+    #cssmenu > ul > li.active > a {
+        color: #ffffff;
+
+    }
+    #cssmenu > ul > li.has-sub > a {
+        padding-right: 30px;
+
+    }
+    #cssmenu > ul > li.has-sub > a::after {
+        position: absolute;
+        top: 21px;
+        right: 10px;
+        width: 8px;
+        height: 8px;
+        border-bottom: .5ch solid #FF9800;
+        border-right: .5ch solid #FF9800;
+        content: "";
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+        -webkit-transition: border-color 0.2s ease;
+        -moz-transition: border-color 0.2s ease;
+        -ms-transition: border-color 0.2s ease;
+        -o-transition: border-color 0.2s ease;
+        transition: border-color 0.2s ease;
+
+    }
+    #cssmenu > ul > li.has-sub:hover > a::after {
+        border-color: #FF9800;
+
+    }
+    #cssmenu ul ul {
+        position: absolute;
+        left: -9999px;
+
+    }
+    #cssmenu li:hover > ul {
+        left: auto;
+
+    }
+    #cssmenu.align-right li:hover > ul {
+        right: 0;
+
+    }
+    #cssmenu ul ul ul {
+        margin-left: 100%;
+        top: 0;
+
+    }
+    #cssmenu.align-right ul ul ul {
+        margin-left: 0;
+        margin-right: 100%;
+
+    }
+    #cssmenu ul ul li {
+        height: 0;
+        -webkit-transition: height .2s ease;
+        -moz-transition: height .2s ease;
+        -ms-transition: height .2s ease;
+        -o-transition: height .2s ease;
+        transition: height .2s ease;
+
+    }
+    #cssmenu ul li:hover > ul > li {
+        height: 43px;
+
+    }
+    #cssmenu ul ul li a {
+        padding: 15px 12px;
+        width: 210px;
+        font-size: 13px;
+        background: #6D4C41;
+        text-decoration: none;
+        color: #ffffff;
+        -webkit-transition: color .2s ease;
+        -moz-transition: color .2s ease;
+        -ms-transition: color .2s ease;
+        -o-transition: color .2s ease;
+        transition: color .2s ease;
+    }
+    #cssmenu ul ul li:hover > a,
+    #cssmenu ul ul li a:hover {
+        color: #ffffff;
+        background-color: #FF9800;  /*color de cada elemento de la lista                /////////////////////////////////////////////////////////////////////////////////////////*/
+    }
+    #cssmenu ul ul li.has-sub > a::after {
+        position: absolute;
+        top: 13px;
+        right: 10px;
+        width: 4px;
+        height: 4px;
+        border-bottom: 1px solid #dddddd;
+        border-right: 1px solid #dddddd;
+        content: "";
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-transition: border-color 0.2s ease;
+        -moz-transition: border-color 0.2s ease;
+        -ms-transition: border-color 0.2s ease;
+        -o-transition: border-color 0.2s ease;
+        transition: border-color 0.2s ease;
+    }
+    #cssmenu.align-right ul ul li.has-sub > a::after {
+        right: auto;
+        left: 10px;
+        border-bottom: 0;
+        border-right: 0;
+        border-top: 1px solid #dddddd;
+        border-left: 1px solid #dddddd;
+    }
+    #cssmenu ul ul li.has-sub:hover > a::after {
+        border-color: #ffffff;
+    }
+
+    nav{
+        z-index: 10;
+        top:-20px;
+        position: fixed;
+        left: 0px;
+        right: 0px;
+        text-align: left;
+        background-color: #6D4C41;
+        margin: 20px auto;
+
+        width: 100%;
+        max-width: 100%;
+        box-shadow: 0px 7px 7px rgba(0,0,0,0.5);
+    }
+}
+
+
+
+@media only screen and  (max-width: 839px)
+{
+    .nav1100{
+        display: none;
+    }
+
+    .compa{
+        display: flex;
+        height: 800px;
+    }
+    .compa0{
+        display: flex;
+        height: 800px;
+    }
+
+    .text00{
+        font-size: 60px;
+    }
+    .text11{
+        line-height: 56px;
+        width: 680px;
+        top: 550px;
+        font-size: 55px;
+    }
+    .text22{
+        top: 550px;
+        left: -70px;
+    }
+    header {
+        width: 100%;
+
+    }
+    header nav {
+        background:#6D4C41;
+        z-index:1000;
+        max-width: 1000px;
+        width:95%;
+        margin:20px auto;
+    }
+
+    header nav ul {
+        list-style:none;
+    }
+
+    header nav ul li {
+        display:inline-block;
+        position: relative;
+    }
+
+    header nav ul li:hover {
+        background-color: #4E342E;
+    }
+
+    header nav ul li a {
+        color:#fff;
+        display:block;
+        text-decoration:none;
+        padding: 20px;
+    }
+
+    header nav ul li a span {
+        margin-right:10px;
+    }
+
+    header nav ul li:hover .children {
+        display:block;
+
+    }
+
+    header nav ul li .children {
+        display: none;
+        background:#011826;
+        position: absolute;
+        width: 150%;
+        z-index:1000;
+
+    }
+
+    header nav ul li .children li {
+        display:block;
+        overflow: hidden;
+        border-bottom: 1px solid rgba(255,255,255,.5);
+
+    }
+
+    header nav ul li .children li a {
+        display: block;
+
+    }
+
+    header nav ul li .children li a span {
+        float: left;
+        position: relative;
+        top:3px;
+        margin-right:10px;
+        margin-left:0;
+
+    }
+
+    header nav ul li .caret {
+        position: relative;
+        top:3px;
+        margin-left:10px;
+        margin-right:0px;
+
+    }
+
+    @media screen and (max-width: 839px)
+    {
+
+        body {
+            padding-top: 60px;
+
+        }
+
+        .menu_bar {
+            display: block;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            height: 60px;
+            background: #3E2723;
+        }
+
+        .menu_bar .bt-menu {
+            display: block;
+            padding: 13px;
+            height: 60px;
+            color: #fff;
+            overflow: hidden;
+            font-size: 25px;
+            /*font-weight: bold;*/
+            text-decoration: none;
+        }
+
+        .menu_bar span {
+            float: right;
+            font-size: 35px;
+
+        }
+
+        header nav {
+            width: 90%;
+            height: calc(100% - 60px);
+            position: fixed;
+            right: 100%;
+            margin: 0;
+            overflow: scroll;
+        }
+
+        header nav ul li {
+            display: block;
+            border-bottom: 1px solid rgba(255, 255, 255, .5);
+            background-color: #6D4C41;
+        }
+
+        header nav ul li ul li {
+            background-color: #FF9800;
+        }
+
+        header nav ul li a {
+            display: block;
+
+        }
+
+        header nav ul li:hover .children {
+            display: none;
+
+        }
+
+        header nav ul li .children {
+            width: 100%;
+            position: relative;
+        }
+
+        header nav ul li .children li a {
+            margin-left: 20px;
+        }
+
+        header nav ul li .caret {
+            float: right;
+        }
+
+    }
+
+
+}
+
+.pex:hover{
+    background-color: #255625;
+}
