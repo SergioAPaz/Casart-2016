@@ -128,7 +128,9 @@ $filas =mysqli_query($conexiondb,$consulta);
                                 echo "<li ><a href='NuevosUsuarios.php'><span class='glyphicon glyphicon-user' style='margin-right: 5px'></span> Nuevo usuario</a></li>";
                             }
                             ?>
+                            <li ><a href='ContactoComentarios.php'><span class='glyphicon glyphicon-comment' style='margin-right: 5px'></span>Comentarios</a></li>
                             <li ><a href='DestruirSesion.php'><span class='glyphicon glyphicon-off' style='margin-right: 5px'></span> Cerrar Sesion</a></li>
+
                         </ul>
                     </li>
 
@@ -191,7 +193,9 @@ $filas =mysqli_query($conexiondb,$consulta);
                             echo " <li><a href='NuevosUsuarios.php'><span class='icon-ctrl'></span>Nuevo usuario</a> </li>";
                         }
                         ?>
+                        <li><a href="ContactoComentarios.php"><span class="icon-ctrl"></span>Comentarios</a> </li>
                         <li><a href="DestruirSesion.php"><span class="icon-ctrl"></span>Cerrar sesion</a> </li>
+
                     </ul>
                 </li>
 
@@ -201,13 +205,13 @@ $filas =mysqli_query($conexiondb,$consulta);
     </div>
 </header>
 
-<div class="container" style="background-color: #EEEEEE;/*height: 100%*/">
+<div class="container"  style="background-color: #EEEEEE;/*height: 100%*/">
     <br/>
     <!--FORMULARIO DE NUEVA GALERIA-->
     <div class="panel panel-default">
         <div class="panel-body">
             <p class="alert fondo456" style="font-size: 20px;background-color: #FFCA28;color: #ffffff"><span class="newarticle">Agregar nuevo artículo</span><span style="color: transparent">.</span>
-                <select  onchange="show()" id="txtselect" name="txtselect" class="form-control btn btn-danger"  required style="margin-top: -3px;">
+                <select  onchange="show()" id="txtselect" name="txtselect" class="form-control btn btn-primary"  required style="margin-top: -3px;">
                     <option>Cesteria tarahumara</option>
                     <option>Alfareria tarahumara</option>
                     <option>Textiles tarahumara</option>

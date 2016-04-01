@@ -104,6 +104,7 @@ session_start();
                             {
                                 echo "<li><a  href='NuevosUsuarios.php'><span class='glyphicon glyphicon-user' style='margin-right: 5px'></span>  Nuevo usuario</a></li>";
                             }
+                            echo "<li ><a href='ContactoComentarios.php'><span class='glyphicon glyphicon-comment' style='margin-right: 5px'></span> Comentarios</a></li>";
                             echo "<li ><a href='PanelAdmin.php'><span class='glyphicon glyphicon-th' style='margin-right: 5px'></span> Panel de control</a></li>";
                             echo "<li ><a href='DestruirSesion.php'><span class='glyphicon glyphicon-off' style='margin-right: 5px'></span> Cerrar Sesion</a></li>";
                             echo "</ul>";
@@ -180,6 +181,7 @@ session_start();
                             echo "<li><a href='NuevosUsuarios.php'><span class='icon-ctrl'></span>Nuevo usuario</a> </li>";
 
                         }
+                        echo "<li><a href='ContactoComentarios.php'><span class='icon-ctrl'></span>Comentarios</a> </li>";
                         echo " <li><a href='PanelAdmin.php'><span class='icon-ctrl'></span>Panel de control</a> </li>";
                         echo " <li><a href='DestruirSesion.php'><span class='icon-ctrl'></span>Cerrar sesion</a> </li>";
                         echo "</ul>";
@@ -348,7 +350,7 @@ session_start();
                <img src="images/animals-q-c-370-210-3.jpg" class="img-thumbnail edit516" alt="">
                 <div class="caption chico125">
                     <h2 class="color651">Concursos</h2>
-                    <p class="color651">Esto es una prueba de como el texto se mostrara te commento que debe estar justificado al centro para su
+                    <p class="color651">Esto es una pruebaxxx de como el texto se mostrara te commento que debe estar justificado al centro para su
                         elegante y correcta vizualizacion, si lo logras aplicalo tambien a las demas columnas</p>
                     <a href="#" class="btn btn-warning">Leer mas...</a>
                 </div>
