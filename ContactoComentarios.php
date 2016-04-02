@@ -204,9 +204,7 @@ $filas =mysqli_query($conexiondb,$consulta);
                     echo "<td>$columna[Email]</td>";
                     echo "<td>$columna[Mensaje]</td>";
                     echo "<td>
-                        <a href='PHPCatalogo/BorrarGaleria.php?id=$columna[id]'>Borrar</a>
-                        <a href='PHPCatalogo/EditarGaleria.php?id=$columna[id]'>Editar</a>
-                        <a href='PHPCatalogo/AdminImagen.php?id=$columna[id]'>Cambiar imagen</a></td>";
+                        <a href='PHPCatalogo/BorrarComentarios.php?id=$columna[id]'>Borrar</a></td>";
                     echo "</tr>";
                 }
                 ?>

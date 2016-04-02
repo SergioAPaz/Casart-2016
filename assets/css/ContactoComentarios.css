@@ -2,3 +2,8 @@
     border: 1px solid transparent;
     border-radius: 5px;
 }
+th{
+    text-align: center;
+    vertical-align: middle;
+    color: #FAFAFA;
+}

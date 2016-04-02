@@ -3,12 +3,35 @@
 }
 
 @media screen and (max-width: 435px) {
-.titulo45{
+    .titulo45{
     font-size: 35px;
+    }
 }
+
+@media screen and (max-width: 1540px) {
+    .desaparece85{
+        display: none;
+    }
 }
 
 
+@media screen and (max-width: 1367px) {
+    .desaparece86{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .desaparece87{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .desaparece87,.desaparece86{
+        display: inline;
+    }
+}
 /*CSS DE CATALOGO*/
 .img152{
     position: absolute;

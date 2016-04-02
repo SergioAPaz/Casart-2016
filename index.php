@@ -387,19 +387,28 @@ session_start();
 PANEL DE IMAGEN REDONDA-->
 <div class="container-fluid">
     <div class="row" style="background-color: #FFCA28">
-         <div class="col-xs-12 col-sm-7" style="background-color: #FFCA28;">
-             <p class="text-uppercase texto651" style="margin-top: 10px">Cerámica de Mata Ortiz<br> la mejor del mundo</p>
+
+         <div class="col-xs-12 col-sm-8" style="background-color: #FFCA28;">
+             <p class="text-uppercase texto651" style="margin-top: 20px;margin-bottom: 20px">Cerámica de Mata Ortiz <br></p>
              <p class="text-uppercase" style="font-size: 17px;color: #ffffff">La cerámica de Mata Ortiz es un estilo de artesanías, principalmente vasijas y ollas, iniciada por Juan Quezada Celado en el poblado de Juan Mata Ortiz,
                  Chihuahua. Toma su inspiración de la cerámica aridoamericana originada en Casas Grandes, para convertirse en cuatro décadas en un estilo artesanal de
                  gran reconocimiento, expuesto en galerías de arte y celebrado internacionalmente. Actualmente son más de 300 los artesanos dedicados a la producción de
                  esta cerámica en Mata Ortiz.</p>
-             <p class="text-uppercase hidden-xs hidden-sm" style="font-size: 17px;color: #ffffff">La cerámica de Mata Ortiz es un estilo de artesanías, principalmente vasijas y ollas, iniciada por Juan Quezada Celado en el poblado de Juan Mata Ortiz,
-                 Chihuahua. Toma su inspiración de la cerámica aridoamericana originada en Casas Grandes, para convertirse en cuatro décadas en un estilo artesanal de
-                 gran reconocimiento, expuesto en galerías de arte y celebrado internacionalmente. Actualmente son más de 300 los artesanos dedicados a la producción de
-                 esta cerámica en Mata Ortiz.</p>
+             <p class="text-uppercase hidden-xs hidden-sm hidden-md" style="font-size: 17px;color: #ffffff">
+                 A la edad de 20 años, Juan Quezada Celado emprendía largas caminatas con su burro para colectar leña, fruta
+                 y miel de agave en las cercanías de su poblado natal, Juan Mata Ortiz. En estos viajes, Quezada recolectaba piezas y pedacería
+                 prehispánica proveniente de la cultura Casas Grandes. Durante varios años, resultado de la observación
+                 de los colores y los patrones geométricos de la cerámica aridoamericana, fue perfeccionando su técnica, añadiendo un poco de arena en la mezcla
+                 para evitar que se fragmentara.
+                 <p class="text-uppercase hidden-xs hidden-sm Desaparece84" style="font-size: 17px;color: #ffffff">Alrededor de 1974 Quezada concentró todos sus esfuerzos en la producción
+                 de cerámica, seguido por sus hermanos Nicolás, Reynaldo, Lidia, Consolación, Reynalda, Jesús y Genoveva, y fue así como toda la familia comenzó
+                 a involucrarse en la incipiente producción de este tipo de artesanía.
+                </p>
+             </p>
          </div>
-        <div class="col-xs-12 col-sm-5" style="background-color: #FFCA28">
-           <img src="images/imagen.jpg" class="img-responsive img-circle fadein hol2" alt="Responsive image" style="display:none;margin: 0 auto; margin-top: 10px;margin-bottom: 20px">
+
+        <div class="col-xs-12 col-sm-4 pull-right" style="background-color: #FFCA28">
+           <img src="images/imagen.jpg" class="img-responsive img-circle fadein hol2" alt="Responsive image" style="display:none;margin: 0 auto; margin-top: 15px;margin-bottom: 16px">
         </div>
     </div>
 </div>
@@ -411,7 +420,7 @@ PANEL DE IMAGEN REDONDA-->
 <header>
  <div class="container" style="background-color: #5D4037; margin-left: 0%; margin-right: 20%" >
      <!--<h3 class="pull-right" style="color: #ffffff;ve"  >Catalogo de productos en venta</h3>-->
-     <p class="pull-right parrafo516" style="color: #ffa000;">Contamos con gran variedad de artesanias</p>
+     <p class="pull-right parrafo516" style="color: #ffa000;">Gran variedad de artesanías mexicanas</p>
  </div>
 </header>
 
@@ -529,21 +538,20 @@ PANEL DE IMAGEN REDONDA-->
 
 <br><br/>
 
-<header class="g65df1" >
+<!--<header class="g65df1" >
     <div class="container pull-right" style="background-color: #5D4037;margin-bottom: 0px"  >
-        <!--<h3 class="pull-right" style="color: #ffffff;ve"  >Catalogo de productos en venta</h3>-->
         <p class="pull-left parrafo516" style="color: #ffa000;">Conoce mas de ellas en nuestras distintas secciones</p>
     </div>
-</header>
+</header>-->
 
 
-
+<!--FORMULARIO DE CONTACTOS-->
 <section id="footer" class="aqui" style="color: #FAFAFA">
     <hr style="height: 6px;width: 100%;background-color: #FF9800;border-color: #FF9800;margin-bottom: 10px">
     <div class="inner">
         <h2 class="major">CONTACTANOS</h2>
         <p>¿Tienes algo interesante que contarnos?, Dudas de nuestros articulos, Existencias, Contactanos!.</p>
-        <form method="post" action="#">
+        <form method="post" action="PHPCatalogo/GuardarComentariosPHP.php">
             <div class="field">
                 <label for="name">NOMBRE</label>
                 <input type="text" name="name" id="name" />
@@ -557,7 +565,7 @@ PANEL DE IMAGEN REDONDA-->
                 <textarea name="message" id="message" rows="4"></textarea>
             </div>
             <ul class="actions">
-                <li><input type="submit" value="ENVIAR MENSAJE" /></li>
+                <li><input type="submit"  value="ENVIAR MENSAJE" /></li>
             </ul>
         </form>
         <ul class="contact">
@@ -577,6 +585,10 @@ PANEL DE IMAGEN REDONDA-->
         <ul class="copyright">
 
         </ul>
+
+
+
+
     </div>
 </section>
 
@@ -616,6 +628,9 @@ PANEL DE IMAGEN REDONDA-->
     ga('send', 'pageview');
 
 </script>
+
+
+
 
 <!--TOOLTIP POPOVER PARA EL FORMULARIO-->
 <script>
