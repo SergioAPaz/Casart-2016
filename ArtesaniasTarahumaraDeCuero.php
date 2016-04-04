@@ -194,25 +194,29 @@ $filas=mysqli_query($conexiondb,$primera);
 
 
 
-<div class="container-fluid" id="id">
-    <div class="row style01" >
-        <div class="col-xs-12 col-sm-8 img02" style="padding-left: 0;padding-right: 0;display: none">
-            <img src="images/cuero.jpg" class="img-responsive" alt="Responsive image" style=" filter: sepia(100%);-webkit-filter: sepia(100%);-moz-filter: sepia(100%);    -o-filter: sepia(100%);   -ms-filter: sepia(100%);">
+
+<div class="container-fluid" style="padding-left: 0;padding-right: 0">
+    <div class="row x" style="background-color: #FF9100;" >
+        <div class="col-xs-12 col-md-6  pull-left" style="padding-right: 0;background-color: #1b6d85">
+            <img src="images/tarahumara2.jpg" class="img-responsive" style="max-height: 550px" alt="Responsive image" >
         </div>
-        <div class="col-xs-12 col-sm-4 img01" style="margin-top: -600px">
-            <p style="font-size: 35px;color: #ffffff;margin-top: 10px">Artesanias Tarahumara De Cuero</p>
-            <p style="font-size: 15px;color: #FAFAFA">En muchas comunidades el tarahumara ha adoptado la indumentaria occidental. Sin embargo, aún conserva la vestimenta
+        <div class="col-sm-12 col-md-6   pull-right style566 " >
+            <h1 class="sdf6513" style="color: white">Artesania tarahumara de cuero</h1>
+            <p style="font-size: 15px;color: white">
+                En muchas comunidades el tarahumara ha adoptado la indumentaria occidental. Sin embargo, aún conserva la vestimenta
                 tradicional,preferentemente, en el caso de los hombres, y siempre en las mujeres. Las blusas o camisas de colores brillantes, estampados, a veces
-                floreados, son usadas por hombres y mujeres.
-                <br/><br/>
-                <span class="hidden-sm hidden-md">Las faldas son muy apreciadas por la mujer, quien viste muchas a la vez, una encima de otra, lo que le da esa apariencia de bellamente esponjada.
-                Le sirve de adorno, de abrigo y, además, parece envolverla en mil colores. Los hombres visten un calzón de manta llamado Tagora. El ceñidor o
-                cinturón lo usan por igual hombres y mujeres. Están tejidos con dibujos propios y los utilizan para sostener pantalones, zapatos y faldas. </span></p>
-
+                floreados, son usadas por hombres y mujeres.<br><br class="ocultame">
+                <a class="desaparece87" style="color: white">Las faldas son muy apreciadas por la mujer, quien viste muchas a la vez, una encima de otra, lo que le da esa apariencia de bellamente esponjada.
+                    Le sirve de adorno, de abrigo y, además, parece envolverla en mil colores. Los hombres visten un calzón de manta llamado Tagora. El ceñidor o
+                    cinturón lo usan por igual hombres y mujeres. Están tejidos con dibujos propios y los utilizan para sostener pantalones, zapatos y faldas.</a>
+            </p>
         </div>
-
     </div>
+    <hr style="height: 6px;width: 100%;background-color: #FF9800;margin-top: 0;border-color: #FF9800;margin-bottom: 10px">
 </div>
+
+
+
 
 
 <br>
@@ -228,8 +232,9 @@ $filas=mysqli_query($conexiondb,$primera);
 
 
 <br>
+
 <!--CATALOGO-->
-<div class="container-fluid" >
+<div class="container-fluid fondo623">
     <div class="row" >
 
         <?php

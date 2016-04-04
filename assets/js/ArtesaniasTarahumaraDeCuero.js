@@ -1,4 +1,5 @@
-/*SI SCREEN WIDTH SUPERA LOS 1367PX EL CONTAINER-FLUID PASARA A CONTAINER*/
+/*
+/!*SI SCREEN WIDTH SUPERA LOS 1367PX EL CONTAINER-FLUID PASARA A CONTAINER*!/
 $(document).ready(function(){
     if(screen.width>1367){
         document.getElementById('id').className = "container";
@@ -14,7 +15,7 @@ window.onresize = function(event) {
  }
 
 
-/*ANIMACION DE PANEL1 IMAGEN Y TEXTO CON RESPONSIVE*/
+/!*ANIMACION DE PANEL1 IMAGEN Y TEXTO CON RESPONSIVE*!/
 $(document).ready(function(){
         $(".img02").fadeIn(3000);
 });
@@ -30,6 +31,7 @@ $(document).ready(function() {
     }
 });
 
+*/
 
 
 /*BOTON IR ARRIBA*/
@@ -56,11 +58,21 @@ $(document).ready(function(){
 
 
 
+
+
 /*FANCYBOX*/
 $(document).ready(function() {
+    /*
+     *  Simple image gallery. Uses default settings
+     */
 
     $('.fancybox').fancybox();
 
+    /*
+     *  Different effects
+     */
+
+    // Change title type, overlay closing speed
     $(".fancybox-effects-a").fancybox({
         helpers: {
             title : {
@@ -72,6 +84,7 @@ $(document).ready(function() {
         }
     });
 
+    // Disable opening and closing animations, change title type
     $(".fancybox-effects-b").fancybox({
         openEffect  : 'none',
         closeEffect	: 'none',
@@ -83,6 +96,7 @@ $(document).ready(function() {
         }
     });
 
+    // Set custom style, close if clicked, change title type and overlay color
     $(".fancybox-effects-c").fancybox({
         wrapCSS    : 'fancybox-custom',
         closeClick : true,
@@ -101,6 +115,7 @@ $(document).ready(function() {
         }
     });
 
+    // Remove padding, set opening and closing animations, close if clicked and disable overlay
     $(".fancybox-effects-d").fancybox({
         padding: 0,
 
@@ -116,6 +131,10 @@ $(document).ready(function() {
             overlay : null
         }
     });
+
+    /*
+     *  Button helper. Disable animations, hide close button, change title type and content
+     */
 
     $('.fancybox-buttons').fancybox({
         openEffect  : 'none',
@@ -138,6 +157,11 @@ $(document).ready(function() {
         }
     });
 
+
+    /*
+     *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
+     */
+
     $('.fancybox-thumbs').fancybox({
         prevEffect : 'none',
         nextEffect : 'none',
@@ -154,6 +178,9 @@ $(document).ready(function() {
         }
     });
 
+    /*
+     *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
+     */
     $('.fancybox-media')
         .attr('rel', 'media-gallery')
         .fancybox({

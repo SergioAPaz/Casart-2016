@@ -1,4 +1,5 @@
-/*EFECTO APARICION PANEL1*/
+/*
+/!*EFECTO APARICION PANEL1*!/
 $(document).ready(function(){
     $('.deslizamiento').animate({'margin-left':-15+'px'},1800,function(){
         document.getElementById("relleno").style.display="none";
@@ -8,6 +9,7 @@ $(document).ready(function(){
 });
 
 
+*/
 
 /*BOTON IR ARRIBA*/
 $(document).ready(function(){

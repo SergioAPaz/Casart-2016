@@ -178,9 +178,9 @@ session_start();
 <br><br>
 
 <div class="container-fluid">
-    <div class="row"id="rowpanel" style="margin-right:2000px;background-color: #FFCA28">
+    <div class="row"id="rowpanel" style="margin-right:2000px;background-color: #FFD54F">
       <div id="divid" style="height: 1000px"></div>
-            <div class="col-xs-12 col-sm-12 col-md-7"id="col1panel" style="display: none;background-color: #FFCA28;margin-top: 20px">
+            <div class="col-xs-12 col-sm-12 col-md-7"id="col1panel" style="display: none;background-color: #FFD54F;margin-top: 20px">
 
                 <p style="font-size: 28px;text-align: center;color: #FF9800">Mision</p>
                 <br>
