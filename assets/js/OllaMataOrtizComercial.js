@@ -1,4 +1,5 @@
-/*AJUSTE DE CONTAINER-FLUID A CONTAINER Y AJUSTE VERTICAL AUTOMATICO DE DIV DE TEXTO*/
+/*
+/!*AJUSTE DE CONTAINER-FLUID A CONTAINER Y AJUSTE VERTICAL AUTOMATICO DE DIV DE TEXTO*!/
 $(document).ready(function(){
     if(screen.width>1367){
         document.getElementById('id3').className = "container";
@@ -28,6 +29,7 @@ window.onresize = function(event) {
             document.getElementById('id2').style.height = 'auto';
         }
 };
+*/
 
 
 /*BOTON IR ARRIBA*/

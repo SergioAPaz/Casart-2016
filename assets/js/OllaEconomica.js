@@ -28,7 +28,7 @@ $(document).ready(function(){
 
 });
 
-setTimeout('ejecutar()',2500);
+setTimeout('ejecutar()',1000);
 
 function ejecutar(){
 

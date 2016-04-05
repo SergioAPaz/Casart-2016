@@ -66,7 +66,7 @@ session_start();
                             <li ><a href='CesteriaTarahumara.php'>Cestería tarahumara</a></li>
                             <li ><a href='AlfareriaTarahumara.php'>Alfarería tarahumara</a></li>
                             <li ><a href='TextilesTarahumaras.php'>Textiles tarahumaras</a></li>
-                            <li ><a href='ArtesaniasTarahumaraDeCuero.php'>Artesanías tarahumara de cuero</a></li>
+                            <li ><a href='ArtesaniasTarahumaraDeCuero.php'>Artesanías de cuero</a></li>
                             <li ><a href='InstrumentosMusicalesTarahumara.php'>Instrumentos musicales</a></li>
                             <li ><a href='ArticulosVarios.php'>Articulos varios</a></li>
                         </ul>
@@ -433,7 +433,8 @@ PANEL DE IMAGEN REDONDA-->
     <div class="row" >
 
         <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="thumbnail x" style="height: 443px">
+            <div class="thumbnail x" style="height: 443px;">
+                <div style="border-radius: 0px 6px 6px 0px;background-color: #FFA726;float: left;margin-left: -6px;margin-top: 20px;opacity: .8;position: absolute;width: 150px;height: 25px"><p style="color: white;;float: right;margin-right: 5px;;margin-top: 2%">Nuevo producto</p></div>
                 <div style="height: 10px" class="divhide"></div>
                 <a class="fancybox " href="images/productocondesc.jpg" data-fancybox-group="gallery" >
                     <img class="img-responsive styleimg" style="max-height: 315px" src="images/productocondesc.jpg" alt="" /></a>
@@ -600,7 +601,7 @@ PANEL DE IMAGEN REDONDA-->
     <div class="container-fluid margintop">
         <div class="row" style="background-color: #3E2723;height: 290px">
            <div >
-                <p  style="background-color: #ffffff;padding: 20px;font-size: 14px;margin: 0">© 2009-2015 Casart Chihuahua Todos los derechos reservados.</p>
+                <p  style="background-color: #ffffff;padding: 20px;font-size: 14px;margin: 0">© Casa de las Artesanías del Estado de Chihuahua. Todos los derechos reservados.</p>
             </div>
            <!-- <div class="col-xs-12 col-sm-5 pull-right" style="background-color: #5D4037;height: 230px">-->
              <div  style="margin-top: 10px;margin-left: 10px">

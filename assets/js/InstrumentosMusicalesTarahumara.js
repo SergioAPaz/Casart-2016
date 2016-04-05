@@ -1,10 +1,11 @@
+/*
 
-/*ANIMACION DE SOBRE DIV PANEL1*/
+/!*ANIMACION DE SOBRE DIV PANEL1*!/
 $(document).ready(function(){
     $( ".fondo" ).animate({marginTop: "0px"}, 1500 );
 });
 
-/*SI SCREEN WIDTH SUPERA LOS 1367PX EL CONTAINER-FLUID PASARA A CONTAINER*/
+/!*SI SCREEN WIDTH SUPERA LOS 1367PX EL CONTAINER-FLUID PASARA A CONTAINER*!/
 $(document).ready(function(){
     if(screen.width>1367){
         document.getElementById('id').className = "container";
@@ -29,6 +30,7 @@ $(document).ready(function(){
 });
 };
 
+*/
 
 
 

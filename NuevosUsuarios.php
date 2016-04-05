@@ -50,7 +50,7 @@ $filas =mysqli_query($conexiondb,$consulta);
                             <li ><a href='CesteriaTarahumara.php'>Cestería tarahumara</a></li>
                             <li ><a href='AlfareriaTarahumara.php'>Alfarería tarahumara</a></li>
                             <li ><a href='TextilesTarahumaras.php'>Textiles tarahumaras</a></li>
-                            <li ><a href='ArtesaniasTarahumaraDeCuero.php'>Artesanías tarahumara de cuero</a></li>
+                            <li ><a href='ArtesaniasTarahumaraDeCuero.php'>Artesanías de cuero</a></li>
                             <li ><a href='InstrumentosMusicalesTarahumara.php'>Instrumentos musicales</a></li>
                             <li ><a href='ArticulosVarios.php'>Articulos varios</a></li>
                         </ul>

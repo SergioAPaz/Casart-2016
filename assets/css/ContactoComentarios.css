@@ -7,3 +7,16 @@ th{
     vertical-align: middle;
     color: #FAFAFA;
 }
+
+
+/*MANDAR FOOTER HASTA ABAJO*/
+html, body {
+    height: 100%;
+}
+
+.paraelfooter {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -60px;
+}

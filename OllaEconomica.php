@@ -3,7 +3,7 @@
 session_start();
 include('conexion.php');
 $primera=<<<SQL
-SELECT Titulo,Descripcion,urlimagen FROM catalogo WHERE galeria='Olla de mata ortiz economica';
+SELECT Titulo,Descripcion,urlimagen,Nuevo_producto FROM catalogo WHERE galeria='Olla de mata ortiz economica';
 SQL;
 $filas=mysqli_query($conexiondb,$primera);
 ?>
@@ -69,7 +69,7 @@ $filas=mysqli_query($conexiondb,$primera);
                             <li ><a href='CesteriaTarahumara.php'>Cestería tarahumara</a></li>
                             <li ><a href='AlfareriaTarahumara.php'>Alfarería tarahumara</a></li>
                             <li ><a href='TextilesTarahumaras.php'>Textiles tarahumaras</a></li>
-                            <li ><a href='ArtesaniasTarahumaraDeCuero.php'>Artesanías tarahumara de cuero</a></li>
+                            <li ><a href='ArtesaniasTarahumaraDeCuero.php'>Artesanías de cuero</a></li>
                             <li ><a href='InstrumentosMusicalesTarahumara.php'>Instrumentos musicales</a></li>
                             <li ><a href='ArticulosVarios.php'>Articulos varios</a></li>
                         </ul>
@@ -197,7 +197,7 @@ $filas=mysqli_query($conexiondb,$primera);
 </header>
 
 <!--PANEL 1-->
-<div class="container-fluid" style="z-index: 1000000000">
+<div class="container-fluid" style="">
     <div class="row">
         <div class="col-xs-12" style="padding-right: 0;padding-left: 0">
             <picture>
@@ -216,7 +216,7 @@ $filas=mysqli_query($conexiondb,$primera);
 </div>
 
 <!--COLUMNAS PANEL2-->
-<div class="container-fluid" style="z-index: 100000">
+<div class="container-fluid" style="z-index: 1;position: relative" >
     <div class="row" id="row2">
         <div class="col-xs-12 col-sm-6 col-lg-3 col1">
             <div class="jumbotron jumbo1" style="background-color: transparent">
@@ -264,8 +264,11 @@ $filas=mysqli_query($conexiondb,$primera);
         while($columna=mysqli_fetch_assoc($filas)){
             echo "<div class='col-xs-12 col-sm-6 col-md-3''>";
             echo '<div class="thumbnail" style="height: 443px">';
+            if($columna['Nuevo_producto']=='Si') {
+                echo '<div style="border-radius: 0px 6px 6px 0px;z-index: 2;background-color: #FFA726;float: left;margin-left: -6px;margin-top: 20px;opacity: .9;position: absolute;width: 150px;height: 25px"><p style="color: white;;float: right;margin-right: 5px;margin-top: 2%">Nuevo producto</p></div>';
+            }
             echo ' <div style="height: 10px" class="divhide"></div>';
-            echo '<div style="height: 315px;position: relative">';
+            echo '<div style="height: 315px;position: relative;z-index: 1">';
             echo "<a class='fancybox' href='PHPCatalogo/ImagenesGaleria/$columna[urlimagen]' data-fancybox-group='gallery'>
                     <img class='img-responsive styleimg img152' style='max-height: 315px;' src='PHPCatalogo/ImagenesGaleria/$columna[urlimagen]' alt='' /></a>";
             echo'</div>';
@@ -289,7 +292,7 @@ $filas=mysqli_query($conexiondb,$primera);
 <footer>
     <div class="container-fluid">
         <div class="row" style="background-color: #4E342E;height: 200px">
-            <p style="background-color: #ffffff;padding: 20px;font-size: 14px">© 2009-2015 Casart Chihuahua Todos los derechos reservados.</p>
+            <p style="background-color: #ffffff;padding: 20px;font-size: 14px">© Casa de las Artesanías del Estado de Chihuahua. Todos los derechos reservados.</p>
         </div>
     </div>
 </footer>

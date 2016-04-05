@@ -3,7 +3,7 @@
 session_start();
 include('conexion.php');
 $primera=<<<SQL
-SELECT Titulo,Descripcion,urlimagen FROM catalogo WHERE galeria='Instrumentos musicales';
+SELECT Titulo,Descripcion,urlimagen,Nuevo_producto FROM catalogo WHERE galeria='Instrumentos musicales';
 SQL;
 $filas=mysqli_query($conexiondb,$primera);
 ?>
@@ -65,7 +65,7 @@ $filas=mysqli_query($conexiondb,$primera);
                             <li ><a href='CesteriaTarahumara.php'>Cestería tarahumara</a></li>
                             <li ><a href='AlfareriaTarahumara.php'>Alfarería tarahumara</a></li>
                             <li ><a href='TextilesTarahumaras.php'>Textiles tarahumaras</a></li>
-                            <li ><a href='ArtesaniasTarahumaraDeCuero.php'>Artesanías tarahumara de cuero</a></li>
+                            <li ><a href='ArtesaniasTarahumaraDeCuero.php'>Artesanías de cuero</a></li>
                             <li ><a href='InstrumentosMusicalesTarahumara.php'>Instrumentos musicales</a></li>
                             <li ><a href='ArticulosVarios.php'>Articulos varios</a></li>
                         </ul>
@@ -194,52 +194,34 @@ $filas=mysqli_query($conexiondb,$primera);
 
 
 
-<div class="container-fluid" id="id">
-
-    <div class="row">
-
-        <div class="col-xs-12" id="id1" style="background-color: transparent;padding-left: 0;padding-right: 0">
-            <img src="images/musica.jpg" class="img-responsive portfolio_frontpage" alt="">
-            <div class="col-xs-12 fondo hidden-xs" id="id2" style="margin-top: -800px">
-                    <div class="portfolio_description col-xs-12  col-sm-7">
-                        <p style="padding: 20px;font-size: 35px">Instrumentos Musicales Tarahumara</p>
-                        <p style="padding-left: 30px;font-size: 15px">En la región de la sierra tarahumara, al norte de nuestro país, se encuentran varios pueblos rarámuris que son herederos de una antigua
-                            tradición indígena, la cual, por fortuna, todavía conservan. Su vestimenta, sus prácticas de siembra, su idioma, sus casas y todo lo que ellos
-                            producen, son herencia que les dejaron sus ancestros que hace cientos de años habitaban aquellos lugares.
-                        <br/><br/>
-                           <span class="hidden-sm"> Su música y sus instrumentos musicales son verdaderamente asombrosos. El tambor tarahumara o kampore es uno de los principales instrumentos
-                            que acompañan muchas de las actividades de los rarámuris, desde ir a sembrar, recibir a un recién nacido, construir una vivienda, ceremonias de
-                            agradecimiento a la tierra, al agua, y muchas otras actividades que suelen hacer en grupo, con la participación de casi todo el pueblo, siempre cantando
-                            y danzando. </span> <br/><br/>
-                        <span class="hidden-sm hidden-md ocudcltar" >
-                            El kampore está hecho de madera, y su piel es de venado; en ocasiones los pintan de colores y les dibujan paisajes o animales de la localidad;
-                            entre más grande sea el instrumento más fuerte y profundo sonará. Pueden ser desde 15 o 20 centímetros de diámetro, hasta casi un metro.
-                            El que lo ejecuta es un conocedor de los ritmos de las danzas y los cantos. Además de utilizar el tambor y de cantar, también utilizan sonajas y los
-                            tenabaris, que son un manojo de capullos de mariposa atados a un mecate que se sujeta a los tobillos a la hora de hacer la danza. </span></p>
 
 
-                    </div>
-            </div>
+
+<div class="container-fluid" style="padding-left: 0;padding-right: 0">
+    <div class="row x" style="background-color: #FF9100;" >
+        <div class="col-xs-12 col-md-6  pull-left" style="padding-right: 0;background-color: #1b6d85">
+            <img src="images/musica.jpg" class="img-responsive" alt="Responsive image" style=" max-height: 550px;filter: sepia(100%);-webkit-filter: sepia(100%);-moz-filter: sepia(100%);    -o-filter: sepia(100%);   -ms-filter: sepia(100%);">
         </div>
-        <!--COLUMNA DE DESCRIPCION DE ANCHO COMPLETO-->
-        <div class="col-xs-12 visible-xs" style="background: rgba(255,152,0,0.5);color: #FAFAFA">
-                <h2>Instrumentos Musicales Tarahumara</h2>
-                <p>En la región de la sierra tarahumara, al norte de nuestro país, se encuentran varios pueblos rarámuris que son herederos de una antigua
-                    tradición indígena, la cual, por fortuna, todavía conservan. Su vestimenta, sus prácticas de siembra, su idioma, sus casas y todo lo que ellos
-                    producen, son herencia que les dejaron sus ancestros que hace cientos de años habitaban aquellos lugares.</p>
-                <p>Su música y sus instrumentos musicales son verdaderamente asombrosos. El tambor tarahumara o kampore es uno de los principales instrumentos
-                    que acompañan muchas de las actividades de los rarámuris, desde ir a sembrar, recibir a un recién nacido, construir una vivienda, ceremonias de
-                    agradecimiento a la tierra, al agua, y muchas otras actividades que suelen hacer en grupo, con la participación de casi todo el pueblo, siempre cantando
-                    y danzando.</p>
-                <p class="hidden-xs">
-                    El kampore está hecho de madera, y su piel es de venado; en ocasiones los pintan de colores y les dibujan paisajes o animales de la localidad;
-                    entre más grande sea el instrumento más fuerte y profundo sonará. Pueden ser desde 15 o 20 centímetros de diámetro, hasta casi un metro.
-                    El que lo ejecuta es un conocedor de los ritmos de las danzas y los cantos. Además de utilizar el tambor y de cantar, también utilizan sonajas y los
-                    tenabaris, que son un manojo de capullos de mariposa atados a un mecate que se sujeta a los tobillos a la hora de hacer la danza. </p>
+        <div class="col-sm-12 col-md-6   pull-right style566 " >
+            <h1 class="sdf6513" style="color: white">Artesania tarahumara de cuero</h1>
+            <p style="font-size: 15px;color: white">
+                En muchas comunidades el tarahumara ha adoptado la indumentaria occidental. Sin embargo, aún conserva la vestimenta
+                tradicional,preferentemente, en el caso de los hombres, y siempre en las mujeres. Las blusas o camisas de colores brillantes, estampados, a veces
+                floreados, son usadas por hombres y mujeres.<br><br class="ocultame">
+                <a class="desaparece87" style="color: white">Las faldas son muy apreciadas por la mujer, quien viste muchas a la vez, una encima de otra, lo que le da esa apariencia de bellamente esponjada.
+                    Le sirve de adorno, de abrigo y, además, parece envolverla en mil colores. Los hombres visten un calzón de manta llamado Tagora. El ceñidor o
+                    cinturón lo usan por igual hombres y mujeres. Están tejidos con dibujos propios y los utilizan para sostener pantalones, zapatos y faldas.</a>
+            </p>
         </div>
+    </div>
+    <hr style="height: 6px;width: 100%;background-color: #FFC107;margin-top: 0;border-color: #FFC107;margin-bottom: 10px">
+</div>
 
-    </div> <!-- /.row -->
-</div><!-- /.container -->
+
+
+
+
+
 
 <br/>
 
@@ -261,8 +243,11 @@ $filas=mysqli_query($conexiondb,$primera);
         while($columna=mysqli_fetch_assoc($filas)){
             echo "<div class='col-xs-12 col-sm-6 col-md-3''>";
             echo '<div class="thumbnail" style="height: 443px">';
+            if($columna['Nuevo_producto']=='Si') {
+                echo '<div style="border-radius: 0px 6px 6px 0px;z-index: 2;background-color: #FFA726;float: left;margin-left: -6px;margin-top: 20px;opacity: .9;position: absolute;width: 150px;height: 25px"><p style="color: white;;float: right;margin-right: 5px;margin-top: 2%">Nuevo producto</p></div>';
+            }
             echo ' <div style="height: 10px" class="divhide"></div>';
-            echo '<div style="height: 315px;position: relative">';
+            echo '<div style="height: 315px;position: relative;z-index: 1">';
             echo "<a class='fancybox' href='PHPCatalogo/ImagenesGaleria/$columna[urlimagen]' data-fancybox-group='gallery'>
                     <img class='img-responsive styleimg img152' style='max-height: 315px;' src='PHPCatalogo/ImagenesGaleria/$columna[urlimagen]' alt='' /></a>";
             echo'</div>';
@@ -286,7 +271,7 @@ $filas=mysqli_query($conexiondb,$primera);
 <footer>
     <div class="container-fluid">
         <div class="row" style="background-color: #4E342E;height: 200px">
-            <p style="background-color: #ffffff;padding: 20px;font-size: 14px">© 2009-2015 Casart Chihuahua Todos los derechos reservados.</p>
+            <p style="background-color: #ffffff;padding: 20px;font-size: 14px">© Casa de las Artesanías del Estado de Chihuahua. Todos los derechos reservados.</p>
         </div>
     </div>
 </footer>

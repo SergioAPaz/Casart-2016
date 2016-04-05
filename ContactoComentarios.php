@@ -50,7 +50,7 @@ $filas =mysqli_query($conexiondb,$consulta);
                             <li ><a href='CesteriaTarahumara.php'>Cestería tarahumara</a></li>
                             <li ><a href='AlfareriaTarahumara.php'>Alfarería tarahumara</a></li>
                             <li ><a href='TextilesTarahumaras.php'>Textiles tarahumaras</a></li>
-                            <li ><a href='ArtesaniasTarahumaraDeCuero.php'>Artesanías tarahumara de cuero</a></li>
+                            <li ><a href='ArtesaniasTarahumaraDeCuero.php'>Artesanías  de cuero</a></li>
                             <li ><a href='InstrumentosMusicalesTarahumara.php'>Instrumentos musicales</a></li>
                             <li ><a href='ArticulosVarios.php'>Articulos varios</a></li>
                         </ul>
@@ -173,7 +173,7 @@ $filas =mysqli_query($conexiondb,$consulta);
 <br>
 <!--BASE DE DATOS DE COMENTARIOS-->
 
-<div class="container" id="estilo54" style="background-color: #EEEEEE;width: 90%">
+<div class="container paraelfooter" id="estilo54" style="background-color: #EEEEEE;width: 90%">
     <br/>
 <div class="panel panel-default">
     <div class="panel-body">
@@ -221,18 +221,13 @@ $filas =mysqli_query($conexiondb,$consulta);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+<footer>
+    <div class="container-fluid">
+        <div class="row" style="background-color: #4E342E;height: 200px">
+            <p style="background-color: #ffffff;padding: 20px;font-size: 14px">© Casa de las Artesanías del Estado de Chihuahua. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
 
 
 

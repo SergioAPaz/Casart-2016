@@ -38,7 +38,7 @@ include ("BloqueDeSeguridad.php");
 include("conexion.php");
 
 $consulta=<<<SQL
-    SELECT id,Titulo,Descripcion, DATE_FORMAT(Fecha_alta,'%d/%m/%Y %H:%i')as Fecha_alta,urlimagen,Galeria,Usuario FROM catalogo
+    SELECT id,Titulo,Descripcion, DATE_FORMAT(Fecha_alta,'%d/%m/%Y %H:%i')as Fecha_alta,urlimagen,Galeria,Nuevo_producto,Usuario FROM catalogo
 SQL;
 
 $filas =mysqli_query($conexiondb,$consulta);
@@ -62,6 +62,7 @@ $filas =mysqli_query($conexiondb,$consulta);
     <script src="assets/bootstrap-3.3.5-dist/js/bootstrap.js"></script>
     <script src="assets/js/NavbarResponsive.js"></script>
     <script type="text/javascript" src="assets/js/PanelAdmin.js"></script><!--scripts generales-->
+
     <!--DATATABLE JQUERY (PAGINACION Y SEARCH)-->
     <link rel="stylesheet" href="assets/jquery/datatable%20jquery/dataTables.bootstrap.min.css">
     <script src="assets/jquery/datatable%20jquery/jquery.dataTables.min.js"></script>
@@ -93,7 +94,7 @@ $filas =mysqli_query($conexiondb,$consulta);
                             <li ><a href='CesteriaTarahumara.php'>Cestería tarahumara</a></li>
                             <li ><a href='AlfareriaTarahumara.php'>Alfarería tarahumara</a></li>
                             <li ><a href='TextilesTarahumaras.php'>Textiles tarahumaras</a></li>
-                            <li ><a href='ArtesaniasTarahumaraDeCuero.php'>Artesanías tarahumara de cuero</a></li>
+                            <li ><a href='ArtesaniasTarahumaraDeCuero.php'>Artesanías de cuero</a></li>
                             <li ><a href='InstrumentosMusicalesTarahumara.php'>Instrumentos musicales</a></li>
                             <li ><a href='ArticulosVarios.php'>Articulos varios</a></li>
                         </ul>
@@ -240,6 +241,11 @@ $filas =mysqli_query($conexiondb,$consulta);
                     <label class="text-muted" for = "name">Imagen del producto:</label>
                     <input type="file" class="form-control" name="archivo" required/>
                     <p class="help-block">*Para una mejor vizualizacion utilizar imagenes de tamaño cuadrado Ejem. (500px x 500px).</p>
+                    <!--BOTON NUEVO PRODUCTO-->
+                    <div class="checkbox" style="margin-left: 0px">
+                        <label><input type="hidden" name="btnnewproduct" value="No">
+                        <label><input type="checkbox" name="btnnewproduct" value="Si">Incluir etiqueta de <span style="color: #1976D2">nuevo producto</span>?</label>
+                    </div>
                 </div>
                 <button id="btnagregar"  disabled  type = "submit" class = "btn btn-primary">Agregar</button>
                 <button type = "reset" class = "btn btn-primary" onclick="deshabilitar()">Limpiar</button>
@@ -261,6 +267,7 @@ $filas =mysqli_query($conexiondb,$consulta);
                             <th style="font-size: 14px;color: #F57C00">Fecha de alta</th>
                             <th style="font-size: 14px;color: #F57C00">Imagen</th>
                             <th style="font-size: 14px;color: #F57C00">Galeria</th>
+                            <th style="font-size: 14px;color: #F57C00">Nuevo?</th>
                             <th style="font-size: 14px;color: #F57C00">Usuario</th>
                             <th style="font-size: 14px;color: #F57C00">Acciones</th>
                         </tr>
@@ -279,6 +286,7 @@ $filas =mysqli_query($conexiondb,$consulta);
                         echo "<td>$columna[Fecha_alta]</td>";
                         echo "<td>$columna[urlimagen]</td>";
                         echo "<td>$columna[Galeria]</td>";
+                        echo "<td>$columna[Nuevo_producto]</td>";
                         echo "<td>$columna[Usuario]</td>";
                         echo "<td>
                         <a href='PHPCatalogo/BorrarGaleria.php?id=$columna[id]'>Borrar</a>
@@ -306,7 +314,7 @@ $filas =mysqli_query($conexiondb,$consulta);
 <footer>
     <div class="container-fluid">
         <div class="row" style="background-color:   #4E342E;height: 200px">
-            <p style="background-color: #FAFAFA;padding: 20px;font-size: 14px">© 2009-2015 Casart Chihuahua Todos los derechos reservados.</p>
+            <p style="background-color: #FAFAFA;padding: 20px;font-size: 14px">© Casa de las Artesanías del Estado de Chihuahua. Todos los derechos reservados.</p>
         </div>
     </div>
 </footer>

@@ -3,7 +3,7 @@
 session_start();
 include('conexion.php');
 $primera=<<<SQL
-SELECT Titulo,Descripcion,urlimagen FROM catalogo WHERE galeria='Olla de mata ortiz comercial';
+SELECT Titulo,Descripcion,urlimagen,Nuevo_producto FROM catalogo WHERE galeria='Olla de mata ortiz comercial';
 SQL;
 $filas=mysqli_query($conexiondb,$primera);
 ?>
@@ -69,7 +69,7 @@ $filas=mysqli_query($conexiondb,$primera);
                             <li ><a href='CesteriaTarahumara.php'>Cestería tarahumara</a></li>
                             <li ><a href='AlfareriaTarahumara.php'>Alfarería tarahumara</a></li>
                             <li ><a href='TextilesTarahumaras.php'>Textiles tarahumaras</a></li>
-                            <li ><a href='ArtesaniasTarahumaraDeCuero.php'>Artesanías tarahumara de cuero</a></li>
+                            <li ><a href='ArtesaniasTarahumaraDeCuero.php'>Artesanías de cuero</a></li>
                             <li ><a href='InstrumentosMusicalesTarahumara.php'>Instrumentos musicales</a></li>
                             <li ><a href='ArticulosVarios.php'>Articulos varios</a></li>
                         </ul>
@@ -196,25 +196,25 @@ $filas=mysqli_query($conexiondb,$primera);
     </div>
 </header>
 
-<div class="container-fluid" id="id3">
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-4" style="   background: rgba(33,33,33,0.6);" id="id2">
-            <p style="font-size: 28px;color: #FF9800;margin-top: 15px">Olla de Mata Ortiz</p>
-            <p style="font-size: 16px;color: #FAFAFA">La cultura mexicana se distingue en el mundo por tener un sello propio, lleno de color, historia y autenticidad.</p>
-            <p style="font-size: 16px;color: #FAFAFA">Prueba de ello lo encontramos en nuestras artesanías que son valoradas como verdaderas joyas. Ejemplo de estas son la cerámica
-                fina elaborada en el estado de Chihuahua en el pueblo de Mata Ortiz. </p>
-            <p style="font-size: 16px;color: #FAFAFA">Prueba de ello lo encontramos en nuestras artesanías que son valoradas como verdaderas joyas. Ejemplo de estas son la cerámica
-                fina elaborada en el estado de Chihuahua en el pueblo de Mata Ortiz. </p>
-            <p class="hidden-lg hidden-md" style="font-size: 16px;color: #FAFAFA">Prueba de ello lo encontramos en nuestras artesanías que son valoradas como verdaderas joyas. Ejemplo de estas son la cerámica
-                fina elaborada en el estado de Chihuahua en el pueblo de Mata Ortiz. </p>
+<div class="container-fluid" style="padding-left: 0;padding-right: 0">
+    <div class="row x" style="background: rgba(33,33,33,0.6)" >
+        <div class="col-xs-12 col-md-6  pull-left" style="padding-right: 0;background-color: #FFA726">
+            <img src="images/mano_olla2.jpg" class="img-responsive" alt="Responsive image" style="filter: sepia(75%);-webkit-filter: sepia(75%);-moz-filter: sepia(75%);    -o-filter: sepia(75%);   -ms-filter: sepia(75%);">
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-8" style="padding-right: 0;padding-left: 0" >
-            <img src="images/juan%20quezada.jpg" class="img-responsive" alt="Responsive image" id="id1">
+        <div class="col-sm-12 col-md-6   pull-right style566 " >
+            <h1 class="sdf6513" style="color: #FF9800;font-size: 28px">Olla de Mata Ortiz comercial</h1>
+            <p style="font-size: 15px;color: white">La cultura mexicana se distingue en el mundo por tener un sello propio, lleno de color, historia y autenticidad.
+                Prueba de ello lo encontramos en nuestras artesanías que son valoradas como verdaderas joyas. Ejemplo de estas son la cerámica
+                fina elaborada en el estado de Chihuahua en el pueblo de Mata Ortiz. <br><br class="ocultame">
+                <a class="desaparece87" style="color: white"></a>
+            </p>
         </div>
     </div>
+    <hr style="height: 6px;width: 100%;background-color: #FFA726;margin-top: 0;border-color: #FFA726;margin-bottom: 10px">
 </div>
 
 <br/>
+
 
 <!--SEPARADOR-->
 <header>
@@ -234,8 +234,11 @@ $filas=mysqli_query($conexiondb,$primera);
         while($columna=mysqli_fetch_assoc($filas)){
             echo "<div class='col-xs-12 col-sm-6 col-md-3''>";
             echo '<div class="thumbnail" style="height: 443px">';
+            if($columna['Nuevo_producto']=='Si') {
+                echo '<div style="border-radius: 0px 6px 6px 0px;z-index: 2;background-color: #FFA726;float: left;margin-left: -6px;margin-top: 20px;opacity: .9;position: absolute;width: 150px;height: 25px"><p style="color: white;;float: right;margin-right: 5px;margin-top: 2%">Nuevo producto</p></div>';
+            }
             echo ' <div style="height: 10px" class="divhide"></div>';
-            echo '<div style="height: 315px;position: relative">';
+            echo '<div style="height: 315px;position: relative;z-index: 1">';
             echo "<a class='fancybox' href='PHPCatalogo/ImagenesGaleria/$columna[urlimagen]' data-fancybox-group='gallery'>
                     <img class='img-responsive styleimg img152' style='max-height: 315px;' src='PHPCatalogo/ImagenesGaleria/$columna[urlimagen]' alt='' /></a>";
             echo'</div>';
@@ -259,7 +262,7 @@ $filas=mysqli_query($conexiondb,$primera);
 <footer>
     <div class="container-fluid">
         <div class="row" style="background-color: #4E342E;height: 200px">
-            <p style="background-color: #ffffff;padding: 20px;font-size: 14px">© 2009-2015 Casart Chihuahua Todos los derechos reservados.</p>
+            <p style="background-color: #ffffff;padding: 20px;font-size: 14px">© Casa de las Artesanías del Estado de Chihuahua. Todos los derechos reservados.</p>
         </div>
     </div>
 </footer>

@@ -1,17 +1,3 @@
-.portfolio_description {
-    position: relative;
-    top: 0;
-color: #FAFAFA;
-    background-color: transparent;
-}
-
-.fondo {
-    position: absolute;
-    top: 0;
-    background: rgba(255,152,0,0.5);
-}
-
-
 /*CSS DE CATALOGO*/
 .img152{
     position: absolute;
@@ -88,14 +74,39 @@ color: #FAFAFA;
 
     }
 }
-.ocultar{
-    display: inherit;
+
+
+
+/*IMAGEN PRINCIPAL*/
+.style566{
+    max-height: 4000px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: white;
 }
 
-@media screen and (min-width: 1367px) {
-    .ocultar{
-display: none;
+.x{
+    margin-right: 0;
+}
+.sdf6513{
+    font-size: 40px;
+}
+@media screen and (max-width: 992px) {
+    .x{
+
+        margin-right: 0;
+
     }
 }
 
+@media screen and (max-width:1098px) and (min-width: 993px){
+    .sdf6513{
+        font-size: 25px;
+    }
+}
 
+@media screen and (max-width:1365px) and (min-width: 993px){
+    .desaparece87{
+        display: none;
+    }
+}

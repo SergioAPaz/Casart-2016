@@ -75,3 +75,41 @@
 
     }
 }
+
+
+
+
+
+/*IMAGEN PRINCIPAL*/
+.style566{
+    max-height: 4000px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: white;
+}
+
+.x{
+    margin-right: 0;
+}
+.sdf6513{
+    font-size: 40px;
+}
+@media screen and (max-width: 992px) {
+    .x{
+
+        margin-right: 0;
+
+    }
+}
+
+@media screen and (max-width:1098px) and (min-width: 993px){
+    .sdf6513{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width:1365px) and (min-width: 993px){
+    .desaparece87{
+        display: none;
+    }
+}
