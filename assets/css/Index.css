@@ -163,19 +163,25 @@
 }
 
 
+
+
 /*CSS DE CATALOGO*/
-/*se renombro thumbnail por x para avitar conflictos con el panel de 3 columnas que tambien es thumbnail*/
+.img152{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right:0;
+    left:0;
+    margin:auto;
+    /*border: 2px solid #FFA000;*/
+}
 .x{
     background-color: #5D4037;
     -moz-box-shadow: 0px 5px 0px #FF9800;
     -webkit-box-shadow: 0px 5px 0px #FF9800;
     box-shadow: 0px 5px 0px #FF9800;
-  /*  -webkit-box-shadow: 0px 42px 21px -27px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 42px 21px -27px rgba(0,0,0,0.75);
-    box-shadow: 0px 42px 21px -27px rgba(0,0,0,0.75);*/
     border: 2px solid #5D4037;
 }
-
 .x:hover{
     border-color:  #ff9800;
 }
@@ -189,10 +195,10 @@
 }
 .x>.caption>h3{
     margin-top: 0px;
-    font-size: 22px;
+    font-size: 18px;
 }
 .styleimg{
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .divhide{
     display: none;
@@ -204,16 +210,3 @@
 
 }
 /*/CSS DE CATALOGO*/
-
-
-
-
-
-/*
-
-.fancybox-custom .fancybox-skin {
-    box-shadow: 100px 100px 500px #222;
-}
-
-*/
-

@@ -1,6 +1,13 @@
 <?php
 session_start();
+include('conexion.php');
+$consultasql=<<<SQL
+SELECT Titulo,Descripcion,urlimagen,Nuevo_producto FROM catalogo WHERE Nuevo_producto='Si' OR Nuevo_producto='No';
+SQL;
+$filas=mysqli_query($conexiondb,$consultasql);
+$filas2=mysqli_query($conexiondb,$consultasql);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -432,7 +439,52 @@ PANEL DE IMAGEN REDONDA-->
 <div class="container-fluid">
     <div class="row" >
 
-        <div class="col-xs-12 col-sm-6 col-md-3">
+        <?php
+        $contador=0;
+        while($columna=mysqli_fetch_assoc($filas)) {
+            if (($columna['Nuevo_producto'] == 'Si') and ($contador<8)) {
+                $contador=$contador+1;
+                echo "<div class='col-xs-12 col-sm-6 col-md-3''>";
+                echo '<div class="x thumbnail " style="height: 443px">';
+                echo '<div style="border-radius: 0px 6px 6px 0px;z-index: 2;background-color: #FFA726;float: left;margin-left: -6px;margin-top: 20px;opacity: .9;position: absolute;width: 150px;height: 25px"><p style="color: white;;float: right;margin-right: 5px;margin-top: 2%">Nuevo producto</p></div>';
+                echo ' <div style="height: 10px" class="divhide"></div>';
+                echo '<div style="height: 315px;position: relative;z-index: 1">';
+                echo "<a class='fancybox' href='PHPCatalogo/ImagenesGaleria/$columna[urlimagen]' data-fancybox-group='gallery'>
+                    <img class='img-responsive styleimg img152' style='max-height: 315px;' src='PHPCatalogo/ImagenesGaleria/$columna[urlimagen]' alt='' /></a>";
+                echo '</div>';
+                echo '  <div class="caption">';
+                echo "<h3>$columna[Titulo]</h3>";
+                echo "<button data-container='body' data-trigger='hover click'  data-placement='top' type='button' class='btn btn-info' data-toggle='popover'
+                            data-content='$columna[Descripcion]'>Detalles...</button>";
+                echo ' </div>';
+                echo '</div>';
+                echo '</div>';
+            }
+        }
+
+        while($columna2=mysqli_fetch_assoc($filas2)) {
+            if (($columna2['Nuevo_producto'] == 'No') and ($contador<8)) {
+                $contador=$contador+1;
+                echo "<div class='col-xs-12 col-sm-6 col-md-3''>";
+                echo '<div class="x thumbnail " style="height: 443px">';
+                echo ' <div style="height: 10px" class="divhide"></div>';
+                echo '<div style="height: 315px;position: relative;z-index: 1">';
+                echo "<a class='fancybox' href='PHPCatalogo/ImagenesGaleria/$columna2[urlimagen]' data-fancybox-group='gallery'>
+                    <img class='img-responsive styleimg img152' style='max-height: 315px;' src='PHPCatalogo/ImagenesGaleria/$columna2[urlimagen]' alt='' /></a>";
+                echo '</div>';
+                echo '  <div class="caption">';
+                echo "<h3>$columna2[Titulo]</h3>";
+                echo "<button data-container='body' data-trigger='hover click'  data-placement='top' type='button' class='btn btn-info' data-toggle='popover'
+                            data-content='$columna2[Descripcion]'>Detalles...</button>";
+                echo ' </div>';
+                echo '</div>';
+                echo '</div>';
+            }
+        }
+        ?>
+
+
+     <!--   <div class="col-xs-12 col-sm-6 col-md-3">
             <div class="thumbnail x" style="height: 443px;">
                 <div style="border-radius: 0px 6px 6px 0px;background-color: #FFA726;float: left;margin-left: -6px;margin-top: 20px;opacity: .8;position: absolute;width: 150px;height: 25px"><p style="color: white;;float: right;margin-right: 5px;;margin-top: 2%">Nuevo producto</p></div>
                 <div style="height: 10px" class="divhide"></div>
@@ -532,7 +584,7 @@ PANEL DE IMAGEN REDONDA-->
                     <p>Mermelada sabor Guayaba, Manzana y Tamarindo, producto Chihuahuense.</p>
                 </div>
             </div>
-        </div>
+        </div>-->
 
     </div>
 </div>
@@ -575,21 +627,13 @@ PANEL DE IMAGEN REDONDA-->
                 Col. Centro<br />
                 Chihuahua, Chihuahua,<br />
                 México 31000
-
             </li>
             <li class="fa-phone">(614) 4-47-48-59</li>
             <li class="fa-envelope"><a>Alejandro@hotmail.com</a></li>
             <li class="fa-envelope"><a>Alejandro@hotmail.com</a></li>
             <li class="fa fa-facebook-official"><a href="#">Casart Chihuahua</a></li>
-
         </ul>
-        <ul class="copyright">
-
-        </ul>
-
-
-
-
+        <ul class="copyright"></ul>
     </div>
 </section>
 
