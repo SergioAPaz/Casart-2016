@@ -16,8 +16,9 @@ $filas=mysqli_query($conexiondb,$primera);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--CSS'S-->
     <link rel="stylesheet" href="assets/bootstrap-3.3.5-dist/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/css/ArticulosVarios.css">
     <link rel="stylesheet" href="assets/css/StylesNavbar.css">
+    <link rel="stylesheet" href="assets/css/ArticulosVarios.css">
+
     <link type="text/css" rel="stylesheet" href="assets/css/Fonts%20navbar/fonts/fonts.css"/>
     <link rel="stylesheet" href="fonts/fonts.css">
     <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -208,7 +209,20 @@ $filas=mysqli_query($conexiondb,$primera);
     </div>
 </div>
 
-<br><br>
+<br>
+
+
+
+
+<!--SEPARADOR-->
+<header>
+    <div class="container" style="background-color: #5D4037; margin-left: 0%; margin-right: 20%" >
+        <!--<h3 class="pull-right" style="color: #ffffff;ve"  >Catalogo de productos en venta</h3>-->
+        <p class="pull-right parrafo516"><span style="color: #ffa000">Catalogo de productos en venta</span></p>
+    </div>
+</header>
+
+<br>
 
 <!--CATALOGO-->
 <div class="container-fluid">

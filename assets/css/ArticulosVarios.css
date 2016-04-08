@@ -160,3 +160,21 @@ hr.star-light:after {
     max-width: 70%;
     }
 }
+
+
+
+.parrafo516{
+    vertical-align: middle;
+    font-size: 25px;
+    margin-top: .5%;
+    color: #ffffff
+}
+
+@media screen and (max-width: 550px) {
+    .parrafo516{
+
+        font-size: 20px;
+
+    }
+}
+

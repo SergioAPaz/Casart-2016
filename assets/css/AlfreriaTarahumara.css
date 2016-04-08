@@ -2,6 +2,10 @@
     font-size: 43px;
 }
 
+.Titulo958{
+    color: #FF9800;
+}
+
 @media screen and (max-width: 435px) {
     .titulo45{
     font-size: 35px;

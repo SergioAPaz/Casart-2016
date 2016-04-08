@@ -28,6 +28,12 @@ $(document).ready(function(){
     });
 });
 
+/*DESPLAZAMIENTO A PANEL DE COMENTARIOS*/
+function  desplazamiento() {
+    $('html, body').animate({
+        'scrollTop':   $('.cmntanchor').offset().top
+    }, 2000);
+}
 
 
 /*FANCYBOX*/

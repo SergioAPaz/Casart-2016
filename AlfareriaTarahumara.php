@@ -194,14 +194,14 @@ $filas=mysqli_query($conexiondb,$primera);
 </header>
 
 
-
+<!--PANEL DE INFORMACION-->
 <div class="container-fluid" style="padding-left: 0;padding-right: 0">
     <div class="row x" style="background-color: #009688;" >
         <div class="col-xs-12 col-md-6  pull-left" style="padding-right: 0;background-color: #1b6d85">
             <img src="images/alfareria%20big.png" class="img-responsive" style="max-height: 550px" alt="Responsive image" >
         </div>
         <div class="col-sm-12 col-md-6   pull-right style566 " >
-            <h1 class="sdf6513">Alfarería Tarahumara</h1>
+            <h1 class="Titulo958">Alfarería Tarahumara</h1>
             <p style="font-size: 15px">
                 La producción de artesanías ayuda a los pobladores nativos a preservar el conocimiento transmitido por sus antepasados,
                 lo que se ha traducido en el fortalecimiento de la economía indígena y para manifestar el arte popular. Hijas y nietas han adquirido
@@ -214,52 +214,11 @@ $filas=mysqli_query($conexiondb,$primera);
                 derivadas de la original olla tesgüinera.</a>
                 <br class="desaparece85"><br class="desaparece85"><a class="desaparece85" style="color: white">Parte de la producción alfarera indígena destinada a la venta, sigue innovaciones en los diseños que se ajustan a la demanda del
                 mercado; fundamentalmente ollas y vasijas con propósitos ornamentales.</a>
-
             </p>
         </div>
     </div>
     <hr style="height: 6px;width: 100%;background-color: #FF9800;margin-top: 0;border-color: #FF9800;margin-bottom: 10px">
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--PANEL DE IMAGEN E HISTORIA-->
-<!--<div class="container-fluid" >
-    <div class="row deslizamiento" style="background-color: #009688;margin-left: 100%">
-        <div id="relleno" style="height: 630px"></div>
-        <div class="col-xs-12 col-sm-8 imagen415" style="display:none;padding-right: 0;padding-left: 0;">
-                <img src="images/alfareria.jpg" class="img-responsive pull-left" alt="Responsive image">
-        </div>
-        <div class="col-xs-12 col-sm-4 descripcion" style=" display:none;color: #ffffff; ">
-            <br>
-            <p class="titulo45" style="color: #ffa000"> Alfarería Tarahumara</p>
-            <p style="font-size: 15px">La producción de artesanías ayuda a los pobladores nativos a preservar el conocimiento transmitido por sus antepasados,
-                lo que se ha traducido en el fortalecimiento de la economía indígena y para manifestar el arte popular. Hijas y nietas han adquirido
-                experiencia y son reconocidas artesanas; los hombres jóvenes y viejos, en cambio, se han vuelto especialistas en la elaboración de arcos
-                y flechas, escaleras de madera, cubetas, bastones y artículos de piel.
-                <br>  <br>
-               <span class="hidden-md hidden-sm"> La mayoría de este tipo de objetos son principalmente para uso doméstico, están destinados a la preparación de los alimentos,
-                contener líquidos y almacenar víveres; entre ellos se encuentran tinajas, botellones, macetas, jarras, tazas, platos, azucareras y ollas
-                de muy diversas formas y dimensiones. En la alfarería tarahumara, vale una mención especial la enorme variedad de piezas ornamentales
-                derivadas de la original olla tesgüinera.</span>
-                <br class="hidden-md hidden-sm">  <br class="hidden-md hidden-sm">
-                <span class="hidden-md hidden-sm">Parte de la producción alfarera indígena destinada a la venta, sigue innovaciones en los diseños que se ajustan a la demanda del
-                mercado; fundamentalmente ollas y vasijas con propósitos ornamentales. </span></p>
-        </div>
-    </div>
-</div>-->
 
 <br>
 

@@ -196,7 +196,7 @@ $filas=mysqli_query($conexiondb,$primera);
 
 
 <div class="container-fluid" style="padding-left: 0;padding-right: 0">
-    <div class="row x" style="background-color: #FFCA28;" >
+    <div class="row x" style="background-color: #FFB300;" >
         <div class="col-xs-12 col-md-7  pull-left" style="padding-right: 0">
             <img src="images/textilestarahumaras.jpg" class="img-responsive" alt="Responsive image" >
         </div>

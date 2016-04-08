@@ -203,7 +203,7 @@ $filas=mysqli_query($conexiondb,$primera);
             <img src="images/musica.jpg" class="img-responsive" alt="Responsive image" style=" max-height: 550px;filter: sepia(100%);-webkit-filter: sepia(100%);-moz-filter: sepia(100%);    -o-filter: sepia(100%);   -ms-filter: sepia(100%);">
         </div>
         <div class="col-sm-12 col-md-6   pull-right style566 " >
-            <h1 class="sdf6513" style="color: white">Artesania tarahumara de cuero</h1>
+            <h1 class="sdf6513" style="color: white">Instrumentos musicales tarahumara</h1>
             <p style="font-size: 15px;color: white">
                 En muchas comunidades el tarahumara ha adoptado la indumentaria occidental. Sin embargo, aún conserva la vestimenta
                 tradicional,preferentemente, en el caso de los hombres, y siempre en las mujeres. Las blusas o camisas de colores brillantes, estampados, a veces

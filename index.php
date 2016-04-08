@@ -97,7 +97,7 @@ $filas2=mysqli_query($conexiondb,$consultasql);
                         <a href='#'>Concursos</a>
                     </li>
                     <li>
-                        <a href='#'>Contacto</a>
+                        <a href="#" onclick="desplazamiento()">Contacto</a>
                     </li>
 
                     <?php
@@ -172,7 +172,7 @@ $filas2=mysqli_query($conexiondb,$consultasql);
                     <a href="#"><span class="glyphicon glyphicon-gift"></span>Concursos</a>
                 </li>
                 <li>
-                    <a href="#"><span class="glyphicon glyphicon-earphone"></span>Contacto</a>
+                    <a href="#cmntanchor"><span class="glyphicon glyphicon-earphone"></span>Contacto</a>
                 </li>
 
                 <?php
@@ -484,7 +484,7 @@ PANEL DE IMAGEN REDONDA-->
         ?>
 
 
-     <!--   <div class="col-xs-12 col-sm-6 col-md-3">
+  <!--     <div class="col-xs-12 col-sm-6 col-md-3">
             <div class="thumbnail x" style="height: 443px;">
                 <div style="border-radius: 0px 6px 6px 0px;background-color: #FFA726;float: left;margin-left: -6px;margin-top: 20px;opacity: .8;position: absolute;width: 150px;height: 25px"><p style="color: white;;float: right;margin-right: 5px;;margin-top: 2%">Nuevo producto</p></div>
                 <div style="height: 10px" class="divhide"></div>
@@ -496,95 +496,7 @@ PANEL DE IMAGEN REDONDA-->
                 </div>
             </div>
         </div>
-
-        <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="thumbnail x" style="height: 443px">
-                <div style="height: 10px" class="divhide"></div>
-                <a class="fancybox " href="images/productocondesc.jpg" data-fancybox-group="gallery" >
-                    <img class="img-responsive styleimg" style="max-height: 315px" src="images/productocondesc.jpg" alt="" /></a>
-                <div class="caption">
-                    <h3>Mermelada varios sabores</h3>
-                    <p>Mermelada sabor Guayaba, Manzana y Tamarindo, producto Chihuahuense.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="thumbnail x" style="height: 443px">
-                <div style="height: 10px" class="divhide"></div>
-                <a class="fancybox " href="images/productocondesc.jpg" data-fancybox-group="gallery" >
-                    <img class="img-responsive styleimg" style="max-height: 315px" src="images/productocondesc.jpg" alt="" /></a>
-                <div class="caption">
-                    <h3>Mermelada varios sabores</h3>
-                    <p>Mermelada sabor Guayaba, Manzana y Tamarindo, producto Chihuahuense.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="thumbnail x" style="height: 443px">
-                <div style="height: 10px" class="divhide"></div>
-                <a class="fancybox " href="images/productocondesc.jpg" data-fancybox-group="gallery" >
-                    <img class="img-responsive styleimg" style="max-height: 315px" src="images/productocondesc.jpg" alt="" /></a>
-                <div class="caption">
-                    <h3>Mermelada varios sabores</h3>
-                    <p>Mermelada sabor Guayaba, Manzana y Tamarindo, producto Chihuahuense.</p>
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-
-        <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="thumbnail x" style="height: 443px">
-                <div style="height: 10px" class="divhide"></div>
-                <a class="fancybox " href="images/productocondesc.jpg" data-fancybox-group="gallery" >
-                    <img class="img-responsive styleimg" style="max-height: 315px" src="images/productocondesc.jpg" alt="" /></a>
-                <div class="caption">
-                    <h3>Mermelada varios sabores</h3>
-                    <p>Mermelada sabor Guayaba, Manzana y Tamarindo, producto Chihuahuense.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="thumbnail x" style="height: 443px">
-                <div style="height: 10px" class="divhide"></div>
-                <a class="fancybox " href="images/productocondesc.jpg" data-fancybox-group="gallery" >
-                    <img class="img-responsive styleimg" style="max-height: 315px" src="images/productocondesc.jpg" alt="" /></a>
-                <div class="caption">
-                    <h3>Mermelada varios sabores</h3>
-                    <p>Mermelada sabor Guayaba, Manzana y Tamarindo, producto Chihuahuense.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="thumbnail x" style="height: 443px">
-                <div style="height: 10px" class="divhide"></div>
-                <a class="fancybox " href="images/productocondesc.jpg" data-fancybox-group="gallery" >
-                    <img class="img-responsive styleimg" style="max-height: 315px" src="images/productocondesc.jpg" alt="" /></a>
-                <div class="caption">
-                    <h3>Mermelada varios sabores</h3>
-                    <p>Mermelada sabor Guayaba, Manzana y Tamarindo, producto Chihuahuense.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="thumbnail x" style="height: 443px">
-                <div style="height: 10px" class="divhide"></div>
-                <a class="fancybox " href="images/productocondesc.jpg" data-fancybox-group="gallery" >
-                    <img class="img-responsive styleimg" style="max-height: 315px" src="images/productocondesc.jpg" alt="" /></a>
-                <div class="caption">
-                    <h3>Mermelada varios sabores</h3>
-                    <p>Mermelada sabor Guayaba, Manzana y Tamarindo, producto Chihuahuense.</p>
-                </div>
-            </div>
-        </div>-->
+-->
 
     </div>
 </div>
@@ -599,7 +511,7 @@ PANEL DE IMAGEN REDONDA-->
 
 
 <!--FORMULARIO DE CONTACTOS-->
-<section id="footer" class="aqui" style="color: #FAFAFA">
+<a name="cmntanchor"><section id="footer"  class="aqui cmntanchor" style="color: #FAFAFA"></a>
     <hr style="height: 6px;width: 100%;background-color: #FF9800;border-color: #FF9800;margin-bottom: 10px">
     <div class="inner">
         <h2 class="major">CONTACTANOS</h2>

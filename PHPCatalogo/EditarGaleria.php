@@ -5,7 +5,7 @@ include('../conexion.php');
 $id=$_GET['id'];
 
 $consulta=<<<SQL
-SELECT Titulo,Descripcion FROM catalogo WHERE id = '$id'
+SELECT Titulo,Descripcion,Nuevo_producto FROM catalogo WHERE id = '$id'
 LIMIT 1
 SQL;
 
@@ -23,8 +23,8 @@ $columnas= mysqli_fetch_assoc($filas);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--CSS'S-->
     <link rel="stylesheet" href="../assets/bootstrap-3.3.5-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/EditarGaleria.css">
     <link rel="stylesheet" href="../assets/css/PanelAdmin.css">
-
     <link rel="stylesheet" href="../assets/css/StylesNavbar.css">
     <link type="text/css" rel="stylesheet" href="../assets/css/Fonts%20navbar/fonts/fonts.css"/>
 
@@ -53,10 +53,29 @@ $columnas= mysqli_fetch_assoc($filas);
                     <label class="text-muted" for = "name">Descripcion del producto:</label>
                     <textarea rows="3" id="desc" class = "form-control" name="txtdesc" placeholder = "Descripcion..." maxlength="500"  pattern="^\s*[a-zA-Z0-9ñÑ-_,.,\s]+\s*" required><?php echo $columnas['Descripcion']; ?></textarea>
                     <input type="hidden" name="idgaleria" value="<?php echo $id; ?>"/>
+                    <!--BOTON NUEVO PRODUCTO-->
+                    <?php
+                    if (($columnas['Nuevo_producto'] == 'Si')) {
+                    echo '<div class="checkbox" style="margin-left: 0px">';
+                   echo  '<label><input type="hidden" name="btnnewproduct" class=""  value="Si">';
+                    echo '<label style="margin-top: 8px"><input type="checkbox" name="btnnewproduct"  value="No">Eliminar etiqueta de <span style="color: #1976D2">nuevo producto</span>?</label>';
+                    echo '</div>';
+                    }else if(($columnas['Nuevo_producto'] == 'No')) {
+                        echo '<div class="checkbox" style="margin-left: 0px">';
+                        echo  '<label><input type="hidden" name="btnnewproduct" class=""  value="No">';
+                        echo '<label style="margin-top: 8px"><input type="checkbox" name="btnnewproduct"  value="Si">Incluir etiqueta de <span style="color: #1976D2">nuevo producto</span>?</label>';
+                        echo '</div>';
+                    }
+                    ?>
                 </div>
-                <button type = "submit" class = "btn btn-primary">Modificar</button>
-                <button class = "btn btn-primary" onclick="formReset()">Limpiar</button>
+                </div>
+                <button type = "submit" class = "btn btn-primary button56">Modificar</button>
+                <button class = "btn btn-primary button56" onclick="formReset()">Limpiar</button>
             </form>
         </div>
     </div>
 </div>
+
+
+</body>
+</html>

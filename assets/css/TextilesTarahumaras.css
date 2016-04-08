@@ -114,13 +114,19 @@ padding-left: 30px;
     }
 }
 
-@media screen and (max-width:1098px) and (min-width: 993px){
-    .sdf6513{
+@media screen and (max-width:1098px) and (min-width: 993px) {
+    .sdf6513 {
         font-size: 25px;
+
+    }
+}
+
+.sdf6513{
+        color: white;
     }
 
 
-}
+
 
 
 
