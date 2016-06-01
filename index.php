@@ -516,21 +516,21 @@ PANEL DE IMAGEN REDONDA-->
     <div class="inner">
         <h2 class="major">CONTACTANOS</h2>
         <p>¿Tienes algo interesante que contarnos?, Dudas de nuestros articulos, Existencias, Contactanos!.</p>
-        <form method="post" action="PHPCatalogo/GuardarComentariosPHP.php">
+        <form method="post" action="<?php echo htmlspecialchars("PHPCatalogo/GuardarComentariosPHP.php");?>">
             <div class="field">
                 <label for="name">NOMBRE</label>
-                <input type="text" name="name" id="name" />
+                <input type="text" name="name" id="name" class="validar45" required/>
             </div>
             <div class="field">
                 <label for="email">EMAIL</label>
-                <input type="email" name="email" id="email" />
+                <input type="email" name="email" id="email" class="validar46" required/>
             </div>
             <div class="field">
                 <label for="message">MENSAJE</label>
-                <textarea name="message" id="message" rows="4"></textarea>
+                <textarea name="message" id="message" rows="4" class="validar47"  required></textarea>
             </div>
             <ul class="actions">
-                <li><input type="submit"  value="ENVIAR MENSAJE" /></li>
+                <li><input type="button"  class="btn64"  value="ENVIAR MENSAJE" /></li>
             </ul>
         </form>
         <ul class="contact">
@@ -540,14 +540,16 @@ PANEL DE IMAGEN REDONDA-->
                 Chihuahua, Chihuahua,<br />
                 México 31000
             </li>
+
             <li class="fa-phone">(614) 4-47-48-59</li>
             <li class="fa-envelope"><a>Alejandro@hotmail.com</a></li>
             <li class="fa-envelope"><a>Alejandro@hotmail.com</a></li>
             <li class="fa fa-facebook-official"><a href="#">Casart Chihuahua</a></li>
         </ul>
         <ul class="copyright"></ul>
+        
     </div>
-</section>
+</section></a>
 
 
 

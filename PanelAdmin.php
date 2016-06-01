@@ -38,7 +38,7 @@ include ("BloqueDeSeguridad.php");
 include("conexion.php");
 
 $consulta=<<<SQL
-    SELECT id,Titulo,Descripcion, DATE_FORMAT(Fecha_alta,'%d/%m/%Y %H:%i')as Fecha_alta,urlimagen,Galeria,Nuevo_producto,Usuario FROM catalogo
+    SELECT id,Titulo,Descripcion, DATE_FORMAT(Fecha_alta,'%d/%m/%Y %H:%i')as Fecha_alta,Galeria,Nuevo_producto,Usuario FROM catalogo
 SQL;
 
 $filas =mysqli_query($conexiondb,$consulta);
@@ -265,7 +265,6 @@ $filas =mysqli_query($conexiondb,$consulta);
                             <th style="font-size: 14px;color: #F57C00">Titulo</th>
                             <th style="font-size: 14px;color: #F57C00">Descripcion</th>
                             <th style="font-size: 14px;color: #F57C00">Fecha de alta</th>
-                            <th style="font-size: 14px;color: #F57C00">Imagen</th>
                             <th style="font-size: 14px;color: #F57C00">Galeria</th>
                             <th style="font-size: 14px;color: #F57C00">Nuevo?</th>
                             <th style="font-size: 14px;color: #F57C00">Usuario</th>
@@ -284,7 +283,6 @@ $filas =mysqli_query($conexiondb,$consulta);
                         echo "<td>$columna[Titulo]</td>";
                         echo "<td>$columna[Descripcion]</td>";
                         echo "<td>$columna[Fecha_alta]</td>";
-                        echo "<td>$columna[urlimagen]</td>";
                         echo "<td>$columna[Galeria]</td>";
                         echo "<td>$columna[Nuevo_producto]</td>";
                         echo "<td>$columna[Usuario]</td>";

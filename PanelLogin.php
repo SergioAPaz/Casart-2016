@@ -184,9 +184,9 @@ session_destroy();
             <form method="POST"  id="flogin" action="verificar.php">
                 <img src="images/logo.png" alt="Responsive image" class="img-responsive img-circle" style=";display: block;margin: auto;margin-bottom: 20px;margin-top: -30px"/>
                 <label>Nombre de usuario:</label>
-                <input  type="text" name="user"  id="name" class="form-control" placeholder="Usuario" maxlength="59"  pattern="^\s*[a-zA-Z0-9ñÑ,.,\s]+\s*" required style="width:100%">
+                <input  type="text" name="user"  id="name" class="form-control" placeholder="Usuario" maxlength="25"  pattern="^\s*[a-zA-Z0-9ñÑ,.,\s]+\s*" required style="width:100%">
                 <label style="margin-top: 10px  ">Contraseña:</label>
-                <input type="password" name="pw"  id="pw" class="form-control"  placeholder="Contraseña" maxlength="59"  pattern="^\s*[a-zA-Z0-9ñÑ,.,\s]+\s*" required>
+                <input type="password" name="pw"  id="pw" class="form-control"  placeholder="Contraseña" maxlength="25"  pattern="^\s*[a-zA-Z0-9ñÑ,.,\s]+\s*" required>
                 <p id="mensaje" style="color: red;margin-top: 10px"></p>
                 <button type="submit" class="btn btn-warning"  style="text-align: center">Ingresar</button>
                 <button class = "btn btn-warning" onclick="formReset()">Limpiar</button>

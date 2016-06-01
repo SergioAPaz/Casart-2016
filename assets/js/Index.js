@@ -36,6 +36,120 @@ function  desplazamiento() {
 }
 
 
+/*
+function  CampoVacio() {
+    if (/^\s*$/.test(campo.value)) {
+        alert("no mames esta vacio");
+    }
+}
+
+
+
+*/
+
+
+/*
+/!*DETECCION DE CARACTERES ESPECIALES*!/
+function  CampoVacio() {
+    $('.validar45').keyup(function () {
+
+
+
+        var inputVal = $(this).val();
+        var characterReg = /^\s*[a-zA-Z0-9ñÑ.,,\s]+\s*$/;
+
+        if (!characterReg.test(inputVal)) {
+            $(this).after('<span class="MensajeError"><br/>No se permiten caracteres especiales<br/></span>');
+            $('.btn64').attr('type', 'reset');
+        } else {
+            $('.btn64').attr('type', 'submit');
+
+        }
+    });
+
+
+}
+*/
+
+/*REPARAR LA SECCION DE COMENTARIOS YA QUE EL ALGORITMO NO ESTA FUNCIONANDO, NO SE RESPETA LA REGULAR EXPRESION*/
+/*DETECCION DE CARACTERES ESPECIALES*/
+
+
+var campo1=0;
+var campo2=0;
+var campo3=0;
+
+$(document).ready(function(){
+
+
+    $('.validar45').keyup(function() {
+        $('span.error-keyup-2').remove();
+        var inputVal = $('.validar45').val();
+        var characterReg = /^\s*[a-zA-Z0-9ñÑ@.,\s]+\s*$/;
+        if((!characterReg.test(inputVal))) {
+            $(this).after('<span class="error error-keyup-2"><br/>No se permiten caracteres especiales<br/></span>');
+            /*$('.btn64').attr('type', 'reset');*/
+            campo1=1;
+        }else{
+            campo1=0;
+            $('span.error-keyup-2').remove();
+        }
+        /*    $('.btn64').attr('type', 'submit');*/
+    });
+
+    $('.validar46').keyup(function() {
+        $('span.error-keyup-3').remove();
+        var inputVal = $('.validar46').val();
+        var characterReg = /^\s*[a-zA-Z0-9ñÑ@.,\s]+\s*$/;
+        if((!characterReg.test(inputVal))) {
+            $(this).after('<span class="error error-keyup-3"><br/>No se permiten caracteres especiales<br/></span>');
+            /*$('.btn64').attr('type', 'reset');*/
+            campo2=1;
+        }else {
+            campo2=0;
+            $('span.error-keyup-3').remove();
+        }
+        /*    $('.btn64').attr('type', 'submit');*/
+    });
+
+    $('.validar47').keyup(function() {
+        $('span.error-keyup-4').remove();
+        var inputVal = $('.validar47').val();
+        var characterReg = /^\s*[a-zA-Z0-9ñÑ@.,\s]+\s*$/;
+        if((!characterReg.test(inputVal))) {
+            $(this).after('<span class="error error-keyup-4"><br/>No se permiten caracteres especiales<br/></span>');
+            /*$('.btn64').attr('type', 'reset');*/
+            campo3=1;
+        }else{
+            campo3=0;
+            $('span.error-keyup-4').remove();
+        }
+        /*    $('.btn64').attr('type', 'submit');*/
+    });
+
+
+
+
+});
+
+$(document).ready(function() {
+    if(campo3==1){
+        $('.btn64').attr('type', 'reset');
+        alert('caca');
+    }   else{
+        $('.btn64').attr('type', 'submit');
+        
+    }
+});
+
+function mialerta() {
+    alert(campo1);
+    alert(campo2);
+    alert(campo3);
+}
+
+
+
 /*FANCYBOX*/
 $(document).ready(function() {
     /*

@@ -5,6 +5,7 @@ include("conexion.php");
 
 $consulta=<<<SQL
     SELECT id,Fecha_de_comentario,Nombre,Email,Mensaje FROM  Comentarios0013
+    
 SQL;
 
 $filas =mysqli_query($conexiondb,$consulta);
@@ -29,6 +30,11 @@ $filas =mysqli_query($conexiondb,$consulta);
 </head>
 
 <body>
+<br><br><br><br><br><br><br>
+<?php
+
+echo $consulta;
+?>
 <header>
     <!--NAVBAR-->
     <!--Nav grande (Resolucion>790px)-->
