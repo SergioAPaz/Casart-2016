@@ -574,7 +574,7 @@ PANEL DE IMAGEN REDONDA-->
 
             <div class="posytam" id="ocultarmq5" style="margin-bottom: 15px"><img src="images/LogoHorizontal.png"></div>
 
-            <div  style="margin-top: 25px;margin-right: 90px;float: right;margin-bottom: 25px" class="ocultarmq" >
+            <div  style="margin-top: 25px;margin-right: 90px;float: right;margin-bottom: 25px;" class="ocultarmq" >
                 <div class="fb-page" data-href="https://www.facebook.com/Casa-De-Las-Artesanias-De-Chihuahua-457359271070862/"
                      data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
             </div>

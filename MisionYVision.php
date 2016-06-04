@@ -87,6 +87,7 @@ session_start();
                                 echo "<li><a  href='NuevosUsuarios.php'><span class='glyphicon glyphicon-user' style='margin-right: 5px'></span>  Nuevo usuario</a></li>";
                             }
                             echo "<li ><a href='PanelAdmin.php'><span class='glyphicon glyphicon-th' style='margin-right: 5px'></span> Panel de control</a></li>";
+                            echo "<li ><a href='ContactoComentarios.php'><span class='glyphicon glyphicon-comment' style='margin-right: 5px'></span> Comentarios</a></li>";
                             echo "<li ><a href='DestruirSesion.php'><span class='glyphicon glyphicon-off' style='margin-right: 5px'></span> Cerrar Sesion</a></li>";
                             echo "</ul>";
                             echo "</li>";
@@ -163,6 +164,7 @@ session_start();
 
                         }
                         echo " <li><a href='PanelAdmin.php'><span class='icon-ctrl'></span>Panel de control</a> </li>";
+                        echo " <li><a href='ContactoComentarios.php'><span class='icon-ctrl'></span>Comentarios</a> </li>";
                         echo " <li><a href='DestruirSesion.php'><span class='icon-ctrl'></span>Cerrar sesion</a> </li>";
                         echo "</ul>";
                         echo "</li>";
