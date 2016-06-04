@@ -30,11 +30,7 @@ $filas =mysqli_query($conexiondb,$consulta);
 </head>
 
 <body>
-<br><br><br><br><br><br><br>
-<?php
 
-echo $consulta;
-?>
 <header>
     <!--NAVBAR-->
     <!--Nav grande (Resolucion>790px)-->
@@ -90,6 +86,11 @@ echo $consulta;
                         {
                             echo "<li class='active has-sub pull-right' ><a href='#'>Administrador</a>";
                             echo "<ul>";
+
+                            if ($_SESSION["RolCuenta"] == "Administrador")
+                            {
+                                echo "<li ><a href='NuevosUsuarios.php'><span class='glyphicon glyphicon-user' style='margin-right: 5px'></span> Nuevo usuario</a></li>";
+                            }
 
                             echo "<li ><a href='PanelAdmin.php'><span class='glyphicon glyphicon-th' style='margin-right: 5px'></span> Panel de control</a></li>";
                             echo "<li ><a href='DestruirSesion.php'><span class='glyphicon glyphicon-off' style='margin-right: 5px'></span> Cerrar Sesion</a></li>";
@@ -162,6 +163,12 @@ echo $consulta;
                         echo "<li class='submenu'>";
                         echo "<a><span class='glyphicon glyphicon-tree-conifer'></span>Administrador<span class='glyphicon glyphicon-chevron-down pull-right'></span> </a>";
                         echo "<ul class='children'>";
+
+                        if ($_SESSION["RolCuenta"] == "Administrador")
+                        {
+                            echo " <li><a href='NuevosUsuarios.php'><span class='icon-ctrl'></span>Nuevo usuario</a> </li>";
+                        }
+
                         echo " <li><a href='PanelAdmin.php'><span class='icon-ctrl'></span>Panel de control</a> </li>";
                         echo " <li><a href='DestruirSesion.php'><span class='icon-ctrl'></span>Cerrar sesion</a> </li>";
                         echo "</ul>";
@@ -176,64 +183,81 @@ echo $consulta;
 </header>
 
 
-<br>
-<!--BASE DE DATOS DE COMENTARIOS-->
+<br><br>
 
-<div class="container paraelfooter" id="estilo54" style="background-color: #EEEEEE;width: 90%">
+<!--TABLA DE COMENTARIOS-->
+
+<div class="container paraelfooter" id="tabla" style="background-color: #EEEEEE;width: 90%">
     <br/>
-<div class="panel panel-default">
-    <div class="panel-body">
-        <p class="alert fondo456" style="font-size: 20px;background-color: #FFCA28;color: #ffffff"><span>Comentarios de usuarios</span></p>
-        <div class="table-responsive" style="border-radius: 10px;margin-top: 12px">
-            <table class="table  table-bordered table-hover table-condensed tab" id="regTable"  style="background-color: #ffffff;text-align: center;vertical-align: middle;">
-                <thead>
-                <tr style="background-color: #F5F5F5">
-                    <th style="font-size: 14px;color: #F57C00">#</th>
-                    <th style="font-size: 14px;color: #F57C00">Fecha de comentario</th>
-                    <th style="font-size: 14px;color: #F57C00">Nombre</th>
-                    <th style="font-size: 14px;color: #F57C00">Email</th>
-                    <th style="font-size: 14px;color: #F57C00">Mensaje</th>
-                    <th style="font-size: 14px;color: #F57C00">Acciones</th>
-                </tr>
-                </thead>
+    <div class="panel panel-default" id="tabddla">
+        <div class="panel-body">
+            <p class="alert fondo456" style="font-size: 20px;background-color: #FFCA28;color: #ffffff"><span>Comentarios de usuarios</span></p>
+            <div class="table-responsive" style="border-radius: 10px;margin-top: 12px">
+                <table class="table  table-bordered table-hover table-condensed tab" id="regTable"  style="background-color: #ffffff;text-align: center;vertical-align: middle;">
+                    <thead>
+                    <tr style="background-color: #F5F5F5">
+                        <th style="font-size: 14px;color: #F57C00">#</th>
+                        <th style="font-size: 14px;color: #F57C00">Fecha de comentario</th>
+                        <th style="font-size: 14px;color: #F57C00">Nombre</th>
+                        <th style="font-size: 14px;color: #F57C00">Email</th>
+                        <th style="font-size: 14px;color: #F57C00">Mensaje</th>
+                        <th style="font-size: 14px;color: #F57C00">Acciones</th>
+                    </tr>
+                    </thead>
 
-                <tbody>
-                <?php
-                $count=0;
-                while ($columna=mysqli_fetch_assoc($filas))
-                {
-                    $count=$count+1;
-                    echo "<tr>";
-                    echo "<td>$count</td>";
-                    echo "<td>$columna[Fecha_de_comentario]</td>";
-                    echo "<td>$columna[Nombre]</td>";
-                    echo "<td>$columna[Email]</td>";
-                    echo "<td>$columna[Mensaje]</td>";
-                    echo "<td>
-                        <a href='PHPCatalogo/BorrarComentarios.php?id=$columna[id]'>Borrar</a></td>";
-                    echo "</tr>";
-                }
-                ?>
-                </tbody>
-            </table>
-
-
+                    <tbody>
+                    <?php
+                    $count=0;
+                    while ($columna=mysqli_fetch_assoc($filas))
+                    {
+                        $count=$count+1;
+                        echo "<tr>";
+                        echo "<td>$count</td>";
+                        echo "<td>$columna[Fecha_de_comentario]</td>";
+                        echo "<td>$columna[Nombre]</td>";
+                        echo "<td>$columna[Email]</td>";
+                        echo "<td>$columna[Mensaje]</td>";
+                        echo "<td>
+                            <a href='PHPCatalogo/BorrarComentarios.php?id=$columna[id]'>Borrar</a></td>";
+                        echo "</tr>";
+                    }
+                    ?>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>
-</div>
 
 
+<br><br><br><br>
 
 
+<!--BOTON IR ARRIBA-->
+<span class="ir-arriba icon-arrow-up-thick"></span>
 
+
+<!--PIE DE PAGINA-->
 <footer>
-    <div class="container-fluid">
-        <div class="row" style="background-color: #4E342E;height: 200px">
-            <p style="background-color: #ffffff;padding: 20px;font-size: 14px">© Casa de las Artesanías del Estado de Chihuahua. Todos los derechos reservados.</p>
+    <div class="container-fluid margintop">
+        <div class="row" style="background-color: #3E2723;height: auto">
+
+            <div >
+                <p  style="color:#212121;background-color: #FAFAFA;padding: 20px;font-size: 14px;margin: 0">© Casa de las Artesanías del Estado de Chihuahua. Todos los derechos reservados. </p>
+            </div>
+
+            <div class="posytam0" id="ocultarmq3" style="margin-bottom: 15px;"><img  style="border-radius: 100px" src="images/MisionVision.png"></div>
+
+            <div class="posytam0" id="ocultarmq2" style="margin-bottom: 15px"><img  style="border-radius: 30px" src="images/ChihuahuaVive.jpg"></div>
+
+            <div class="posytam" id="ocultarmq5" style="margin-bottom: 15px"><img src="images/LogoHorizontal.png"></div>
+
+
+
         </div>
     </div>
 </footer>
+
 
 
 
@@ -242,7 +266,7 @@ echo $consulta;
 <script src="assets/jquery/jquery-1.11.3.min.js"></script>
 <script src="assets/bootstrap-3.3.5-dist/js/bootstrap.js"></script>
 <script src="assets/js/NavbarResponsive.js"></script>
-
+<script src="assets/js/ContactoComentarios.js"></script>
 <script  src="assets/js/scrollbar/jquery.nicescroll.min.js"></script><!--scrollbar-->
 
 

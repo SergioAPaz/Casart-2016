@@ -3,13 +3,6 @@
 include ("BloqueDeSeguridadNewAccount.php");
 include("conexion.php");
 
-/*Funcion para validar campos con entidades HTMLde cualquier manera no son validos & y ; por RegExp PHP*/
-function test_input($data)
-{
-    /*$data = htmlspecialchars($data);*/
-    return $data;
-}
-
 /*Validamos que esten todos los campos requeridos del formulario*/
 if ($_SERVER["REQUEST_METHOD"] == "POST")
 {
@@ -27,11 +20,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     else
     {
         /*Valida que las variables de los campos se transformen en entidades HTML*/
-        $txtnombre = test_input($_POST['txtnombre']);
-        $txtapellido = test_input($_POST['txtapellido']);
-        $txtusuario = test_input($_POST['txtusuario']);
-        $txtcontrasena = test_input($_POST['txtcontrasena']);
-        $txtrol = test_input($_POST['txtrol']);
+        $txtnombre = $_POST['txtnombre'];
+        $txtapellido = $_POST['txtapellido'];
+        $txtusuario = $_POST['txtusuario'];
+        $txtcontrasena = $_POST['txtcontrasena'];
+        $txtrol = $_POST['txtrol'];
 
         /*Validacion con expresiones reulares*/
         if (    (preg_match("/^[a-zA-Z0-9,._ñÑ ]*$/", $txtnombre))  &&     (preg_match("/^[a-zA-Z0-9,._ñÑ ]*$/", $txtapellido))   &&  (preg_match("/^[a-zA-Z0-9,._ñÑ ]*$/", $txtusuario))     &&

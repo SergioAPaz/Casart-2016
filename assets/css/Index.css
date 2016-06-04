@@ -139,14 +139,6 @@
 
 
 
-
-
-.fb-page{
-    margin-top: 20px;
-    margin-right: 85px;
-    float: right;
-}
-
 .ir-arriba {
     z-index: 1;
     display:none;
@@ -161,8 +153,6 @@
     right:10px;
     box-shadow: 5px 7px 7px rgba(0,0,0,0.5);
 }
-
-
 
 
 /*CSS DE CATALOGO*/
@@ -210,3 +200,68 @@
 
 }
 /*/CSS DE CATALOGO*/
+
+
+
+/*FOOTER*/
+.posytam0{
+    margin-top: 45px;
+    margin-left: 25px;
+
+    float: left;
+    max-width: 155px;
+
+    height: auto;
+
+}
+
+
+.posytam{
+    margin-top: 40px;
+
+    float: left;
+    width: 430px;
+    height: auto;
+
+}
+
+.posytam0>img{
+    max-width: 95%;
+}
+
+.posytam>img{
+    max-width: 95%;
+}
+
+@media screen and (max-width: 870px) {
+    .ocultarmq {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1290px) {
+    #ocultarmq2 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    #ocultarmq3 {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 860px) {
+    #ocultarmq4 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 487px) {
+    #ocultarmq5 {
+        max-width: 85%;
+
+    }
+}
+/*FOOTER*/

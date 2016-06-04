@@ -121,20 +121,27 @@ $filas =mysqli_query($conexiondb,$consulta);
                     <li><a href='#'>Concursos</a></li>
                     <li><a href='#'>Contacto</a></li>
 
-                    <li class='active has-sub pull-right' ><a href='#'>Administrador</a>
-                        <ul>
-                            <?php
-                            if ($_SESSION["RolCuenta"] == "Administrador")
+                        <?php
+                        if (isset($_SESSION["username"]))
+                        {
+                            if ($_SESSION["username"] == "SI")
                             {
-                                echo "<li ><a href='NuevosUsuarios.php'><span class='glyphicon glyphicon-user' style='margin-right: 5px'></span> Nuevo usuario</a></li>";
+                                echo "<li class='active has-sub pull-right' ><a href='#'>Administrador</a>";
+                                echo "<ul>";
+
+                                if ($_SESSION["RolCuenta"] == "Administrador")
+                                {
+                                    echo "<li ><a href='NuevosUsuarios.php'><span class='glyphicon glyphicon-user' style='margin-right: 5px'></span> Nuevo usuario</a></li>";
+                                }
+
+                                echo "<li ><a href='ContactoComentarios.php'><span class='glyphicon glyphicon-comment' style='margin-right: 5px'></span> Comentarios</a></li>";
+
+                                echo "<li ><a href='DestruirSesion.php'><span class='glyphicon glyphicon-off' style='margin-right: 5px'></span> Cerrar Sesion</a></li>";
+                                echo "</ul>";
+                                echo "</li>";
                             }
-                            ?>
-                            <li ><a href='ContactoComentarios.php'><span class='glyphicon glyphicon-comment' style='margin-right: 5px'></span>Comentarios</a></li>
-                            <li ><a href='DestruirSesion.php'><span class='glyphicon glyphicon-off' style='margin-right: 5px'></span> Cerrar Sesion</a></li>
-
-                        </ul>
-                    </li>
-
+                        }
+                        ?>
 
                 </ul>
             </div>
@@ -184,22 +191,26 @@ $filas =mysqli_query($conexiondb,$consulta);
                     </ul>
                 <li><a href="#"><span class="glyphicon glyphicon-gift"></span>Concursos</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-earphone"></span>Contacto</a></li>
-
-                <li class="submenu">
-                    <a href="#"><span class="glyphicon glyphicon-tree-conifer"></span>Administrador<span class="glyphicon glyphicon-chevron-down pull-right"></span> </a>
-                    <ul class="children">
-                        <?php
+                
+                <?php
+                if (isset($_SESSION["username"]))
+                {
+                    if ($_SESSION["username"] == "SI")
+                    {
+                        echo "<li class='submenu'>";
+                        echo "<a><span class='glyphicon glyphicon-tree-conifer'></span>Administrador<span class='glyphicon glyphicon-chevron-down pull-right'></span> </a>";
+                        echo "<ul class='children'>";
                         if ($_SESSION["RolCuenta"] == "Administrador")
                         {
                             echo " <li><a href='NuevosUsuarios.php'><span class='icon-ctrl'></span>Nuevo usuario</a> </li>";
                         }
-                        ?>
-                        <li><a href="ContactoComentarios.php"><span class="icon-ctrl"></span>Comentarios</a> </li>
-                        <li><a href="DestruirSesion.php"><span class="icon-ctrl"></span>Cerrar sesion</a> </li>
-
-                    </ul>
-                </li>
-
+                        echo " <li><a href='ContactoComentarios.php'><span class='icon-ctrl'></span>Comentarios</a> </li>";
+                        echo " <li><a href='DestruirSesion.php'><span class='icon-ctrl'></span>Cerrar sesion</a> </li>";
+                        echo "</ul>";
+                        echo "</li>";
+                    }
+                }
+                ?>
 
             </ul>
         </nav>
@@ -301,24 +312,34 @@ $filas =mysqli_query($conexiondb,$consulta);
         </div>
     </div>
 
-    <br><br><br><br><br>
+
 
 </div>
 
-
+<br><br><br>
 
 <span class="ir-arriba icon-arrow-up-thick"></span>
 
+<!--PIE DE PAGINA-->
 <footer>
-    <div class="container-fluid">
-        <div class="row" style="background-color:   #4E342E;height: 200px">
-            <p style="background-color: #FAFAFA;padding: 20px;font-size: 14px">© Casa de las Artesanías del Estado de Chihuahua. Todos los derechos reservados.</p>
+    <div class="container-fluid margintop">
+        <div class="row" style="background-color: #3E2723;height: auto">
+
+            <div >
+                <p  style="color:#212121;background-color: #FAFAFA;padding: 20px;font-size: 14px;margin: 0">© Casa de las Artesanías del Estado de Chihuahua. Todos los derechos reservados. </p>
+            </div>
+
+            <div class="posytam0" id="ocultarmq3" style="margin-bottom: 15px;"><img  style="border-radius: 100px" src="images/MisionVision.png"></div>
+
+            <div class="posytam0" id="ocultarmq2" style="margin-bottom: 15px"><img  style="border-radius: 30px" src="images/ChihuahuaVive.jpg"></div>
+
+            <div class="posytam" id="ocultarmq5" style="margin-bottom: 15px"><img src="images/LogoHorizontal.png"></div>
+
+
+
         </div>
     </div>
 </footer>
-
-
-
 
 <script>
     $(document).ready(

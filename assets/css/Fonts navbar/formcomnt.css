@@ -1,8 +1,9 @@
 
 
 	.aqui {
+
 		background-color: #2e3141;
-		background-image: linear-gradient(to top, rgba(93, 64, 55, 0.93), rgba(46, 49, 65, 0.8)), url("bg.jpg");
+		background-image: linear-gradient(to top, rgba(93, 64, 55, 0.93), rgba(46, 49, 65, 0.8)), url("bg-compressor.jpg");
 		background-size: auto, cover;
 		background-attachment: fixed, fixed;
 		background-position: center, center;

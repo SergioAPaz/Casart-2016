@@ -511,72 +511,82 @@ PANEL DE IMAGEN REDONDA-->
 
 
 <!--FORMULARIO DE CONTACTOS-->
-<a name="cmntanchor"><section id="footer"  class="aqui cmntanchor" style="color: #FAFAFA"></a>
-    <hr style="height: 6px;width: 100%;background-color: #FF9800;border-color: #FF9800;margin-bottom: 10px">
-    <div class="inner">
-        <h2 class="major">CONTACTANOS</h2>
-        <p>¿Tienes algo interesante que contarnos?, Dudas de nuestros articulos, Existencias, Contactanos!.</p>
-        <form method="post" action="<?php echo htmlspecialchars("PHPCatalogo/GuardarComentariosPHP.php");?>">
-            <div class="field">
-                <label for="name">NOMBRE</label>
-                <input type="text" name="name" id="name" class="validar45" required/>
-            </div>
-            <div class="field">
-                <label for="email">EMAIL</label>
-                <input type="email" name="email" id="email" class="validar46" required/>
-            </div>
-            <div class="field">
-                <label for="message">MENSAJE</label>
-                <textarea name="message" id="message" rows="4" class="validar47"  required></textarea>
-            </div>
-            <ul class="actions">
-                <li><input type="button"  class="btn64"  value="ENVIAR MENSAJE" /></li>
-            </ul>
-        </form>
-        <ul class="contact">
-            <li class="fa-home">
-                Calle 2da   <br />
-                Col. Centro<br />
-                Chihuahua, Chihuahua,<br />
-                México 31000
-            </li>
-
-            <li class="fa-phone">(614) 4-47-48-59</li>
-            <li class="fa-envelope"><a>Alejandro@hotmail.com</a></li>
-            <li class="fa-envelope"><a>Alejandro@hotmail.com</a></li>
-            <li class="fa fa-facebook-official"><a href="#">Casart Chihuahua</a></li>
+<section style="position: relative">
+<a name="cmntanchor"><section id="footer"  class=" aqui cmntanchor" style="color: #FAFAFA">
+</a>
+<hr style="height: 6px;width: 100%;background-color: #FF9800;border-color: #FF9800;margin-bottom: 10px">
+<div class="inner">
+    <h2 class="major">CONTACTANOS</h2>
+    <p>¿Tienes algo interesante que contarnos?, Preguntas acerca nuestras artesanias, Contactanos!.</p>
+    
+    <form method="post" action="PHPCatalogo/GuardarComentariosPHP.php">
+        <div class="field">
+            <label for="name">NOMBRE</label>
+            <input type="text" name="name" id="name" class="validar1" maxlength="25" pattern="^\s*[a-zA-Z0-9ñÑ@_.\s]+\s*" required/>
+        </div>
+        <div class="field">
+            <label for="email">EMAIL</label>
+            <input type="email" name="email" id="email" class="validar2" maxlength="30" pattern="^\s*[a-zA-Z0-9ñÑ@_.\s]+\s*" required/>
+        </div>
+        <div class="field">
+            <label for="message">MENSAJE</label>
+            <textarea name="message" id="message" rows="4" class="validar3"  maxlength="400" pattern="^\s*[a-zA-Z0-9ñÑ@_.,\s]+\s*" required></textarea>
+        </div>
+        <ul class="actions">
+            <li><input type="submit"  class="btn64"  value="ENVIAR MENSAJE" /></li>
         </ul>
-        <ul class="copyright"></ul>
-        
-    </div>
-</section></a>
+    </form>
+    
+    <ul class="contact">
+        <li class="fa-home">
+            Calle 2da   <br />
+            Col. Centro<br />
+            Chihuahua, Chihuahua,<br />
+            México 31000
+        </li>
 
+        <li class="fa-phone">(614) 4-47-48-59</li>
+        <li class="fa-envelope"><a>Alejandro@hotmail.com</a></li>
+        <li class="fa-envelope"><a>Alejandro@hotmail.com</a></li>
+    </ul>
+    <ul class="copyright"></ul>
+</div>
 
+</section>
 
+<!--BOTON IR ARRIBA-->
 <span class="ir-arriba icon-arrow-up-thick"></span>
 
+
+<!--PIE DE PAGINA-->
 <footer>
     <div class="container-fluid margintop">
-        <div class="row" style="background-color: #3E2723;height: 290px">
+        <div class="row" style="background-color: #3E2723;height: auto">
+
            <div >
-                <p  style="background-color: #ffffff;padding: 20px;font-size: 14px;margin: 0">© Casa de las Artesanías del Estado de Chihuahua. Todos los derechos reservados.</p>
+                <p  style="color:#212121;background-color: #FAFAFA;padding: 20px;font-size: 14px;margin: 0">© Casa de las Artesanías del Estado de Chihuahua. Todos los derechos reservados.
+       <span id="ocultarmq4" style="float: right"><span>Dessarrollado por </span><a href="mailto:alejandroax@live.com.mx">Sergio Paz.</a> </p>
             </div>
-           <!-- <div class="col-xs-12 col-sm-5 pull-right" style="background-color: #5D4037;height: 230px">-->
-             <div  style="margin-top: 10px;margin-left: 10px">
-                    <div class="fb-page" data-href="https://www.facebook.com/pages/Casa-De-Las-Artesanias-De-Chihuahua/457359271070862?fref=ts"
-                         data-width="550" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false"
-                         data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote
-                                cite="https://www.facebook.com/pages/Casa-De-Las-Artesanias-De-Chihuahua/457359271070862?fref=ts"><a
-                                    href="https://www.facebook.com/pages/Casa-De-Las-Artesanias-De-Chihuahua/457359271070862?fref=ts">
-                                    Casa De Las Artesanias De Chihuahua</a></blockquote></div>
-                    </div>
-                </div>
-            <!--</div>-->
+
+            <div class="posytam0" id="ocultarmq3" style="margin-bottom: 25px"><img  style="border-radius: 100px" src="images/MisionVision.png"></div>
+
+            <div class="posytam0" id="ocultarmq2" style="margin-bottom: 15px"><img  style="border-radius: 30px" src="images/ChihuahuaVive.jpg"></div>
+
+            <div class="posytam" id="ocultarmq5" style="margin-bottom: 15px"><img src="images/LogoHorizontal.png"></div>
+
+            <div  style="margin-top: 25px;margin-right: 90px;float: right;margin-bottom: 25px" class="ocultarmq" >
+                <div class="fb-page" data-href="https://www.facebook.com/Casa-De-Las-Artesanias-De-Chihuahua-457359271070862/"
+                     data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+            </div>
+
         </div>
     </div>
 </footer>
 
 
+
+
+<!--SCRIPT PARA GOOGLE ANALYTICS-->
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -636,14 +646,17 @@ PANEL DE IMAGEN REDONDA-->
 </script><!--"ScrollBar"-->
 
 <!--SCRIPT FACEBOOK-->
+<div id="fb-root"></div>
 <script>(function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
         js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.3";
+        js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.6";
         fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script> <!--Facebook-->
+    }(document, 'script', 'facebook-jssdk'));</script>
 
+
+<!--SCRIPT SLIDESHOW-->
 <script>
     jQuery(document).ready(function ($) {
         var _CaptionTransitions = [];
@@ -714,7 +727,8 @@ PANEL DE IMAGEN REDONDA-->
         $(window).bind("orientationchange", ScaleSlider);
         //responsive code end
     });
-</script> <!--script del slideshow-->
+</script>
+
 </body>
 </html>
 

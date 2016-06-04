@@ -266,10 +266,23 @@ $filas=mysqli_query($conexiondb,$primera);
 
 <span class="ir-arriba icon-arrow-up-thick"></span>
 
+<!--PIE DE PAGINA-->
 <footer>
-    <div class="container-fluid">
-        <div class="row" style="background-color: #4E342E;height: 200px">
-            <p style="background-color: #ffffff;padding: 20px;font-size: 14px">© Casa de las Artesanías del Estado de Chihuahua. Todos los derechos reservados.</p>
+    <div class="container-fluid margintop">
+        <div class="row" style="background-color: #3E2723;height: auto">
+
+            <div >
+                <p  style="color:#212121;background-color: #FAFAFA;padding: 20px;font-size: 14px;margin: 0">© Casa de las Artesanías del Estado de Chihuahua. Todos los derechos reservados. </p>
+            </div>
+
+            <div class="posytam0" id="ocultarmq3" style="margin-bottom: 15px;"><img  style="border-radius: 100px" src="images/MisionVision.png"></div>
+
+            <div class="posytam0" id="ocultarmq2" style="margin-bottom: 15px"><img  style="border-radius: 30px" src="images/ChihuahuaVive.jpg"></div>
+
+            <div class="posytam" id="ocultarmq5" style="margin-bottom: 15px"><img src="images/LogoHorizontal.png"></div>
+
+
+
         </div>
     </div>
 </footer>

@@ -1,17 +1,21 @@
-#estilo54{
-    border: 1px solid transparent;
-    border-radius: 5px;
-}
+
 th{
     text-align: center;
     vertical-align: middle;
     color: #FAFAFA;
 }
 
+#tabla{
+
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
 
 /*MANDAR FOOTER HASTA ABAJO*/
 html, body {
     height: 100%;
+    background-color: rgb(78, 52, 46);
 }
 
 .paraelfooter {
@@ -20,3 +24,72 @@ html, body {
     height: 100%;
     margin: 0 auto -60px;
 }
+
+
+/*BOTON IR ARRIBA*/
+.ir-arriba {
+    z-index: 1;
+    display:none;
+    padding:15px;
+    /*margin: 10px;*/
+    background:#4E342E;
+    font-size:20px;
+    color:#fff;
+    cursor:pointer;
+    position: fixed;
+    bottom:20px;
+    right:10px;
+    box-shadow: 5px 7px 7px rgba(0,0,0,0.5);
+}
+
+
+/*FOOTER*/
+.posytam0{
+    margin-top: 25px;
+    margin-left: 35px;
+
+    float: left;
+    max-width: 155px;
+
+    height: auto;
+
+}
+
+
+.posytam{
+    margin-top: 20px;
+    margin-left: 10px;
+    float: left;
+    width: 430px;
+    height: auto;
+
+}
+
+.posytam0>img{
+    max-width: 90%;
+}
+
+.posytam>img{
+    max-width: 90%;
+}
+
+@media screen and (max-width: 620px) {
+    #ocultarmq2 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    #ocultarmq3 {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 487px) {
+    #ocultarmq5 {
+        max-width: 85%;
+
+    }
+}
+/*FOOTER*/

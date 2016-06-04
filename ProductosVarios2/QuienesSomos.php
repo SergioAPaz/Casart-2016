@@ -269,7 +269,8 @@ session_start();
             <span class="ir-arriba icon-arrow-up-thick" style="position: absolute"></span>
 
                     <div class="crow" style="background-color: #3E2723;height: 200px;width: 100%">
-                        <p style="background-color: #ffffff;padding: 20px;font-size: 14px;color: #000000;font-size: 17px">© 2009-2015 Casart Chihuahua Todos los derechos reservados.</p>
+                        <p  style="color:#212121;background-color: #FAFAFA;padding: 20px;font-size: 14px;margin: 0">© Casa de las Artesanías del Estado de Chihuahua. Todos los derechos reservados.
+                           </p>
                     </div>
 
 		</div>

@@ -1,19 +1,15 @@
 /*BOTON IR ARRIBA*/
 $(document).ready(function(){
-
     $('.ir-arriba').click(function(){
         $('body, html').animate({
             scrollTop: '0px'
         }, 300);
     });
-
     $(window).scroll(function(){
         if( $(this).scrollTop() > 150 ){
             $('.ir-arriba').slideDown(400);
-
         } else {
             $('.ir-arriba').slideUp(400);
-
         }
     });
 
@@ -36,18 +32,9 @@ function  desplazamiento() {
 }
 
 
-/*
-function  CampoVacio() {
-    if (/^\s*$/.test(campo.value)) {
-        alert("no mames esta vacio");
-    }
-}
 
 
-
-*/
-
-
+ 
 /*
 /!*DETECCION DE CARACTERES ESPECIALES*!/
 function  CampoVacio() {
@@ -75,78 +62,46 @@ function  CampoVacio() {
 /*DETECCION DE CARACTERES ESPECIALES*/
 
 
-var campo1=0;
-var campo2=0;
-var campo3=0;
-
-$(document).ready(function(){
 
 
-    $('.validar45').keyup(function() {
+$(document).ready(function()
+{
+    $('.validar1').keyup(function()
+    {
         $('span.error-keyup-2').remove();
-        var inputVal = $('.validar45').val();
+        var inputVal = $('.validar1').val();
         var characterReg = /^\s*[a-zA-Z0-9ñÑ@.,\s]+\s*$/;
-        if((!characterReg.test(inputVal))) {
-            $(this).after('<span class="error error-keyup-2"><br/>No se permiten caracteres especiales<br/></span>');
-            /*$('.btn64').attr('type', 'reset');*/
-            campo1=1;
-        }else{
-            campo1=0;
+        if(!characterReg.test(inputVal))
+        {
+            $(this).after('<span class="error error-keyup-2" style="color: #EF5350"><br/>No se permiten caracteres especiales nombre<br/></span>');
+        }else
+        {
             $('span.error-keyup-2').remove();
         }
-        /*    $('.btn64').attr('type', 'submit');*/
     });
 
-    $('.validar46').keyup(function() {
+    $('.validar2').keyup(function() {
         $('span.error-keyup-3').remove();
-        var inputVal = $('.validar46').val();
-        var characterReg = /^\s*[a-zA-Z0-9ñÑ@.,\s]+\s*$/;
+        var inputVal = $('.validar2').val();
+        var characterReg = /^\s*[a-zA-Z0-9ñÑ@_.,\s]+\s*$/;
         if((!characterReg.test(inputVal))) {
-            $(this).after('<span class="error error-keyup-3"><br/>No se permiten caracteres especiales<br/></span>');
-            /*$('.btn64').attr('type', 'reset');*/
-            campo2=1;
+            $(this).after('<span class="error error-keyup-3" style="color: #EF5350"><br/>No se permiten caracteres especiales email<br/></span>');
         }else {
-            campo2=0;
             $('span.error-keyup-3').remove();
         }
-        /*    $('.btn64').attr('type', 'submit');*/
     });
 
-    $('.validar47').keyup(function() {
+    $('.validar3').keyup(function() {
         $('span.error-keyup-4').remove();
-        var inputVal = $('.validar47').val();
+        var inputVal = $('.validar3').val();
         var characterReg = /^\s*[a-zA-Z0-9ñÑ@.,\s]+\s*$/;
         if((!characterReg.test(inputVal))) {
-            $(this).after('<span class="error error-keyup-4"><br/>No se permiten caracteres especiales<br/></span>');
-            /*$('.btn64').attr('type', 'reset');*/
-            campo3=1;
+            $(this).after('<span class="error error-keyup-4" style="color: #EF5350"><br/>No se permiten caracteres especiales mensaje<br/></span>');
         }else{
-            campo3=0;
             $('span.error-keyup-4').remove();
         }
-        /*    $('.btn64').attr('type', 'submit');*/
     });
-
-
-
-
 });
-
-$(document).ready(function() {
-    if(campo3==1){
-        $('.btn64').attr('type', 'reset');
-        alert('caca');
-    }   else{
-        $('.btn64').attr('type', 'submit');
-        
-    }
-});
-
-function mialerta() {
-    alert(campo1);
-    alert(campo2);
-    alert(campo3);
-}
 
 
 

@@ -178,3 +178,56 @@ hr.star-light:after {
     }
 }
 
+
+
+
+/*FOOTER*/
+.posytam0{
+    margin-top: 25px;
+    margin-left: 35px;
+
+    float: left;
+    max-width: 155px;
+
+    height: auto;
+
+}
+
+
+.posytam{
+    margin-top: 20px;
+    margin-left: 10px;
+    float: left;
+    width: 430px;
+    height: auto;
+
+}
+
+.posytam0>img{
+    max-width: 90%;
+}
+
+.posytam>img{
+    max-width: 90%;
+}
+
+@media screen and (max-width: 620px) {
+    #ocultarmq2 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    #ocultarmq3 {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 487px) {
+    #ocultarmq5 {
+        max-width: 85%;
+
+    }
+}
+/*FOOTER*/
