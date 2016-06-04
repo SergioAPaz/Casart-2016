@@ -179,14 +179,14 @@ $filas =mysqli_query($conexiondb,$consulta);
         <form method="POST"  id="flogin" action="NuevosUsuariosPHP.php">
             <p class="alert" style="font-size: 20px;background-color: #FFCA28;color: #ffffff">Nuevo usuario</p>
             <label>Nombres:</label>
-            <input   type="text" name="txtnombre"  id class="form-control" maxlength="25"  pattern="^\s*[a-zA-Z0-9ñÑ@_.,,\s]+\s*" required style="width:100%">
+            <input   type="text" name="txtnombre"  id class="form-control" maxlength="25"  pattern="^\s*[a-zA-Z0-9ñÑ_.,,\s]+\s*" required style="width:100%">
             <label style="margin-top: 10px  ">Apellidos:</label>
-            <input type="text" name="txtapellido"   class="form-control"  maxlength="25" pattern="^\s*[a-zA-Z0-9ñÑ@_.,,\s]+\s*" required>
+            <input type="text" name="txtapellido"   class="form-control"  maxlength="25" pattern="^\s*[a-zA-Z0-9ñÑ_.,,\s]+\s*" required>
             <label style="margin-top: 10px  ">Usuario:</label>
             <input type="text" name="txtusuario"   data-toggle="tooltip" title="El usuario debe ser unico y no duplicarse con los nombres de usuario ya existentes."
-                   data-placement="right"  class="form-control"  maxlength="25" pattern="^\s*[a-zA-Z0-9ñÑ@_.,,\s]+\s*" required>
+                   data-placement="right"  class="form-control"  maxlength="25" pattern="^\s*[a-zA-Z0-9ñÑ_.\s]+\s*" required>
             <label style="margin-top: 10px  ">Contraseña:</label>
-            <input type="password" name="txtcontrasena"   class="form-control"  maxlength="25" pattern="^\s*[a-zA-Z0-9ñÑ@_.,,\s]+\s*" required>
+            <input type="password" name="txtcontrasena"   class="form-control"  maxlength="25" pattern="^\s*[a-zA-Z0-9ñÑ_.\s]+\s*" required>
             <label style="margin-top: 10px  ">Rol:</label>
             <select name="txtrol" data-toggle="tooltip" title="
             Los administradores podran dar de alta nuevos administradores o usuarios y vizualizar los datos personales de los registros asi como

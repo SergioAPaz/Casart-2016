@@ -23,6 +23,9 @@ session_destroy();
     <script src="assets/bootstrap-3.3.5-dist/js/bootstrap.js"></script>
     <script src="assets/js/NavbarResponsive.js"></script>
     <script type="text/javascript" src="assets/js/PanelLogin.js"></script><!--scripts generales-->
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 </head>
 <body>
 <!--PRECARGA DE PAGINA-->
@@ -182,16 +185,25 @@ session_destroy();
 <div class="container">
     <div class="jumbotron boxlogin" style="text-align: center;padding-left: 0;padding-right: 0">
             <form method="POST"  id="flogin" action="verificar.php">
+
+
+
                 <img src="images/logo.png" alt="Responsive image" class="img-responsive img-circle" style=";display: block;margin: auto;margin-bottom: 20px;margin-top: -30px"/>
                 <label>Nombre de usuario:</label>
-                <input  type="text" name="user"  id="name" class="form-control" placeholder="Usuario" maxlength="25"  pattern="^\s*[a-zA-Z0-9ñÑ,.,\s]+\s*" required style="width:100%">
+                <input  type="text" name="user"  id="name" class="form-control" placeholder="Usuario" maxlength="25"  pattern="^\s*[a-zA-Z0-9ñÑ_.\s]+\s*" required style="width:100%">
                 <label style="margin-top: 10px  ">Contraseña:</label>
-                <input type="password" name="pw"  id="pw" class="form-control"  placeholder="Contraseña" maxlength="25"  pattern="^\s*[a-zA-Z0-9ñÑ,.,\s]+\s*" required>
+                <input type="password" name="pw"  id="pw" class="form-control"  placeholder="Contraseña" maxlength="25"  pattern="^\s*[a-zA-Z0-9ñÑ_.\s]+\s*" required>
                 <p id="mensaje" style="color: red;margin-top: 10px"></p>
+
+
+                <div class="g-recaptcha"   data-sitekey="6LdwxSETAAAAAAgUhUhtKcDPdNu8xQmIOt6JDRot"></div>
+
+
                 <button type="submit" class="btn btn-warning"  style="text-align: center">Ingresar</button>
                 <button class = "btn btn-warning" onclick="formReset()">Limpiar</button>
                <!-- <button  class="btn btn-warning" onclick="javascript:window.close();" style="text-align: center">Salir</button>-->
             </form>
+
     </div>
 </div>
 

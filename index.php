@@ -45,6 +45,8 @@ $filas2=mysqli_query($conexiondb,$consultasql);
         <!--PICTUREFILL-->
     <script src="assets/js/picturefill.js" async></script>
     <script>document.createElement( "picture" );</script>
+    <!--SCRIPT de Recaptcha en comments-->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
 <!--PRECARGA DE PAGINA-->
@@ -172,7 +174,7 @@ $filas2=mysqli_query($conexiondb,$consultasql);
                     <a href="#"><span class="glyphicon glyphicon-gift"></span>Concursos</a>
                 </li>
                 <li>
-                    <a href="#cmntanchor"><span class="glyphicon glyphicon-earphone"></span>Contacto</a>
+                    <a><span class="glyphicon glyphicon-earphone"></span>Contacto</a>
                 </li>
 
                 <?php
@@ -522,7 +524,7 @@ PANEL DE IMAGEN REDONDA-->
     <form method="post" action="PHPCatalogo/GuardarComentariosPHP.php">
         <div class="field">
             <label for="name">NOMBRE</label>
-            <input type="text" name="name" id="name" class="validar1" maxlength="25" pattern="^\s*[a-zA-Z0-9ñÑ@_.\s]+\s*" required/>
+            <input type="text" name="name" id="name" class="validar1" maxlength="25" pattern="^\s*[a-zA-Z0-9ñÑ_.\s]+\s*" required/>
         </div>
         <div class="field">
             <label for="email">EMAIL</label>
@@ -532,6 +534,11 @@ PANEL DE IMAGEN REDONDA-->
             <label for="message">MENSAJE</label>
             <textarea name="message" id="message" rows="4" class="validar3"  maxlength="400" pattern="^\s*[a-zA-Z0-9ñÑ@_.,\s]+\s*" required></textarea>
         </div>
+
+        <div class="g-recaptcha"   data-theme="dark" data-sitekey="6LdwxSETAAAAAAgUhUhtKcDPdNu8xQmIOt6JDRot"></div>
+
+        <br>
+
         <ul class="actions">
             <li><input type="submit"  class="btn64"  value="ENVIAR MENSAJE" /></li>
         </ul>

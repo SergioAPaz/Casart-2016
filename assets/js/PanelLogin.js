@@ -3,7 +3,7 @@ $(document).ready(function(){
     $('.form-control').keyup(function() {
         $('span.error-keyup-2').remove();
         var inputVal = $(this).val();
-        var characterReg = /^\s*[a-zA-Z0-9ñÑ.,,\s]+\s*$/;
+        var characterReg = /^\s*[a-zA-Z0-9ñÑ_.\s]+\s*$/;
         if(!characterReg.test(inputVal)) {
             $(this).after('<span class="error error-keyup-2"><br/>No se permiten caracteres especiales<br/></span>');
             $('.btn').attr('type', 'reset');
