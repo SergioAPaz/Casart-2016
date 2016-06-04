@@ -4,7 +4,7 @@ include ("BloqueDeSeguridadNewAccount.php");
 include("conexion.php");
 
 $consulta=<<<SQL
-    SELECT id,Nombre,Apellido,USER, Rol FROM  users
+SELECT id,Nombre,Apellido,USER, Rol FROM  users;
 SQL;
 
 $filas =mysqli_query($conexiondb,$consulta);

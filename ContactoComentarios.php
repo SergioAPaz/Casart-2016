@@ -4,8 +4,7 @@ include ("BloqueDeSeguridad.php");
 include("conexion.php");
 
 $consulta=<<<SQL
-    SELECT id,Fecha_de_comentario,Nombre,Email,Mensaje FROM  Comentarios0013
-    
+SELECT id,Fecha_de_comentario,Nombre,Email,Mensaje FROM  comentarios0013;
 SQL;
 
 $filas =mysqli_query($conexiondb,$consulta);
