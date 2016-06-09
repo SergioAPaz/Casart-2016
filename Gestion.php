@@ -1,13 +1,15 @@
 <?php
-/*SESSION START PARA QUE FUNCIONE LA OPCION DE ADMINISTRADOR EN NAVBAR*/
-session_start();
-include('conexion.php');
-$primera=<<<SQL
-SELECT Titulo,Descripcion,urlimagen,Nuevo_producto FROM catalogo WHERE galeria='Textiles tarahumara';
+
+include ("BloqueDeSeguridad.php");
+include("conexion.php");
+
+$consulta=<<<SQL
+SELECT id,Nombre,Email FROM emailadmins;
 SQL;
-$filas=mysqli_query($conexiondb,$primera);
+
+$filas =mysqli_query($conexiondb,$consulta);
 ?>
-<!DOCTYPE html>
+<!DOCTYPE html >
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -18,34 +20,20 @@ $filas=mysqli_query($conexiondb,$primera);
     <link rel="stylesheet" href="assets/bootstrap-3.3.5-dist/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/StylesNavbar.css">
     <link type="text/css" rel="stylesheet" href="assets/css/Fonts%20navbar/fonts/fonts.css"/>
-    <link rel="stylesheet" href="assets/css/TextilesTarahumaras.css">
     <link rel="stylesheet" href="fonts/fonts.css">
+    <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!--SCRIPT'S-->
     <script src="assets/jquery/jquery-1.11.3.min.js"></script>
     <script src="assets/bootstrap-3.3.5-dist/js/bootstrap.js"></script>
     <script src="assets/js/NavbarResponsive.js"></script>
-    <script type="text/javascript" src="assets/js/TextilesTarahumaras.js"></script><!--scripts generales-->
-    <script  src="assets/js/scrollbar/jquery.nicescroll.min.js"></script><!--scrollbar-->
-    <!--FANCYBOX-->
-    <script type="text/javascript" src="assets/jquery/aumento%20de%20img/jquery.mousewheel-3.0.6.pack.js"></script>
-    <script type="text/javascript" src="assets/jquery/aumento%20de%20img/source/jquery.fancybox.js?v=2.1.5"></script>
-    <link rel="stylesheet" type="text/css" href="assets/jquery/aumento%20de%20img/source/jquery.fancybox.css?v=2.1.5" media="screen" />
-    <link rel="stylesheet" type="text/css" href="assets/jquery/aumento%20de%20img/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
-    <script type="text/javascript" src="assets/jquery/aumento%20de%20img/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
-    <!--Add Thumbnail helper (this is optional)-->
-    <link rel="stylesheet" type="text/css" href="assets/jquery/aumento%20de%20img/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
-    <script type="text/javascript" src="assets/jquery/aumento%20de%20img/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
-    <!--  Add Media helper (this is optional)-->
-    <script type="text/javascript" src="assets/jquery/aumento%20de%20img/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+    <script type="text/javascript" src="assets/js/Gestion.js"></script><!--scripts generales-->
+    <!--CSS'S-->
+    <link href="assets/css/Gestion.css" rel="stylesheet" type="text/css">
+
+    <script  src="assets/js/scrollbar/jquery.nicescroll.min.js"></script>
+
 </head>
-<body>
-<!--PRECARGA DE PAGINA-->
-<div id="preloader">
-    <div id="loader">&nbsp;</div>
-</div>
-
-
-
+<body style="background-color: #4E342E">
 <header>
     <!--NAVBAR-->
     <!--Nav grande (Resolucion>790px)-->
@@ -53,15 +41,14 @@ $filas=mysqli_query($conexiondb,$primera);
         <div>
             <div id='cssmenu'>
                 <ul>
-                    <li>
-                        <a href='index.php'>Inicio</a>
-                    </li>
+                    <li><a href='index.php'>Inicio</a></li>
                     <li class='active has-sub'><a href='#'>Nosotros</a>
                         <ul>
                             <li ><a href='MisionYVision.php'>Mision & Vision</a></li>
                             <li ><a href='ProductosVarios2/QuienesSomos.php'>Quiénes somos</a></li>
                         </ul>
                     </li>
+
                     <li class='active has-sub'><a href='#'>Tarahumara</a>
                         <ul>
                             <li ><a href='CesteriaTarahumara.php'>Cestería tarahumara</a></li>
@@ -72,6 +59,7 @@ $filas=mysqli_query($conexiondb,$primera);
                             <li ><a href='ArticulosVarios.php'>Articulos varios</a></li>
                         </ul>
                     </li>
+
                     <li class='active has-sub'><a href='#'>Mata Ortiz</a>
                         <ul>
                             <li ><a href='OllaEconomica.php'>Olla mata ortiz económica</a></li>
@@ -80,6 +68,8 @@ $filas=mysqli_query($conexiondb,$primera);
                             <li ><a href='GaleriaMataOrtiz.php'>Galería ceramica de mata ortiz</a></li>
                         </ul>
                     </li>
+
+
                     <li class='active has-sub'><a href='#'>Productos</a>
                         <ul>
                             <li ><a href='#'>Productos Chihuahuenses</a></li>
@@ -87,12 +77,9 @@ $filas=mysqli_query($conexiondb,$primera);
                             <li ><a href='#'>Artesania regional</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href='#'>Concursos</a>
-                    </li>
-                    <li>
-                        <a href='#'>Contacto</a>
-                    </li>
+
+                    <li><a href='#'>Concursos</a></li>
+                    <li><a href='#'>Contacto</a></li>
 
                     <?php
                     if (isset($_SESSION["username"]))
@@ -101,12 +88,14 @@ $filas=mysqli_query($conexiondb,$primera);
                         {
                             echo "<li class='active has-sub pull-right' ><a href='#'>Administrador</a>";
                             echo "<ul>";
+
                             if ($_SESSION["RolCuenta"] == "Administrador")
                             {
-                                echo "<li><a  href='NuevosUsuarios.php'><span class='glyphicon glyphicon-user' style='margin-right: 5px'></span>  Nuevo usuario</a></li>";
+                                echo "<li ><a href='NuevosUsuarios.php'><span class='glyphicon glyphicon-user' style='margin-right: 5px'></span> Nuevo usuario</a></li>";
                             }
                             echo "<li ><a href='PanelAdmin.php'><span class='glyphicon glyphicon-th' style='margin-right: 5px'></span> Panel de control</a></li>";
                             echo "<li ><a href='ContactoComentarios.php'><span class='glyphicon glyphicon-comment' style='margin-right: 5px'></span> Comentarios</a></li>";
+
                             echo "<li ><a href='DestruirSesion.php'><span class='glyphicon glyphicon-off' style='margin-right: 5px'></span> Cerrar Sesion</a></li>";
                             echo "</ul>";
                             echo "</li>";
@@ -153,7 +142,6 @@ $filas=mysqli_query($conexiondb,$primera);
                         <li><a href="OllaFina.php"><span class="icon-ctrl"></span>Olla Mata Ortiz Fina</a> </li>
                         <li><a href="GaleriaMataOrtiz.php"><span class="icon-ctrl"></span>Galeria ceramica de Mata Ortiz</a> </li>
                     </ul>
-                </li>
                 <li class="submenu">
                     <a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>Productos<span class="glyphicon glyphicon-chevron-down pull-right"></span> </a>
                     <ul class="children">
@@ -161,13 +149,8 @@ $filas=mysqli_query($conexiondb,$primera);
                         <li><a href="#"><span class="icon-ctrl"></span>Arcones</a> </li>
                         <li><a href="#"><span class="icon-ctrl"></span>Artesania Regional</a> </li>
                     </ul>
-                </li>
-                <li>
-                    <a href="#"><span class="glyphicon glyphicon-gift"></span>Concursos</a>
-                </li>
-                <li>
-                    <a href="#"><span class="glyphicon glyphicon-earphone"></span>Contacto</a>
-                </li>
+                <li><a href="#"><span class="glyphicon glyphicon-gift"></span>Concursos</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-earphone"></span>Contacto</a></li>
 
                 <?php
                 if (isset($_SESSION["username"]))
@@ -179,8 +162,7 @@ $filas=mysqli_query($conexiondb,$primera);
                         echo "<ul class='children'>";
                         if ($_SESSION["RolCuenta"] == "Administrador")
                         {
-                            echo "<li><a href='NuevosUsuarios.php'><span class='icon-ctrl'></span>Nuevo usuario</a> </li>";
-
+                            echo " <li><a href='NuevosUsuarios.php'><span class='icon-ctrl'></span>Nuevo usuario</a> </li>";
                         }
                         echo " <li><a href='PanelAdmin.php'><span class='icon-ctrl'></span>Panel de control</a> </li>";
                         echo " <li><a href='ContactoComentarios.php'><span class='icon-ctrl'></span>Comentarios</a> </li>";
@@ -196,67 +178,104 @@ $filas=mysqli_query($conexiondb,$primera);
     </div>
 </header>
 
+<div class="container"  style="background-color: #EEEEEE;/*height: 100%*/">
+    <br/>
 
-<div class="container-fluid" style="padding-left: 0;padding-right: 0">
-    <div class="row x" style="background-color: #FFB300;" >
-        <div class="col-xs-12 col-md-7  pull-left" style="padding-right: 0">
-            <img src="images/textilestarahumaras.png" class="img-responsive" alt="Responsive image" >
-        </div>
-        <div class="col-sm-12 col-md-5   pull-right style566 " >
-            <h1 class="sdf6513">Textiles Tarahumara</h1>
-            <p style="font-size: 15px">
-                Más de dos mil tarahumaras, algunos desde los nueve años de edad, se dedican a la elaboración de artesanías que les permiten
-                sobrevivir y cubrir sus principales necesidades alimenticias, salud y educación.<br><br class="ocultame">
-                Los rarámuris realizan trabajos de barro, madera y textiles, de estas materias primas crean ollas, canastos y artículos de cocina,
-                así como las típicas muñecas mexicanas de madera y tela.
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <p class="alert fondo456" style="font-size: 20px;background-color: #FFCA28;color: #FAFAFA"><span class="newarticle">Correos para notificaciones: </span><span style="color: transparent">.</span>
+                <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Mostrar correos</button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header" style="background-color: #FFCA28">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="exampleModalLabel" style="color: #FAFAFA">Tabla de correos asignados para notificaciones</h4>
+                            </div>
 
+                            <div class="modal-body">
+                                <form>
+
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="control-label">Nombre:</label>
+                                        <input type="text" class="form-control" id="recipient-name" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="control-label">Correo:</label>
+                                        <input type="text" class="form-control" id="recipient-name" required>
+                                    </div>
+
+
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Nombre</th>
+                                            <th>Correo</th>
+                                            <th>Accion</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php
+                                            $count=0;
+                                            while ($columna=mysqli_fetch_assoc($filas))
+                                            {
+                                                $count=$count+1;
+                                                echo "<tr>";
+                                                echo "<td>$count</td>";
+                                                echo "<td>$columna[Nombre]</td>";
+                                                echo "<td>$columna[Email]</td>";
+                                                echo "<td>  <a href='PHPCatalogo/BorrarComentarios.php?id=$columna[id]'>Borrar</a>   </td>";
+                                                echo "</tr>";
+                                            }
+                                            ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                <button type="submit" class="btn btn-primary">Agregar correo</button>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </p>
         </div>
     </div>
-    <hr style="height: 6px;width: 100%;background-color: #FF9800;margin-top: 0;border-color: #FF9800;margin-bottom: 10px">
-</div>
 
-<br>
 
-<!--SEPARADOR-->
-<header>
-    <div class="container" style="background-color:#5D4037; margin-left: 0%; margin-right: 20%" >
-        <!--<h3 class="pull-right" style="color: #ffffff;ve"  >Catalogo de productos en venta</h3>-->
-        <p class="pull-right parrafo516"><span style="color: #ffa000">Catalogo de productos en venta</span></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--TABLA DE EXISTENCIAS-->
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <p class="alert fondo456" style="font-size: 20px;background-color: #FFCA28;color: #ffffff"><span>Productos en exhibición</span></p>
+
+        </div>
     </div>
-</header>
 
-<br/>
-
-<!--CATALOGO-->
-<div class="container-fluid fondo623">
-    <div class="row" >
-
-        <?php
-        while($columna=mysqli_fetch_assoc($filas)){
-            echo "<div class='col-xs-12 col-sm-6 col-md-3''>";
-            echo '<div class="thumbnail" style="height: 443px">';
-            if($columna['Nuevo_producto']=='Si') {
-                echo '<div style="border-radius: 0px 6px 6px 0px;z-index: 2;background-color: #FFA726;float: left;margin-left: -6px;margin-top: 20px;opacity: .9;position: absolute;width: 150px;height: 25px"><p style="color: white;;float: right;margin-right: 5px;margin-top: 2%">Nuevo producto</p></div>';
-            }
-            echo ' <div style="height: 10px" class="divhide"></div>';
-            echo '<div style="height: 315px;position: relative;z-index: 1">';
-            echo "<a class='fancybox' href='PHPCatalogo/ImagenesGaleria/$columna[urlimagen]' data-fancybox-group='gallery'>
-                    <img class='img-responsive styleimg img152' style='max-height: 315px;' src='PHPCatalogo/ImagenesGaleria/$columna[urlimagen]' alt='' /></a>";
-            echo'</div>';
-            echo '  <div class="caption">';
-            echo "<h3>$columna[Titulo]</h3>";
-            echo "<button data-container='body' data-trigger='hover click'  data-placement='top' type='button' class='btn btn-info' data-toggle='popover'
-                            data-content='$columna[Descripcion]'>Detalles...</button>";
-            echo ' </div>';
-            echo '</div>';
-            echo '</div>';
-        }
-        ?>
-
-    </div>
 </div>
-
 
 <br><br><br>
 
@@ -283,13 +302,6 @@ $filas=mysqli_query($conexiondb,$primera);
     </div>
 </footer>
 
-
-<!--TOOLTIP POPOVER PARA EL FORMULARIO-->
-<script>
-    $(function () {
-        $('[data-toggle="popover"]').popover()
-    });
-</script>
 <script>
     $(document).ready(
         function() {

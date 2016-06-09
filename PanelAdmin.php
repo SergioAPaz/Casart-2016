@@ -133,7 +133,7 @@ $filas =mysqli_query($conexiondb,$consulta);
                                 {
                                     echo "<li ><a href='NuevosUsuarios.php'><span class='glyphicon glyphicon-user' style='margin-right: 5px'></span> Nuevo usuario</a></li>";
                                 }
-
+                                echo "<li ><a href='Gestion.php'><span class='glyphicon glyphicon-th' style='margin-right: 5px'></span> Gestion</a></li>";
                                 echo "<li ><a href='ContactoComentarios.php'><span class='glyphicon glyphicon-comment' style='margin-right: 5px'></span> Comentarios</a></li>";
 
                                 echo "<li ><a href='DestruirSesion.php'><span class='glyphicon glyphicon-off' style='margin-right: 5px'></span> Cerrar Sesion</a></li>";
@@ -204,6 +204,7 @@ $filas =mysqli_query($conexiondb,$consulta);
                         {
                             echo " <li><a href='NuevosUsuarios.php'><span class='icon-ctrl'></span>Nuevo usuario</a> </li>";
                         }
+                        echo " <li><a href='Gestion.php'><span class='icon-ctrl'></span>Gestion</a> </li>";
                         echo " <li><a href='ContactoComentarios.php'><span class='icon-ctrl'></span>Comentarios</a> </li>";
                         echo " <li><a href='DestruirSesion.php'><span class='icon-ctrl'></span>Cerrar sesion</a> </li>";
                         echo "</ul>";
