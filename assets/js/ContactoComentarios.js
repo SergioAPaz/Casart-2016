@@ -14,3 +14,9 @@ $(document).ready(function(){
     });
 
 });
+
+
+/*Libreria DataTable Jquery*/
+$(document).ready(function() {
+    $('#regTable').DataTable();
+} );

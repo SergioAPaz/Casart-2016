@@ -24,7 +24,6 @@ $filas =mysqli_query($conexiondb,$consulta);
     <link rel="stylesheet" href="assets/css/ContactoComentarios.css">
     <link type="text/css" rel="stylesheet" href="assets/css/Fonts%20navbar/fonts/fonts.css"/>
     <link rel="stylesheet" href="fonts/fonts.css">
-    <!--SCRIPTS DE LA PAGINA AL FINAL DEL BODY-->
 
 </head>
 
@@ -267,6 +266,12 @@ $filas =mysqli_query($conexiondb,$consulta);
 <script src="assets/js/NavbarResponsive.js"></script>
 <script src="assets/js/ContactoComentarios.js"></script>
 <script  src="assets/js/scrollbar/jquery.nicescroll.min.js"></script><!--scrollbar-->
+
+<!--DATATABLE JQUERY (PAGINACION Y SEARCH)-->
+<link rel="stylesheet" href="assets/jquery/datatable%20jquery/dataTables.bootstrap.min.css">
+<script src="assets/jquery/datatable%20jquery/jquery.dataTables.min.js"></script>
+<script src="assets/jquery/datatable%20jquery/dataTables.bootstrap.min.js"></script>
+
 
 
 <script>
