@@ -1,6 +1,6 @@
 <?php
 
-include ("../../BloqueDeSeguridad.php");
+include("../../BloqueDeSeguridad.php");
 
 if(isset($_GET['id']))
     {

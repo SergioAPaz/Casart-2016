@@ -1,6 +1,6 @@
 <?php
 
-include ("BloqueDeSeguridadNewAccount.php");
+include("BloqueDeSeguridadNewAccount.php");
 include("conexion.php");
 
 $consulta=<<<SQL
@@ -87,7 +87,7 @@ $filas =mysqli_query($conexiondb,$consulta);
                             echo "<li ><a href='PanelAdmin.php'><span class='glyphicon glyphicon-th' style='margin-right: 5px'></span> Panel de control</a></li>";
                             echo "<li ><a href='Gestion.php'><span class='glyphicon glyphicon-th-large' style='margin-right: 5px'></span> Gestion</a></li>";
                             echo "<li ><a href='ContactoComentarios.php'><span class='glyphicon glyphicon-comment' style='margin-right: 5px'></span> Comentarios</a></li>";
-                            echo "<li ><a href='DestruirSesion.php'><span class='glyphicon glyphicon-off' style='margin-right: 5px'></span> Cerrar Sesion</a></li>";
+                            echo "<li ><a href='PHPCatalogo/DestruirSesion.php'><span class='glyphicon glyphicon-off' style='margin-right: 5px'></span> Cerrar Sesion</a></li>";
                             echo "</ul>";
                             echo "</li>";
                         }
@@ -161,7 +161,7 @@ $filas =mysqli_query($conexiondb,$consulta);
                         echo " <li><a href='PanelAdmin.php'><span class='icon-ctrl'></span>Panel de control</a> </li>";
                         echo " <li><a href='Gestion.php'><span class='icon-ctrl'></span>Gestion</a> </li>";
                         echo " <li><a href='ContactoComentarios.php'><span class='icon-ctrl'></span>Comentarios</a> </li>";
-                        echo " <li><a href='DestruirSesion.php'><span class='icon-ctrl'></span>Cerrar sesion</a> </li>";
+                        echo " <li><a href='PHPCatalogo/DestruirSesion.php'><span class='icon-ctrl'></span>Cerrar sesion</a> </li>";
                         echo "</ul>";
                         echo "</li>";
                     }
@@ -179,7 +179,7 @@ $filas =mysqli_query($conexiondb,$consulta);
 
 <div class="container">
     <div class=" jumbotron boxlogin" style="text-align: center;padding-left: 0;padding-right: 0">
-        <form method="POST"  id="flogin" action="NuevosUsuariosPHP.php">
+        <form method="POST"  id="flogin" action="PHPCatalogo/NuevosUsuariosPHP.php">
             <p class="alert" style="font-size: 20px;background-color: #FFCA28;color: #ffffff">Nuevo usuario</p>
             <label>Nombres:</label>
             <input   type="text" name="txtnombre"  id class="form-control" maxlength="25"  pattern="^\s*[a-zA-Z0-9ñÑ_.,,\s]+\s*" required style="width:100%">
@@ -248,7 +248,7 @@ $filas =mysqli_query($conexiondb,$consulta);
                     echo "<td>$columna[USER]</td>";
                     echo "<td>$columna[Rol]</td>";
                     echo "<td>
-                        <a href='BorrarUsuarioPHP.php?id=$columna[id]'>Borrar</a></td>";
+                        <a href='PHPCatalogo/BorrarUsuarioPHP.php?id=$columna[id]'>Borrar</a></td>";
                     echo "<tr>";
                 }
                 ?>

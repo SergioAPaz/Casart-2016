@@ -1,7 +1,7 @@
 <?php
 
-include ("../../BloqueDeSeguridad.php");
-include ("../../conexion.php");
+include("../../BloqueDeSeguridad.php");
+include("../../conexion.php");
 
         /*Validamos que esten todos los campos requeridos del formulario*/
         if ($_SERVER["REQUEST_METHOD"] == "POST")

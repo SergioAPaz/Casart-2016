@@ -118,7 +118,7 @@ $filas2=mysqli_query($conexiondb,$consultasql);
                                 echo "<li><a  href='NuevosUsuarios.php'><span class='glyphicon glyphicon-user' style='margin-right: 5px'></span>  Nuevo usuario</a></li>";
                             }
 
-                            echo "<li ><a href='DestruirSesion.php'><span class='glyphicon glyphicon-off' style='margin-right: 5px'></span> Cerrar Sesion</a></li>";
+                            echo "<li ><a href='PHPCatalogo/DestruirSesion.php'><span class='glyphicon glyphicon-off' style='margin-right: 5px'></span> Cerrar Sesion</a></li>";
                             echo "</ul>";
                             echo "</li>";
                         }
@@ -197,7 +197,7 @@ $filas2=mysqli_query($conexiondb,$consultasql);
                             echo "<li><a href='NuevosUsuarios.php'><span class='icon-ctrl'></span>Nuevo usuario</a> </li>";
 
                         }
-                        echo " <li><a href='DestruirSesion.php'><span class='icon-ctrl'></span>Cerrar sesion</a> </li>";
+                        echo " <li><a href='PHPCatalogo/DestruirSesion.php'><span class='icon-ctrl'></span>Cerrar sesion</a> </li>";
                         echo "</ul>";
                         echo "</li>";
                     }

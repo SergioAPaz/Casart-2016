@@ -1,5 +1,5 @@
 <?php
-include ("BloqueDeSeguridadNewAccount.php");
+include("BloqueDeSeguridadNewAccount.php");
 if(isset($_GET['id']))
 {
 

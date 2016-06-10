@@ -34,7 +34,7 @@
 
 <?php
 
-include ("BloqueDeSeguridad.php");
+include("BloqueDeSeguridad.php");
 include("conexion.php");
 
 $consulta=<<<SQL
@@ -137,7 +137,7 @@ $filas =mysqli_query($conexiondb,$consulta);
                                 echo "<li><a  href='NuevosUsuarios.php'><span class='glyphicon glyphicon-user' style='margin-right: 5px'></span>  Nuevo usuario</a></li>";
                             }
 
-                            echo "<li ><a href='DestruirSesion.php'><span class='glyphicon glyphicon-off' style='margin-right: 5px'></span> Cerrar Sesion</a></li>";
+                            echo "<li ><a href='PHPCatalogo/DestruirSesion.php'><span class='glyphicon glyphicon-off' style='margin-right: 5px'></span> Cerrar Sesion</a></li>";
                             echo "</ul>";
                             echo "</li>";
                         }
@@ -210,7 +210,7 @@ $filas =mysqli_query($conexiondb,$consulta);
                             echo "<li><a href='NuevosUsuarios.php'><span class='icon-ctrl'></span>Nuevo usuario</a> </li>";
 
                         }
-                        echo " <li><a href='DestruirSesion.php'><span class='icon-ctrl'></span>Cerrar sesion</a> </li>";
+                        echo " <li><a href='PHPCatalogo/DestruirSesion.php'><span class='icon-ctrl'></span>Cerrar sesion</a> </li>";
                         echo "</ul>";
                         echo "</li>";
                     }
@@ -304,8 +304,8 @@ $filas =mysqli_query($conexiondb,$consulta);
                         echo "<td>$columna[Usuario]</td>";
                         echo "<td>
                         <a href='PHPCatalogo/BorrarGaleria.php?id=$columna[id]'>Borrar</a>
-                        <a href='PHPCatalogo/EditarGaleria.php?id=$columna[id]'>Editar</a>
-                        <a href='PHPCatalogo/AdminImagen.php?id=$columna[id]'>Cambiar imagen</a></td>";
+                        <a href='EditarGaleria.php?id=$columna[id]'>Editar</a>
+                        <a href='AdminImagen.php?id=$columna[id]'>Cambiar imagen</a></td>";
                         echo "</tr>";
                     }
                     ?>

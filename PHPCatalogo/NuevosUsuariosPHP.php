@@ -1,6 +1,6 @@
 <?php
 
-include ("BloqueDeSeguridadNewAccount.php");
+include("BloqueDeSeguridadNewAccount.php");
 include("conexion.php");
 
 /*Validamos que esten todos los campos requeridos del formulario*/

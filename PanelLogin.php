@@ -97,7 +97,7 @@ session_destroy();
                                 echo "<li><a  href='NuevosUsuarios.php'><span class='glyphicon glyphicon-user' style='margin-right: 5px'></span>  Nuevo usuario</a></li>";
                             }
 
-                            echo "<li ><a href='DestruirSesion.php'><span class='glyphicon glyphicon-off' style='margin-right: 5px'></span> Cerrar Sesion</a></li>";
+                            echo "<li ><a href='PHPCatalogo/DestruirSesion.php'><span class='glyphicon glyphicon-off' style='margin-right: 5px'></span> Cerrar Sesion</a></li>";
                             echo "</ul>";
                             echo "</li>";
                         }
@@ -176,7 +176,7 @@ session_destroy();
                             echo "<li><a href='NuevosUsuarios.php'><span class='icon-ctrl'></span>Nuevo usuario</a> </li>";
 
                         }
-                        echo " <li><a href='DestruirSesion.php'><span class='icon-ctrl'></span>Cerrar sesion</a> </li>";
+                        echo " <li><a href='PHPCatalogo/DestruirSesion.php'><span class='icon-ctrl'></span>Cerrar sesion</a> </li>";
                         echo "</ul>";
                         echo "</li>";
                     }
@@ -191,7 +191,7 @@ session_destroy();
 
 <div class="container">
     <div class="jumbotron boxlogin" style="text-align: center;padding-left: 0;padding-right: 0">
-            <form method="POST"  id="flogin" action="verificar.php">
+            <form method="POST"  id="flogin" action="PHPCatalogo/verificar.php">
 
 
 
