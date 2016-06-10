@@ -34,7 +34,7 @@ $columnas= mysqli_fetch_assoc($filas);
     <script src="../assets/jquery/jquery-1.11.3.min.js"></script>
     <script src="../assets/bootstrap-3.3.5-dist/js/bootstrap.js"></script>
     <script src="../assets/js/NavbarResponsive.js"></script>
-    <script src="EditarGaleria.js"></script>
+    <script src="../assets/js/EditarGaleria.js"></script>
 
     <script  src="../assets/js/scrollbar/jquery.nicescroll.min.js"></script><!--scrollbar-->
 </head>
