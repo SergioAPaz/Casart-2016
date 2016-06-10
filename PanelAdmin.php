@@ -121,27 +121,28 @@ $filas =mysqli_query($conexiondb,$consulta);
                     <li><a href='#'>Concursos</a></li>
                     <li><a href='#'>Contacto</a></li>
 
-                        <?php
-                        if (isset($_SESSION["username"]))
+                    <?php
+                    if (isset($_SESSION["username"]))
+                    {
+                        if ($_SESSION["username"] == "SI")
                         {
-                            if ($_SESSION["username"] == "SI")
+                            echo "<li class='active has-sub pull-right' ><a href='#'>Administrador</a>";
+                            echo "<ul>";
+                     
+                            echo "<li ><a href='Gestion.php'><span class='glyphicon glyphicon-th-large' style='margin-right: 5px'></span> Gestion</a></li>";
+                            echo "<li ><a href='ContactoComentarios.php'><span class='glyphicon glyphicon-comment' style='margin-right: 5px'></span> Comentarios</a></li>";
+
+                            if ($_SESSION["RolCuenta"] == "Administrador")
                             {
-                                echo "<li class='active has-sub pull-right' ><a href='#'>Administrador</a>";
-                                echo "<ul>";
-
-                                if ($_SESSION["RolCuenta"] == "Administrador")
-                                {
-                                    echo "<li ><a href='NuevosUsuarios.php'><span class='glyphicon glyphicon-user' style='margin-right: 5px'></span> Nuevo usuario</a></li>";
-                                }
-                                echo "<li ><a href='Gestion.php'><span class='glyphicon glyphicon-th' style='margin-right: 5px'></span> Gestion</a></li>";
-                                echo "<li ><a href='ContactoComentarios.php'><span class='glyphicon glyphicon-comment' style='margin-right: 5px'></span> Comentarios</a></li>";
-
-                                echo "<li ><a href='DestruirSesion.php'><span class='glyphicon glyphicon-off' style='margin-right: 5px'></span> Cerrar Sesion</a></li>";
-                                echo "</ul>";
-                                echo "</li>";
+                                echo "<li><a  href='NuevosUsuarios.php'><span class='glyphicon glyphicon-user' style='margin-right: 5px'></span>  Nuevo usuario</a></li>";
                             }
+
+                            echo "<li ><a href='DestruirSesion.php'><span class='glyphicon glyphicon-off' style='margin-right: 5px'></span> Cerrar Sesion</a></li>";
+                            echo "</ul>";
+                            echo "</li>";
                         }
-                        ?>
+                    }
+                    ?>
 
                 </ul>
             </div>
@@ -191,7 +192,7 @@ $filas =mysqli_query($conexiondb,$consulta);
                     </ul>
                 <li><a href="#"><span class="glyphicon glyphicon-gift"></span>Concursos</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-earphone"></span>Contacto</a></li>
-                
+
                 <?php
                 if (isset($_SESSION["username"]))
                 {
@@ -200,12 +201,15 @@ $filas =mysqli_query($conexiondb,$consulta);
                         echo "<li class='submenu'>";
                         echo "<a><span class='glyphicon glyphicon-tree-conifer'></span>Administrador<span class='glyphicon glyphicon-chevron-down pull-right'></span> </a>";
                         echo "<ul class='children'>";
-                        if ($_SESSION["RolCuenta"] == "Administrador")
-                        {
-                            echo " <li><a href='NuevosUsuarios.php'><span class='icon-ctrl'></span>Nuevo usuario</a> </li>";
-                        }
+
+     
                         echo " <li><a href='Gestion.php'><span class='icon-ctrl'></span>Gestion</a> </li>";
                         echo " <li><a href='ContactoComentarios.php'><span class='icon-ctrl'></span>Comentarios</a> </li>";
+                        if ($_SESSION["RolCuenta"] == "Administrador")
+                        {
+                            echo "<li><a href='NuevosUsuarios.php'><span class='icon-ctrl'></span>Nuevo usuario</a> </li>";
+
+                        }
                         echo " <li><a href='DestruirSesion.php'><span class='icon-ctrl'></span>Cerrar sesion</a> </li>";
                         echo "</ul>";
                         echo "</li>";
