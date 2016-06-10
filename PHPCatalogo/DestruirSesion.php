@@ -4,5 +4,5 @@ session_start();
 
 session_destroy();
 
-header("location:PanelLogin.php");
+header("location: ../PanelLogin.php");
 

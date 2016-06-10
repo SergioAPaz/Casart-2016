@@ -16,5 +16,5 @@ SQL;
 
 }
 
-header("Location: NuevosUsuarios.php");
+header("Location: ../NuevosUsuarios.php");
 ?>

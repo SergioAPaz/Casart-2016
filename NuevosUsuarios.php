@@ -1,7 +1,7 @@
 <?php
 
-include("BloqueDeSeguridadNewAccount.php");
-include("conexion.php");
+include("PHPCatalogo/BloqueDeSeguridadNewAccount.php");
+include("PHPCatalogo/conexion.php");
 
 $consulta=<<<SQL
 SELECT id,Nombre,Apellido,USER, Rol FROM  users;

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('conexion.php');
+include('PHPCatalogo/conexion.php');
 $consultasql=<<<SQL
 SELECT Titulo,Descripcion,urlimagen,Nuevo_producto FROM catalogo WHERE Nuevo_producto='Si' OR Nuevo_producto='No';
 SQL;

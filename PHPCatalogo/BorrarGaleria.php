@@ -4,7 +4,7 @@ if(isset($_GET['id']))
 {
 
 $id=$_GET['id'];
-include('../conexion.php');
+include('conexion.php');
 
 /*CONSULTA DE NOMBRE DE ARCHIVO DE IMAGEN*/
 $ConsultaImagen=<<<SQL

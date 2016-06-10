@@ -1,7 +1,7 @@
 <?php
 /*SESSION START PARA QUE FUNCIONE LA OPCION DE ADMINISTRADOR EN NAVBAR*/
 session_start();
-include('conexion.php');
+include('PHPCatalogo/conexion.php');
 $primera=<<<SQL
 SELECT Titulo,Descripcion,urlimagen,Nuevo_producto FROM catalogo WHERE galeria='Instrumentos musicales';
 SQL;

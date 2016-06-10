@@ -1,6 +1,6 @@
 <?php
-include("BloqueDeSeguridadCatalogo.php");
-include('../conexion.php');
+include("PHPCatalogo/BloqueDeSeguridadCatalogo.php");
+include('PHPCatalogo/conexion.php');
 
 $id=$_GET['id'];
 

@@ -34,8 +34,8 @@
 
 <?php
 
-include("BloqueDeSeguridad.php");
-include("conexion.php");
+include("PHPCatalogo/BloqueDeSeguridad.php");
+include("PHPCatalogo/conexion.php");
 
 $consulta=<<<SQL
     SELECT id,Titulo,Descripcion, DATE_FORMAT(Fecha_alta,'%d/%m/%Y %H:%i')as Fecha_alta,Galeria,Nuevo_producto,Usuario FROM catalogo

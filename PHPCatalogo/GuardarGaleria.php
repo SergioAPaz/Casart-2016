@@ -1,6 +1,6 @@
 <?php
 include ("BloqueDeSeguridadCatalogo.php");
-include('../conexion.php');
+include('conexion.php');
 /*var_dump($_POST)*/
 
 $titulo=$_POST['txttitulo'];

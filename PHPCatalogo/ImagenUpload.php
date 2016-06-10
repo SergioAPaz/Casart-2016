@@ -1,6 +1,6 @@
 <?php
 include ("BloqueDeSeguridadCatalogo.php");
-include('../conexion.php');
+include('conexion.php');
 
 $id= $_POST['idgaleria'];
 $NombreArchivo=time() .'.jpg';
