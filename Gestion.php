@@ -194,16 +194,16 @@ $filas =mysqli_query($conexiondb,$consulta);
                             </div>
 
                             <div class="modal-body">
-                                <form>
+                                <form method="post" action="PHPCatalogo/Gestion/Notifications.php">
 
                                     <div class="form-group">
                                         <label for="recipient-name" class="control-label">Nombre:</label>
-                                        <input type="text" class="form-control" id="recipient-name" required>
+                                        <input type="text" name="Name" class="form-control" id="recipient-name" maxlength="30" pattern="^\s*[a-zA-Z0-9ñÑ_.\s]+\s*" required>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="recipient-name" class="control-label">Correo:</label>
-                                        <input type="text" class="form-control" id="recipient-name" required>
+                                        <input type="text" name="Email" class="form-control" id="recipient-name" maxlength="40" pattern="^\s*[a-zA-Z0-9ñÑ@_.\s]+\s*" required>
                                     </div>
 
 
@@ -227,7 +227,7 @@ $filas =mysqli_query($conexiondb,$consulta);
                                                 echo "<td>$count</td>";
                                                 echo "<td>$columna[Nombre]</td>";
                                                 echo "<td>$columna[Email]</td>";
-                                                echo "<td>  <a href='PHPCatalogo/BorrarComentarios.php?id=$columna[id]'>Borrar</a>   </td>";
+                                                echo "<td>  <a href='PHPCatalogo/Gestion/DeleteEmail.php?id=$columna[id]'>Eliminar</a></td>";
                                                 echo "</tr>";
                                             }
                                             ?>

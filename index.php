@@ -524,11 +524,11 @@ PANEL DE IMAGEN REDONDA-->
     <form method="post" action="PHPCatalogo/GuardarComentariosPHP.php">
         <div class="field">
             <label for="name">NOMBRE</label>
-            <input type="text" name="name" id="name" class="validar1" maxlength="25" pattern="^\s*[a-zA-Z0-9ñÑ_.\s]+\s*" required/>
+            <input type="text" name="name" id="name" class="validar1" maxlength="30" pattern="^\s*[a-zA-Z0-9ñÑ_.\s]+\s*" required/>
         </div>
         <div class="field">
             <label for="email">EMAIL</label>
-            <input type="email" name="email" id="email" class="validar2" maxlength="30" pattern="^\s*[a-zA-Z0-9ñÑ@_.\s]+\s*" required/>
+            <input type="email" name="email" id="email" class="validar2" maxlength="40" pattern="^\s*[a-zA-Z0-9ñÑ@_.\s]+\s*" required/>
         </div>
         <div class="field">
             <label for="message">MENSAJE</label>
