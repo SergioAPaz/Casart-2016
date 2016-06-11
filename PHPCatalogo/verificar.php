@@ -51,7 +51,7 @@ if(isset($_POST['g-recaptcha-response'])  &&  $_POST['g-recaptcha-response'])
                         $_SESSION["username"] = "SI";
                         $_SESSION['RolCuenta'] = $sesion['Rol'];
                         $_SESSION['usuario'] = $_POST['user'];
-                        header("location:PanelAdmin.php");
+                        header("location:../PanelAdmin.php");
 
                     } else {
                         echo "<!DOCTYPE html>";
