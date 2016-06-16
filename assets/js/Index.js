@@ -105,6 +105,101 @@ $(document).ready(function()
 
 
 
+
+/*PANE MOSAICO*/
+$(document).ready(function(){
+    $("#color1").hover(function(){
+        document.getElementById("hover1").className = "animated bounceOutUp";
+        $("#hover2").css("display", "block");
+        document.getElementById("hover2").className = "animated bounceInUp";
+        $(".shadow").animate({top: '0%'});
+    }, function(){
+        document.getElementById("hover1").className = "animated bounceInDown";
+        document.getElementById("hover2").className = "animated bounceOutDown";
+        $(".shadow").animate({top: '100%'});
+    });
+    $("#color2").hover(function(){
+        $(".shadow2").animate({top: '0%'});
+        document.getElementById("hover3").className = "animated bounceOutUp";
+        $("#hover4").css("display", "block");
+        document.getElementById("hover4").className = "animated bounceInUp";
+    }, function(){
+        $(".shadow2").animate({top: '100%'});
+        document.getElementById("hover3").className = "animated bounceInDown";
+        document.getElementById("hover4").className = "animated bounceOutDown";
+    });
+    $("#color3").hover(function(){
+        $(".shadow3").animate({top: '0%'});
+        document.getElementById("hover5").className = "animated bounceOutUp";
+        $("#hover6").css("display", "block");
+        document.getElementById("hover6").className = "animated bounceInUp";
+    }, function(){
+        $(".shadow3").animate({top: '100%'});
+        document.getElementById("hover5").className = "animated bounceInDown";
+        document.getElementById("hover6").className = "animated bounceOutDown";
+    });
+    $("#color4").hover(function(){
+        $(".shadow4").animate({top: '0%'});
+        document.getElementById("hover7").className = "animated bounceOutUp";
+        $("#hover8").css("display", "block");
+        document.getElementById("hover8").className = "animated bounceInUp";
+    }, function(){
+        $(".shadow4").animate({top: '100%'});
+        document.getElementById("hover7").className = "animated bounceInDown";
+        document.getElementById("hover8").className = "animated bounceOutDown";
+    });
+
+    
+    $("#color5").hover(function(){
+        document.getElementById("hover9").className = "animated bounceOutUp";
+        $("#hover10").css("display", "block");
+        document.getElementById("hover10").className = "animated bounceInUp";
+        $(".shadow5").animate({top: '0%'});
+    }, function(){
+        document.getElementById("hover9").className = "animated bounceInDown";
+        document.getElementById("hover10").className = "animated bounceOutDown";
+        $(".shadow5").animate({top: '100%'});
+    });
+
+    $("#color6").hover(function(){
+        $(".shadow6").animate({top: '0%'});
+        document.getElementById("hover11").className = "animated bounceOutUp";
+        $("#hover12").css("display", "block");
+        document.getElementById("hover12").className = "animated bounceInUp";
+    }, function(){
+        $(".shadow6").animate({top: '100%'});
+        document.getElementById("hover11").className = "animated bounceInDown";
+        document.getElementById("hover12").className = "animated bounceOutDown";
+    });
+
+    $("#color7").hover(function(){
+        $(".shadow7").animate({top: '0%'});
+        document.getElementById("hover13").className = "animated bounceOutUp";
+        $("#hover14").css("display", "block");
+        document.getElementById("hover14").className = "animated bounceInUp";
+    }, function(){
+        $(".shadow7").animate({top: '100%'});
+        document.getElementById("hover13").className = "animated bounceInDown";
+        document.getElementById("hover14").className = "animated bounceOutDown";
+    });
+
+    $("#color8").hover(function(){
+        $(".shadow8").animate({top: '0%'});
+        document.getElementById("hover15").className = "animated bounceOutUp";
+        $("#hover16").css("display", "block");
+        document.getElementById("hover16").className = "animated bounceInUp";
+    }, function(){
+        $(".shadow8").animate({top: '100%'});
+        document.getElementById("hover15").className = "animated bounceInDown";
+        document.getElementById("hover16").className = "animated bounceOutDown";
+    });
+});
+
+/*FIN PANE MOSAICO*/
+
+
+
+
 /*FANCYBOX*/
 $(document).ready(function() {
     /*

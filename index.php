@@ -20,9 +20,13 @@ $filas2=mysqli_query($conexiondb,$consultasql);
     <link rel="stylesheet" href="assets/css/Fonts%20navbar/formcomnt.css">
     <link rel="stylesheet" href="assets/bootstrap-3.3.5-dist/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/StylesNavbar.css">
+
     <link type="text/css" rel="stylesheet" href="assets/css/Fonts%20navbar/fonts/fonts.css"/>
+
     <link rel="stylesheet" href="assets/css/Index.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="fonts/fonts.css">
+
     <!--SCRIPT'S-->
     <script src="assets/jquery/jquery-1.11.3.min.js"></script>
     <script src="assets/bootstrap-3.3.5-dist/js/bootstrap.js"></script>
@@ -37,22 +41,22 @@ $filas2=mysqli_query($conexiondb,$consultasql);
     <link rel="stylesheet" type="text/css" href="assets/jquery/aumento%20de%20img/source/jquery.fancybox.css?v=2.1.5" media="screen" />
     <link rel="stylesheet" type="text/css" href="assets/jquery/aumento%20de%20img/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
     <script type="text/javascript" src="assets/jquery/aumento%20de%20img/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
-     <!--Add Thumbnail helper (this is optional)-->
+    <!--Add Thumbnail helper (this is optional)-->
     <link rel="stylesheet" type="text/css" href="assets/jquery/aumento%20de%20img/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
     <script type="text/javascript" src="assets/jquery/aumento%20de%20img/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
-   <!--  Add Media helper (this is optional)-->
+    <!--  Add Media helper (this is optional)-->
     <script type="text/javascript" src="assets/jquery/aumento%20de%20img/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
-        <!--PICTUREFILL-->
+    <!--PICTUREFILL-->
     <script src="assets/js/picturefill.js" async></script>
     <script>document.createElement( "picture" );</script>
     <!--SCRIPT de Recaptcha en comments-->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
-<body>
+<body style="background-color: #795548">
 <!--PRECARGA DE PAGINA-->
-<div id="preloader">
+<!--<div id="preloader">
     <div id="loader">&nbsp;</div>
-</div>
+</div>-->
 
 <header>
     <!--NAVBAR-->
@@ -208,12 +212,13 @@ $filas2=mysqli_query($conexiondb,$consultasql);
         </nav>
     </div>
 </header>
+
 <!--Slideshow-->
 <div class="SlideshowBig hol" >
-    <div id="slider1_container" class="compa0" style=" margin-top:0px;position: relative;/* margin: 0 auto*/ top: 0px; left: 0px;
+    <div id="slider1_container" class="compa0" style=" margin-top:0;position: relative;/* margin: 0 auto*/ top: 0; left: 0;
         width: 1300px; /*height: 500px;*/ overflow: hidden;">
 
-        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+        <div u="loading" style="position: absolute; top: 0; left: 0;">
             <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block;
                         top: 0px; left: 0px; width: 100%; height: 100%;">
             </div>
@@ -224,6 +229,7 @@ $filas2=mysqli_query($conexiondb,$consultasql);
         <!-- Slides Container -->
         <div id="Slides" class="compa" u="slides" style="cursor: pointer; position: absolute; left: 0px; top: 0px;
             width: 1300px;overflow: hidden;">
+
             <div class="pantalla 1">
                 <a href="GaleriaMataOrtiz.php"> <!--<img u="image"  src="imagenes/panftalla1.jpg" />-->
                     <picture>
@@ -244,7 +250,7 @@ $filas2=mysqli_query($conexiondb,$consultasql);
                 </div>
                 <div class="text22" style="position:relative; width: 180px; height: 190px; /*top: 335px;*/ /*left: -12px;*/ padding: 5px;
                             text-align: right; line-height: 36px; float: right;">
-                    <img  src="imagenes/logo%20casa.png" />
+                    <!--<img  src="images/logo.png" />-->
                 </div>
             </div>
 
@@ -342,6 +348,7 @@ $filas2=mysqli_query($conexiondb,$consultasql);
         <span u="arrowleft" class="jssora21l" style="top: 123px; left: 8px;"></span>
         <span u="arrowright" class="jssora21r" style="top: 123px; right: 8px;"></span>
     </div>
+
 </div>
 <!--HR Y MENSAJES-->
 <div class="container estilos2561">
@@ -355,87 +362,193 @@ $filas2=mysqli_query($conexiondb,$consultasql);
     </div>
 </div>
 
-<!--PANEL DE 3 COLUMNAS-->
-<div class="container-fluid" style="background-color: #5D4037">
-    <div class="row">
-    <br>
-        <div class="col-xs-12 col-sm-4 col-md-4 text-center">
-            <div class="thumbnail color54">
-               <img src="images/animals-q-c-370-210-3.jpg" class="img-thumbnail edit516" alt="">
-                <div class="caption chico125">
-                    <h2 class="color651">Concursos</h2>
-                    <p class="color651">Esto es una pruebaxxx de como el texto se mostrara te commento que debe estar justificado al centro para su
-                        elegante y correcta vizualizacion, si lo logras aplicalo tambien a las demas columnas</p>
-                    <a href="#" class="btn btn-warning">Leer mas...</a>
-                </div>
-            </div>
-        </div>
 
-        <div class="col-xs-12 col-sm-4 col-md-4 text-center">
-            <div class="thumbnail color54">
-                <img src="images/animals-q-c-370-210-3.jpg"  class="img-thumbnail edit516"  alt="">
-                <div class="caption chico125">
-                    <h2 class="color651">Concursos</h2>
-                    <p class="color651">Esto es una prueba de como el texto se mostrara te commento que debe estar justificado al centro para su
-                        elegante y correcta vizualizacion, si lo logras aplicalo tambien a las demas columnas</p>
-                    <a href="#" class="btn btn-warning">Leer mas...</a>
-                </div>
-            </div>
-        </div>
+<!--PANEL MOSAICO-->
 
-        <div class="col-xs-12 col-sm-4 col-md-4 text-center">
-            <div class="thumbnail color54">
-                <img src="images/animals-q-c-370-210-3.jpg"  class="img-thumbnail edit516"  alt="">
-                <div class="caption chico125">
-                    <h2 class="color651">Concursos</h2>
-                    <p class="color651">Esto es una prueba de como el texto se mostrara te commento que debe estar justificado al centro para su
-                        elegante y correcta vizualizacion, si lo logras aplicalo tambien a las demas columnas</p>
-                    <a href="#" class="btn btn-warning">Leer mas...</a>
-                </div>
-            </div>
+
+<div class="container-fluid" style="padding-right: 0;padding-left: 0">
+
+    <hr  style="height: 6px;width: 100%;;background-color: #FF9800;border-color: #FF9800;margin-bottom: 0">
+
+    <div class="x2  col-lg-3 col-md-4 col-sm-6 col-xs-12" style="overflow: hidden;padding-left: 0;padding-right: 0">
+        <div id="color1">
+            <a href="AlfareriaTarahumara.php">
+                <div class="shadow0"  style=""></div>
+                <div class="shadow"  style=""></div>
+                <img class="img-responsive" alt="Responsive image"  src="images/Mosaic/test111.png" style="    background-size: cover;height: 300px;">
+                <div   class="hovertest"  id="hover1" style="font-family: 'Montserrat', sans-serif;  position: absolute;
+                     top: 35%; text-align: center;margin-left: 18%;margin-right: 18%; color: white;">Alfereria Tarahumara</div>
+                <div   class="hovertest"  id="hover2" style="font-family: 'Montserrat', sans-serif;  position: absolute; font-size: 18px;
+                 display: none; text-align: center;margin-left: 4%;margin-right: 4%;   color: white;">Conoce la mejor alfareria de nuestro bello estado de Chihuahua.</div>
+            </a>
         </div>
     </div>
+
+    <div class="x2  col-lg-3 col-md-4 col-sm-6 col-xs-12" style="overflow: hidden;padding-left: 0;padding-right: 0">
+        <div id="color2">
+            <a href="#">
+                <div class="shadow0"  style="opacity: .5"></div>
+                <div class="shadow2"  style=""></div>
+                <img  src="images/Mosaic/test3.jpg" alt="" style="    background-size: cover;height: 300px;">
+                <div   class="hovertest"  id="hover3" style="font-family: 'Montserrat', sans-serif;  position: absolute;
+                 top: 40%; text-align: center;margin-left: 18%;margin-right: 18%; color: white;">Ollas finas de Mata Ortiz</div>
+                <div   class="hovertest"  id="hover4" style="font-family: 'Montserrat', sans-serif;  position: absolute; font-size: 18px;
+               display: none; text-align: center;margin-left: 4%;margin-right: 4%; top: 38%;  color: white;"> Ollas con estilo artesanal de gran reconocimiento, expuesto en galerías de arte y celebrado internacionalmente.</div>
+            </a>
+        </div>
+    </div>
+
+    <div class="x2  col-lg-3 col-md-4 col-sm-6 col-xs-12" style="overflow: hidden;padding-left: 0;padding-right: 0">
+        <div id="color3">
+            <a href="CesteriaTarahumara.php">
+                <div class="shadow0"  style=""></div>
+                <div class="shadow3"  style=""></div>
+                <img  src="images/Mosaic/test4.JPG" alt="" style="    background-size: cover;height: 300px;">
+                <div   class="hovertest"  id="hover5" style="font-family: 'Montserrat', sans-serif;  position: absolute;
+                     top: 35%; text-align: center;margin-left: 18%;margin-right: 18%; color: white;">Cesteria Tarahumara</div>
+                <div   class="hovertest"  id="hover6" style="font-family: 'Montserrat', sans-serif;  position: absolute; font-size: 18px;top: 33%;
+                    display: none; text-align: center;margin-left: 4%;margin-right: 4%;   color: white;">Tradición de antaño, la fabricación de artesanías es fundamental para los tarahumaras, quienes siempre han destacado por sus
+                    minuciosos trabajos en cestería.
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="x2  col-lg-3 col-md-4 col-sm-6 col-xs-12" style="overflow: hidden;padding-left: 0;padding-right: 0">
+        <div id="color4">
+            <a href="InstrumentosMusicalesTarahumara.php">
+                <div class="shadow0"  style=""></div>
+                <div class="shadow4"  style=""></div>
+                <img  src="images/Mosaic/Sierra.jpg" alt="" style="    background-size: cover;height: 300px;">
+                <div   class="hovertest"  id="hover7" style="font-family: 'Montserrat', sans-serif;  position: absolute;
+                 top: 35%; text-align: center;margin-left: 18%;margin-right: 18%; color: white;">Instrumentos musicales</div>
+                <div   class="hovertest"  id="hover8" style="font-family: 'Montserrat', sans-serif;  position: absolute; font-size: 18px;top: 30%;
+                 display: none; text-align: center;margin-left: 4%;margin-right: 4%;   color: white;">Los pueblos Rarámuris realizan distintas actividades y la mayoría de las veces, son acompañadas por música y sonidos que emiten los
+                    instrumentos que ellos mismos fabrican a mano con materiales como cuero y madera.</div>
+            </a>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="x2  col-lg-3 col-md-4 col-sm-6 col-xs-12" style="overflow: hidden;padding-left: 0;padding-right: 0">
+        <div id="color5">
+            <a href="#">
+                <div class="shadow0"  style=""></div>
+                <div class="shadow5"  style=""></div>
+                <img  class="img-responsive" alt="Responsive image" src="images/Mosaic/77.jpg" alt="" style="    background-size: cover;height: 300px;">
+                <div   class="hovertest"  id="hover9" style="font-family: 'Montserrat', sans-serif;  position: absolute;
+                 top: 33%; text-align: center;margin-left: 18%;margin-right: 18%; color: white;">Productos Chihuahuenses</div>
+                <div   class="hovertest"  id="hover10" style="font-family: 'Montserrat', sans-serif;  position: absolute; font-size: 18px;top: 33%;
+                display: none; text-align: center;margin-left: 4%;margin-right: 4%;   color: white;">Variedad de productos de gran sabor como mermeladas, galletas, pinole, sotol y muchos mas.</div>
+            </a>
+        </div>
+    </div>
+
+    <div class="x2  col-lg-3 col-md-4 col-sm-6 col-xs-12" style="overflow: hidden;padding-left: 0;padding-right: 0">
+        <div id="color6">
+            <a href="#">
+                <div class="shadow0"  style=""></div>
+                <div class="shadow6"  style=""></div>
+                <img  class="img-responsive" alt="Responsive image" src="images/Mosaic/88.jpg" alt="" style="background-size: cover;height: 300px;">
+                <div   class="hovertest"  id="hover11" style="font-family: 'Montserrat', sans-serif;  position: absolute;
+                 top: 40%; text-align: center;margin-left: 39%;margin-right: 39%; color: white;">Arcones</div>
+                <div   class="hovertest"  id="hover12" style="font-family: 'Montserrat', sans-serif;  position: absolute; font-size: 18px;top: 38%;
+                 display: none; text-align: center;margin-left: 4%;margin-right: 4%;   color: white;">Una excelente combinacion de sabor con distintos dulces tradicionales y productos 100% Chihuahuenses.
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="x2  col-lg-3 col-md-4 col-sm-6 col-xs-12" style="overflow: hidden;padding-left: 0;padding-right: 0">
+        <div id="color7">
+            <a href="OllaMataOrtizComercial.php">
+                <div class="shadow0"  style=""></div>
+                <div class="shadow7"  style=""></div>
+                <img   class="img-responsive" alt="Responsive image" src="images/Mosaic/999.png" alt="" style="    background-size: cover;height: 300px;">
+                <div   class="hovertest"  id="hover13" style="font-family: 'Montserrat', sans-serif;  position: absolute;
+                 top: 40%; text-align: center;margin-left: 18%;margin-right: 18%; color: white;">Ollas de Mata Ortiz</div>
+                <div   class="hovertest"  id="hover14" style="font-family: 'Montserrat', sans-serif;  position: absolute; font-size: 18px;top: 30%;
+                 display: none; text-align: center;margin-left: 4%;margin-right: 4%;   color: white;">La cultura mexicana se distingue en el mundo por tener un sello propio, lleno de color, historia y autenticidad. Prueba
+                    de ello lo encontramos en el pueblo de Mata Ortiz.</div>
+            </a>
+        </div>
+    </div>
+
+    <div class="x2  col-lg-3 col-md-4 col-sm-6 col-xs-12" style="overflow: hidden;padding-left: 0;padding-right: 0">
+        <div id="color8">
+            <a href="#">
+                <div class="shadow0"  style="opacity: .5"></div>
+                <div class="shadow8"  style=""></div>
+                <img  src="images/Mosaic/10000.png" alt="" style="    background-size: cover;height: 300px;">
+                <div   class="hovertest"  id="hover15" style="font-family: 'Montserrat', sans-serif;  position: absolute;
+                 top: 40%; text-align: center;margin-left: 21%;margin-right: 21%; color: white;">Artesania regional</div>
+                <div   class="hovertest"  id="hover16" style="font-family: 'Montserrat', sans-serif;  position: absolute; font-size: 18px;
+               display: none; text-align: center;margin-left: 4%;margin-right: 4%; top: 33%;  color: white;">Piezas artísticas de significación cultural realizadas manualmente por artesanos, piezas que reflejan una
+                    autenticidad que enorgullece y revitaliza la artesania chihuahuense.</div>
+            </a>
+        </div>
+    </div>
+
 </div>
 
-<!--
-PANEL DE IMAGEN REDONDA-->
-<div class="container-fluid">
-    <div class="row" style="background-color: #FFCA28">
+<div CLASS="container-fluid" style="padding-left: 0;padding-right: 0">
+    <hr  style="height: 2px;width: 100%;;background-color: #212121;border-color: #212121;margin-bottom: 0;margin-top: 0">
+</div>
 
-         <div class="col-xs-12 col-sm-8" style="background-color: #FFCA28;">
-             <p class="text-uppercase texto651" style="margin-top: 20px;margin-bottom: 20px">Cerámica de Mata Ortiz <br></p>
-             <p class="text-uppercase" style="font-size: 17px;color: #ffffff">La cerámica de Mata Ortiz es un estilo de artesanías, principalmente vasijas y ollas, iniciada por Juan Quezada Celado en el poblado de Juan Mata Ortiz,
-                 Chihuahua. Toma su inspiración de la cerámica aridoamericana originada en Casas Grandes, para convertirse en cuatro décadas en un estilo artesanal de
-                 gran reconocimiento, expuesto en galerías de arte y celebrado internacionalmente. Actualmente son más de 300 los artesanos dedicados a la producción de
-                 esta cerámica en Mata Ortiz.</p>
-             <p class="text-uppercase hidden-xs hidden-sm hidden-md" style="font-size: 17px;color: #ffffff">
-                 A la edad de 20 años, Juan Quezada Celado emprendía largas caminatas con su burro para colectar leña, fruta
-                 y miel de agave en las cercanías de su poblado natal, Juan Mata Ortiz. En estos viajes, Quezada recolectaba piezas y pedacería
-                 prehispánica proveniente de la cultura Casas Grandes. Durante varios años, resultado de la observación
-                 de los colores y los patrones geométricos de la cerámica aridoamericana, fue perfeccionando su técnica, añadiendo un poco de arena en la mezcla
-                 para evitar que se fragmentara.
-                 <p class="text-uppercase hidden-xs hidden-sm Desaparece84" style="font-size: 17px;color: #ffffff">Alrededor de 1974 Quezada concentró todos sus esfuerzos en la producción
-                 de cerámica, seguido por sus hermanos Nicolás, Reynaldo, Lidia, Consolación, Reynalda, Jesús y Genoveva, y fue así como toda la familia comenzó
-                 a involucrarse en la incipiente producción de este tipo de artesanía.
-                </p>
-             </p>
-         </div>
+<!--FIN PANEL MOSAICO-->
+
+<!--PANEL DE IMAGEN REDONDA-->
+
+<div class="container-fluid">
+
+
+    <div class="row" style="background-color: #FFA726">
+
+
+
+        <div class="col-xs-12 col-sm-8" style="background-color: #FFA726;">
+
+            <p class="text-uppercase texto651" style="margin-top: 20px;margin-bottom: 20px">Cerámica de Mata Ortiz <br></p>
+            <p class="text-uppercase" style="font-size: 17px;color: #ffffff">La cerámica de Mata Ortiz es un estilo de artesanías, principalmente vasijas y ollas, iniciada por Juan Quezada Celado en el poblado de Juan Mata Ortiz,
+                Chihuahua. Toma su inspiración de la cerámica aridoamericana originada en Casas Grandes, para convertirse en cuatro décadas en un estilo artesanal de
+                gran reconocimiento, expuesto en galerías de arte y celebrado internacionalmente. Actualmente son más de 300 los artesanos dedicados a la producción de
+                esta cerámica en Mata Ortiz.</p>
+            <p class="text-uppercase hidden-xs hidden-sm hidden-md" style="font-size: 17px;color: #ffffff">
+                A la edad de 20 años, Juan Quezada Celado emprendía largas caminatas con su burro para colectar leña, fruta
+                y miel de agave en las cercanías de su poblado natal, Juan Mata Ortiz. En estos viajes, Quezada recolectaba piezas y pedacería
+                prehispánica proveniente de la cultura Casas Grandes. Durante varios años, resultado de la observación
+                de los colores y los patrones geométricos de la cerámica aridoamericana, fue perfeccionando su técnica, añadiendo un poco de arena en la mezcla
+                para evitar que se fragmentara.
+            <p class="text-uppercase hidden-xs hidden-sm Desaparece84" style="font-size: 17px;color: #ffffff">Alrededor de 1974 Quezada concentró todos sus esfuerzos en la producción
+                de cerámica, seguido por sus hermanos Nicolás, Reynaldo, Lidia, Consolación, Reynalda, Jesús y Genoveva, y fue así como toda la familia comenzó
+                a involucrarse en la incipiente producción de este tipo de artesanía.
+            </p>
+            </p>
+        </div>
 
         <div class="col-xs-12 col-sm-4 pull-right" style="background-color: #FFCA28">
-           <img src="images/imagen.jpg" class="img-responsive img-circle fadein hol2" alt="Responsive image" style="display:none;margin: 0 auto; margin-top: 15px;margin-bottom: 16px">
+
+            <img src="images/imagen.jpg" class="img-responsive img-circle fadein hol2" alt="Responsive image" style="display:none;margin: 0 auto; margin-top: 15px;margin-bottom: 16px">
         </div>
     </div>
 </div>
 
 
+
+<hr style="height: 6px;width: 100%;position: absolute;background-color: #FF9800;border-color: #FF9800;margin-top: auto">
 
 
 <br>
 <header>
- <div class="container" style="background-color: #5D4037; margin-left: 0%; margin-right: 20%" >
-     <!--<h3 class="pull-right" style="color: #ffffff;ve"  >Catalogo de productos en venta</h3>-->
-     <p class="pull-right parrafo516" style="color: #ffa000;">Gran variedad de artesanías mexicanas</p>
- </div>
+
+    <div class="container" style="background-color: #4E342E; margin-left: 0%; margin-right: 20%" >
+        <!--<h3 class="pull-right" style="color: #ffffff;ve"  >Catalogo de productos en venta</h3>-->
+        <p class="pull-right parrafo516" style="color: #ffa000;">Gran variedad de artesanías mexicanas</p>
+    </div>
 </header>
 
 
@@ -491,19 +604,19 @@ PANEL DE IMAGEN REDONDA-->
         ?>
 
 
-  <!--     <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="thumbnail x" style="height: 443px;">
-                <div style="border-radius: 0px 6px 6px 0px;background-color: #FFA726;float: left;margin-left: -6px;margin-top: 20px;opacity: .8;position: absolute;width: 150px;height: 25px"><p style="color: white;;float: right;margin-right: 5px;;margin-top: 2%">Nuevo producto</p></div>
-                <div style="height: 10px" class="divhide"></div>
-                <a class="fancybox " href="images/productocondesc.jpg" data-fancybox-group="gallery" >
-                    <img class="img-responsive styleimg" style="max-height: 315px" src="images/productocondesc.jpg" alt="" /></a>
-                <div class="caption">
-                    <h3>Mermelada varios sabores</h3>
-                    <p>Mermelada sabor Guayaba, Manzana y Tamarindo, producto Chihuahuense.</p>
-                </div>
-            </div>
-        </div>
--->
+        <!--     <div class="col-xs-12 col-sm-6 col-md-3">
+                  <div class="thumbnail x" style="height: 443px;">
+                      <div style="border-radius: 0px 6px 6px 0px;background-color: #FFA726;float: left;margin-left: -6px;margin-top: 20px;opacity: .8;position: absolute;width: 150px;height: 25px"><p style="color: white;;float: right;margin-right: 5px;;margin-top: 2%">Nuevo producto</p></div>
+                      <div style="height: 10px" class="divhide"></div>
+                      <a class="fancybox " href="images/productocondesc.jpg" data-fancybox-group="gallery" >
+                          <img class="img-responsive styleimg" style="max-height: 315px" src="images/productocondesc.jpg" alt="" /></a>
+                      <div class="caption">
+                          <h3>Mermelada varios sabores</h3>
+                          <p>Mermelada sabor Guayaba, Manzana y Tamarindo, producto Chihuahuense.</p>
+                      </div>
+                  </div>
+              </div>
+      -->
 
     </div>
 </div>
@@ -519,50 +632,50 @@ PANEL DE IMAGEN REDONDA-->
 
 <!--FORMULARIO DE CONTACTOS-->
 <section style="position: relative">
-<a name="cmntanchor"><section id="footer"  class=" aqui cmntanchor" style="color: #FAFAFA">
-</a>
-<hr style="height: 6px;width: 100%;background-color: #FF9800;border-color: #FF9800;margin-bottom: 10px">
-<div class="inner">
-    <h2 class="major">CONTACTANOS</h2>
-    <p>¿Tienes algo interesante que contarnos?, Preguntas acerca nuestras artesanias, Contactanos!.</p>
-    
-    <form method="post" action="PHPCatalogo/GuardarComentariosPHP.php">
-        <div class="field">
-            <label for="name">NOMBRE</label>
-            <input type="text" name="name" id="name" class="validar1" maxlength="30" pattern="^\s*[a-zA-Z0-9ñÑ_.\s]+\s*" required/>
-        </div>
-        <div class="field">
-            <label for="email">EMAIL</label>
-            <input type="email" name="email" id="email" class="validar2" maxlength="40" pattern="^\s*[a-zA-Z0-9ñÑ@_.\s]+\s*" required/>
-        </div>
-        <div class="field">
-            <label for="message">MENSAJE</label>
-            <textarea name="message" id="message" rows="4" class="validar3"  maxlength="400" pattern="^\s*[a-zA-Z0-9ñÑ@_.,\s]+\s*" required></textarea>
-        </div>
+    <a name="cmntanchor"><section id="footer"  class=" aqui cmntanchor" style="color: #FAFAFA">
+    </a>
+    <hr style="height: 6px;width: 100%;background-color: #FF9800;border-color: #FF9800;margin-bottom: 10px">
+    <div class="inner">
+        <h2 class="major">CONTACTANOS</h2>
+        <p>¿Tienes algo interesante que contarnos?, Preguntas acerca nuestras artesanias, Contactanos!.</p>
 
-        <div class="g-recaptcha"   data-theme="dark" data-sitekey="6LdwxSETAAAAAAgUhUhtKcDPdNu8xQmIOt6JDRot"></div>
+        <form method="post" action="PHPCatalogo/GuardarComentariosPHP.php">
+            <div class="field">
+                <label for="name">NOMBRE</label>
+                <input type="text" name="name" id="name" class="validar1" maxlength="30" pattern="^\s*[a-zA-Z0-9ñÑ_.\s]+\s*" required/>
+            </div>
+            <div class="field">
+                <label for="email">EMAIL</label>
+                <input type="email" name="email" id="email" class="validar2" maxlength="40" pattern="^\s*[a-zA-Z0-9ñÑ@_.\s]+\s*" required/>
+            </div>
+            <div class="field">
+                <label for="message">MENSAJE</label>
+                <textarea name="message" id="message" rows="4" class="validar3"  maxlength="400" pattern="^\s*[a-zA-Z0-9ñÑ@_.,\s]+\s*" required></textarea>
+            </div>
 
-        <br>
+            <div class="g-recaptcha"   data-theme="dark" data-sitekey="6LdwxSETAAAAAAgUhUhtKcDPdNu8xQmIOt6JDRot"></div>
 
-        <ul class="actions">
-            <li><input type="submit"  class="btn64"  value="ENVIAR MENSAJE" /></li>
+            <br>
+
+            <ul class="actions">
+                <li><input type="submit"  class="btn64"  value="ENVIAR MENSAJE" /></li>
+            </ul>
+        </form>
+
+        <ul class="contact">
+            <li class="fa-home">
+                Calle 2da   <br />
+                Col. Centro<br />
+                Chihuahua, Chihuahua,<br />
+                México 31000
+            </li>
+
+            <li class="fa-phone">(614) 4-47-48-59</li>
+            <li class="fa-envelope"><a>Alejandro@hotmail.com</a></li>
+            <li class="fa-envelope"><a>Alejandro@hotmail.com</a></li>
         </ul>
-    </form>
-    
-    <ul class="contact">
-        <li class="fa-home">
-            Calle 2da   <br />
-            Col. Centro<br />
-            Chihuahua, Chihuahua,<br />
-            México 31000
-        </li>
-
-        <li class="fa-phone">(614) 4-47-48-59</li>
-        <li class="fa-envelope"><a>Alejandro@hotmail.com</a></li>
-        <li class="fa-envelope"><a>Alejandro@hotmail.com</a></li>
-    </ul>
-    <ul class="copyright"></ul>
-</div>
+        <ul class="copyright"></ul>
+    </div>
 
 </section>
 
@@ -575,9 +688,9 @@ PANEL DE IMAGEN REDONDA-->
     <div class="container-fluid margintop">
         <div class="row" style="background-color: #3E2723;height: auto">
 
-           <div >
+            <div >
                 <p  style="color:#212121;background-color: #FAFAFA;padding: 20px;font-size: 14px;margin: 0">© Casa de las Artesanías del Estado de Chihuahua. Todos los derechos reservados.
-       <span id="ocultarmq4" style="float: right"><span>Dessarrollado por </span><a href="mailto:alejandroax@live.com.mx">Sergio Paz.</a> </p>
+                    <span id="ocultarmq4" style="float: right"><span>Dessarrollado por </span><a href="mailto:alejandroax@live.com.mx">Sergio Paz.</a> </p>
             </div>
 
             <div class="posytam0" id="ocultarmq3" style="margin-bottom: 25px"><img  style="border-radius: 100px" src="images/MisionVision.png"></div>

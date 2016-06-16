@@ -51,10 +51,10 @@ a:focus {
 
     .compa{
 
-        height: 500px;
+        height: 430px;
     }
     .compa0{
-        height: 500px;
+        height: 430px;
     }
 
     .text00{
@@ -243,7 +243,7 @@ a:focus {
         padding: 15px 12px;
         width: 210px;
         font-size: 13px;
-        background: #6D4C41;
+        background: #5D4037;
         text-decoration: none;
         color: #ffffff;
         -webkit-transition: color .2s ease;

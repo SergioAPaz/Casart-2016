@@ -1,3 +1,83 @@
+/*PANEL MOSAICO*/
+
+/*SOMBRAS*/
+.shadow0{
+    width: 100%;
+    top: 0%;
+    height: 100%;
+    background-color: #212121;
+    position: absolute;
+    opacity: .6;
+}
+.shadow, .shadow2, .shadow3, .shadow4, .shadow5, .shadow6, .shadow7, .shadow8{
+    width: 100%;
+    top: 100%;
+    height: 100%;
+    background-color: #212121;
+    position: absolute;
+    opacity: .8;
+}
+
+#color2{
+    background-color: #5D4037;
+}
+#color3{
+    background-color: #5D4037;
+}
+#color4{
+    background-color: #5D4037;
+}
+#color5{
+    background-color: #5D4037;
+}
+#color6{
+    background-color: #5D4037;
+}
+#color7{
+    background-color: #5D4037;
+}
+#color8{
+    background-color: #5D4037;
+}
+
+
+.x2{
+    height: 300px;
+}
+
+@media screen and (max-width: 993px) {
+    .x2{
+        height: 230px;
+    }
+}
+
+#hover1, #hover3, #hover5, #hover7,#hover9,#hover11,#hover13,#hover15{
+    font-size: 30px;
+}
+
+#hover2{
+    top: 43%;
+}
+
+@media (min-width: 993px) and (max-width: 1500px) {
+    #hover1, #hover3, #hover5, #hover7,#hover9,#hover11,#hover13,#hover15{
+        font-size: 25px;
+    }
+    #hover2, #hover4, #hover6, #hover8,#hover10,#hover12,#hover14,#hover16{
+        top: 39%;
+    }
+
+}
+@media (min-width: 1px) and (max-width: 693px) {
+    #hover1, #hover3, #hover5, #hover7,#hover9,#hover11,#hover13,#hover15{
+        font-size: 25px;
+    }
+    #hover2, #hover4, #hover6, #hover8,#hover10,#hover12,#hover14,#hover16{
+        top: 31%;
+    }
+}
+
+/* FIN PANEL MOSAICO*/
 
 
 @media screen and (max-width: 1370px) {
@@ -7,9 +87,9 @@
 }
 
 .hol{
-    -moz-box-shadow: 0px 5px 15px #212121;
-    -webkit-box-shadow: 0px 5px 15px #212121;
-    box-shadow: 0px 5px 15px #212121;
+    -moz-box-shadow: 0px 1px 10px #212121;
+    -webkit-box-shadow: 0px 1px 10px #212121;
+    box-shadow: 0px 1px 10px #212121;
 }
 
 .hol2{
@@ -26,7 +106,7 @@
     text-align: center;
    padding-top: 0;
     padding-bottom: 0;
-    background-color: #8D6E63;
+    background-color: #795548;
 }
 .estilos2562>h2, .estilos2562>p{
     color: #ffffff;
@@ -166,11 +246,11 @@
     /*border: 2px solid #FFA000;*/
 }
 .x{
-    background-color: #5D4037;
+    background-color: #4E342E;
     -moz-box-shadow: 0px 5px 0px #FF9800;
     -webkit-box-shadow: 0px 5px 0px #FF9800;
     box-shadow: 0px 5px 0px #FF9800;
-    border: 2px solid #5D4037;
+    border: 2px solid #4E342E;
 }
 .x:hover{
     border-color:  #ff9800;
