@@ -1,16 +1,3 @@
-/*
-/!*EFECTO APARICION PANEL1*!/
-$(document).ready(function(){
-    $('.deslizamiento').animate({'margin-left':-15+'px'},1800,function(){
-        document.getElementById("relleno").style.display="none";
-        $('.descripcion').fadeIn(2000);
-        $('.imagen415').fadeIn(2000);
-    });
-});
-
-
-*/
-
 /*BOTON IR ARRIBA*/
 $(document).ready(function(){
 

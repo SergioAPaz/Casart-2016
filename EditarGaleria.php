@@ -45,7 +45,7 @@ $columnas= mysqli_fetch_assoc($filas);
     <div class="panel panel-default"style="margin-top: 15px">
         <div class="panel-body" >
            <p class="alert" style="font-size: 30px;background-color: #FFCA28;color: #ffffff">Modificar Galeria</p>
-            <form role = "form" method="post" action="PHPCatalogo/EditarGaleriaPHP.php" >
+            <form role = "form" method="post" action="PHPCatalogo/EditarGaleriaPHP" >
                 <div class = "form-group">
                     <label class="text-muted" for = "name">Titulo del producto:</label>
                     <input type="text" name="txttitulo" id=tit class="form-control" placeholder="Titulo..." maxlength="200"  pattern="^\s*[a-zA-Z0-9ñÑ-_,.,\s]+\s*" required value="<?php echo $columnas['Titulo']; ?>"/>

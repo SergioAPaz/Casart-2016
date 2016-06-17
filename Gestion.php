@@ -194,7 +194,7 @@ $filas =mysqli_query($conexiondb,$consulta);
                         <div class="modal-content">
                             <div class="modal-header" style="background-color: #FFCA28">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="exampleModalLabel" style="color: #FAFAFA">Tabla de correos asignados para notificaciones</h4>
+                                <h4 class="modal-title" id="exampleModalLabel" style="color: #FAFAFA">Correos para notificaciones</h4>
                             </div>
 
                             <div class="modal-body">

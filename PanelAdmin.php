@@ -81,31 +81,31 @@ $filas =mysqli_query($conexiondb,$consulta);
         <div>
             <div id='cssmenu'>
                 <ul>
-                    <li><a href='index.php'>Inicio</a></li>
+                    <li><a href='index'>Inicio</a></li>
                     <li class='active has-sub'><a href='#'>Nosotros</a>
                         <ul>
-                            <li ><a href='MisionYVision.php'>Mision & Vision</a></li>
-                            <li ><a href='ProductosVarios2/QuienesSomos.php'>Quiénes somos</a></li>
+                            <li ><a href='MisionYVision'>Mision & Vision</a></li>
+                            <li ><a href='ProductosVarios2/QuienesSomos'>Quiénes somos</a></li>
                         </ul>
                     </li>
 
                     <li class='active has-sub'><a href='#'>Tarahumara</a>
                         <ul>
-                            <li ><a href='CesteriaTarahumara.php'>Cestería tarahumara</a></li>
-                            <li ><a href='AlfareriaTarahumara.php'>Alfarería tarahumara</a></li>
-                            <li ><a href='TextilesTarahumaras.php'>Textiles tarahumaras</a></li>
-                            <li ><a href='ArtesaniasTarahumaraDeCuero.php'>Artesanías de cuero</a></li>
-                            <li ><a href='InstrumentosMusicalesTarahumara.php'>Instrumentos musicales</a></li>
-                            <li ><a href='ArticulosVarios.php'>Articulos varios</a></li>
+                            <li ><a href='CesteriaTarahumara'>Cestería tarahumara</a></li>
+                            <li ><a href='AlfareriaTarahumara'>Alfarería tarahumara</a></li>
+                            <li ><a href='TextilesTarahumaras'>Textiles tarahumaras</a></li>
+                            <li ><a href='ArtesaniasTarahumaraDeCuero'>Artesanías de cuero</a></li>
+                            <li ><a href='InstrumentosMusicalesTarahumara'>Instrumentos musicales</a></li>
+                            <li ><a href='ArticulosVarios'>Articulos varios</a></li>
                         </ul>
                     </li>
 
                     <li class='active has-sub'><a href='#'>Mata Ortiz</a>
                         <ul>
-                            <li ><a href='OllaEconomica.php'>Olla mata ortiz económica</a></li>
-                            <li ><a href='OllaMataOrtizComercial.php'>Olla mata ortiz comercial</a></li>
-                            <li ><a href='OllaFina.php'>Olla mata ortiz fina</a></li>
-                            <li ><a href='GaleriaMataOrtiz.php'>Galería ceramica de mata ortiz</a></li>
+                            <li ><a href='OllaEconomica'>Olla mata ortiz económica</a></li>
+                            <li ><a href='OllaMataOrtizComercial'>Olla mata ortiz comercial</a></li>
+                            <li ><a href='OllaFina'>Olla mata ortiz fina</a></li>
+                            <li ><a href='GaleriaMataOrtiz'>Galería ceramica de mata ortiz</a></li>
                         </ul>
                     </li>
 
@@ -129,15 +129,15 @@ $filas =mysqli_query($conexiondb,$consulta);
                             echo "<li class='active has-sub pull-right' ><a href='#'>Administrador</a>";
                             echo "<ul>";
                      
-                            echo "<li ><a href='Gestion.php'><span class='glyphicon glyphicon-th-large' style='margin-right: 5px'></span> Gestion</a></li>";
-                            echo "<li ><a href='ContactoComentarios.php'><span class='glyphicon glyphicon-comment' style='margin-right: 5px'></span> Comentarios</a></li>";
+                            echo "<li ><a href='Gestion'><span class='glyphicon glyphicon-th-large' style='margin-right: 5px'></span> Gestion</a></li>";
+                            echo "<li ><a href='ContactoComentarios'><span class='glyphicon glyphicon-comment' style='margin-right: 5px'></span> Comentarios</a></li>";
 
                             if ($_SESSION["RolCuenta"] == "Administrador")
                             {
-                                echo "<li><a  href='NuevosUsuarios.php'><span class='glyphicon glyphicon-user' style='margin-right: 5px'></span>  Nuevo usuario</a></li>";
+                                echo "<li><a  href='NuevosUsuarios'><span class='glyphicon glyphicon-user' style='margin-right: 5px'></span>  Nuevo usuario</a></li>";
                             }
 
-                            echo "<li ><a href='PHPCatalogo/DestruirSesion.php'><span class='glyphicon glyphicon-off' style='margin-right: 5px'></span> Cerrar Sesion</a></li>";
+                            echo "<li ><a href='PHPCatalogo/DestruirSesion'><span class='glyphicon glyphicon-off' style='margin-right: 5px'></span> Cerrar Sesion</a></li>";
                             echo "</ul>";
                             echo "</li>";
                         }
@@ -156,32 +156,32 @@ $filas =mysqli_query($conexiondb,$consulta);
         </div>
         <nav>
             <ul>
-                <li><a href="index.php"><span class="glyphicon glyphicon-home"></span>Inicio</a></li>
+                <li><a href="index"><span class="glyphicon glyphicon-home"></span>Inicio</a></li>
                 <li class="submenu">
                     <a href="#"><span class="glyphicon glyphicon-user"></span>Nosotros<span class="glyphicon glyphicon-chevron-down pull-right"></span> </a>
                     <ul class="children">
-                        <li><a href="MisionYVision.php"><span class="icon-ctrl"></span>Mision & Vision</a> </li>
-                        <li><a href="ProductosVarios2/QuienesSomos.php"><span class="icon-ctrl"></span>Quiénes somos</a> </li>
+                        <li><a href="MisionYVision"><span class="icon-ctrl"></span>Mision & Vision</a> </li>
+                        <li><a href="ProductosVarios2/QuienesSomos"><span class="icon-ctrl"></span>Quiénes somos</a> </li>
                     </ul>
                 </li>
                 <li class="submenu">
                     <a href="#"><span class="glyphicon glyphicon-tree-conifer"></span>Tarahumara<span class="glyphicon glyphicon-chevron-down pull-right"></span> </a>
                     <ul class="children">
-                        <li><a href="CesteriaTarahumara.php"><span class="icon-ctrl"></span>Cesteria Tarahuara</a> </li>
-                        <li><a href="AlfareriaTarahumara.php"><span class="icon-ctrl"></span>Alfareria Tarahumara</a> </li>
-                        <li><a href="TextilesTarahumaras.php"><span class="icon-ctrl"></span>Textiles Tarahumara</a> </li>
-                        <li><a href="ArtesaniasTarahumaraDeCuero.php"><span class="icon-ctrl"></span>Artesanias de Cuero</a> </li>
-                        <li><a href="InstrumentosMusicalesTarahumara.php"><span class="icon-ctrl"></span>Instrumentos Musicales</a> </li>
-                        <li><a href="ArticulosVarios.php"><span class="icon-ctrl"></span>Articulos Varios</a> </li>
+                        <li><a href="CesteriaTarahumara"><span class="icon-ctrl"></span>Cesteria Tarahuara</a> </li>
+                        <li><a href="AlfareriaTarahumara"><span class="icon-ctrl"></span>Alfareria Tarahumara</a> </li>
+                        <li><a href="TextilesTarahumaras"><span class="icon-ctrl"></span>Textiles Tarahumara</a> </li>
+                        <li><a href="ArtesaniasTarahumaraDeCuero"><span class="icon-ctrl"></span>Artesanias de Cuero</a> </li>
+                        <li><a href="InstrumentosMusicalesTarahumara"><span class="icon-ctrl"></span>Instrumentos Musicales</a> </li>
+                        <li><a href="ArticulosVarios"><span class="icon-ctrl"></span>Articulos Varios</a> </li>
                     </ul>
                 </li>
                 <li class="submenu">
                     <a href="#"><span class="glyphicon glyphicon-equalizer"></span>Mata Ortiz<span class="glyphicon glyphicon-chevron-down pull-right"></span> </a>
                     <ul class="children">
-                        <li><a href="OllaEconomica.php"><span class="icon-ctrl"></span>Olla Mata Ortiz economica</a> </li>
-                        <li><a href="OllaMataOrtizComercial.php"><span class="icon-ctrl"></span>Olla Mata Ortiz comercial</a> </li>
-                        <li><a href="OllaFina.php"><span class="icon-ctrl"></span>Olla Mata Ortiz Fina</a> </li>
-                        <li><a href="GaleriaMataOrtiz.php"><span class="icon-ctrl"></span>Galeria ceramica de Mata Ortiz</a> </li>
+                        <li><a href="OllaEconomica"><span class="icon-ctrl"></span>Olla Mata Ortiz economica</a> </li>
+                        <li><a href="OllaMataOrtizComercial"><span class="icon-ctrl"></span>Olla Mata Ortiz comercial</a> </li>
+                        <li><a href="OllaFina"><span class="icon-ctrl"></span>Olla Mata Ortiz Fina</a> </li>
+                        <li><a href="GaleriaMataOrtiz"><span class="icon-ctrl"></span>Galeria ceramica de Mata Ortiz</a> </li>
                     </ul>
                 <li class="submenu">
                     <a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>Productos<span class="glyphicon glyphicon-chevron-down pull-right"></span> </a>
@@ -203,14 +203,14 @@ $filas =mysqli_query($conexiondb,$consulta);
                         echo "<ul class='children'>";
 
      
-                        echo " <li><a href='Gestion.php'><span class='icon-ctrl'></span>Gestion</a> </li>";
-                        echo " <li><a href='ContactoComentarios.php'><span class='icon-ctrl'></span>Comentarios</a> </li>";
+                        echo " <li><a href='Gestion'><span class='icon-ctrl'></span>Gestion</a> </li>";
+                        echo " <li><a href='ContactoComentarios'><span class='icon-ctrl'></span>Comentarios</a> </li>";
                         if ($_SESSION["RolCuenta"] == "Administrador")
                         {
-                            echo "<li><a href='NuevosUsuarios.php'><span class='icon-ctrl'></span>Nuevo usuario</a> </li>";
+                            echo "<li><a href='NuevosUsuarios'><span class='icon-ctrl'></span>Nuevo usuario</a> </li>";
 
                         }
-                        echo " <li><a href='PHPCatalogo/DestruirSesion.php'><span class='icon-ctrl'></span>Cerrar sesion</a> </li>";
+                        echo " <li><a href='PHPCatalogo/DestruirSesion'><span class='icon-ctrl'></span>Cerrar sesion</a> </li>";
                         echo "</ul>";
                         echo "</li>";
                     }
@@ -245,7 +245,7 @@ $filas =mysqli_query($conexiondb,$consulta);
                 </select>
                 <span class="pull-right" id="galeriade" style="margin-right: 10px">Galeria de: </span>
             </p>
-            <form role = "form" method="post" action="PHPCatalogo/GuardarGaleria.php"   enctype="multipart/form-data" >
+            <form role = "form" method="post" action="PHPCatalogo/GuardarGaleria"   enctype="multipart/form-data" >
                 <div class = "form-group">
                     <input type='text' name='txtgaleria' id='txtgaleria' hidden>
                     <label class="text-muted" for = "name">Titulo del producto:</label>
@@ -303,9 +303,9 @@ $filas =mysqli_query($conexiondb,$consulta);
                         echo "<td>$columna[Nuevo_producto]</td>";
                         echo "<td>$columna[Usuario]</td>";
                         echo "<td>
-                        <a href='PHPCatalogo/BorrarGaleria.php?id=$columna[id]'>Borrar</a>
-                        <a href='EditarGaleria.php?id=$columna[id]'>Editar</a>
-                        <a href='AdminImagen.php?id=$columna[id]'>Cambiar imagen</a></td>";
+                        <a href='PHPCatalogo/BorrarGaleria?id=$columna[id]'>Borrar</a>
+                        <a href='EditarGaleria?id=$columna[id]'>Editar</a>
+                        <a href='AdminImagen?id=$columna[id]'>Cambiar imagen</a></td>";
                         echo "</tr>";
                     }
                     ?>

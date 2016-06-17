@@ -31,7 +31,7 @@ $id=$_GET['id'];
         <div class="panel panel-default"style="margin-top: 15px">
             <div class="panel-body" >
                 <p class="alert" style="font-size: 30px;background-color: #FFCA28;color: #ffffff">Modificar Imagen</p>
-                <form role="form" method="POST"  enctype="multipart/form-data" action="PHPCatalogo/ImagenUpload.php">
+                <form role="form" method="POST"  enctype="multipart/form-data" action="PHPCatalogo/ImagenUpload">
                     <div class = "form-group">
                        <input type='hidden' name='idgaleria' value='<?php echo $id; ?>'>
 

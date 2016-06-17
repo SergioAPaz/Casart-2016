@@ -4,6 +4,8 @@
 /*PRECARGA DE PAGINA*/
 body {
     overflow: hidden;
+    background-color: #795548;
+    font-family: 'Montserrat', sans-serif;
 }
 /* preloader */
 #preloader {
@@ -25,12 +27,7 @@ body {
 
 
 
-body{
-    background-color: #8D6E63;
-    font-family: 'Montserrat', sans-serif;
 
-
-}
 
 *{
     margin: 0;
