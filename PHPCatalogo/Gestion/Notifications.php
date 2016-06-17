@@ -1,7 +1,7 @@
 <?php
 
-include("../../BloqueDeSeguridad.php");
-include("../../conexion.php");
+include("../BloqueDeSeguridad.php");
+include("../conexion.php");
 
         /*Validamos que esten todos los campos requeridos del formulario*/
         if ($_SERVER["REQUEST_METHOD"] == "POST")
@@ -61,7 +61,7 @@ SQL;
                     $insert=<<<SQL
 INSERT INTO emailadmins SET Nombre='$inputnombre',Email='$inputmail'
 SQL;
-                    mysqli_query($conexiondb, $insert) or die ("Error al ingresar nuevo correo");
+                    mysqli_query($conexiondb, $insert) or die ("Error al ingresar nuevo correo o correo ya registrado.");
                     header("Location: ../../Gestion.php");
                 } else {
                     echo "<!DOCTYPE html>";

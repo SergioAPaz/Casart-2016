@@ -1,10 +1,10 @@
 <?php
 
-include("../../BloqueDeSeguridad.php");
+include("../BloqueDeSeguridad.php");
 
 if(isset($_GET['id']))
     {
-        include('../../conexion.php');
+        include('../conexion.php');
 
         $id=$_GET['id'];
 
