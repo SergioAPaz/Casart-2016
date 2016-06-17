@@ -424,8 +424,8 @@ $filas2=mysqli_query($conexiondb,$consultasql);
                 <div   class="hovertest"  id="hover7" style="font-family: 'Montserrat', sans-serif;  position: absolute;
                  top: 35%; text-align: center;margin-left: 18%;margin-right: 18%; color: white;">Instrumentos musicales</div>
                 <div   class="hovertest"  id="hover8" style="font-family: 'Montserrat', sans-serif;  position: absolute; font-size: 18px;top: 30%;
-                 display: none; text-align: center;margin-left: 4%;margin-right: 4%;   color: white;">Los pueblos Rarámuris realizan distintas actividades y la mayoría de las veces, son acompañadas por música y sonidos que emiten los
-                    instrumentos que ellos mismos fabrican a mano con materiales como cuero y madera.</div>
+                 display: none; text-align: center;margin-left: 4%;margin-right: 4%;   color: white;">Los pueblos Rarámuris realizan distintas actividades siempre acompañadas de música y sonidos que emiten los
+                    instrumentos que ellos mismos fabrican con materiales como cuero y  madera.</div>
             </a>
         </div>
     </div>
