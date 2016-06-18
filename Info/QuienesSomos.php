@@ -227,14 +227,14 @@ session_start();
 				</section>
 
 			<!-- Three -->
-				<section id="three" class="spotlight style3 left">
+				<section id="three" class="spotlight style3 left" style="min-height: 900px;">
 					<span class="image fit main bottom"><img src="images/casa.jpg" alt="" /></span>
 					<div class="content">
 						<header>
 
 						</header>
                         <h2 style="color: #FF9800;text-align: center">Visión</h2>
-                        <p style="font-size: 19px;line-height: 30px">Conformar una red eficiente de talleres artesanales; centro de acopio y tiendas localizadas en los municipios mas
+                        <p class="R1" >Conformar una red eficiente de talleres artesanales; centro de acopio y tiendas localizadas en los municipios mas
                             importantes del estado, para apoyar al artresano en su desarrollo integral y sustentable, brindandoles las
                             oportunidades de comercializacion y mejora de sus productos, con el fin de elevar su calidad de vida  y alentar
                             el binestar social de la comunidad donde vive.

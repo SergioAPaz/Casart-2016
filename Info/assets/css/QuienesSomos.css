@@ -1,3 +1,32 @@
+.R1{
+    font-size: 19px;
+    line-height: 30px;
+
+}
+
+@media screen and (max-width: 1895px) {
+    .R1 {
+        font-size: 18px;
+        line-height: 27px;
+    }
+}
+
+@media screen and (max-width: 1683px) {
+    .R1 {
+        font-size: 18px;
+        line-height: 25px;
+    }
+}
+
+
+@media screen and (max-width: 1282px) {
+    .R1 {
+        font-size: 15px;
+        line-height: 25px;
+    }
+}
+
+
 
 /*FOOTER*/
 .posytam0{
