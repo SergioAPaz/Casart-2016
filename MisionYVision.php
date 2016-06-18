@@ -21,7 +21,7 @@ session_start();
     <script type="text/javascript" src="assets/js/MisionYVision.js"></script><!--scripts generales-->
     <script  src="assets/js/scrollbar/jquery.nicescroll.min.js"></script><!--scrollbar-->
 </head>
-<body>
+<body style="background-color: #795548">
 <!--PRECARGA DE PAGINA-->
 <div id="preloader">
     <div id="loader">&nbsp;</div>
@@ -40,7 +40,7 @@ session_start();
                     <li class='active has-sub'><a href='#'>Nosotros</a>
                         <ul>
                             <li ><a href='MisionYVision'>Mision & Vision</a></li>
-                            <li ><a href='ProductosVarios2/QuienesSomos'>Quiénes somos</a></li>
+                            <li ><a href='Info/QuienesSomos'>Quiénes somos</a></li>
                         </ul>
                     </li>
                     <li class='active has-sub'><a href='#'>Tarahumara</a>
@@ -115,7 +115,7 @@ session_start();
                     <a href="#"><span class="glyphicon glyphicon-user"></span>Nosotros<span class="glyphicon glyphicon-chevron-down pull-right"></span> </a>
                     <ul class="children">
                         <li><a href="MisionYVision"><span class="icon-ctrl"></span>Mision & Vision</a> </li>
-                        <li><a href="ProductosVarios2/QuienesSomos"><span class="icon-ctrl"></span>Quiénes somos</a> </li>
+                        <li><a href="Info/QuienesSomos"><span class="icon-ctrl"></span>Quiénes somos</a> </li>
                     </ul>
                 </li>
                 <li class="submenu">
@@ -185,7 +185,7 @@ session_start();
 <br><br>
 
 <div class="container-fluid">
-    <div class="row"id="rowpanel" style="margin-right:2000px;background-color: #FFD54F">
+    <div class="row"id="rowpanel" style="background-color: #FFD54F">
       <div id="divid" style="height: 1000px"></div>
             <div class="col-xs-12 col-sm-12 col-md-7"id="col1panel" style="display: none;background-color: #FFD54F;margin-top: 20px">
 

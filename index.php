@@ -72,7 +72,7 @@ $filas2=mysqli_query($conexiondb,$consultasql);
                     <li class='active has-sub'><a href='#'>Nosotros</a>
                         <ul>
                             <li ><a href='MisionYVision'>Mision & Vision</a></li>
-                            <li ><a href='ProductosVarios2/QuienesSomos'>Quiénes somos</a></li>
+                            <li ><a href='Info/QuienesSomos'>Quiénes somos</a></li>
                         </ul>
                     </li>
                     <li class='active has-sub'><a href='#'>Tarahumara</a>
@@ -147,7 +147,7 @@ $filas2=mysqli_query($conexiondb,$consultasql);
                     <a href="#"><span class="glyphicon glyphicon-user"></span>Nosotros<span class="glyphicon glyphicon-chevron-down pull-right"></span> </a>
                     <ul class="children">
                         <li><a href="MisionYVision"><span class="icon-ctrl"></span>Mision & Vision</a> </li>
-                        <li><a href="ProductosVarios2/QuienesSomos"><span class="icon-ctrl"></span>Quiénes somos</a> </li>
+                        <li><a href="Info/QuienesSomos"><span class="icon-ctrl"></span>Quiénes somos</a> </li>
                     </ul>
                 </li>
                 <li class="submenu">
@@ -404,7 +404,7 @@ $filas2=mysqli_query($conexiondb,$consultasql);
             <a href="CesteriaTarahumara">
                 <div class="shadow0"  style=""></div>
                 <div class="shadow3"  style=""></div>
-                <img  src="images/Mosaic/test4.JPG" alt="" style="    background-size: cover;height: 300px;">
+                <img  src="images/Mosaic/test4.jpg" alt="" style="    background-size: cover;height: 300px;">
                 <div   class="hovertest"  id="hover5" style="font-family: 'Montserrat', sans-serif;  position: absolute;
                      top: 35%; text-align: center;margin-left: 18%;margin-right: 18%; color: white;">Cesteria Tarahumara</div>
                 <div   class="hovertest"  id="hover6" style="font-family: 'Montserrat', sans-serif;  position: absolute; font-size: 18px;top: 33%;

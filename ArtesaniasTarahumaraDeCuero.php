@@ -57,7 +57,7 @@ $filas=mysqli_query($conexiondb,$primera);
 					<li class='active has-sub'><a href='#'>Nosotros</a>
 						<ul>
 							<li ><a href='MisionYVision'>Mision & Vision</a></li>
-							<li ><a href='ProductosVarios2/QuienesSomos'>Quiénes somos</a></li>
+							<li ><a href='Info/QuienesSomos'>Quiénes somos</a></li>
 						</ul>
 					</li>
 					<li class='active has-sub'><a href='#'>Tarahumara</a>
@@ -132,7 +132,7 @@ $filas=mysqli_query($conexiondb,$primera);
 					<a href="#"><span class="glyphicon glyphicon-user"></span>Nosotros<span class="glyphicon glyphicon-chevron-down pull-right"></span> </a>
 					<ul class="children">
 						<li><a href="MisionYVision"><span class="icon-ctrl"></span>Mision & Vision</a> </li>
-						<li><a href="ProductosVarios2/QuienesSomos"><span class="icon-ctrl"></span>Quiénes somos</a> </li>
+						<li><a href="Info/QuienesSomos"><span class="icon-ctrl"></span>Quiénes somos</a> </li>
 					</ul>
 				</li>
 				<li class="submenu">

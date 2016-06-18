@@ -1,4 +1,5 @@
-/*deslizamiento de parrafos de misionyvision*/
+/*
+/!*deslizamiento de parrafos de misionyvision*!/
 $(document).ready(function(){
     $('#rowpanel').ready(function(){
         $('#rowpanel').animate({marginRight: '20px'}, 2000);
@@ -9,7 +10,7 @@ $(document).ready(function(){
     });
 });
 
-/*PANEL DE VISION VISION*/
+/!*PANEL DE VISION VISION*!/
 setTimeout('ejecutar()',2000);
 
    function ejecutar(){
@@ -17,11 +18,12 @@ setTimeout('ejecutar()',2000);
     if(element.style.display == 'none') {
         $('#col1panel').fadeIn(1000);
         $('.fadein2').fadeIn(7000);
-       /* document.getElementById("col1panel").fade;*/
+       /!* document.getElementById("col1panel").fade;*!/
         document.getElementById("divid").style.height="0px";
 
     }
 }
+*/
 
 /*BOTON IR ARRIBA*/
 $(document).ready(function(){

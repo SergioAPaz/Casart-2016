@@ -1,6 +1,5 @@
 
 
-
 body{
 
     font-family: 'Montserrat', sans-serif;
@@ -3019,7 +3018,7 @@ body{
 
 		.spotlight.left .content, .spotlight.right .content {
 			height: 101%;
-			padding: 6em 3em;
+			padding: 3em 3em;
 			top: 0;
 			width: 28em;
 		}

@@ -10,9 +10,11 @@ session_start();
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
         <script src="../assets/jquery/jquery-1.11.3.min.js"></script>
 		<link rel="stylesheet" href="assets/css/main.css" />
+
         <link rel="stylesheet" href="assets/css/NavActualizada.css">
         <script src="../assets/js/NavbarResponsive.js"></script>
         <link type="text/css" rel="stylesheet" href="../assets/css/Fonts%20navbar/fonts/fonts.css"/>
+        <link rel="stylesheet" href="assets/css/QuienesSomos.css" />
 	</head>
 	<body class="landing">
     <div id="page-wrapper">
@@ -28,7 +30,7 @@ session_start();
                             <li class='active has-sub'><a href='#'>Nosotros</a>
                                 <ul>
                                     <li ><a href='../MisionYVision'>Mision & Vision</a></li>
-                                    <li ><a href='../ProductosVarios2/QuienesSomos'>¿Quiénes somos?</a></li>
+                                    <li ><a href='/QuienesSomos'>¿Quiénes somos?</a></li>
                                 </ul>
                             </li>
 
@@ -105,7 +107,7 @@ session_start();
                             <a href="#"><span class="glyphicon glyphicon-user"></span>Nosotros<span class="glyphicon glyphicon-chevron-down pull-right"></span> </a>
                             <ul class="children">
                                 <li><a href="../MisionYVision"><span class="icon-ctrl"></span>Mision & Vision</a> </li>
-                                <li><a href="../ProductosVarios2/QuienesSomos"><span class="icon-ctrl"></span>¿Quiénes somos?</a> </li>
+                                <li><a href="/QuienesSomos"><span class="icon-ctrl"></span>¿Quiénes somos?</a> </li>
                             </ul>
                         </li>
                         <li class="submenu">
@@ -212,13 +214,15 @@ session_start();
 					<span class="image fit main"><img src="../images/maps.jpg" alt="" /></span>
 					<div class="content">
 						<header>
-							<h2 style="text-align:center;font-size: 35px;color: #FF9800">CASART</h2>
-							<p>Manifestaciones del arte popular y éste se da de manera generosa en el Estado de Chihuahua.</p>
+							<h2 style="text-align:center;font-size: 35px;color: #FF9800">Misión</h2>
+							<p>Fomentar la elaboración de artesanía regional propiciando el bienestar de quienes la producen, brindando capacitación y asesoría
+                                para una producción eficiente, así como en los procesos de comercialización y exhibición.</p>
 						</header>
-						<p>La Artesanía del estado tiene tres fuentes: la tarahumara, la conocida como Paquimé y la mestiza. Chihuahua a incrementado la
-                            obtención de premios en concursos nacionales, tanto en la artesanía tarahumara como en la mestiza, durante los últimos cinco años.</p>
-                        <ul class="actions">
-                            <li><a target="_blank" href="https://www.google.com.mx/maps/@28.6415218,-106.0752234,3a,75y,341.18h,84.68t/data=!3m7!1e1!3m5!1s9jd7AC4HqVjwPgJ4piE7hA!2e0!6s%2F%2Fgeo3.ggpht.com%2Fcbk%3Fpanoid%3D9jd7AC4HqVjwPgJ4piE7hA%26output%3Dthumbnail%26cb_client%3Dmaps_sv.tactile.gps%26thumb%3D2%26w%3D203%26h%3D100%26yaw%3D26.638226%26pitch%3D0!7i13312!8i6656" class="button">Conoce nuestra ubicacion</a></li>
+
+                        <ul class="actions" style="text-align: center">
+                            <li><a target="_blank" href="https://www.google.com.mx/maps/place/Casa+de+las+Artesanias+del+Estado+de+Chihuahua/@28.6416097,-106.075608,20z/data=!4m12!1m6!3m5!1s0x86c1cb0015fd9947:0xbfb
+                            b4eaae836a9eb!2sCasa+de+las+Artesanias+del+Estado+de+Chihuahua!8m2!3d28.6416809!4d-106.0752955!3m4!1s0x86c1cb0015fd9947:0xbfbb4eaae836a9eb!8m2!3d28.6416809!4d-106
+                            .0752955" class="button">Conoce nuestra ubicación</a></li>
                         </ul>
 					</div>
 
@@ -230,11 +234,24 @@ session_start();
 					<span class="image fit main bottom"><img src="images/casa.jpg" alt="" /></span>
 					<div class="content">
 						<header>
-							<h2 style="color: #FF9800">Nuestros Productos</h2>
-							<p>Artesanía Tarahumara, menonita, y mestiza, cerámica de la región de Paquimé y muebles rústicos, dulces artesanales, carne seca, sotol y pinole.</p>
+
 						</header>
-						<p>Con una rica variedad de artesanías en la región que van desde cestería, alfarería, textiles, madera, cuero y mucho más, este museo nos muestra en sus cuatro
-                            salas permanentes elementos de la cultura prehispánica relacionados con etnografía, arte popular e historia.</p>
+                        <h2 style="color: #FF9800;text-align: center">Visión</h2>
+                        <p style="font-size: 19px;line-height: 30px">Conformar una red eficiente de talleres artesanales; centro de acopio y tiendas localizadas en los municipios mas
+                            importantes del estado, para apoyar al artresano en su desarrollo integral y sustentable, brindandoles las
+                            oportunidades de comercializacion y mejora de sus productos, con el fin de elevar su calidad de vida  y alentar
+                            el binestar social de la comunidad donde vive.
+                            <br><br>
+                            El apoyar directamente a los artesanos del estado, realizando concursos, muestras, capacitacion, promocion y
+                            difusion de sus productos es parte integral de nuestro trabajo el cual se centra principalmente en todas estas
+                            muestras de arte unicas e invaluables.
+                            <br><br>
+                            Es por ello que los trabajos dentro de este organismo son intensos, pero sin perder el rumbo de nuestra misión
+                            y vision que nos hemos trazado, hasta llegar a  consolidar el nivel y la calidad de los proyectos, en beneficio
+                            de la comunidad y en coordinación con todas aquellas instituciones y organizaciones comprometidas firmemente
+                            con la artesania y desarrollo sustentable de la diversificada y talentosa rama artesanal.
+                            <br><br>
+                        </p>
 
 					</div>
 					<a href="#four" class="goto-next scrolly">Next</a>
@@ -275,14 +292,32 @@ session_start();
 					</div>
 				</section>
 
-            <span class="ir-arriba icon-arrow-up-thick" style="position: absolute"></span>
 
-                    <div class="crow" style="background-color: #3E2723;height: 200px;width: 100%">
-                        <p  style="color:#212121;background-color: #FAFAFA;padding: 20px;font-size: 14px;margin: 0">© Casa de las Artesanías del Estado de Chihuahua. Todos los derechos reservados.
-                           </p>
+
+
+        <footer>
+            <div class=" margintop" >
+                <div class="row" style="background-color: #3E2723;height: auto">
+
+                    <div style="width: 100%">
+                        <p  style="color:#212121;background-color: #FAFAFA;padding: 15px;font-size: 17px; margin: 0">© Casa de las Artesanías del Estado de Chihuahua. Todos los derechos reservados.</p>
                     </div>
 
-		</div>
+                    <div class="posytam0" id="ocultarmq3" style="margin-bottom: 10px;    margin-left: 30px;"><img  style="border-radius: 100px" src="../images/MisionVision.png"></div>
+
+                    <div class="posytam0" id="ocultarmq2" style="margin-bottom: 10px"><img  style="border-radius: 30px" src="../images/ChihuahuaVive.jpg"></div>
+
+                    <div class="posytam" id="ocultarmq5" style="margin-left: -10px"><img src="../images/LogoHorizontal.png"></div>
+
+                </div>
+            </div>
+        </footer>
+
+
+
+    </div>
+    
+    <!--PIE DE PAGINA-->
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
