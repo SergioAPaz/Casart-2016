@@ -173,8 +173,7 @@ session_start();
 					<div class="content">
 						<header>
 							<h2>Casa de las Artesanias <br/> del Estado de Chihuahua</h2>
-							<p>Casa de la artesania chihuahuense<br />
-							100% Mexicana</p>
+							<p>Casa de la artesania chihuahuense.</p>
 						</header>
 						<span class="image"><img src="images/logo.png" alt="" /></span>
 					</div>
