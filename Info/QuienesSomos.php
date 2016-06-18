@@ -29,8 +29,7 @@ session_start();
                             <li><a  href='../index'>Inicio</a></li>
                             <li class='active has-sub'><a href='#'>Nosotros</a>
                                 <ul>
-                                    <li ><a href='../MisionYVision'>Mision & Vision</a></li>
-                                    <li ><a href='/QuienesSomos'>¿Quiénes somos?</a></li>
+                                    <li ><a href='QuienesSomos'>¿Quiénes somos?</a></li>
                                 </ul>
                             </li>
 
@@ -48,7 +47,7 @@ session_start();
                             <li class='active has-sub'><a href='#'>Mata Ortiz</a>
                                 <ul>
                                     <li ><a href='../OllaEconomica'>Olla mata ortiz económica</a></li>
-                                    <li ><a href='OllaMataOrtizComercial'>Olla mata ortiz comercial</a></li>
+                                    <li ><a href='../OllaMataOrtizComercial'>Olla mata ortiz comercial</a></li>
                                     <li ><a href='OllaFina'>Olla mata ortiz fina</a></li>
                                     <li ><a href='GaleriaMataOrtiz'>Galería ceramica de mata ortiz</a></li>
                                 </ul>
@@ -106,8 +105,7 @@ session_start();
                         <li class="submenu">
                             <a href="#"><span class="glyphicon glyphicon-user"></span>Nosotros<span class="glyphicon glyphicon-chevron-down pull-right"></span> </a>
                             <ul class="children">
-                                <li><a href="../MisionYVision"><span class="icon-ctrl"></span>Mision & Vision</a> </li>
-                                <li><a href="/QuienesSomos"><span class="icon-ctrl"></span>¿Quiénes somos?</a> </li>
+                                <li><a href="QuienesSomos"><span class="icon-ctrl"></span>¿Quiénes somos?</a> </li>
                             </ul>
                         </li>
                         <li class="submenu">
