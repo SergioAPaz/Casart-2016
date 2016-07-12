@@ -65,12 +65,7 @@ session_start();
                             <li ><a href='#'>Artesania regional</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href='#'>Concursos</a>
-                    </li>
-                    <li>
-                        <a href='#'>Contacto</a>
-                    </li>
+                 
 
                     <?php
                     if (isset($_SESSION["username"]))
@@ -142,12 +137,7 @@ session_start();
                         <li><a href="#"><span class="icon-ctrl"></span>Artesania Regional</a> </li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#"><span class="glyphicon glyphicon-gift"></span>Concursos</a>
-                </li>
-                <li>
-                    <a href="#"><span class="glyphicon glyphicon-earphone"></span>Contacto</a>
-                </li>
+             
 
                 <?php
                 if (isset($_SESSION["username"]))

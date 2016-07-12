@@ -150,12 +150,7 @@ session_destroy();
                         <li><a href="#"><span class="icon-ctrl"></span>Artesania Regional</a> </li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#"><span class="glyphicon glyphicon-gift"></span>Concursos</a>
-                </li>
-                <li>
-                    <a href="#"><span class="glyphicon glyphicon-earphone"></span>Contacto</a>
-                </li>
+                
 
                 <?php
                 if (isset($_SESSION["username"]))

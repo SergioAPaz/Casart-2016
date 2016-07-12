@@ -77,8 +77,7 @@ $filas =mysqli_query($conexiondb,$consulta);
                         </ul>
                     </li>
 
-                    <li><a href='#'>Concursos</a></li>
-                    <li><a href='#'>Contacto</a></li>
+                 
 
                     <?php
                     if (isset($_SESSION["username"]))
@@ -148,8 +147,7 @@ $filas =mysqli_query($conexiondb,$consulta);
                         <li><a href="#"><span class="icon-ctrl"></span>Arcones</a> </li>
                         <li><a href="#"><span class="icon-ctrl"></span>Artesania Regional</a> </li>
                     </ul>
-                <li><a href="#"><span class="glyphicon glyphicon-gift"></span>Concursos</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-earphone"></span>Contacto</a></li>
+           
 
                 <?php
                 if (isset($_SESSION["username"]))
