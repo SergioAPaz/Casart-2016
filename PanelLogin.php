@@ -87,6 +87,7 @@ session_destroy();
                         {
                             echo "<li class='active has-sub pull-right' ><a href='#'>Administrador</a>";
                             echo "<ul>";
+                            echo "<li><a style='background-color: #FF9800'><span class='glyphicon glyphicon-user' style='margin-right: 5px;font-size: 20px;margin-top: -2%'></span> <span style='font-size: 20px;margin-left: 4%;margin-top: -2%;position: absolute'>$_SESSION[usuario]</span></li>";
                             echo "<li ><a href='PanelAdmin'><span class='glyphicon glyphicon-th' style='margin-right: 5px'></span> Panel de control</a></li>";
                             echo "<li ><a href='Gestion'><span class='glyphicon glyphicon-th-large' style='margin-right: 5px'></span> Gestion</a></li>";
                             echo "<li ><a href='ContactoComentarios'><span class='glyphicon glyphicon-comment' style='margin-right: 5px'></span> Comentarios</a></li>";
@@ -160,7 +161,7 @@ session_destroy();
                         echo "<li class='submenu'>";
                         echo "<a><span class='glyphicon glyphicon-tree-conifer'></span>Administrador<span class='glyphicon glyphicon-chevron-down pull-right'></span> </a>";
                         echo "<ul class='children'>";
-
+                        echo " <li><a style='height: 63px;'><span class='glyphicon glyphicon-user' style='font-size: 20px'></span><p style='font-size: 20px; '>$_SESSION[usuario]</p></a> </li>";
                         echo " <li><a href='PanelAdmin'><span class='icon-ctrl'></span>Panel de control</a> </li>";
                         echo " <li><a href='Gestion'><span class='icon-ctrl'></span>Gestion</a> </li>";
                         echo " <li><a href='ContactoComentarios'><span class='icon-ctrl'></span>Comentarios</a> </li>";
@@ -195,8 +196,7 @@ session_destroy();
                 <input type="password" name="pw"  id="pw" class="form-control"  placeholder="Contraseña" maxlength="25"  pattern="^\s*[a-zA-Z0-9ñÑ_.\s]+\s*" required>
                 <p id="mensaje" style="color: red;margin-top: 10px"></p>
 
-
-                <div class="g-recaptcha"   data-sitekey="6LdwxSETAAAAAAgUhUhtKcDPdNu8xQmIOt6JDRot"></div>
+                <div class="g-recaptcha" data-sitekey="6LcE6iQTAAAAACNmHB2efCQX6k7QtUVNVShUuSPH"></div>
 
 
                 <button type="submit" class="btn btn-warning"  style="text-align: center">Ingresar</button>

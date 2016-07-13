@@ -3,7 +3,7 @@
 if(isset($_POST['g-recaptcha-response'])  &&  $_POST['g-recaptcha-response'])
 {
 
-    $secret = "6LdwxSETAAAAANP0PJ2XXQNbIhdANZ514_ALiZ3B";
+    $secret = "6LcE6iQTAAAAAKRId8iye10EModLLii3vUsLdd-t";
 
     $ip = $_SERVER['REMOTE_ADDR'];
 

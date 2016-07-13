@@ -113,6 +113,7 @@ $filas2=mysqli_query($conexiondb,$consultasql);
                         {
                             echo "<li class='active has-sub pull-right' ><a href='#'>Administrador</a>";
                             echo "<ul>";
+                            echo "<li><a style='background-color: #FF9800'><span class='glyphicon glyphicon-user' style='margin-right: 5px;font-size: 20px;margin-top: -2%'></span> <span style='font-size: 20px;margin-left: 4%;margin-top: -2%;position: absolute'>$_SESSION[usuario]</span></li>";
                             echo "<li ><a href='PanelAdmin'><span class='glyphicon glyphicon-th' style='margin-right: 5px'></span> Panel de control</a></li>";
                             echo "<li ><a href='Gestion'><span class='glyphicon glyphicon-th-large' style='margin-right: 5px'></span> Gestion</a></li>";
                             echo "<li ><a href='ContactoComentarios'><span class='glyphicon glyphicon-comment' style='margin-right: 5px'></span> Comentarios</a></li>";
@@ -191,7 +192,7 @@ $filas2=mysqli_query($conexiondb,$consultasql);
                         echo "<li class='submenu'>";
                         echo "<a><span class='glyphicon glyphicon-tree-conifer'></span>Administrador<span class='glyphicon glyphicon-chevron-down pull-right'></span> </a>";
                         echo "<ul class='children'>";
-
+                        echo " <li><a style='height: 63px;'><span class='glyphicon glyphicon-user' style='font-size: 20px'></span><p style='font-size: 20px; '>$_SESSION[usuario]</p></a> </li>";
                         echo " <li><a href='PanelAdmin'><span class='icon-ctrl'></span>Panel de control</a> </li>";
                         echo " <li><a href='Gestion'><span class='icon-ctrl'></span>Gestion</a> </li>";
                         echo " <li><a href='ContactoComentarios'><span class='icon-ctrl'></span>Comentarios</a> </li>";
@@ -601,8 +602,7 @@ $filas2=mysqli_query($conexiondb,$consultasql);
             }
         }
         ?>
-
-
+        
         <!--     <div class="col-xs-12 col-sm-6 col-md-3">
                   <div class="thumbnail x" style="height: 443px;">
                       <div style="border-radius: 0px 6px 6px 0px;background-color: #FFA726;float: left;margin-left: -6px;margin-top: 20px;opacity: .8;position: absolute;width: 150px;height: 25px"><p style="color: white;;float: right;margin-right: 5px;;margin-top: 2%">Nuevo producto</p></div>
@@ -621,13 +621,6 @@ $filas2=mysqli_query($conexiondb,$consultasql);
 </div>
 
 <br><br/>
-
-<!--<header class="g65df1" >
-    <div class="container pull-right" style="background-color: #5D4037;margin-bottom: 0px"  >
-        <p class="pull-left parrafo516" style="color: #ffa000;">Conoce mas de ellas en nuestras distintas secciones</p>
-    </div>
-</header>-->
-
 
 <!--FORMULARIO DE CONTACTOS-->
 <section style="position: relative">
@@ -651,9 +644,9 @@ $filas2=mysqli_query($conexiondb,$consultasql);
                 <label for="message">MENSAJE</label>
                 <textarea name="message" id="message" rows="4" class="validar3"  maxlength="400" pattern="^\s*[a-zA-Z0-9ñÑ@_.,\s]+\s*" required></textarea>
             </div>
-
-            <div class="g-recaptcha"   data-theme="dark" data-sitekey="6LdwxSETAAAAAAgUhUhtKcDPdNu8xQmIOt6JDRot"></div>
-
+            
+            <div class="g-recaptcha" data-theme="dark" data-sitekey="6LcE6iQTAAAAACNmHB2efCQX6k7QtUVNVShUuSPH"></div>
+            
             <br>
 
             <ul class="actions">
@@ -689,7 +682,7 @@ $filas2=mysqli_query($conexiondb,$consultasql);
 
             <div >
                 <p  style="color:#212121;background-color: #FAFAFA;padding: 20px;font-size: 14px;margin: 0">© Casa de las Artesanías del Estado de Chihuahua. Todos los derechos reservados.
-                    <span id="ocultarmq4" style="float: right"><span>Dessarrollado por </span><a href="mailto:alejandroax@live.com.mx">Sergio Paz.</a> </p>
+                    <span id="ocultarmq4" style="float: right"><span>Developed by </span><a href="mailto:alejandroax@live.com.mx">Sergio Paz.</a> </p>
             </div>
 
             <div class="posytam0" id="ocultarmq3" style="margin-bottom: 25px"><img  style="border-radius: 100px" src="images/MisionVision.png"></div>

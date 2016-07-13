@@ -35,7 +35,7 @@ INSERT INTO users SET Nombre='$txtnombre',Apellido='$txtapellido',USER='$txtusua
 SQL;
             mysqli_query($conexiondb, $insert) or die ("Error al registrar usuario o usuario ya existente.");
             /*mysqli_query($conexiondb,$insert) or die ("Error al registrar usuario o usuario ya existente.".mysqli_error());*/
-            header("Location: NuevosUsuarios.php");
+            header("Location:../NuevosUsuarios.php");
         }
         else
         {

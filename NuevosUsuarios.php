@@ -77,6 +77,7 @@ $filas =mysqli_query($conexiondb,$consulta);
                         {
                             echo "<li class='active has-sub pull-right' ><a href='#'>Administrador</a>";
                             echo "<ul>";
+                            echo "<li><a style='background-color: #FF9800'><span class='glyphicon glyphicon-user' style='margin-right: 5px;font-size: 20px;margin-top: -2%'></span> <span style='font-size: 20px;margin-left: 4%;margin-top: -2%;position: absolute'>$_SESSION[usuario]</span></li>";
                             echo "<li ><a href='PanelAdmin'><span class='glyphicon glyphicon-th' style='margin-right: 5px'></span> Panel de control</a></li>";
                             echo "<li ><a href='Gestion'><span class='glyphicon glyphicon-th-large' style='margin-right: 5px'></span> Gestion</a></li>";
                             echo "<li ><a href='ContactoComentarios'><span class='glyphicon glyphicon-comment' style='margin-right: 5px'></span> Comentarios</a></li>";
@@ -143,7 +144,7 @@ $filas =mysqli_query($conexiondb,$consulta);
                         echo "<li class='submenu'>";
                         echo "<a><span class='glyphicon glyphicon-tree-conifer'></span>Administrador<span class='glyphicon glyphicon-chevron-down pull-right'></span> </a>";
                         echo "<ul class='children'>";
-
+                        echo " <li><a style='height: 63px;'><span class='glyphicon glyphicon-user' style='font-size: 20px'></span><p style='font-size: 20px; '>$_SESSION[usuario]</p></a> </li>";
                         echo " <li><a href='PanelAdmin'><span class='icon-ctrl'></span>Panel de control</a> </li>";
                         echo " <li><a href='Gestion'><span class='icon-ctrl'></span>Gestion</a> </li>";
                         echo " <li><a href='ContactoComentarios'><span class='icon-ctrl'></span>Comentarios</a> </li>";
@@ -165,7 +166,7 @@ $filas =mysqli_query($conexiondb,$consulta);
 
 <div class="container">
     <div class=" jumbotron boxlogin" style="text-align: center;padding-left: 0;padding-right: 0">
-        <form method="POST"  id="flogin" action="PHPCatalogo/NuevosUsuariosPHP">
+        <form method="POST"  id="flogin" action="PHPCatalogo/NuevosUsuariosPHP.php">
             <p class="alert" style="font-size: 20px;background-color: #FFCA28;color: #ffffff">Nuevo usuario</p>
             <label>Nombres:</label>
             <input   type="text" name="txtnombre"  id class="form-control" maxlength="25"  pattern="^\s*[a-zA-Z0-9ñÑ_.,,\s]+\s*" required style="width:100%">
