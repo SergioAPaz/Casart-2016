@@ -26,6 +26,12 @@
             document.getElementById("txtgaleria").value ="Olla de mata ortiz economica";
         }else if (text2.value=="Olla de mata ortiz comercial"){
             document.getElementById("txtgaleria").value ="Olla de mata ortiz comercial";
+       }else if (text2.value=="Olla de mata ortiz fina"){
+           document.getElementById("txtgaleria").value ="Olla de mata ortiz fina";
+       }else if (text2.value=="Galería de cerámica de Mata Ortiz"){
+           document.getElementById("txtgaleria").value ="Galería de cerámica de Mata Ortiz";
+       }else if (text2.value=="Productos Chihuahuenses"){
+           document.getElementById("txtgaleria").value ="Productos Chihuahuenses";
         }else{
             document.getElementById("txtgaleria").value ="Sin precisar tabla 2";
         }
@@ -232,7 +238,8 @@ $filas =mysqli_query($conexiondb,$consulta);
                     <option>Articulos varios</option>
                     <option>Olla de mata ortiz economica</option>
                     <option>Olla de mata ortiz comercial</option>
-                    <option>Galeria ceraamica de mata ortiz</option>
+                    <option>Olla de mata ortiz fina</option>
+                    <option>Galería de cerámica de Mata Ortiz</option>
                     <option>Productos Chihuahuenses</option>
                     <option>Arcones</option>
                     <option>Artesania regional</option>

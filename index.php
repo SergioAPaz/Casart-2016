@@ -88,13 +88,13 @@ $filas2=mysqli_query($conexiondb,$consultasql);
                         <ul>
                             <li ><a href='OllaEconomica'>Olla mata ortiz económica</a></li>
                             <li ><a href='OllaMataOrtizComercial'>Olla mata ortiz comercial</a></li>
-                            <li ><a href='OllaFina'>Olla mata ortiz fina</a></li>
-                            <li ><a href='GaleriaMataOrtiz'>Galería ceramica de mata ortiz</a></li>
+                            <li ><a href='OllaMataOrtizFina'>Olla mata ortiz fina</a></li>
+                            <li ><a href='GaleriaDeCeramicaDeMataOrtiz'>Galería ceramica de mata ortiz</a></li>
                         </ul>
                     </li>
                     <li class='active has-sub'><a href='#'>Productos</a>
                         <ul>
-                            <li ><a href='#'>Productos Chihuahuenses</a></li>
+                            <li ><a href='ProductosChihuahuenses'>Productos Chihuahuenses</a></li>
                             <li ><a href='PanelAdmin'>Arcones</a></li>
                             <li ><a href='PanelLogin'>Artesania regional</a></li>
                         </ul>
