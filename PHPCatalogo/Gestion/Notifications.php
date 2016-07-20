@@ -50,7 +50,7 @@ SQL;
                     $mail->Body    = "<span style='font-size: 25px'><b>Se registro la alta de un nuevo correo para notificaciones:</b></span><br><br>Nombre: <b>$inputnombre</b> <br><br> Email: <b>$inputmail</b> </b><br><br> 
                                 <b>Panel de comentarios de Sitio web Casart Chihuahua.<b>   ";
                     $mail->AltBody = "<span style='font-size: 25px'><b>Se registro la alta de un nuevo correo para notificaciones:</b></span><br><br>Nombre: <b>$inputnombre</b> <br><br> Email: <b>$inputmail</b> </b><br><br> 
-                                <b>Panel de comentarios de Sitio web Casart Chihuahua.<b>   ";
+                                <b>Web Casart Chihuahua.<b>   ";
                     if(!$mail->send()) {
 
                     } else {

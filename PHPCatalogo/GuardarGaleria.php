@@ -57,7 +57,7 @@ SQL;
             $mail->Body    = "<span style='font-size: 25px'><b>Se ha agregado un nuevo producto:</b></span><br><br>Galeria: <b>$galeria</b> <br><br> Titulo: <b>$titulo</b> <br><br> Descripcion: <b>$descripcion</b><br><br>
                                                                 Usuario: <b>$Usuario</b><br><br><b>Panel de comentarios de Sitio web Casart Chihuahua.<b>   ";
                     $mail->AltBody = "<span style='font-size: 25px'><b>Se ha agregado un nuevo producto:</b></span><br><br>Galeria: <b>$galeria</b> <br><br> Titulo: <b>$titulo</b> <br><br> Descripcion: <b>$descripcion</b><br><br>
-                                                                Usuario: <b>$Usuario</b><br><br><b>Panel de comentarios de Sitio web Casart Chihuahua.<b>   ";
+                                                                Usuario: <b>$Usuario</b><br><br><b>Web Casart Chihuahua.<b>   ";
                             if(!$mail->send()) {
             
                             } else {

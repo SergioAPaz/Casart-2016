@@ -1,60 +1,13 @@
-<!--SCRIPT PARA IDENTIFICAR LA TABLA SELECCIONADA PARA LA BASE DE DATOS-->
-<script>
-    function show() {
-       /* SET VALUE EN INPUT  DE FORMULARIO NUEVO ARTICULO AL SELECCIONAR OPCION DEL SELECT Y HABILITADO DEL BOTON AGREGAR*/
-        var text2 = document.getElementById('txtselect');
-
-        if (text2.value =="Elegir galeria...") {
-            document.getElementById("btnagregar").disabled = 'true';
-        } else {
-            document.getElementById("btnagregar").disabled = false;
-        }
-
-       if (text2.value=="Alfareria tarahumara"){
-            document.getElementById("txtgaleria").value = "Alfareria tarahumara";
-        } else if (text2.value=="Cesteria tarahumara"){
-            document.getElementById("txtgaleria").value ="Cesteria tarahumara";
-        } else if (text2.value=="Textiles tarahumara"){
-            document.getElementById("txtgaleria").value ="Textiles tarahumara";
-        } else if (text2.value=="Artesanias tarahumara de cuero"){
-            document.getElementById("txtgaleria").value ="Artesanias tarahumara de cuero";
-        } else if (text2.value=="Instrumentos musicales"){
-            document.getElementById("txtgaleria").value ="Instrumentos musicales";
-        }else if (text2.value=="Articulos varios"){
-            document.getElementById("txtgaleria").value ="Articulos varios";
-        }else if (text2.value=="Olla de mata ortiz economica"){
-            document.getElementById("txtgaleria").value ="Olla de mata ortiz economica";
-        }else if (text2.value=="Olla de mata ortiz comercial"){
-            document.getElementById("txtgaleria").value ="Olla de mata ortiz comercial";
-       }else if (text2.value=="Olla de mata ortiz fina"){
-           document.getElementById("txtgaleria").value ="Olla de mata ortiz fina";
-       }else if (text2.value=="Galería de cerámica de Mata Ortiz"){
-           document.getElementById("txtgaleria").value ="Galería de cerámica de Mata Ortiz";
-       }else if (text2.value=="Productos Chihuahuenses"){
-           document.getElementById("txtgaleria").value ="Productos Chihuahuenses";
-       }else if (text2.value=="Arcones"){
-           document.getElementById("txtgaleria").value ="Arcones";
-       }else if (text2.value=="Artesanía regional"){
-           document.getElementById("txtgaleria").value ="Artesanía regional";
-        }else{
-            document.getElementById("txtgaleria").value ="Sin precisar tabla 2";
-        }
-    }
-</script>
-
 <?php
-
-include("PHPCatalogo/BloqueDeSeguridad.php");
-include("PHPCatalogo/conexion.php");
-
-$consulta=<<<SQL
-    SELECT id,Titulo,Descripcion, DATE_FORMAT(Fecha_alta,'%d/%m/%Y %H:%i')as Fecha_alta,Galeria,Nuevo_producto,Usuario FROM catalogo
+/*SESSION START PARA QUE FUNCIONE LA OPCION DE ADMINISTRADOR EN NAVBAR*/
+session_start();
+include('PHPCatalogo/conexion.php');
+$primera=<<<SQL
+SELECT Titulo,Descripcion,urlimagen,Nuevo_producto FROM catalogo WHERE galeria='Artesanía regional';
 SQL;
-
-$filas =mysqli_query($conexiondb,$consulta);
+$filas=mysqli_query($conexiondb,$primera);
 ?>
-
-<!DOCTYPE html >
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -64,6 +17,8 @@ $filas =mysqli_query($conexiondb,$consulta);
     <!--CSS'S-->
     <link rel="stylesheet" href="assets/bootstrap-3.3.5-dist/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/StylesNavbar.css">
+    <link rel="stylesheet" href="assets/css/ArtesaniaRegional.css">
+
     <link type="text/css" rel="stylesheet" href="assets/css/Fonts%20navbar/fonts/fonts.css"/>
     <link rel="stylesheet" href="fonts/fonts.css">
     <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -71,19 +26,26 @@ $filas =mysqli_query($conexiondb,$consulta);
     <script src="assets/jquery/jquery-1.11.3.min.js"></script>
     <script src="assets/bootstrap-3.3.5-dist/js/bootstrap.js"></script>
     <script src="assets/js/NavbarResponsive.js"></script>
-    <script type="text/javascript" src="assets/js/PanelAdmin.js"></script><!--scripts generales-->
-
-    <!--DATATABLE JQUERY (PAGINACION Y SEARCH)-->
-    <link rel="stylesheet" href="assets/jquery/datatable%20jquery/dataTables.bootstrap.min.css">
-    <script src="assets/jquery/datatable%20jquery/jquery.dataTables.min.js"></script>
-    <script src="assets/jquery/datatable%20jquery/dataTables.bootstrap.min.js"></script>
-    <!--CSS'S-->
-    <link href="assets/css/PanelAdmin.css" rel="stylesheet" type="text/css">
-
-  <!--<script  src="assets/js/scrollbar/jquery.nicescroll.min.js"></script>    scrollbar-->
-
+    <script type="text/javascript" src="assets/js/ArtesaniaRegional.js"></script><!--scripts generales-->
+    <script  src="assets/js/scrollbar/jquery.nicescroll.min.js"></script><!--scrollbar-->
+    <!--FANCYBOX-->
+    <script type="text/javascript" src="assets/jquery/aumento%20de%20img/jquery.mousewheel-3.0.6.pack.js"></script>
+    <script type="text/javascript" src="assets/jquery/aumento%20de%20img/source/jquery.fancybox.js?v=2.1.5"></script>
+    <link rel="stylesheet" type="text/css" href="assets/jquery/aumento%20de%20img/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+    <link rel="stylesheet" type="text/css" href="assets/jquery/aumento%20de%20img/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+    <script type="text/javascript" src="assets/jquery/aumento%20de%20img/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+    <!--Add Thumbnail helper (this is optional)-->
+    <link rel="stylesheet" type="text/css" href="assets/jquery/aumento%20de%20img/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+    <script type="text/javascript" src="assets/jquery/aumento%20de%20img/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+    <!--  Add Media helper (this is optional)-->
+    <script type="text/javascript" src="assets/jquery/aumento%20de%20img/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
 </head>
-<body style="background-color: #4E342E">
+<body>
+<!--PRECARGA DE PAGINA-->
+<div id="preloader">
+    <div id="loader">&nbsp;</div>
+</div>
+
 <header>
     <!--NAVBAR-->
     <!--Nav grande (Resolucion>790px)-->
@@ -91,24 +53,24 @@ $filas =mysqli_query($conexiondb,$consulta);
         <div>
             <div id='cssmenu'>
                 <ul>
-                    <li><a href='index'>Inicio</a></li>
+                    <li>
+                        <a href='index'>Inicio</a>
+                    </li>
                     <li class='active has-sub'><a href='#'>Nosotros</a>
                         <ul>
                             <li ><a href='Info/QuienesSomos'>Quiénes somos</a></li>
                         </ul>
                     </li>
-
                     <li class='active has-sub'><a href='#'>Tarahumara</a>
                         <ul>
                             <li ><a href='CesteriaTarahumara'>Cestería tarahumara</a></li>
                             <li ><a href='AlfareriaTarahumara'>Alfarería tarahumara</a></li>
                             <li ><a href='TextilesTarahumaras'>Textiles tarahumaras</a></li>
-                            <li ><a href='ArtesaniasTarahumaraDeCuero'>Artesanías de cuero</a></li>
+                            <li ><a href='ArtesaniasTarahumaraDeCuero'>Artesanías  de cuero</a></li>
                             <li ><a href='InstrumentosMusicalesTarahumara'>Instrumentos musicales</a></li>
                             <li ><a href='ArticulosVarios'>Articulos varios</a></li>
                         </ul>
                     </li>
-
                     <li class='active has-sub'><a href='#'>Mata Ortiz</a>
                         <ul>
                             <li ><a href='OllaEconomica'>Olla mata ortiz económica</a></li>
@@ -117,8 +79,6 @@ $filas =mysqli_query($conexiondb,$consulta);
                             <li ><a href='GaleriaMataOrtiz'>Galería ceramica de mata ortiz</a></li>
                         </ul>
                     </li>
-
-
                     <li class='active has-sub'><a href='#'>Productos</a>
                         <ul>
                             <li ><a href='#'>Productos Chihuahuenses</a></li>
@@ -127,7 +87,6 @@ $filas =mysqli_query($conexiondb,$consulta);
                         </ul>
                     </li>
 
-                   
 
                     <?php
                     if (isset($_SESSION["username"]))
@@ -137,6 +96,7 @@ $filas =mysqli_query($conexiondb,$consulta);
                             echo "<li class='active has-sub pull-right' ><a href='#'>Administrador</a>";
                             echo "<ul>";
                             echo "<li><a style='background-color: #FF9800'><span class='glyphicon glyphicon-user' style='margin-right: 5px;font-size: 20px;margin-top: -2%'></span> <span style='font-size: 20px;margin-left: 4%;margin-top: -2%;position: absolute'>$_SESSION[usuario]</span></li>";
+                            echo "<li ><a href='PanelAdmin'><span class='glyphicon glyphicon-th' style='margin-right: 5px'></span> Panel de control</a></li>";
                             echo "<li ><a href='Gestion'><span class='glyphicon glyphicon-th-large' style='margin-right: 5px'></span> Gestion</a></li>";
                             echo "<li ><a href='ContactoComentarios'><span class='glyphicon glyphicon-comment' style='margin-right: 5px'></span> Comentarios</a></li>";
 
@@ -190,6 +150,7 @@ $filas =mysqli_query($conexiondb,$consulta);
                         <li><a href="OllaFina"><span class="icon-ctrl"></span>Olla Mata Ortiz Fina</a> </li>
                         <li><a href="GaleriaMataOrtiz"><span class="icon-ctrl"></span>Galeria ceramica de Mata Ortiz</a> </li>
                     </ul>
+                </li>
                 <li class="submenu">
                     <a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>Productos<span class="glyphicon glyphicon-chevron-down pull-right"></span> </a>
                     <ul class="children">
@@ -197,7 +158,8 @@ $filas =mysqli_query($conexiondb,$consulta);
                         <li><a href="#"><span class="icon-ctrl"></span>Arcones</a> </li>
                         <li><a href="#"><span class="icon-ctrl"></span>Artesania Regional</a> </li>
                     </ul>
-            
+                </li>
+
 
                 <?php
                 if (isset($_SESSION["username"]))
@@ -208,6 +170,7 @@ $filas =mysqli_query($conexiondb,$consulta);
                         echo "<a><span class='glyphicon glyphicon-tree-conifer'></span>Administrador<span class='glyphicon glyphicon-chevron-down pull-right'></span> </a>";
                         echo "<ul class='children'>";
                         echo " <li><a style='height: 63px;'><span class='glyphicon glyphicon-user' style='font-size: 20px'></span><p style='font-size: 20px; '>$_SESSION[usuario]</p></a> </li>";
+                        echo " <li><a href='PanelAdmin'><span class='icon-ctrl'></span>Panel de control</a> </li>";
                         echo " <li><a href='Gestion'><span class='icon-ctrl'></span>Gestion</a> </li>";
                         echo " <li><a href='ContactoComentarios'><span class='icon-ctrl'></span>Comentarios</a> </li>";
                         if ($_SESSION["RolCuenta"] == "Administrador")
@@ -227,107 +190,66 @@ $filas =mysqli_query($conexiondb,$consulta);
     </div>
 </header>
 
-<div class="container"  style="background-color: #EEEEEE;/*height: 100%*/">
-    <br/>
-    <!--FORMULARIO DE NUEVA GALERIA-->
-    <div class="panel panel-default">
-        <div class="panel-body">
-            <p class="alert fondo456" style="font-size: 20px;background-color: #FFCA28;color: #ffffff"><span class="newarticle">Agregar nuevo artículo</span><span style="color: transparent">.</span>
-                <select  onchange="show()" id="txtselect" name="txtselect" class="form-control btn btn-primary"  required style="margin-top: -3px;">
-                    <option>Cesteria tarahumara</option>
-                    <option>Alfareria tarahumara</option>
-                    <option>Textiles tarahumara</option>
-                    <option>Artesanias tarahumara de cuero</option>
-                    <option>Instrumentos musicales</option>
-                    <option>Articulos varios</option>
-                    <option>Olla de mata ortiz economica</option>
-                    <option>Olla de mata ortiz comercial</option>
-                    <option>Olla de mata ortiz fina</option>
-                    <option>Galería de cerámica de Mata Ortiz</option>
-                    <option>Productos Chihuahuenses</option>
-                    <option>Arcones</option>
-                    <option>Artesanía regional</option>
-                    <option selected>Elegir galeria...</option>
-                </select>
-                <span class="pull-right" id="galeriade" style="margin-right: 10px">Galeria de: </span>
-            </p>
-            <form role = "form" method="post" action="PHPCatalogo/GuardarGaleria"   enctype="multipart/form-data" >
-                <div class = "form-group">
-                    <input type='text' name='txtgaleria' id='txtgaleria' hidden>
-                    <label class="text-muted" for = "name">Titulo del producto:</label>
-                    <input type="text" name="txttitulo" class="form-control" placeholder="Titulo..." maxlength="200"  pattern="^\s*[a-zA-Z0-9ñÑ-_.,\s]+\s*" required>
-                    <br/>
-                    <label class="text-muted" for = "name">Descripcion del producto:</label>
-                    <input  class = "form-control" name="txtdesc" placeholder = "Descripcion..."  maxlength="500"        pattern="^\s*[a-zA-Z0-9ñÑ-_.,\s]+\s*" required>
-                    <br/>
-                    <label class="text-muted" for = "name">Imagen del producto:</label>
-                    <input type="file" class="form-control" name="archivo" required/>
-                    <p class="help-block">*Para una mejor vizualizacion utilizar imagenes de tamaño cuadrado Ejem. (500px x 500px).</p>
-                    <!--BOTON NUEVO PRODUCTO-->
-                    <div class="checkbox" style="margin-left: 0px">
-                        <label><input type="hidden" name="btnnewproduct" value="No">
-                        <label><input type="checkbox" name="btnnewproduct" value="Si">Incluir etiqueta de <span style="color: #1976D2">nuevo producto</span>?</label>
-                    </div>
+<div id="estilos" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12" >
+                <img class="img-responsive img-circle" src="images/logo.png" alt="" >
+                <div class="intro-text">
+                    <span class="name" style="font-size: 40px">Artesanía regional</span>
+                    <hr class="star-light" >
+                    <span class="skills">Variedad de artículos regionales.</span>
                 </div>
-                <button id="btnagregar"  disabled  type = "submit" class = "btn btn-primary">Agregar</button>
-                <button type = "reset" class = "btn btn-primary" onclick="deshabilitar()">Limpiar</button>
-                 </form>
-         </div>
-    </div>
-
-    <!--TABLA DE EXISTENCIAS-->
-    <div class="panel panel-default">
-        <div class="panel-body">
-                <p class="alert fondo456" style="font-size: 20px;background-color: #FFCA28;color: #ffffff"><span>Productos en exhibición</span></p>
-            <div class="table-responsive" style="border-radius: 10px;margin-top: 12px">
-                <table class="table  table-bordered table-hover table-condensed tab" id="regTable"  style="background-color: #ffffff;text-align: center;vertical-align: middle;">
-                    <thead>
-                        <tr style="background-color: #F5F5F5">
-                            <th style="font-size: 14px;color: #F57C00">Publicacion</th>
-                            <th style="font-size: 14px;color: #F57C00">Titulo</th>
-                            <th style="font-size: 14px;color: #F57C00">Descripcion</th>
-                            <th style="font-size: 14px;color: #F57C00">Fecha de alta</th>
-                            <th style="font-size: 14px;color: #F57C00">Galeria</th>
-                            <th style="font-size: 14px;color: #F57C00">Nuevo?</th>
-                            <th style="font-size: 14px;color: #F57C00">Usuario</th>
-                            <th style="font-size: 14px;color: #F57C00">Acciones</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                    <?php
-                    $count=0;
-                    while ($columna=mysqli_fetch_assoc($filas))
-                    {
-                        $count=$count+1;
-                        echo "<tr>";
-                        echo "<td>$count</td>";
-                        echo "<td>$columna[Titulo]</td>";
-                        echo "<td>$columna[Descripcion]</td>";
-                        echo "<td>$columna[Fecha_alta]</td>";
-                        echo "<td>$columna[Galeria]</td>";
-                        echo "<td>$columna[Nuevo_producto]</td>";
-                        echo "<td>$columna[Usuario]</td>";
-                        echo "<td>
-                        <a href='PHPCatalogo/BorrarGaleria?id=$columna[id]'>Borrar</a>
-                        <a href='EditarGaleria?id=$columna[id]'>Editar</a>
-                        <a href='AdminImagen?id=$columna[id]'>Cambiar imagen</a></td>";
-                        echo "</tr>";
-                    }
-                    ?>
-                    </tbody>
-                </table>
-
-
             </div>
         </div>
     </div>
-
-
-
 </div>
 
-<br><br><br>
+<br>
+
+
+
+
+<!--SEPARADOR-->
+<header>
+    <div class="container" style="background-color: #5D4037; margin-left: 0%; margin-right: 20%" >
+        <!--<h3 class="pull-right" style="color: #ffffff;ve"  >Catalogo de productos en venta</h3>-->
+        <p class="pull-right parrafo516"><span style="color: #ffa000">Catalogo de productos en venta</span></p>
+    </div>
+</header>
+
+<br>
+
+<!--CATALOGO-->
+<div class="container-fluid">
+    <div class="row" >
+
+        <?php
+        while($columna=mysqli_fetch_assoc($filas)){
+            echo "<div class='col-xs-12 col-sm-6 col-md-3''>";
+            echo '<div class="thumbnail" style="height: 443px">';
+            if($columna['Nuevo_producto']=='Si') {
+                echo '<div style="border-radius: 0px 6px 6px 0px;z-index: 2;background-color: #FFA726;float: left;margin-left: -6px;margin-top: 20px;opacity: .9;position: absolute;width: 150px;height: 25px"><p style="color: white;;float: right;margin-right: 5px;margin-top: 2%">Nuevo producto</p></div>';
+            }
+            echo ' <div style="height: 10px" class="divhide"></div>';
+            echo '<div style="height: 315px;position: relative;z-index: 1">';
+            echo "<a class='fancybox' href='PHPCatalogo/ImagenesGaleria/$columna[urlimagen]' data-fancybox-group='gallery'>
+                    <img class='img-responsive styleimg img152' style='max-height: 315px;' src='PHPCatalogo/ImagenesGaleria/$columna[urlimagen]' alt='' /></a>";
+            echo'</div>';
+            echo '  <div class="caption">';
+            echo "<h3>$columna[Titulo]</h3>";
+            echo "<button data-container='body' data-trigger='hover click'  data-placement='top' type='button' class='btn btn-info' data-toggle='popover'
+                            data-content='$columna[Descripcion]'>Detalles...</button>";
+            echo ' </div>';
+            echo '</div>';
+            echo '</div>';
+        }
+        ?>
+
+    </div>
+</div>
+
+<br><br><br><br>
 
 <span class="ir-arriba icon-arrow-up-thick"></span>
 
@@ -352,6 +274,13 @@ $filas =mysqli_query($conexiondb,$consulta);
     </div>
 </footer>
 
+
+<!--TOOLTIP POPOVER PARA EL FORMULARIO-->
+<script>
+    $(function () {
+        $('[data-toggle="popover"]').popover()
+    });
+</script>
 <script>
     $(document).ready(
         function() {

@@ -72,6 +72,8 @@ $filas2=mysqli_query($conexiondb,$consultasql);
                     <li class='active has-sub'><a href='#'>Nosotros</a>
                         <ul>
                             <li ><a href='Info/QuienesSomos'>Quiénes somos</a></li>
+                            <li ><a href='AvisoDePrvacidad'>Aviso de privacidad</a></li>
+
                         </ul>
                     </li>
                     <li class='active has-sub'><a href='#'>Tarahumara</a>
@@ -95,13 +97,11 @@ $filas2=mysqli_query($conexiondb,$consultasql);
                     <li class='active has-sub'><a href='#'>Productos</a>
                         <ul>
                             <li ><a href='ProductosChihuahuenses'>Productos Chihuahuenses</a></li>
-                            <li ><a href='PanelAdmin'>Arcones</a></li>
-                            <li ><a href='PanelLogin'>Artesania regional</a></li>
+                            <li ><a href='Arcones'>Arcones</a></li>
+                            <li ><a href='ArtesaniaRegional'>Artesania regional</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href='#'>Concursos</a>
-                    </li>
+
                     <li>
                         <a href="#" onclick="desplazamiento()">Contacto</a>
                     </li>
@@ -177,9 +177,7 @@ $filas2=mysqli_query($conexiondb,$consultasql);
                         <li><a href="PanelLogin"><span class="icon-ctrl"></span>Artesania Regional</a> </li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#"><span class="glyphicon glyphicon-gift"></span>Concursos</a>
-                </li>
+
                 <li>
                     <a><span class="glyphicon glyphicon-earphone"></span>Contacto</a>
                 </li>
@@ -354,7 +352,7 @@ $filas2=mysqli_query($conexiondb,$consultasql);
 <div class="container estilos2561">
     <div class="jumbotron estilos2562">
 
-        <h2>Artesanias Mexicanas Tradicionales</h2>
+        <a href='PanelLogin'><h2>Artesanias Mexicanas Tradicionales</h2></a>
 
         <hr class="divisor365">
 
