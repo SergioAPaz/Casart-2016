@@ -72,26 +72,25 @@ $filas2=mysqli_query($conexiondb,$consultasql);
                     <li class='active has-sub'><a href='#'>Nosotros</a>
                         <ul>
                             <li ><a href='Info/QuienesSomos'>Quiénes somos</a></li>
-                            <li ><a href='AvisoDePrvacidad'>Aviso de privacidad</a></li>
-
+                            <li ><a href='AvisoDePrivacidad'>Aviso de privacidad</a></li>
                         </ul>
                     </li>
                     <li class='active has-sub'><a href='#'>Tarahumara</a>
                         <ul>
-                            <li ><a href='CesteriaTarahumara'>Cestería tarahumara</a></li>
-                            <li ><a href='AlfareriaTarahumara'>Alfarería tarahumara</a></li>
-                            <li ><a href='TextilesTarahumaras'>Textiles tarahumaras</a></li>
-                            <li ><a href='ArtesaniasTarahumaraDeCuero'>Artesanías de cuero</a></li>
-                            <li ><a href='InstrumentosMusicalesTarahumara'>Instrumentos musicales</a></li>
-                            <li ><a href='ArticulosVarios'>Articulos varios</a></li>
+                            <li><a href='CesteriaTarahumara'>Cestería tarahumara</a></li>
+                            <li><a href='AlfareriaTarahumara'>Alfarería tarahumara</a></li>
+                            <li><a href='TextilesTarahumaras'>Textiles tarahumaras</a></li>
+                            <li><a href='ArtesaniasTarahumaraDeCuero'>Artesanías de cuero</a></li>
+                            <li><a href='InstrumentosMusicalesTarahumara'>Instrumentos musicales</a></li>
+                            <li><a href='ArticulosVarios'>Artículos varios</a></li>
                         </ul>
                     </li>
                     <li class='active has-sub'><a href='#'>Mata Ortiz</a>
                         <ul>
-                            <li ><a href='OllaEconomica'>Olla mata ortiz económica</a></li>
-                            <li ><a href='OllaMataOrtizComercial'>Olla mata ortiz comercial</a></li>
-                            <li ><a href='OllaMataOrtizFina'>Olla mata ortiz fina</a></li>
-                            <li ><a href='GaleriaDeCeramicaDeMataOrtiz'>Galería ceramica de mata ortiz</a></li>
+                            <li><a href='OllaEconomica'>Olla economica Mata Ortiz</a></li>
+                            <li><a href='OllaMataOrtizComercial'>Olla comercial Mata Ortiz</a></li>
+                            <li><a href='OllaMataOrtizFina'>Olla fina Mata Ortiz</a></li>
+                            <li><a href='GaleriaDeCeramicaDeMataOrtiz'>Galería ceramica Mata Ortiz</a></li>
                         </ul>
                     </li>
                     <li class='active has-sub'><a href='#'>Productos</a>
@@ -147,6 +146,7 @@ $filas2=mysqli_query($conexiondb,$consultasql);
                     <a href="#"><span class="glyphicon glyphicon-user"></span>Nosotros<span class="glyphicon glyphicon-chevron-down pull-right"></span> </a>
                     <ul class="children">
                         <li><a href="Info/QuienesSomos"><span class="icon-ctrl"></span>Quiénes somos</a> </li>
+                        <li><a href="AvisoDePrivacidad"><span class="icon-ctrl"></span>Aviso de privacidad</a> </li>
                     </ul>
                 </li>
                 <li class="submenu">
@@ -165,22 +165,20 @@ $filas2=mysqli_query($conexiondb,$consultasql);
                     <ul class="children">
                         <li><a href="OllaEconomica"><span class="icon-ctrl"></span>Olla Mata Ortiz economica</a> </li>
                         <li><a href="OllaMataOrtizComercial"><span class="icon-ctrl"></span>Olla Mata Ortiz comercial</a> </li>
-                        <li><a href="OllaFina"><span class="icon-ctrl"></span>Olla Mata Ortiz Fina</a> </li>
-                        <li><a href="GaleriaMataOrtiz"><span class="icon-ctrl"></span>Galeria ceramica de Mata Ortiz</a> </li>
+                        <li><a href="OllaMataOrtizFina"><span class="icon-ctrl"></span>Olla de Mata Ortiz fina</a> </li>
+                        <li><a href="GaleriaDeCeramicaDeMataOrtiz"><span class="icon-ctrl"></span>Galería de cerámica de Mata Ortiz</a> </li>
                     </ul>
                 </li>
                 <li class="submenu">
                     <a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>Productos<span class="glyphicon glyphicon-chevron-down pull-right"></span> </a>
                     <ul class="children">
-                        <li><a href="#"><span class="icon-ctrl"></span>Productos Chihuahuenses</a> </li>
-                        <li><a href="#"><span class="icon-ctrl"></span>Arcones</a> </li>
-                        <li><a href="PanelLogin"><span class="icon-ctrl"></span>Artesania Regional</a> </li>
+                        <li><a href="ProductosChihuahuenses"><span class="icon-ctrl"></span>Productos chihuahuenses</a> </li>
+                        <li><a href="Arcones"><span class="icon-ctrl"></span>Arcones</a> </li>
+                        <li><a href="ArtesaniaRegional"><span class="icon-ctrl"></span>Artesanía regional</a> </li>
                     </ul>
                 </li>
 
-                <li>
-                    <a><span class="glyphicon glyphicon-earphone"></span>Contacto</a>
-                </li>
+             
 
                 <?php
                 if (isset($_SESSION["username"]))
