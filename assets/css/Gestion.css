@@ -1,3 +1,15 @@
+.shadowx {
+    -webkit-box-shadow: 0px 24px 13px -13px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 24px 13px -13px rgba(0,0,0,0.75);
+    box-shadow: 0px 24px 13px -13px rgba(0,0,0,0.75);
+
+    background-color: #337ab7;
+    border-color: #337ab7;
+    border-radius: 10px;
+}
+
+
+
 
 
 /*FOOTER*/
