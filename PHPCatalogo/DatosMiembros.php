@@ -6,7 +6,7 @@ include("conexion.php");
         /*Validamos que esten todos los campos requeridos del formulario*/
         if ($_SERVER["REQUEST_METHOD"] == "POST")
         {
-            if ((empty($_POST["Cargo"])) || (empty($_POST["Desc"])) )
+            if ((empty($_POST["Cargo"])) || (empty($_POST["Desc"]))  )
             {
                 echo "<!DOCTYPE html>";
                 echo "<html>";
@@ -16,11 +16,12 @@ include("conexion.php");
                 echo "</html>";
             }else {
 
-                $inputcargo = $_POST['Cargo'];
-                $inputdesc = $_POST['Desc'];
+                $InputCargo = $_POST['Cargo'];
+                $InputDesc = $_POST['Desc'];
+                $InputIdMiembro = $_POST['idmiembro'];
 
                 /*Validacion con expresiones reulares*/
-                if ((preg_match("/^[a-zA-Z0-9._ñÑ ]*$/", $inputcargo)) && (preg_match("/^[\n\r0-9a-zA-Z@,._ñÑ ]+$/", $inputdesc))) {
+                if ((preg_match("/^[a-zA-Z0-9._ñÑ ]*$/", $InputCargo)) && (preg_match("/^[\n\r0-9a-zA-Z@,._ñÑ ]+$/", $InputDesc))) {
 
                     /*ENVIO DE EMAIL A ADMIN*/
                     require '../assets/php/PHPMailer/PHPMailerAutoload.php';
@@ -47,9 +48,9 @@ SQL;
 
                     $mail->isHTML(false);                                  // Set email format to HTML
                     $mail->Subject = 'Nuevo miembro en Web Casart Chihuahua';
-                    $mail->Body    = "<span style='font-size: 25px'><b>Nuevo miembro en web Casart Chihuahua:</b></span><br><br>Cargo: <b>$inputcargo</b> <br><br> Descripcion: <b>$inputdesc</b> <br><br> 
+                    $mail->Body    = "<span style='font-size: 25px'><b>Nuevo miembro en web Casart Chihuahua:</b></span><br><br>Cargo: <b>$InputCargo</b> <br><br> Descripcion: <b>$InputDesc</b> <br><br> 
                                 <b>Web Casart Chihuahua.<b>   ";
-                    $mail->AltBody = "<span style='font-size: 25px'><b>Nuevo miembro de Casart Chihuahua:</b></span><br><br>Cargo: <b>$inputcargo</b> <br><br> Descripcion: <b>$inputdesc</b> <br><br> 
+                    $mail->AltBody = "<span style='font-size: 25px'><b>Nuevo miembro de Casart Chihuahua:</b></span><br><br>Cargo: <b>$InputCargo</b> <br><br> Descripcion: <b>$InputDesc</b> <br><br> 
                                 <b>Web Casart Chihuahua.<b>";
                     if(!$mail->send()) {
 
@@ -58,11 +59,40 @@ SQL;
                     }
                     /*FIN DE ENVIO DE NOTIFICACION POR EMAIL*/
 
-                    $insert = <<<SQL
-    INSERT INTO miembros SET Cargo='$inputcargo', Descripcion='$inputdesc'
+                    /*CONSULTA DE NOMBRE DE IMAGEN VIEJA*/
+                    $ConsultaImagen=<<<SQL
+SELECT UrlImagen FROM  miembros WHERE id='$InputIdMiembro'
 SQL;
-                    mysqli_query($conexiondb, $insert) or die ("Error al guardar nuevo miembro.");
-                    header("Location: ../index.php");
+                    $QueryImagen =mysqli_query($conexiondb,$ConsultaImagen);
+                    $Asociacion =mysqli_fetch_assoc($QueryImagen);
+
+$Aso=$Asociacion['UrlImagen'];
+
+if(is_null($Asociacion))
+{
+    $insert = <<<SQL
+    INSERT INTO miembros SET Cargo='$InputCargo', Descripcion='$InputDesc'
+SQL;
+}
+else
+{
+    $insert = <<<SQL
+    INSERT INTO miembros SET Cargo='$InputCargo', Descripcion='$InputDesc', UrlImagen= '$Aso'
+SQL;
+}
+
+
+
+                    $DeleteMiembro=<<<SQL
+    DELETE  FROM miembros WHERE id='$InputIdMiembro'
+SQL;
+
+
+                    mysqli_query($conexiondb, $insert) or die ("Error al actualizar miembro, Error 127.");
+                    mysqli_query($conexiondb,$DeleteMiembro) or die ("Error al actualizar miembro, Error 126.");
+
+
+
                 } else {
                     echo "<!DOCTYPE html>";
                     echo "<html>";
@@ -74,5 +104,5 @@ SQL;
             }
         }
 
-
+header("Location:../Gestion.php");
 ?>

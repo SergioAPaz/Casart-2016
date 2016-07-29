@@ -3,14 +3,34 @@
 include("PHPCatalogo/BloqueDeSeguridad.php");
 include("PHPCatalogo/conexion.php");
 
-$consulta=<<<SQL
-    SELECT id,Cargo,Descripcion,Imagen FROM miembros
+
+/*$consulta=<<<SQL
+SELECT id,Nombre,Email FROM emailadmins;
 SQL;
 
-$filas =mysqli_query($conexiondb,$consulta);
-$columnas= mysqli_fetch_assoc($filas);
+$filas =mysqli_query($conexiondb,$consulta);*/
+
+
+$miembro1=<<<SQL
+    SELECT id,Cargo,Descripcion,UrlImagen FROM miembros LIMIT 0,1;
+SQL;
+$miembro2=<<<SQL
+    SELECT id,Cargo,Descripcion,UrlImagen FROM miembros LIMIT 1,1;
+SQL;
+$miembro3=<<<SQL
+    SELECT id,Cargo,Descripcion,UrlImagen FROM miembros LIMIT 2,1;
+SQL;
+
+$filas1=mysqli_query($conexiondb,$miembro1);
+$columnas1=mysqli_fetch_assoc($filas1);
+$filas2=mysqli_query($conexiondb,$miembro2);
+$columnas2=mysqli_fetch_assoc($filas2);
+$filas3=mysqli_query($conexiondb,$miembro3);
+$columnas3=mysqli_fetch_assoc($filas3);
 
 ?>
+
+
 <!DOCTYPE html >
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
@@ -264,6 +284,7 @@ $columnas= mysqli_fetch_assoc($filas);
     </div>
 
     <!--PANEL DE GESTION DE MIEMBROS DE CASART-->
+    <!--MIEMBRO1-->
     <div class="panel panel-default" >
         <p class="alert fondo456" style="font-size: 20px;background-color: #FFCA28;color: #FAFAFA"><span class="newarticle">Gestion de miembros de Casart Chihuahua </span><span style="color: transparent">.</span></p>
 
@@ -273,108 +294,122 @@ $columnas= mysqli_fetch_assoc($filas);
                     <div class="col-sm-6 col-md-4 " >
                         <div class="thumbnail shadowx" >
                             <div>
-                                <button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-default btn-group-justified" style="margin-bottom: 10px;background-color: white"><span class= "glyphicon glyphicon-refresh" aria-hidden="true"></span> Cambiar imagen</button>
-                                <img class="img-responsive img-circle" style="margin-right: auto;margin-left: auto;" src="Info/images/directora.jpeg" alt="Imagen" data-toggle="modal" data-target="#myModal">
+                                <button data-toggle="modal" data-target="#myModal1" type="button" class="btn btn-default btn-group-justified" style="margin-bottom: 10px;background-color: white"><span class= "glyphicon glyphicon-refresh" aria-hidden="true"></span> Cambiar imagen</button>
+                                <img class="img-responsive img-circle" style="max-width:250px;margin-right: auto;margin-left: auto;" src="<?php echo 'images/Miembros/'.$columnas1['UrlImagen']; ?>" alt="Imagen" data-toggle="modal" data-target="#myModal">
                                 <!-- Modal -->
-                                <div class="modal fade" id="myModal" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal fade" id="myModal1" role="dialog" aria-labelledby="myModalLabel">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header" style="background-color: rgb(255, 202, 40);color: #FAFAFA">
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                                 <h4 class="modal-title" id="myModalLabel">Modificar imagen</h4>
                                             </div>
-                                            <div class="modal-body">
-                                                <label class="text-muted" for = "name">Selecciona una imagen:</label>
-                                                <input type="file" class="form-control" name="archivo" required/>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                                <button type="button" class="btn btn-primary">Guardar imagen</button>
-                                            </div>
+                                            <form role="form" method="POST"  enctype="multipart/form-data" action="PHPCatalogo/CambiarImagenMiembros.php">
+                                                <div class="modal-body">
+                                                    <label class="text-muted" for = "name">Selecciona una imagen:</label>
+                                                    <input type="file" class="form-control" name="archivo" required/>
+                                                    <input type='' name='idmiembro' value='<?php echo $columnas1['id']; ?>'>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                                    <button type="submit" class="btn btn-primary">Guardar imagen</button>
+                                                </div>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <form method="post" action="PHPCatalogo/DatosMiembros.php">
                                 <div class="caption">
-                                    <input type="text" style="margin-bottom: 10px" class="form-control" name="Cargo" value="<?php echo $columnas['Cargo']; ?>" placeholder="Cargo...">
-                                    <textarea class="form-control" rows="3" name="Desc"  placeholder="Descripcion..."><?php echo $columnas['Descripcion']; ?></textarea>
+                                    <input type="text" style="margin-bottom: 10px" class="form-control" name="Cargo" value="<?php echo $columnas1['Cargo'];  ?>" placeholder="Cargo...">
+                                    <textarea class="form-control" rows="3" name="Desc"  placeholder="Descripcion..."><?php echo $columnas1['Descripcion'];  ?></textarea>
+                                    <input type="" name="idmiembro" value="<?php echo $columnas1['id']; ?>"/>
                                 </div>
                                 <button type="submit" class="btn btn-info center-block" style="margin-bottom: 4px" id="m1" name="m1">Guardar</button>
                             </form>
                         </div>
                     </div>
 
-
+                    <!--MIEMBRO2-->
                     <div class="col-sm-6 col-md-4 " >
                         <div class="thumbnail shadowx" >
                             <div>
-                                <button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-default btn-group-justified" style="margin-bottom: 10px;background-color: white"><span class= "glyphicon glyphicon-refresh" aria-hidden="true"></span> Cambiar imagen</button>
-                                <img class="img-responsive img-circle" style="margin-right: auto;margin-left: auto;" src="Info/images/directora.jpeg" alt="Imagen" data-toggle="modal" data-target="#myModal">
+                                <button data-toggle="modal" data-target="#myModal2" type="button" class="btn btn-default btn-group-justified" style="margin-bottom: 10px;background-color: white"><span class= "glyphicon glyphicon-refresh" aria-hidden="true"></span> Cambiar imagen</button>
+                                <img class="img-responsive img-circle" style="max-width:250px;margin-right: auto;margin-left: auto;" src="<?php echo 'images/Miembros/'.$columnas2['UrlImagen']; ?>" alt="Imagen" data-toggle="modal" data-target="#myModal">
                                 <!-- Modal -->
-                                <div class="modal fade" id="myModal" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal fade" id="myModal2" role="dialog" aria-labelledby="myModalLabel">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header" style="background-color: rgb(255, 202, 40);color: #FAFAFA">
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                                 <h4 class="modal-title" id="myModalLabel">Modificar imagen</h4>
                                             </div>
-                                            <div class="modal-body">
-                                                <label class="text-muted" for = "name">Selecciona una imagen:</label>
-                                                <input type="file" class="form-control center-block" name="archivo" required/>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                                <button type="button" class="btn btn-primary">Guardar imagen</button>
-                                            </div>
+                                            <form role="form" method="POST"  enctype="multipart/form-data" action="PHPCatalogo/CambiarImagenMiembros.php">
+                                                <div class="modal-body">
+                                                    <label class="text-muted" for = "name">Selecciona una imagen:</label>
+                                                    <input type="file" class="form-control" name="archivo" required/>
+                                                    <input type='hidden' name='idmiembro' value='<?php echo $columnas2['id']; ?>'>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                                    <button type="submit" class="btn btn-primary">Guardar imagen</button>
+                                                </div>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <form method="post" action="PHPCatalogo/DatosMiembros.php">
                                 <div class="caption">
-                                    <input type="text" style="margin-bottom: 10px" class="form-control" name="Cargo" value="<?php echo $columnas['Cargo']; ?>" placeholder="Cargo...">
-                                    <textarea class="form-control" rows="3" name="Desc"  placeholder="Descripcion..."><?php echo $columnas['Descripcion']; ?></textarea>
+                                    <input type="text" style="margin-bottom: 10px" class="form-control" name="Cargo" value="<?php echo $columnas2['Cargo']; ?>" placeholder="Cargo...">
+                                    <textarea class="form-control" rows="3" name="Desc"  placeholder="Descripcion..."><?php echo $columnas2['Descripcion']; ?></textarea>
+                                    <input type="" name="idmiembro" value="<?php echo $columnas2['id']; ?>"/>
                                 </div>
                                 <button type="submit" class="btn btn-info center-block"style="margin-bottom: 4px" id="m2" name="m2">Guardar</button>
                             </form>
                         </div>
                     </div>
 
+                    <!--MIEMBRO3-->
                     <div class="col-sm-6 col-md-4 " >
                         <div class="thumbnail shadowx" >
                             <div>
-                                <button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-default btn-group-justified" style="margin-bottom: 10px;background-color: white"><span class= "glyphicon glyphicon-refresh" aria-hidden="true"></span> Cambiar imagen</button>
-                                <img class="img-responsive img-circle" style="margin-right: auto;margin-left: auto;" src="Info/images/directora.jpeg" alt="Imagen" data-toggle="modal" data-target="#myModal">
+                                <button data-toggle="modal" data-target="#myModal3" type="button" class="btn btn-default btn-group-justified" style="margin-bottom: 10px;background-color: white"><span class= "glyphicon glyphicon-refresh" aria-hidden="true"></span> Cambiar imagen</button>
+                                <img class="img-responsive img-circle" style="max-width:250px;margin-right: auto;margin-left: auto;" src="<?php echo 'images/Miembros/'.$columnas3['UrlImagen']; ?>" alt="Imagen" data-toggle="modal" data-target="#myModal">
                                 <!-- Modal -->
-                                <div class="modal fade" id="myModal" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal fade" id="myModal3" role="dialog" aria-labelledby="myModalLabel">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header" style="background-color: rgb(255, 202, 40);color: #FAFAFA">
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                                 <h4 class="modal-title" id="myModalLabel">Modificar imagen</h4>
                                             </div>
-                                            <div class="modal-body">
-                                                <label class="text-muted" for = "name">Selecciona una imagen:</label>
-                                                <input type="file" class="form-control" name="archivo" required/>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                                <button type="button" class="btn btn-primary">Guardar imagen</button>
-                                            </div>
+                                            <form role="form" method="POST"  enctype="multipart/form-data" action="PHPCatalogo/CambiarImagenMiembros.php">
+                                                <div class="modal-body">
+                                                    <label class="text-muted" for = "name">Selecciona una imagen:</label>
+                                                    <input type="file" class="form-control" name="archivo" required/>
+                                                    <input type='' name='idmiembro' value='<?php echo $columnas3['id']; ?>'>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                                    <button type="submit" class="btn btn-primary">Guardar imagen</button>
+                                                </div>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <form method="post" action="PHPCatalogo/DatosMiembros.php">
                                 <div class="caption">
-                                    <input type="text" style="margin-bottom: 10px" class="form-control" name="Cargo" value="<?php echo $columnas['Cargo']; ?>" placeholder="Cargo...">
-                                    <textarea class="form-control" rows="3" name="Desc"  placeholder="Descripcion..."><?php echo $columnas['Descripcion']; ?></textarea>
+                                    <input type="text" style="margin-bottom: 10px" class="form-control" name="Cargo" value="<?php echo $columnas3['Cargo']; ?>" placeholder="Cargo...">
+                                    <textarea class="form-control" rows="3" name="Desc"  placeholder="Descripcion..."><?php echo $columnas3['Descripcion']; ?></textarea>
+                                    <input type="" name="idmiembro" value="<?php echo $columnas3['id']; ?>"/>
                                 </div>
                                 <button type="submit" class="btn btn-info center-block" style="margin-bottom: 4px" id="m3" name="m3">Guardar</button>
                             </form>
                         </div>
                     </div>
+
                 </div>
         </div>
 
