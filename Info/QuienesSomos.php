@@ -1,5 +1,12 @@
 <?php
 session_start();
+
+include('../PHPCatalogo/conexion.php');
+$consulta=<<<SQL
+SELECT id,Cargo,Descripcion,UrlImagen FROM miembros;
+SQL;
+
+$filas=mysqli_query($conexiondb,$consulta);
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -267,26 +274,17 @@ session_start();
 						</header>
 						<div class="box alt">
 							<div class="row uniform">
-								<section class="4u 6u(medium) 12u$(xsmall)">
-									<span class="icon alt major fa-area-chart hol" style="width: 10em;height: 10em"><img src="images/directora.jpeg" style="border-radius: 50%;display: block;max-width: 100%;height: auto"></span>
-                                    <h4>Veronica Rodriguez</h4>
-									<p>Orgullosa directora de Casart Chihuahua desde el año 2012 y ha contribuido al progreso de la casa de las artesanias trayendo
-                                        a nuevos talentos de las artesanias.</p>
-								</section>
-
-                                <section class="4u 6u(medium) 12u$(xsmall)">
-                                    <span class="icon alt major fa-area-chart hol" style="width: 10em;height: 10em"><img src="images/subdirector.jpeg" style="border-radius: 50%;display: block;max-width: 100%;height: auto;border: 0px solid #ffffff"></span>
-                                    <h4>Gabriel Ornelas</h4>
-                                    <p>Orgulloso subdirector de Casart Chihuahua desde el año 2005, ha contribuido al progreso de la casa de las artesanias trayendo
-                                        a nuevos talentos y promoviendo las artesanias del estado.</p>
-                                </section>
-
-                                <section class="4u 6u(medium) 12u$(xsmall)">
-                                    <span class="icon alt major fa-area-chart hol" style="width: 10em;height: 10em"><img src="images/Tesorero.jpeg" style="border-radius: 50%;display: block;max-width: 100%;height: auto"></span>
-                                    <h4>Sergio Paz</h4>
-                                    <p>Tesorero de Casart Chihuahua, ha contribuido a la administracion de las finanzas de la casa generando un
-                                        crecimiento y promoviendo nuevos concursos con grandes premios para os participantes.</p>
-                                </section>
+                                <!--MIEMBROS-->
+                                <?php
+                                    while($columna=mysqli_fetch_assoc($filas))
+                                    {
+                                        echo "<section class='4u 6u(medium) 12u$(xsmall)'>";
+                                        echo "<span class='icon alt major fa-area-chart hol' style='width: 13em;height: 13em'><img src='../images/Miembros/$columna[UrlImagen]' style='border-radius: 50%;display: block;max-width: 100%;height: auto'></span>";
+                                        echo "<h4>$columna[Cargo]</h4>";
+                                        echo "<p>$columna[Descripcion]</p>";
+                                        echo '</section>';
+                                    }
+                                ?>
 							</div>
 						</div>
 

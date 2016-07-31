@@ -630,7 +630,7 @@ $filas2=mysqli_query($conexiondb,$consultasql);
         <form method="post" action="PHPCatalogo/GuardarComentariosPHP">
             <div class="field">
                 <label for="name">NOMBRE</label>
-                <input type="text" name="name" id="name" class="validar1" maxlength="30" pattern="^\s*[a-zA-Z0-9ñÑ_.\s]+\s*" required/>
+                <input type="text" name="name" id="name" class="validar1" maxlength="30" pattern="^\s*[a-zA-Z0-9ñÑáéíóú_.\s]+\s*" required/>
             </div>
             <div class="field">
                 <label for="email">EMAIL</label>
@@ -638,7 +638,7 @@ $filas2=mysqli_query($conexiondb,$consultasql);
             </div>
             <div class="field">
                 <label for="message">MENSAJE</label>
-                <textarea name="message" id="message" rows="4" class="validar3"  maxlength="400" pattern="^\s*[a-zA-Z0-9ñÑ@_.,\s]+\s*" required></textarea>
+                <textarea name="message" id="message" rows="4" class="validar3"  maxlength="400" required></textarea>
             </div>
             
             <div class="g-recaptcha" data-theme="dark" data-sitekey="6LcE6iQTAAAAACNmHB2efCQX6k7QtUVNVShUuSPH"></div>

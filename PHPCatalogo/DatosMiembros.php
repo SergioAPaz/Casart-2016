@@ -21,7 +21,7 @@ include("conexion.php");
                 $InputIdMiembro = $_POST['idmiembro'];
 
                 /*Validacion con expresiones reulares*/
-                if ((preg_match("/^[a-zA-Z0-9._ñÑ ]*$/", $InputCargo)) && (preg_match("/^[\n\r0-9a-zA-Z@,._ñÑ ]+$/", $InputDesc))) {
+                if ((preg_match("/^[a-zA-Z0-9._ñÑáéíóú ]*$/", $InputCargo)) && (preg_match("/^[\n\r0-9a-zA-Z@,._ñÑáéíóú ]+$/", $InputDesc))) {
 
                     /*ENVIO DE EMAIL A ADMIN*/
                     require '../assets/php/PHPMailer/PHPMailerAutoload.php';
@@ -91,7 +91,7 @@ SQL;
                     mysqli_query($conexiondb, $insert) or die ("Error al actualizar miembro, Error 127.");
                     mysqli_query($conexiondb,$DeleteMiembro) or die ("Error al actualizar miembro, Error 126.");
 
-
+                    header("Location:../Gestion.php");
 
                 } else {
                     echo "<!DOCTYPE html>";
@@ -104,5 +104,5 @@ SQL;
             }
         }
 
-header("Location:../Gestion.php");
+
 ?>

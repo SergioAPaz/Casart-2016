@@ -34,7 +34,7 @@ if(isset($_POST['g-recaptcha-response'])  &&  $_POST['g-recaptcha-response']) {
                 $inputmessage = $_POST['message'];
 
                 /*Validacion con expresiones reulares*/
-                if ((preg_match("/^[a-zA-Z0-9._ñÑ ]*$/", $inputnombre)) && (preg_match("/^[a-zA-Z0-9@._ñÑ ]*$/", $inputmail)) && (preg_match("/^[\n\r0-9a-zA-Z@,._ñÑ ]+$/", $inputmessage))) {
+                if ((preg_match("/^[a-zA-Z0-9._ñÑáéíóú ]*$/", $inputnombre)) && (preg_match("/^[a-zA-Z0-9@._ñÑ ]*$/", $inputmail)) && (preg_match("/^[\n\r0-9a-zA-Z@,._ñÑáéíóú ]+$/", $inputmessage))) {
 
                     /*ENVIO DE EMAIL A ADMIN*/
                     require '../assets/php/PHPMailer/PHPMailerAutoload.php';

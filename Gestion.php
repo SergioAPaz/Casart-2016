@@ -3,12 +3,12 @@
 include("PHPCatalogo/BloqueDeSeguridad.php");
 include("PHPCatalogo/conexion.php");
 
-
-/*$consulta=<<<SQL
+/*CONSULTA DE CORREOS PARA ELFUNCIONAMIENTO DE EL PANEL DE ADMINISTRACION DE CORREOS PARA NOTIFICACIONES*/
+$consulta=<<<SQL
 SELECT id,Nombre,Email FROM emailadmins;
 SQL;
 
-$filas =mysqli_query($conexiondb,$consulta);*/
+$filas =mysqli_query($conexiondb,$consulta);
 
 
 $miembro1=<<<SQL
@@ -295,7 +295,7 @@ $columnas3=mysqli_fetch_assoc($filas3);
                         <div class="thumbnail shadowx" >
                             <div>
                                 <button data-toggle="modal" data-target="#myModal1" type="button" class="btn btn-default btn-group-justified" style="margin-bottom: 10px;background-color: white"><span class= "glyphicon glyphicon-refresh" aria-hidden="true"></span> Cambiar imagen</button>
-                                <img class="img-responsive img-circle" style="max-width:250px;margin-right: auto;margin-left: auto;" src="<?php echo 'images/Miembros/'.$columnas1['UrlImagen']; ?>" alt="Imagen" data-toggle="modal" data-target="#myModal">
+                                <img class="img-responsive img-circle 44245" style="min-width: 250px;min-height: 250px;max-width:250px;margin-right: auto;margin-left: auto;" src="<?php echo 'images/Miembros/'.$columnas1['UrlImagen']; ?>" alt="Imagen" data-toggle="modal" data-target="#myModal">
                                 <!-- Modal -->
                                 <div class="modal fade" id="myModal1" role="dialog" aria-labelledby="myModalLabel">
                                     <div class="modal-dialog" role="document">
@@ -308,7 +308,7 @@ $columnas3=mysqli_fetch_assoc($filas3);
                                                 <div class="modal-body">
                                                     <label class="text-muted" for = "name">Selecciona una imagen:</label>
                                                     <input type="file" class="form-control" name="archivo" required/>
-                                                    <input type='' name='idmiembro' value='<?php echo $columnas1['id']; ?>'>
+                                                    <input type='hidden' name='idmiembro' value='<?php echo $columnas1['id']; ?>'>
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
@@ -323,7 +323,7 @@ $columnas3=mysqli_fetch_assoc($filas3);
                                 <div class="caption">
                                     <input type="text" style="margin-bottom: 10px" class="form-control" name="Cargo" value="<?php echo $columnas1['Cargo'];  ?>" placeholder="Cargo...">
                                     <textarea class="form-control" rows="3" name="Desc"  placeholder="Descripcion..."><?php echo $columnas1['Descripcion'];  ?></textarea>
-                                    <input type="" name="idmiembro" value="<?php echo $columnas1['id']; ?>"/>
+                                    <input type="hidden" name="idmiembro" value="<?php echo $columnas1['id']; ?>"/>
                                 </div>
                                 <button type="submit" class="btn btn-info center-block" style="margin-bottom: 4px" id="m1" name="m1">Guardar</button>
                             </form>
@@ -335,7 +335,7 @@ $columnas3=mysqli_fetch_assoc($filas3);
                         <div class="thumbnail shadowx" >
                             <div>
                                 <button data-toggle="modal" data-target="#myModal2" type="button" class="btn btn-default btn-group-justified" style="margin-bottom: 10px;background-color: white"><span class= "glyphicon glyphicon-refresh" aria-hidden="true"></span> Cambiar imagen</button>
-                                <img class="img-responsive img-circle" style="max-width:250px;margin-right: auto;margin-left: auto;" src="<?php echo 'images/Miembros/'.$columnas2['UrlImagen']; ?>" alt="Imagen" data-toggle="modal" data-target="#myModal">
+                                <img class="img-responsive img-circle" style="min-width: 250px;min-height: 250px;max-width:250px;margin-right: auto;margin-left: auto;" src="<?php echo 'images/Miembros/'.$columnas2['UrlImagen']; ?>" alt="Imagen" data-toggle="modal" data-target="#myModal">
                                 <!-- Modal -->
                                 <div class="modal fade" id="myModal2" role="dialog" aria-labelledby="myModalLabel">
                                     <div class="modal-dialog" role="document">
@@ -363,7 +363,7 @@ $columnas3=mysqli_fetch_assoc($filas3);
                                 <div class="caption">
                                     <input type="text" style="margin-bottom: 10px" class="form-control" name="Cargo" value="<?php echo $columnas2['Cargo']; ?>" placeholder="Cargo...">
                                     <textarea class="form-control" rows="3" name="Desc"  placeholder="Descripcion..."><?php echo $columnas2['Descripcion']; ?></textarea>
-                                    <input type="" name="idmiembro" value="<?php echo $columnas2['id']; ?>"/>
+                                    <input type="hidden" name="idmiembro" value="<?php echo $columnas2['id']; ?>"/>
                                 </div>
                                 <button type="submit" class="btn btn-info center-block"style="margin-bottom: 4px" id="m2" name="m2">Guardar</button>
                             </form>
@@ -375,7 +375,7 @@ $columnas3=mysqli_fetch_assoc($filas3);
                         <div class="thumbnail shadowx" >
                             <div>
                                 <button data-toggle="modal" data-target="#myModal3" type="button" class="btn btn-default btn-group-justified" style="margin-bottom: 10px;background-color: white"><span class= "glyphicon glyphicon-refresh" aria-hidden="true"></span> Cambiar imagen</button>
-                                <img class="img-responsive img-circle" style="max-width:250px;margin-right: auto;margin-left: auto;" src="<?php echo 'images/Miembros/'.$columnas3['UrlImagen']; ?>" alt="Imagen" data-toggle="modal" data-target="#myModal">
+                                <img class="img-responsive img-circle" style="min-width: 250px;min-height: 250px;max-width:250px;margin-right: auto;margin-left: auto;" src="<?php echo 'images/Miembros/'.$columnas3['UrlImagen']; ?>" alt="Imagen" data-toggle="modal" data-target="#myModal">
                                 <!-- Modal -->
                                 <div class="modal fade" id="myModal3" role="dialog" aria-labelledby="myModalLabel">
                                     <div class="modal-dialog" role="document">
@@ -388,7 +388,7 @@ $columnas3=mysqli_fetch_assoc($filas3);
                                                 <div class="modal-body">
                                                     <label class="text-muted" for = "name">Selecciona una imagen:</label>
                                                     <input type="file" class="form-control" name="archivo" required/>
-                                                    <input type='' name='idmiembro' value='<?php echo $columnas3['id']; ?>'>
+                                                    <input type='hidden' name='idmiembro' value='<?php echo $columnas3['id']; ?>'>
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
@@ -401,9 +401,9 @@ $columnas3=mysqli_fetch_assoc($filas3);
                             </div>
                             <form method="post" action="PHPCatalogo/DatosMiembros.php">
                                 <div class="caption">
-                                    <input type="text" style="margin-bottom: 10px" class="form-control" name="Cargo" value="<?php echo $columnas3['Cargo']; ?>" placeholder="Cargo...">
-                                    <textarea class="form-control" rows="3" name="Desc"  placeholder="Descripcion..."><?php echo $columnas3['Descripcion']; ?></textarea>
-                                    <input type="" name="idmiembro" value="<?php echo $columnas3['id']; ?>"/>
+                                    <input type="text" style="margin-bottom: 10px" class="form-control" name="Cargo" value="<?php echo $columnas3['Cargo']; ?>" placeholder="Nombre..." required>
+                                    <textarea class="form-control" rows="3" name="Desc"  placeholder="Descripcion..." required><?php echo $columnas3['Descripcion']; ?></textarea>
+                                    <input type="hidden" name="idmiembro" value="<?php echo $columnas3['id']; ?>"/>
                                 </div>
                                 <button type="submit" class="btn btn-info center-block" style="margin-bottom: 4px" id="m3" name="m3">Guardar</button>
                             </form>
@@ -414,21 +414,9 @@ $columnas3=mysqli_fetch_assoc($filas3);
         </div>
 
         <div class="modal-footer">
-           <p style="color: #9E9E9E">Panel de gestion de miembros activos de Casart Chihuahua.</p>
+           <p style="color: #9E9E9E">Nota: para una mejor vizualizacion de las imagenes de los miembros las imagenes deben tener una resolucion cuadrada ejemplo: 640px x 640px.</p>
         </div>
 
-    </div>
-
-
-
-
-
-
-    <!--TABLA DE EXISTENCIAS-->
-    <div class="panel panel-default">
-        <div class="panel-body">
-            <p class="alert fondo456" style="font-size: 20px;background-color: #FFCA28;color: #ffffff"><span>Productos en exhibición</span></p>
-        </div>
     </div>
 
 </div>
@@ -450,16 +438,6 @@ $columnas3=mysqli_fetch_assoc($filas3);
         </div>
     </div>
 </footer>
-
-
-
-
-
-
-
-
-
-
 
 <script>
     $(document).ready(

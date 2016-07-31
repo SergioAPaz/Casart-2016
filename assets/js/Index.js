@@ -70,10 +70,10 @@ $(document).ready(function()
     {
         $('span.error-keyup-2').remove();
         var inputVal = $('.validar1').val();
-        var characterReg = /^\s*[a-zA-Z0-9ñÑ@.,\s]+\s*$/;
+        var characterReg = /^\s*[a-zA-Z0-9áéíóúñÑ@.,\s]+\s*$/;
         if(!characterReg.test(inputVal))
         {
-            $(this).after('<span class="error error-keyup-2" style="color: #EF5350"><br/>No se permiten caracteres especiales nombre<br/></span>');
+            $(this).after('<span class="error error-keyup-2" style="color: #EF5350"><br/>No se permiten caracteres especiales<br/></span>');
         }else
         {
             $('span.error-keyup-2').remove();
@@ -85,7 +85,7 @@ $(document).ready(function()
         var inputVal = $('.validar2').val();
         var characterReg = /^\s*[a-zA-Z0-9ñÑ@_.,\s]+\s*$/;
         if((!characterReg.test(inputVal))) {
-            $(this).after('<span class="error error-keyup-3" style="color: #EF5350"><br/>No se permiten caracteres especiales email<br/></span>');
+            $(this).after('<span class="error error-keyup-3" style="color: #EF5350"><br/>No se permiten caracteres especiales<br/></span>');
         }else {
             $('span.error-keyup-3').remove();
         }
@@ -94,9 +94,9 @@ $(document).ready(function()
     $('.validar3').keyup(function() {
         $('span.error-keyup-4').remove();
         var inputVal = $('.validar3').val();
-        var characterReg = /^\s*[a-zA-Z0-9ñÑ@.,\s]+\s*$/;
+        var characterReg = /^\s*[a-zA-Z0-9áéíóúñÑ@.,\s]+\s*$/;
         if((!characterReg.test(inputVal))) {
-            $(this).after('<span class="error error-keyup-4" style="color: #EF5350"><br/>No se permiten caracteres especiales mensaje<br/></span>');
+            $(this).after('<span class="error error-keyup-4" style="color: #EF5350"><br/>No se permiten caracteres especiales<br/></span>');
         }else{
             $('span.error-keyup-4').remove();
         }
