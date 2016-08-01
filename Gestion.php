@@ -10,7 +10,7 @@ SQL;
 
 $filas =mysqli_query($conexiondb,$consulta);
 
-
+/*CONSULTA PARA PANEL DE GESTION DE MIEMBROS*/
 $miembro1=<<<SQL
     SELECT id,Cargo,Descripcion,UrlImagen FROM miembros LIMIT 0,1;
 SQL;
@@ -28,6 +28,12 @@ $columnas2=mysqli_fetch_assoc($filas2);
 $filas3=mysqli_query($conexiondb,$miembro3);
 $columnas3=mysqli_fetch_assoc($filas3);
 
+/*CONSULTA PARA TABLA DE EXISTENCIAS DE SLIDESHOW*/
+$ConsultaSlideshow=<<<SQL
+    SELECT id, Titulo,Descripcion, LinkTo FROM slideshow;
+SQL;
+
+$FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
 ?>
 
 
@@ -49,6 +55,11 @@ $columnas3=mysqli_fetch_assoc($filas3);
     <script src="assets/bootstrap-3.3.5-dist/js/bootstrap.js"></script>
     <script src="assets/js/NavbarResponsive.js"></script>
     <script type="text/javascript" src="assets/js/Gestion.js"></script><!--scripts generales-->
+
+    <!--DATATABLE JQUERY (PAGINACION Y SEARCH)-->
+    <link rel="stylesheet" href="assets/jquery/datatable%20jquery/dataTables.bootstrap.min.css">
+    <script src="assets/jquery/datatable%20jquery/jquery.dataTables.min.js"></script>
+    <script src="assets/jquery/datatable%20jquery/dataTables.bootstrap.min.js"></script>
     <!--CSS'S-->
     <link href="assets/css/Gestion.css" rel="stylesheet" type="text/css">
 
@@ -208,9 +219,8 @@ $columnas3=mysqli_fetch_assoc($filas3);
 <div class="container" style="background-color: #EEEEEE;/*height: 100%*/">
 
     <br/>
-
+    <!--PANEL DE GESTION DE CORREOS PARA NOTIFICACIONES-->
     <div class="panel panel-default">
-
         <div class="panel-body">
             <p class="alert fondo456" style="font-size: 20px;background-color: #FFCA28;color: #FAFAFA"><span class="newarticle">Correos para notificaciones: </span><span style="color: transparent">.</span>
                 <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#exampleModal"
@@ -282,6 +292,100 @@ $columnas3=mysqli_fetch_assoc($filas3);
             </p>
         </div>
     </div>
+
+
+    <!--PANEL DE GESTION PARA SLIDESHOW-->
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <p class="alert fondo456" style="font-size: 20px;background-color: #FFCA28;color: #ffffff"><span class="newarticle">Gestion de Carrusel</span><span style="color: transparent">.</span>
+
+            </p>
+            <form role = "form" method="post" action="PHPCatalogo/Carousel.php"   enctype="multipart/form-data" >
+                <div class = "form-group">
+                    <label class="text-muted" for = "name">Titulo:</label>
+                    <input type="text" name="TxtTitulo" class="form-control" placeholder="Titulo..." maxlength="200"  pattern="^\s*[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ-_.,\s]+\s*" required>
+                    <br/>
+                    <label class="text-muted" for = "name">Descripcion:</label>
+                    <input  class = "form-control" name="TxtDesc" placeholder = "Descripcion..."  maxlength="500"        pattern="^\s*[a-zA-Z0-9ñÑÁÉÍÓÚ-_.,\s]+\s*" required>
+                    <br/>
+                    <label class="text-muted" for = "name">Imagen grande:</label>
+                    <input type="file" class="form-control" name="ImagenBig" required/>
+                    <p class="help-block">*Para una mejor vizualizacion utilizar imagenes de tamaño cuadrado Ejem. (500px x 500px).</p>
+                    <label class="text-muted" for = "name">Imagen pequeña:</label>
+                    <input type="file" class="form-control" name="ImagenSmall" required/>
+                    <p class="help-block">*Para una mejor vizualizacion utilizar imagenes de tamaño cuadrado Ejem. (500px x 500px).</p>
+                    <label class="text-muted" style="margin-top: 15px;margin-bottom: 15px" for = "name">Link a: </label>
+
+                    <select  onchange="show()" id="TxtSelect" name="txtselect" class="form-control btn btn-primary"  required style="margin-top: -3px;max-width: 300px;">
+                        <option>Cesteria tarahumara</option>
+                        <option>Alfareria tarahumara</option>
+                        <option>Textiles tarahumara</option>
+                        <option>Artesanias tarahumara de cuero</option>
+                        <option>Instrumentos musicales</option>
+                        <option>Articulos varios</option>
+                        <option>Olla de mata ortiz economica</option>
+                        <option>Olla de mata ortiz comercial</option>
+                        <option>Olla de mata ortiz fina</option>
+                        <option>Galeria de ceramica de Mata Ortiz</option>
+                        <option>Productos Chihuahuenses</option>
+                        <option>Arcones</option>
+                        <option>Artesania regional</option>
+                    </select>
+                </div>
+                <button type = "submit" class = "btn btn-primary">Agregar</button>
+                <button type = "reset" class = "btn btn-primary">Limpiar</button>
+            </form>
+        </div>
+    </div>
+
+    <!--TABLA DE EXISTENCIAS SLIDESHOW-->
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <p class="alert fondo456" style="font-size: 20px;background-color: #FFCA28;color: #ffffff"><span>Elementos en Carrusel</span></p>
+            <div class="table-responsive" style="border-radius: 10px;margin-top: 12px">
+                <table class="table  table-bordered table-hover table-condensed tab" id="regTable"  style="background-color: #ffffff;text-align: center;vertical-align: middle;">
+                    <thead>
+                    <tr style="background-color: #F5F5F5">
+                        <th style="font-size: 14px;color: #F57C00">Numero</th>
+                        <th style="font-size: 14px;color: #F57C00">Titulo</th>
+                        <th style="font-size: 14px;color: #F57C00">Descripcion</th>
+                        <th style="font-size: 14px;color: #F57C00">Link</th>
+                        <th style="font-size: 14px;color: #F57C00">Acciones</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <?php
+                    $count=0;
+                    while ($ColumnaSlideshow=mysqli_fetch_assoc($FilasSlideshow))
+                    {
+                        $count=$count+1;
+                        echo "<tr>";
+                        echo "<td>$count</td>";
+                        echo "<td>$ColumnaSlideshow[Titulo]</td>";
+                        echo "<td>$ColumnaSlideshow[Descripcion]</td>";
+                        echo "<td>$ColumnaSlideshow[LinkTo]</td>";
+                        echo "<td>
+                        <a href='PHPCatalogo/BorrarCarrusel?id=$ColumnaSlideshow[id]'>Borrar</a>";
+                        echo "</tr>";
+                    }
+                    ?>
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
 
     <!--PANEL DE GESTION DE MIEMBROS DE CASART-->
     <!--MIEMBRO1-->
@@ -421,7 +525,7 @@ $columnas3=mysqli_fetch_assoc($filas3);
 
 </div>
 
-<br><br><br>
+
 
 <span class="ir-arriba icon-arrow-up-thick"></span>
 

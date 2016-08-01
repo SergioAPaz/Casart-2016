@@ -1,5 +1,5 @@
 <?php
-
+include("BloqueDeSeguridad.php");
 include("conexion.php");
 
 
@@ -21,7 +21,7 @@ include("conexion.php");
                 $InputIdMiembro = $_POST['idmiembro'];
 
                 /*Validacion con expresiones reulares*/
-                if ((preg_match("/^[a-zA-Z0-9._ñÑáéíóú ]*$/", $InputCargo)) && (preg_match("/^[\n\r0-9a-zA-Z@,._ñÑáéíóú ]+$/", $InputDesc))) {
+                if ((preg_match("/^[a-zA-Z0-9._ñÑáéíóúÁÉÍÓÚ ]*$/", $InputCargo)) && (preg_match("/^[\n\r0-9a-zA-Z@,._ñÑáéíóúÁÉÍÓÚ ]+$/", $InputDesc))) {
 
                     /*ENVIO DE EMAIL A ADMIN*/
                     require '../assets/php/PHPMailer/PHPMailerAutoload.php';

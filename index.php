@@ -225,16 +225,15 @@ $filas2=mysqli_query($conexiondb,$consultasql);
         <!-- Slides Container -->
         <div id="Slides" class="compa" u="slides" style="cursor: pointer; position: absolute; left: 0px; top: 0px;
             width: 1300px;overflow: hidden;">
-
+            <!--PANTALLA 1-->
             <div class="pantalla 1">
                 <a href="GaleriaMataOrtiz"> <!--<img u="image"  src="imagenes/panftalla1.jpg" />-->
                     <picture>
-                        <source srcset="images/slideshow/pantalla1.jpg" media="(min-width: 770px)">
-                        <source srcset="images/slideshow/MataOrtizFONART9.JPG" media="(min-width: 100px)">
+                        <source srcset="images/slideshow/pantalla1.jpg" media="(min-width: 770px)"> <!--IMAGEN GRANDE-->
+                        <source srcset="images/slideshow/MataOrtizFONART9.JPG" media="(min-width: 100px)"> <!--IMAGEN PEQUENA-->
                         <img srcset="examples/images/art-medium.jpg" alt="…">
                     </picture>
                 </a>
-
                 <div class="text00" style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
                             text-align: left; line-height: 60px; text-transform: uppercase; /*font-size: 50px;*/
                                 color: #FFFFFF;">Una tradicion en Mata Ortiz
@@ -244,10 +243,7 @@ $filas2=mysqli_query($conexiondb,$consultasql);
                                 color: #FFFFFF;">
                     Conoce mas acerca de las artesanias de Mata Ortiz.
                 </div>
-                <div class="text22" style="position:relative; width: 180px; height: 190px; /*top: 335px;*/ /*left: -12px;*/ padding: 5px;
-                            text-align: right; line-height: 36px; float: right;">
-                    <!--<img  src="images/logo.png" />-->
-                </div>
+
             </div>
 
             <div class="pantalla 2" >
@@ -266,10 +262,7 @@ $filas2=mysqli_query($conexiondb,$consultasql);
                                 color: #FFFFFF;">
                     Conoce la artesania tradicional de la cultura tarahumara icono de Chihuahua.
                 </div>
-                <div class="text22" style="position:relative; width: 180px; height: 190px; /*top: 335px; left: -12px;*/ padding: 5px;
-                            text-align: right; line-height: 36px; float: right;">
-                    <img  src="imagenes/logo%20casa.png" />
-                </div>
+
             </div>
 
             <div class="pantalla 3">
@@ -346,6 +339,16 @@ $filas2=mysqli_query($conexiondb,$consultasql);
     </div>
 
 </div>
+
+
+
+
+
+
+
+
+
+
 <!--HR Y MENSAJES-->
 <div class="container estilos2561">
     <div class="jumbotron estilos2562">

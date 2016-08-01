@@ -10,4 +10,7 @@ $('#exampleModal').on('show.bs.modal', function (event) {
 
 
 
-
+/*TABLA DE EXISTENCIAS DE SLIDESHOWS*/
+$(document).ready(function() {
+    $('#regTable').DataTable();
+} );

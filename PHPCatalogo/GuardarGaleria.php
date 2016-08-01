@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
         $id=time();
 
         /*Validacion con expresiones reulares*/
-        if ((preg_match("/^[ a-zA-ZñÑ,._[0-9]|- ]+$/", $titulo)) && (preg_match("/^[ a-zA-ZñÑ,._[0-9]|- ]+$/", $descripcion))       )
+        if (    (preg_match("/^[ a-zA-ZñÑ,._[0-9]|- ]+$/", $titulo)) && (preg_match("/^[ a-zA-ZñÑ,._[0-9]|- ]+$/", $descripcion))       )
         {
 
         /*ENVIO DE EMAIL A ADMIN*/
