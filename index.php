@@ -6,6 +6,14 @@ SELECT Titulo,Descripcion,urlimagen,Nuevo_producto FROM catalogo WHERE Nuevo_pro
 SQL;
 $filas=mysqli_query($conexiondb,$consultasql);
 $filas2=mysqli_query($conexiondb,$consultasql);
+
+
+/*CONSULTA DE SLIDESHOW*/
+$ConsultaSlideshow=<<<SQL
+    SELECT Titulo,Descripcion, UrlImagenBig,UrlImagenSmall,LinkTo  FROM slideshow;
+SQL;
+$FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
+
 ?>
 
 <!DOCTYPE html>
@@ -226,47 +234,36 @@ $filas2=mysqli_query($conexiondb,$consultasql);
         <div id="Slides" class="compa" u="slides" style="cursor: pointer; position: absolute; left: 0px; top: 0px;
             width: 1300px;overflow: hidden;">
             <!--PANTALLA 1-->
-            <div class="pantalla 1">
-                <a href="GaleriaMataOrtiz"> <!--<img u="image"  src="imagenes/panftalla1.jpg" />-->
-                    <picture>
-                        <source srcset="images/slideshow/pantalla1.jpg" media="(min-width: 770px)"> <!--IMAGEN GRANDE-->
-                        <source srcset="images/slideshow/MataOrtizFONART9.JPG" media="(min-width: 100px)"> <!--IMAGEN PEQUENA-->
-                        <img srcset="examples/images/art-medium.jpg" alt="…">
-                    </picture>
-                </a>
-                <div class="text00" style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
-                            text-align: left; line-height: 60px; text-transform: uppercase; /*font-size: 50px;*/
-                                color: #FFFFFF;">Una tradicion en Mata Ortiz
-                </div>
-                <div class="text11" style="position: absolute; /*width: 480px;*/ height: 180px;  /*top: 300px;*/ left: 30px; padding: 5px;
-                            text-align: left; /*line-height: 36px;*/ /*font-size: 30px;*/
-                                color: #FFFFFF;">
-                    Conoce mas acerca de las artesanias de Mata Ortiz.
-                </div>
-
-            </div>
-
-            <div class="pantalla 2" >
-                <!--<img u="image" src="imagenes/pantalla2.jpg" />-->
+            <?php
+            while ($ColumnaSlideshow=mysqli_fetch_assoc($FilasSlideshow))
+            {
+                echo "<div class='pantalla 1'>";
+                   echo "<a href='$ColumnaSlideshow[LinkTo]'>";
+                        echo "<picture>";
+                        echo "<source srcset='images/slideshow/test/$ColumnaSlideshow[UrlImagenBig]' media='(min-width: 770px)'>"; /*IMAGEN GRANDE*/
+                         echo "<source srcset='images/slideshow/test/$ColumnaSlideshow[UrlImagenSmall]' media='(min-width: 100px)'>"; /*IMAGEN PEQUENA*/
+                        echo "<img  class='img-responsive' srcset='examples/images/art-medium.jpg' alt='…'>";
+                        echo "</picture>";
+                   echo "</a>";
+                    echo "<div class='text00' style='position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;text-align: left; line-height: 60px; text-transform: uppercase; color: #FFFFFF;'>$ColumnaSlideshow[Titulo]</div>";
+                    echo "<div class='text11' style='position: absolute; height: 180px;left: 30px; padding: 5px;text-align: left; color: #FFFFFF;'>$ColumnaSlideshow[Descripcion]</div>";
+                echo "</div>";
+            }
+            ?>
+            <!--PANTALLA 2-->
+<!--           <div class="pantalla 2" >
                 <picture>
-                    <source srcset="images/slideshow/pantalla2.jpg" media="(min-width: 770px)">
+                    <source srcset="images/slideshow/pantalla2.jpg" media='(min-width: 770px)'>
                     <source srcset="images/slideshow/Tarahumara.jpg" media="(min-width: 100px)">
                     <img srcset="examples/images/art-medium.jpg" alt="…">
                 </picture>
-                <div class="text00" style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
-                            text-align: left; line-height: 60px; text-transform: uppercase; /*font-size: 50px;*/
-                                color: #FFFFFF;">Artesanias Tarahumara
-                </div>
+                <div class="text00" style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;text-align: left; line-height: 60px; text-transform: uppercase; /*font-size: 50px;*/color: #FFFFFF;">$ConsultaSlideshow[Titulo]</div>
                 <div class="text11" style="position: absolute; /*width: 480px;*/ height: 120px; /*top: 300px;*/ left: 30px; padding: 5px;
                             text-align: left; /*line-height: 36px; font-size: 30px;*/
-                                color: #FFFFFF;">
-                    Conoce la artesania tradicional de la cultura tarahumara icono de Chihuahua.
-                </div>
-
+                                color: #FFFFFF;">Conoce la artesania tradicional de la cultura tarahumara icono de Chihuahua.</div>
             </div>
 
             <div class="pantalla 3">
-                <!--<img u="image" src="imagenes/pantalla3.jpg" />-->
                 <picture>
                     <source srcset="images/slideshow/pantalla1.jpg" media="(min-width: 770px)">
                     <source srcset="images/slideshow/MataOrtizFONART9.JPG" media="(min-width: 100px)">
@@ -274,19 +271,15 @@ $filas2=mysqli_query($conexiondb,$consultasql);
                 </picture>
                 <div class="text00" style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
                             text-align: left; line-height: 60px; text-transform: uppercase; /*font-size: 50px;*/
-                                color: #FFFFFF;">
-                    Arcones con diversos productos
-                </div>
+                                color: #FFFFFF;">Arcones con diversos productos</div>
                 <div class="text11" style="position: absolute; /*width: 480px;*/ height: 120px; /*top: 300px;*/ left: 30px; padding: 5px;
                             text-align: left; /*line-height: 36px; font-size: 30px;*/
-                                color: #FFFFFF;">
-                    Excelente para un regalo especial, incluyen diversos productos con un gran sabor.
-                </div>
+                                color: #FFFFFF;">Excelente para un regalo especial, incluyen diversos productos con un gran sabor.</div>
                 <div class="text22" style="position:relative; width: 180px; height: 190px; /*top: 335px; left: -12px;*/ padding: 5px;
                             text-align: right; line-height: 36px; float: right;">
                     <img  src="imagenes/logo%20casa.png" />
                 </div>
-            </div>
+            </div>-->
         </div>
 
         <style>
