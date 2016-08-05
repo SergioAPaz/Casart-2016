@@ -303,17 +303,17 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
             <form role = "form" method="post" action="PHPCatalogo/Carousel.php"   enctype="multipart/form-data" >
                 <div class = "form-group">
                     <label class="text-muted" for = "name">Titulo:</label>
-                    <input type="text" name="TxtTitulo" class="form-control" placeholder="Titulo..." maxlength="200"  pattern="^\s*[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ-_.,\s]+\s*" required>
+                    <input type="text" name="TxtTitulo" class="form-control" placeholder="Titulo..." maxlength="30"  pattern="^\s*[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ-_.,\s]+\s*" required>
                     <br/>
                     <label class="text-muted" for = "name">Descripcion:</label>
-                    <input  class = "form-control" name="TxtDesc" placeholder = "Descripcion..."  maxlength="500"        pattern="^\s*[a-zA-Z0-9ñÑÁÉÍÓÚ-_.,\s]+\s*" required>
+                    <input  class = "form-control" name="TxtDesc" placeholder = "Descripcion..."  maxlength="80"        pattern="^\s*[a-zA-Z0-9ñÑÁÉÍÓÚ-_.,\s]+\s*" required>
                     <br/>
                     <label class="text-muted" for = "name">Imagen grande:</label>
                     <input type="file" class="form-control" name="ImagenBig" required/>
-                    <p class="help-block">*Para una mejor vizualizacion utilizar imagenes de tamaño cuadrado Ejem. (500px x 500px).</p>
+                    <p class="help-block">*Para una correcta vizualizacion utilizar imagenes de tamaño ancho Ejem. <a style="color: #F44336">(1500px x 500px)</a>.</p>
                     <label class="text-muted" for = "name">Imagen pequeña:</label>
                     <input type="file" class="form-control" name="ImagenSmall" required/>
-                    <p class="help-block">*Para una mejor vizualizacion utilizar imagenes de tamaño cuadrado Ejem. (500px x 500px).</p>
+                    <p class="help-block">Para una correcta vizualizacion utilizar imagenes de tamaño ancho Ejem. <a style="color: #F44336">(1500px x 500px)</a>.</p>
                     <label class="text-muted" style="margin-top: 15px;margin-bottom: 15px" for = "name">Link a: </label>
 
                     <select  onchange="show()" id="TxtSelect" name="txtselect" class="form-control btn btn-primary"  required style="margin-top: -3px;max-width: 300px;">
@@ -366,7 +366,9 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
                         echo "<td>$ColumnaSlideshow[Descripcion]</td>";
                         echo "<td>$ColumnaSlideshow[LinkTo]</td>";
                         echo "<td>
-                        <a href='PHPCatalogo/BorrarCarrusel?id=$ColumnaSlideshow[id]'>Borrar</a>";
+                            <a href='PHPCatalogo/BorrarCarrusel?id=$ColumnaSlideshow[id]'>Borrar</a>
+                            <a href='PHPCatalogo/EditarCarrusel?id=$ColumnaSlideshow[id]'>Editar</a>
+                            <a href='EditarImagenCarrusel?id=$ColumnaSlideshow[id]'>Cambiar Imagen</a>";
                         echo "</tr>";
                     }
                     ?>
@@ -377,15 +379,6 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
 
     <!--PANEL DE GESTION DE MIEMBROS DE CASART-->
     <!--MIEMBRO1-->

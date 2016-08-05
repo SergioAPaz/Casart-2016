@@ -238,7 +238,9 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
             while ($ColumnaSlideshow=mysqli_fetch_assoc($FilasSlideshow))
             {
                 echo "<div class='pantalla 1'>";
-                   echo "<a href='$ColumnaSlideshow[LinkTo]'>";
+                /*REMOVE WHITESPACES FOR TO PERMIT LINKEAR CORRECTLY*/
+                $Validate=preg_replace('[\s+]',"", $ColumnaSlideshow['LinkTo']);
+                   echo "<a href='$Validate'>";
                         echo "<picture>";
                         echo "<source srcset='images/slideshow/test/$ColumnaSlideshow[UrlImagenBig]' media='(min-width: 770px)'>"; /*IMAGEN GRANDE*/
                          echo "<source srcset='images/slideshow/test/$ColumnaSlideshow[UrlImagenSmall]' media='(min-width: 100px)'>"; /*IMAGEN PEQUENA*/
@@ -490,17 +492,12 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
 <div CLASS="container-fluid" style="padding-left: 0;padding-right: 0">
     <hr  style="height: 2px;width: 100%;;background-color: #212121;border-color: #212121;margin-bottom: 0;margin-top: 0">
 </div>
-
 <!--FIN PANEL MOSAICO-->
 
 <!--PANEL DE IMAGEN REDONDA-->
-
 <div class="container-fluid">
 
-
     <div class="row" style="background-color: #FFA726">
-
-
 
         <div class="col-xs-12 col-sm-8" style="background-color: #FFA726;">
 
@@ -521,9 +518,7 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
             </p>
             </p>
         </div>
-
-        <div class="col-xs-12 col-sm-4 pull-right" style="background-color: #FFCA28">
-
+        <div class="col-xs-12 col-sm-4 pull-right" style="background-color: #FFB74D">
             <img src="images/imagen.jpg" class="img-responsive img-circle fadein hol2" alt="Responsive image" style="display:none;margin: 0 auto; margin-top: 15px;margin-bottom: 16px">
         </div>
     </div>
