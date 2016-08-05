@@ -264,7 +264,7 @@ $filas =mysqli_query($conexiondb,$consulta);
                     <input  class = "form-control" name="txtdesc" placeholder = "Descripcion..."  maxlength="500"        pattern="^\s*[a-zA-Z0-9ñÑ-_.,\s]+\s*" required>
                     <br/>
                     <label class="text-muted" for = "name">Imagen del producto:</label>
-                    <input type="file" class="form-control" name="archivo" required/>
+                    <input type="file" class="form-control" accept="image/*" name="archivo" required/>
                     <p class="help-block">*Para una mejor vizualizacion utilizar imagenes de tamaño cuadrado Ejem. (500px x 500px).</p>
                     <!--BOTON NUEVO PRODUCTO-->
                     <div class="checkbox" style="margin-left: 0px">

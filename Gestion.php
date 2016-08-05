@@ -309,10 +309,10 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
                     <input  class = "form-control" name="TxtDesc" placeholder = "Descripcion..."  maxlength="80"        pattern="^\s*[a-zA-Z0-9ñÑÁÉÍÓÚ-_.,\s]+\s*" required>
                     <br/>
                     <label class="text-muted" for = "name">Imagen grande:</label>
-                    <input type="file" class="form-control" name="ImagenBig" required/>
+                    <input type="file" class="form-control" accept="image/*" name="ImagenBig" required/>
                     <p class="help-block">*Para una correcta vizualizacion utilizar imagenes de tamaño ancho Ejem. <a style="color: #F44336">(1500px x 500px)</a>.</p>
                     <label class="text-muted" for = "name">Imagen pequeña:</label>
-                    <input type="file" class="form-control" name="ImagenSmall" required/>
+                    <input type="file" class="form-control" accept="image/*" name="ImagenSmall" required/>
                     <p class="help-block">Para una correcta vizualizacion utilizar imagenes de tamaño ancho Ejem. <a style="color: #F44336">(1500px x 500px)</a>.</p>
                     <label class="text-muted" style="margin-top: 15px;margin-bottom: 15px" for = "name">Link a: </label>
 
@@ -404,7 +404,7 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
                                             <form role="form" method="POST"  enctype="multipart/form-data" action="PHPCatalogo/CambiarImagenMiembros.php">
                                                 <div class="modal-body">
                                                     <label class="text-muted" for = "name">Selecciona una imagen:</label>
-                                                    <input type="file" class="form-control" name="archivo" required/>
+                                                    <input type="file" class="form-control" accept="image/*" name="archivo" required/>
                                                     <input type='hidden' name='idmiembro' value='<?php echo $columnas1['id']; ?>'>
                                                 </div>
                                                 <div class="modal-footer">
@@ -444,7 +444,7 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
                                             <form role="form" method="POST"  enctype="multipart/form-data" action="PHPCatalogo/CambiarImagenMiembros.php">
                                                 <div class="modal-body">
                                                     <label class="text-muted" for = "name">Selecciona una imagen:</label>
-                                                    <input type="file" class="form-control" name="archivo" required/>
+                                                    <input type="file" class="form-control" accept="image/*" name="archivo" required/>
                                                     <input type='hidden' name='idmiembro' value='<?php echo $columnas2['id']; ?>'>
                                                 </div>
                                                 <div class="modal-footer">
@@ -484,7 +484,7 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
                                             <form role="form" method="POST"  enctype="multipart/form-data" action="PHPCatalogo/CambiarImagenMiembros.php">
                                                 <div class="modal-body">
                                                     <label class="text-muted" for = "name">Selecciona una imagen:</label>
-                                                    <input type="file" class="form-control" name="archivo" required/>
+                                                    <input type="file" class="form-control" accept="image/*" name="archivo" required/>
                                                     <input type='hidden' name='idmiembro' value='<?php echo $columnas3['id']; ?>'>
                                                 </div>
                                                 <div class="modal-footer">

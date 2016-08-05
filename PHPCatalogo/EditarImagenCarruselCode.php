@@ -30,7 +30,6 @@ SQL;
         /*BORRADO FISICO DE IMAGEN VIEJA EN DISCO*/
         if(file_exists('../images/slideshow/test/'.$Asosiacion['UrlImagenBig'])){
             unlink('../images/slideshow/test/'.$Asosiacion['UrlImagenBig']);
-            echo "1";
         }else{
             echo 'Error al borrar archivo de imagen grande del fichero';
         }
@@ -45,7 +44,6 @@ SQL;
         /*BORRADO FISICO DE IMAGEN VIEJA EN DISCO*/
         if(file_exists('../images/slideshow/test/'.$Asosiacion['UrlImagenSmall'])){
             unlink('../images/slideshow/test/'.$Asosiacion['UrlImagenSmall']);
-            echo "2";
         }else{
             echo 'Error al borrar archivo de imagen pequeña del fichero';
         }
@@ -56,8 +54,6 @@ SQL;
 UPDATE slideshow SET UrlImagenSmall = "$VarImgSmall", UrlImagemSmall="$VarImgSmall" WHERE id = $id;
 SQL;
         mysqli_query($conexiondb,$consultaBoth);
-        echo "3";
-
         /*BORRADO FISICO DE IMAGEN VIEJA EN DISCO*/
         if(file_exists('../images/slideshow/test/'.$Asosiacion['UrlImagenBig'])){
             unlink('../images/slideshow/test/'.$Asosiacion['UrlImagenBig']);
@@ -84,7 +80,7 @@ SQL;
 
 
 
-/*    header("Location:../PanelAdmin.php");*/
+    header("Location:../Gestion");
 }else{
     echo "Porfavor seleccionar una imagen para actualizar";
 }

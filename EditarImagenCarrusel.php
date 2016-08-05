@@ -39,10 +39,10 @@ if(isset($_GET['id'])) {
                     <input type='hidden' name='IdSlideshowIMG' value='<?php echo $id; ?>'>
 
                     <label class="text-muted" for = "name">Imagen grande:</label>
-                    <input type="file" class="form-control" name="ImgBig"/>
+                    <input type="file" class="form-control" accept="image/*" name="ImgBig"/>
 
                     <label class="text-muted" for = "name">Imagen pequeña:</label>
-                    <input type="file" class="form-control" name="ImgSmall"/>
+                    <input type="file" class="form-control" accept="image/*" name="ImgSmall"/>
                     
                     <br/>
                     <button type = "submit" class = "btn btn-primary">Modificar</button>
