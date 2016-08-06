@@ -367,7 +367,7 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
                         echo "<td>$ColumnaSlideshow[LinkTo]</td>";
                         echo "<td>
                             <a href='PHPCatalogo/BorrarCarrusel?id=$ColumnaSlideshow[id]'>Borrar</a>
-                            <a href='PHPCatalogo/EditarCarrusel?id=$ColumnaSlideshow[id]'>Editar</a>
+                            <a href='EditarSlideshow?id=$ColumnaSlideshow[id]'>Editar</a>
                             <a href='EditarImagenCarrusel?id=$ColumnaSlideshow[id]'>Cambiar Imagen</a>";
                         echo "</tr>";
                     }
