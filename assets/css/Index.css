@@ -284,54 +284,45 @@
 
 
 /*FOOTER*/
-.posytam0{
-    margin-top: 45px;
-    margin-left: 25px;
 
+.posytam0{
+    margin-top: 20px;
+    margin-left: 10px;
     float: left;
     max-width: 155px;
-
     height: auto;
-
 }
-
-
+.lefts{
+    margin-left: 25px;
+}
 .posytam{
-    margin-top: 40px;
-
+    margin-top: 20px;
+    margin-left: -10px;
     float: left;
     width: 430px;
     height: auto;
-
 }
-
 .posytam0>img{
-    max-width: 95%;
+    max-width: 80%;
 }
-
 .posytam>img{
-    max-width: 95%;
+    max-width: 80%;
 }
-
 @media screen and (max-width: 870px) {
     .ocultarmq {
         display: none;
     }
 }
-
 @media screen and (max-width: 1290px) {
     #ocultarmq2 {
         display: none;
     }
 }
-
 @media screen and (max-width: 1080px) {
     #ocultarmq3 {
         display: none;
     }
 }
-
-
 @media screen and (max-width: 860px) {
     #ocultarmq4 {
         display: none;
@@ -340,7 +331,9 @@
 
 @media screen and (max-width: 487px) {
     #ocultarmq5 {
-        max-width: 85%;
+        max-width: 100%;
+        padding: 15px;
+        margin-left: 5px;
 
     }
 }
