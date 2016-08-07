@@ -369,7 +369,7 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
             <a href="AlfareriaTarahumara">
                 <div class="shadow0"  style=""></div>
                 <div class="shadow"  style=""></div>
-                <img class="img-responsive" alt="Responsive image"  src="images/Mosaic/test111.png" style="    background-size: cover;height: 300px;">
+                <img class="img-responsive" alt="Responsive image"  src="images/Mosaic/test111.png" style="min-width: 100%;background-size: cover;height: 300px;">
                 <div   class="hovertest"  id="hover1" style="font-family: 'Montserrat', sans-serif;  position: absolute;
                      top: 35%; text-align: center;margin-left: 18%;margin-right: 18%; color: white;">Alfereria Tarahumara</div>
                 <div   class="hovertest"  id="hover2" style="font-family: 'Montserrat', sans-serif;  position: absolute; font-size: 18px;
@@ -383,7 +383,7 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
             <a href="#">
                 <div class="shadow0"  style="opacity: .5"></div>
                 <div class="shadow2"  style=""></div>
-                <img  src="images/Mosaic/test3.jpg" alt="" style="    background-size: cover;height: 300px;">
+                <img  src="images/Mosaic/test3.jpg" alt="" style="min-width: 100%;background-size: cover;height: 300px;">
                 <div   class="hovertest"  id="hover3" style="font-family: 'Montserrat', sans-serif;  position: absolute;
                  top: 40%; text-align: center;margin-left: 18%;margin-right: 18%; color: white;">Ollas finas de Mata Ortiz</div>
                 <div   class="hovertest"  id="hover4" style="font-family: 'Montserrat', sans-serif;  position: absolute; font-size: 18px;
@@ -397,7 +397,7 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
             <a href="CesteriaTarahumara">
                 <div class="shadow0"  style=""></div>
                 <div class="shadow3"  style=""></div>
-                <img  src="images/Mosaic/test4.jpg" alt="" style="    background-size: cover;height: 300px;">
+                <img  src="images/Mosaic/test4.jpg" alt="" style="min-width: 100%;background-size: cover;height: 300px;">
                 <div   class="hovertest"  id="hover5" style="font-family: 'Montserrat', sans-serif;  position: absolute;
                      top: 35%; text-align: center;margin-left: 18%;margin-right: 18%; color: white;">Cesteria Tarahumara</div>
                 <div   class="hovertest"  id="hover6" style="font-family: 'Montserrat', sans-serif;  position: absolute; font-size: 18px;top: 33%;
@@ -413,7 +413,7 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
             <a href="InstrumentosMusicalesTarahumara">
                 <div class="shadow0"  style=""></div>
                 <div class="shadow4"  style=""></div>
-                <img  src="images/Mosaic/Sierra.jpg" alt="" style="    background-size: cover;height: 300px;">
+                <img  src="images/Mosaic/Sierra.jpg" alt="" style="min-width: 100%;background-size: cover;height: 300px;">
                 <div   class="hovertest"  id="hover7" style="font-family: 'Montserrat', sans-serif;  position: absolute;
                  top: 35%; text-align: center;margin-left: 18%;margin-right: 18%; color: white;">Instrumentos musicales</div>
                 <div   class="hovertest"  id="hover8" style="font-family: 'Montserrat', sans-serif;  position: absolute; font-size: 18px;top: 30%;
@@ -427,13 +427,12 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
 
 
 
-
     <div class="x2  col-lg-3 col-md-4 col-sm-6 col-xs-12" style="overflow: hidden;padding-left: 0;padding-right: 0">
         <div id="color5">
             <a href="#">
                 <div class="shadow0"  style=""></div>
                 <div class="shadow5"  style=""></div>
-                <img  class="img-responsive" alt="Responsive image" src="images/Mosaic/77.jpg" alt="" style="    background-size: cover;height: 300px;">
+                <img  class="img-responsive" alt="Responsive image" src="images/Mosaic/77.jpg" alt="" style="min-width: 100%;background-size: cover;height: 300px;">
                 <div   class="hovertest"  id="hover9" style="font-family: 'Montserrat', sans-serif;  position: absolute;
                  top: 33%; text-align: center;margin-left: 18%;margin-right: 18%; color: white;">Productos Chihuahuenses</div>
                 <div   class="hovertest"  id="hover10" style="font-family: 'Montserrat', sans-serif;  position: absolute; font-size: 18px;top: 33%;
@@ -447,7 +446,7 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
             <a href="#">
                 <div class="shadow0"  style=""></div>
                 <div class="shadow6"  style=""></div>
-                <img  class="img-responsive" alt="Responsive image" src="images/Mosaic/88.jpg" alt="" style="background-size: cover;height: 300px;">
+                <img  class="img-responsive" src="images/Mosaic/88.jpg" alt="..." style="min-width: 100%;height: 300px;">
                 <div   class="hovertest"  id="hover11" style="font-family: 'Montserrat', sans-serif;  position: absolute;
                  top: 40%; text-align: center;margin-left: 39%;margin-right: 39%; color: white;">Arcones</div>
                 <div   class="hovertest"  id="hover12" style="font-family: 'Montserrat', sans-serif;  position: absolute; font-size: 18px;top: 38%;
@@ -462,7 +461,7 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
             <a href="OllaMataOrtizComercial">
                 <div class="shadow0"  style=""></div>
                 <div class="shadow7"  style=""></div>
-                <img   class="img-responsive" alt="Responsive image" src="images/Mosaic/999.png" alt="" style="    background-size: cover;height: 300px;">
+                <img   class="img-responsive" alt="Responsive image" src="images/Mosaic/999.png" alt="" style="min-width: 100%;background-size: cover;height: 300px;">
                 <div   class="hovertest"  id="hover13" style="font-family: 'Montserrat', sans-serif;  position: absolute;
                  top: 40%; text-align: center;margin-left: 18%;margin-right: 18%; color: white;">Ollas de Mata Ortiz</div>
                 <div   class="hovertest"  id="hover14" style="font-family: 'Montserrat', sans-serif;  position: absolute; font-size: 18px;top: 30%;
@@ -477,7 +476,7 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
             <a href="#">
                 <div class="shadow0"  style="opacity: .5"></div>
                 <div class="shadow8"  style=""></div>
-                <img  src="images/Mosaic/10000.png" alt="" style="    background-size: cover;height: 300px;">
+                <img  src="images/Mosaic/10000.png" alt="" style="min-width: 100%;background-size: cover;height: 300px;">
                 <div   class="hovertest"  id="hover15" style="font-family: 'Montserrat', sans-serif;  position: absolute;
                  top: 40%; text-align: center;margin-left: 21%;margin-right: 21%; color: white;">Artesania regional</div>
                 <div   class="hovertest"  id="hover16" style="font-family: 'Montserrat', sans-serif;  position: absolute; font-size: 18px;
@@ -714,7 +713,9 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
             $("html").niceScroll();
         }
     );
-</script><!--"ScrollBar"-->
+
+    <!--"ScrollBar"-->
+</script>
 <script>
     var nice = false; $(document).ready(
         function() {
