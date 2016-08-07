@@ -181,8 +181,8 @@ $filas=mysqli_query($conexiondb,$consulta);
 				<section id="banner">
 					<div class="content">
 						<header>
-							<h2>Casa de las Artesanias <br/> del Estado de Chihuahua</h2>
-							<p>Casa de la artesania chihuahuense.</p>
+							<h2>Casa de las Artesanías <br> del Estado de Chihuahua</h2>
+							<p>Casa de la artesanía chihuahuense.</p>
 						</header>
 						<span class="image"><img src="images/logo.png" alt="" /></span>
 					</div>
@@ -198,11 +198,11 @@ $filas=mysqli_query($conexiondb,$consulta);
 								<div class="4u 12u$(medium)">
 									<header>
 										<h2 style="color: #FF9800;text-align: center">¿Quiénes somos?</h2>
-										<p>Manifestaciones del arte popular y éste se da de manera generosa en el Estado de Chihuahua. </p>
+										<p>Casart Chihuahua tiene como objetivo Fomentar la elaboración de artesanía regional propiciando el bienestar de quienes la producen. </p>
 									</header>
 								</div>
 								<div class="4u 12u$(medium)">
-									<p>La Artesanía del estado tiene tres fuentes: la tarahumara, la conocida como Paquimé y la mestiza. Chihuahua a incrementado la
+									<p>La Artesanía del estado tiene tres fuentes: la tarahumara, la conocida como Paquimé y la mestiza. Chihuahua ha incrementado la
                                         obtención de premios en concursos nacionales, tanto en la artesanía tarahumara como en la mestiza, durante los últimos cinco años.</p>
 								</div>
 								<div class="4u$ 12u$(medium)">
@@ -269,8 +269,8 @@ $filas=mysqli_query($conexiondb,$consulta);
 				<section id="four" class="wrapper style1 special fade-up"style="background-color: #1c1d26" >
 					<div class="container" >
 						<header class="major">
-							<h2 style="margin: 0;color: #FF9800">Casa de las Artesanias del Estado de Chihuahua</h2>
-							<p>La casa de la artesania chihuahuense desde 1980.</p>
+							<h2 style="margin: 0;color: #FF9800">Casa de las Artesanías del Estado de Chihuahua</h2>
+							<p>La casa de la artesanía chihuahuense desde 1980.</p>
 						</header>
 						<div class="box alt">
 							<div class="row uniform">

@@ -20,7 +20,7 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Casart Chihuahua</title>
+    <title>Casa de las Artesanías del Estado de Chihuahua</title>
     <link rel="shortcut icon" href="images/logopagina.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--CSS'S-->
@@ -252,36 +252,6 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
                 echo "</div>";
             }
             ?>
-            <!--PANTALLA 2-->
-<!--           <div class="pantalla 2" >
-                <picture>
-                    <source srcset="images/slideshow/pantalla2.jpg" media='(min-width: 770px)'>
-                    <source srcset="images/slideshow/Tarahumara.jpg" media="(min-width: 100px)">
-                    <img srcset="examples/images/art-medium.jpg" alt="…">
-                </picture>
-                <div class="text00" style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;text-align: left; line-height: 60px; text-transform: uppercase; /*font-size: 50px;*/color: #FFFFFF;">$ConsultaSlideshow[Titulo]</div>
-                <div class="text11" style="position: absolute; /*width: 480px;*/ height: 120px; /*top: 300px;*/ left: 30px; padding: 5px;
-                            text-align: left; /*line-height: 36px; font-size: 30px;*/
-                                color: #FFFFFF;">Conoce la artesania tradicional de la cultura tarahumara icono de Chihuahua.</div>
-            </div>
-
-            <div class="pantalla 3">
-                <picture>
-                    <source srcset="images/slideshow/pantalla1.jpg" media="(min-width: 770px)">
-                    <source srcset="images/slideshow/MataOrtizFONART9.JPG" media="(min-width: 100px)">
-                    <img srcset="examples/images/art-medium.jpg" alt="…">
-                </picture>
-                <div class="text00" style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
-                            text-align: left; line-height: 60px; text-transform: uppercase; /*font-size: 50px;*/
-                                color: #FFFFFF;">Arcones con diversos productos</div>
-                <div class="text11" style="position: absolute; /*width: 480px;*/ height: 120px; /*top: 300px;*/ left: 30px; padding: 5px;
-                            text-align: left; /*line-height: 36px; font-size: 30px;*/
-                                color: #FFFFFF;">Excelente para un regalo especial, incluyen diversos productos con un gran sabor.</div>
-                <div class="text22" style="position:relative; width: 180px; height: 190px; /*top: 335px; left: -12px;*/ padding: 5px;
-                            text-align: right; line-height: 36px; float: right;">
-                    <img  src="imagenes/logo%20casa.png" />
-                </div>
-            </div>-->
         </div>
 
         <style>
@@ -335,31 +305,20 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
 
 </div>
 
-
-
-
-
-
-
-
-
-
 <!--HR Y MENSAJES-->
 <div class="container estilos2561">
     <div class="jumbotron estilos2562">
 
-        <a href='PanelLogin'><h2>Artesanias Mexicanas Tradicionales</h2></a>
+        <a href='PanelLogin'><h2>Artesanías Mexicanas Tradicionales</h2></a>
 
         <hr class="divisor365">
 
-        <p>Conoce las artesanias de la casa de las artesanias del estado de chihuahua, 100% Chihuahuenses.</p>
+        <p>Conoce las artesanías de la casa de las artesanías del estado de Chihuahua.</p>
     </div>
 </div>
 
 
 <!--PANEL MOSAICO-->
-
-
 <div class="container-fluid" style="padding-right: 0;padding-left: 0">
 
     <hr  style="height: 6px;width: 100%;;background-color: #FF9800;border-color: #FF9800;margin-bottom: 0">
@@ -371,16 +330,16 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
                 <div class="shadow"  style=""></div>
                 <img class="img-responsive" alt="Responsive image"  src="images/Mosaic/test111.png" style="min-width: 100%;background-size: cover;height: 300px;">
                 <div   class="hovertest"  id="hover1" style="font-family: 'Montserrat', sans-serif;  position: absolute;
-                     top: 35%; text-align: center;margin-left: 18%;margin-right: 18%; color: white;">Alfereria Tarahumara</div>
+                     top: 35%; text-align: center;margin-left: 18%;margin-right: 18%; color: white;">Alfarería Tarahumara</div>
                 <div   class="hovertest"  id="hover2" style="font-family: 'Montserrat', sans-serif;  position: absolute; font-size: 18px;
-                 display: none; text-align: center;margin-left: 4%;margin-right: 4%;   color: white;">Conoce la mejor alfareria de nuestro bello estado de Chihuahua.</div>
+                 display: none; text-align: center;margin-left: 4%;margin-right: 4%;   color: white;">Conoce la mejor alfarería de nuestro bello estado de Chihuahua.</div>
             </a>
         </div>
     </div>
 
     <div class="x2  col-lg-3 col-md-4 col-sm-6 col-xs-12" style="overflow: hidden;padding-left: 0;padding-right: 0">
         <div id="color2">
-            <a href="#">
+            <a href="OllaMataOrtizFina">
                 <div class="shadow0"  style="opacity: .5"></div>
                 <div class="shadow2"  style=""></div>
                 <img  src="images/Mosaic/test3.jpg" alt="" style="min-width: 100%;background-size: cover;height: 300px;">
@@ -399,7 +358,7 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
                 <div class="shadow3"  style=""></div>
                 <img  src="images/Mosaic/test4.jpg" alt="" style="min-width: 100%;background-size: cover;height: 300px;">
                 <div   class="hovertest"  id="hover5" style="font-family: 'Montserrat', sans-serif;  position: absolute;
-                     top: 35%; text-align: center;margin-left: 18%;margin-right: 18%; color: white;">Cesteria Tarahumara</div>
+                     top: 35%; text-align: center;margin-left: 18%;margin-right: 18%; color: white;">Cestería Tarahumara</div>
                 <div   class="hovertest"  id="hover6" style="font-family: 'Montserrat', sans-serif;  position: absolute; font-size: 18px;top: 33%;
                     display: none; text-align: center;margin-left: 4%;margin-right: 4%;   color: white;">Tradición de antaño, la fabricación de artesanías es fundamental para los tarahumaras, quienes siempre han destacado por sus
                     minuciosos trabajos en cestería.
@@ -429,28 +388,28 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
 
     <div class="x2  col-lg-3 col-md-4 col-sm-6 col-xs-12" style="overflow: hidden;padding-left: 0;padding-right: 0">
         <div id="color5">
-            <a href="#">
+            <a href="ProductosChihuahuenses">
                 <div class="shadow0"  style=""></div>
                 <div class="shadow5"  style=""></div>
                 <img  class="img-responsive" alt="Responsive image" src="images/Mosaic/77.jpg" alt="" style="min-width: 100%;background-size: cover;height: 300px;">
                 <div   class="hovertest"  id="hover9" style="font-family: 'Montserrat', sans-serif;  position: absolute;
                  top: 33%; text-align: center;margin-left: 18%;margin-right: 18%; color: white;">Productos Chihuahuenses</div>
                 <div   class="hovertest"  id="hover10" style="font-family: 'Montserrat', sans-serif;  position: absolute; font-size: 18px;top: 33%;
-                display: none; text-align: center;margin-left: 4%;margin-right: 4%;   color: white;">Variedad de productos de gran sabor como mermeladas, galletas, pinole, sotol y muchos mas.</div>
+                display: none; text-align: center;margin-left: 4%;margin-right: 4%;   color: white;">Variedad de productos de gran sabor como mermeladas, galletas, pinole, sotol y muchos más.</div>
             </a>
         </div>
     </div>
 
     <div class="x2  col-lg-3 col-md-4 col-sm-6 col-xs-12" style="overflow: hidden;padding-left: 0;padding-right: 0">
         <div id="color6">
-            <a href="#">
+            <a href="Arcones">
                 <div class="shadow0"  style=""></div>
                 <div class="shadow6"  style=""></div>
                 <img  class="img-responsive" src="images/Mosaic/88.jpg" alt="..." style="min-width: 100%;height: 300px;">
                 <div   class="hovertest"  id="hover11" style="font-family: 'Montserrat', sans-serif;  position: absolute;
                  top: 40%; text-align: center;margin-left: 39%;margin-right: 39%; color: white;">Arcones</div>
                 <div   class="hovertest"  id="hover12" style="font-family: 'Montserrat', sans-serif;  position: absolute; font-size: 18px;top: 38%;
-                 display: none; text-align: center;margin-left: 4%;margin-right: 4%;   color: white;">Una excelente combinacion de sabor con distintos dulces tradicionales y productos 100% Chihuahuenses.
+                 display: none; text-align: center;margin-left: 4%;margin-right: 4%;   color: white;">Una excelente combinación de sabor con distintos dulces tradicionales y productos 100% Chihuahuenses.
                 </div>
             </a>
         </div>
@@ -473,15 +432,15 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
 
     <div class="x2  col-lg-3 col-md-4 col-sm-6 col-xs-12" style="overflow: hidden;padding-left: 0;padding-right: 0">
         <div id="color8">
-            <a href="#">
+            <a href="ArtesaniaRegional.php">
                 <div class="shadow0"  style="opacity: .5"></div>
                 <div class="shadow8"  style=""></div>
                 <img  src="images/Mosaic/10000.png" alt="" style="min-width: 100%;background-size: cover;height: 300px;">
                 <div   class="hovertest"  id="hover15" style="font-family: 'Montserrat', sans-serif;  position: absolute;
-                 top: 40%; text-align: center;margin-left: 21%;margin-right: 21%; color: white;">Artesania regional</div>
+                 top: 40%; text-align: center;margin-left: 21%;margin-right: 21%; color: white;">Artesanía regional</div>
                 <div   class="hovertest"  id="hover16" style="font-family: 'Montserrat', sans-serif;  position: absolute; font-size: 18px;
                display: none; text-align: center;margin-left: 4%;margin-right: 4%; top: 33%;  color: white;">Piezas artísticas de significación cultural realizadas manualmente por artesanos, piezas que reflejan una
-                    autenticidad que enorgullece y revitaliza la artesania chihuahuense.</div>
+                    autenticidad que enorgullece y revitaliza la artesanía chihuahuense.</div>
             </a>
         </div>
     </div>
@@ -501,7 +460,7 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
         <div class="col-xs-12 col-sm-8" style="background-color: #FFA726;">
 
             <p class="text-uppercase texto651" style="margin-top: 20px;margin-bottom: 20px">Cerámica de Mata Ortiz <br></p>
-            <p class="text-uppercase" style="font-size: 17px;color: #ffffff">La cerámica de Mata Ortiz es un estilo de artesanías, principalmente vasijas y ollas, iniciada por Juan Quezada Celado en el poblado de Juan Mata Ortiz,
+            <p class="text-uppercase" style="font-size: 17px;color: #ffffff">La cerámica de Mata Ortiz es un estilo de artesanías, principalmente vasijas y ollas, iniciada en el poblado de Juan Mata Ortiz,
                 Chihuahua. Toma su inspiración de la cerámica aridoamericana originada en Casas Grandes, para convertirse en cuatro décadas en un estilo artesanal de
                 gran reconocimiento, expuesto en galerías de arte y celebrado internacionalmente. Actualmente son más de 300 los artesanos dedicados a la producción de
                 esta cerámica en Mata Ortiz.</p>
@@ -518,7 +477,7 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
             </p>
         </div>
         <div class="col-xs-12 col-sm-4 pull-right" style="background-color: #FFB74D">
-            <img src="images/imagen.jpg" class="img-responsive img-circle fadein hol2" alt="Responsive image" style="display:none;margin: 0 auto; margin-top: 15px;margin-bottom: 16px">
+            <img src="images/imagen.png" class="img-responsive  fadein hol2" alt="Responsive image" style="display:none;margin: 0 auto; margin-top: 15px;margin-bottom: 16px;border-radius: 10px">
         </div>
     </div>
 </div>
@@ -588,20 +547,6 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
             }
         }
         ?>
-        
-        <!--     <div class="col-xs-12 col-sm-6 col-md-3">
-                  <div class="thumbnail x" style="height: 443px;">
-                      <div style="border-radius: 0px 6px 6px 0px;background-color: #FFA726;float: left;margin-left: -6px;margin-top: 20px;opacity: .8;position: absolute;width: 150px;height: 25px"><p style="color: white;;float: right;margin-right: 5px;;margin-top: 2%">Nuevo producto</p></div>
-                      <div style="height: 10px" class="divhide"></div>
-                      <a class="fancybox " href="images/productocondesc.jpg" data-fancybox-group="gallery" >
-                          <img class="img-responsive styleimg" style="max-height: 315px" src="images/productocondesc.jpg" alt="" /></a>
-                      <div class="caption">
-                          <h3>Mermelada varios sabores</h3>
-                          <p>Mermelada sabor Guayaba, Manzana y Tamarindo, producto Chihuahuense.</p>
-                      </div>
-                  </div>
-              </div>
-      -->
 
     </div>
 </div>
@@ -614,8 +559,8 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
     </a>
     <hr style="height: 6px;width: 100%;background-color: #FF9800;border-color: #FF9800;margin-bottom: 10px">
     <div class="inner">
-        <h2 class="major">CONTACTANOS</h2>
-        <p>¿Tienes algo interesante que contarnos?, Preguntas acerca nuestras artesanias, Contactanos!.</p>
+        <h2 class="major">CONTÁCTANOS</h2>
+        <p>¿Tienes algo interesante que contarnos?, Preguntas acerca de las artesanías, Contáctanos!</p>
 
         <form method="post" action="PHPCatalogo/GuardarComentariosPHP">
             <div class="field">
