@@ -201,11 +201,11 @@ $filas=mysqli_query($conexiondb,$primera);
         <div class="col-sm-12 col-md-5   pull-right style566 " >
             <h1 class="sdf6513">Textiles Tarahumara</h1>
             <p style="font-size: 15px">
-                Más de dos mil tarahumaras, algunos desde los nueve años de edad, se dedican a la elaboración de artesanías que les permiten
-                sobrevivir y cubrir sus principales necesidades alimenticias, salud y educación.<br><br class="ocultame">
+                Más de dos mil tarahumaras, algunos desde los muy pequeños se dedican a la elaboración de artesanías que les permiten
+                cubrir sus principales necesidades alimenticias, de salud y educación.<br><br class="ocultame">
                 Los rarámuris realizan trabajos de barro, madera y textiles, de estas materias primas crean ollas, canastos y artículos de cocina,
                 así como las típicas muñecas mexicanas de madera y tela.
-
+                <br><br>
             </p>
         </div>
     </div>

@@ -224,7 +224,7 @@ $filas=mysqli_query($conexiondb,$primera);
 <header>
     <div class="container" style="background-color: #5D4037; margin-left: 0%; margin-right: 20%" >
         <!--<h3 class="pull-right" style="color: #ffffff;ve"  >Catalogo de productos en venta</h3>-->
-        <p class="pull-right parrafo516"><span style="color: #ffa000">Catalogo de productos en venta</span></p>
+        <p class="pull-right parrafo516"><span style="color: #ffa000">Catálogo de productos en venta</span></p>
     </div>
 </header>
 

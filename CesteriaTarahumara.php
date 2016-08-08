@@ -213,7 +213,7 @@ $filas=mysqli_query($conexiondb,$primera);
 	<div class="row" id="row2">
 		<div class="col-xs-12 col-sm-6 col-lg-3 col1">
 			<div class="jumbotron jumbo1" style="background-color: transparent">
-				<p>Cesteria tarahumara</p>
+				<p>Cestería tarahumara</p>
 			</div>
 		</div>
 		<div class="col-xs-12 col-sm-6 col-lg-3 parrafo2" >
@@ -243,7 +243,7 @@ $filas=mysqli_query($conexiondb,$primera);
 <header>
 	<div class="container" style="background-color: #5D4037; margin-left: 0%; margin-right: 20%" >
 		<!--<h3 class="pull-right" style="color: #ffffff;ve"  >Catalogo de productos en venta</h3>-->
-		<p class="pull-right parrafo516" style="color: #ffa000;">Catalogo de productos en venta
+		<p class="pull-right parrafo516" style="color: #ffa000;">Catálogo  de productos en venta
 
 		</p>
 	</div>
@@ -278,23 +278,6 @@ $filas=mysqli_query($conexiondb,$primera);
 		}
 		?>
 
-	   <!-- <div class="col-xs-12 col-sm-6 col-md-3">
-			<div class="thumbnail" style="height: 443px">
-				<div style="height: 10px" class="divhide"></div>
-				<div style="height: 315px;position: relative/*position:relative;text-align: center*/">
-				<a class="fancybox " href="images/cuero.jpg" data-fancybox-group="gallery" >
-					<img  class="img-responsive styleimg sombra152" style="/*display:inline-block;*/ ;position:absolute;max-height: 315px;top: 0;bottom: 0;right:0;left:0;margin:auto; border: 2px solid white;" src="http://www.ghulmil.com/wp-content/uploads/rainy-weather-hd-wallpaper.jpg" alt="" /></a>
-				</div>
-				<div class="caption">
-					<h3>OLLA DE BARRO TARAHUMARA TIPO FLORERO 2 </h3>
-					<button data-container="body" data-trigger="hover click"  data-placement="bottom" type="button" class="btn btn-info" data-toggle="popover"
-							data-content="ALF-009 OLLA DE BARRO TARAHUMARA TIPO FLORERO LISO SIN AMARRE DE 46 A 48 cm. DE ALTURA
-					   POR 21 A 23 cm. DE ANCHO. INCLUYE BASE DE MADERA RUSTICA DE 3 PALOS CON HERRAJES METALICOS Y AMARRE DE CUERO. COLORES
-					   NEGRO, COBRIZADO, CAFE Y NATURAL.">Detalles...</button>
-				</div>
-			</div>
-		</div>-->
-
 	</div>
 </div>
 
@@ -306,23 +289,13 @@ $filas=mysqli_query($conexiondb,$primera);
 <footer>
 	<div class="container-fluid margintop">
 		<div class="row" style="background-color: #3E2723;height: auto">
-
 			<div >
 				<p  style="color:#212121;background-color: #FAFAFA;padding: 20px;font-size: 14px;margin: 0">© Casa de las Artesanías del Estado de Chihuahua. Todos los derechos reservados.
 					<span id="ocultarmq4" style="float: right"><span>Developed by </span><a href="mailto:alejandroax@live.com.mx">Sergio Paz.</a> </p>
 			</div>
-
 			<div class="posytam0 lefts" id="ocultarmq3" style="margin-bottom: 5px"><img  style="border-radius: 100px" src="images/MisionVision.png"></div>
-
 			<div class="posytam0" id="ocultarmq2" style="margin-bottom: 5px"><img  style="border-radius: 30px" src="images/ChihuahuaVive.jpg"></div>
-
 			<div class="posytam" id="ocultarmq5" style="margin-bottom: 5px"><img src="images/LogoHorizontal.png"></div>
-
-			<!--   <div  style="margin-top: 25px;margin-right: 90px;float: right;margin-bottom: 25px;" class="ocultarmq" >
-                   <div class="fb-page" data-href="https://www.facebook.com/Casa-De-Las-Artesanias-De-Chihuahua-457359271070862/"
-                        data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
-               </div>
-   -->
 		</div>
 	</div>
 </footer>

@@ -244,7 +244,7 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
                         echo "<picture>";
                         echo "<source srcset='images/slideshow/test/$ColumnaSlideshow[UrlImagenBig]' media='(min-width: 770px)'>"; /*IMAGEN GRANDE*/
                          echo "<source srcset='images/slideshow/test/$ColumnaSlideshow[UrlImagenSmall]' media='(min-width: 100px)'>"; /*IMAGEN PEQUENA*/
-                        echo "<img  class='img-responsive' srcset='examples/images/art-medium.jpg' alt='…'>";
+                        echo "<img  style='min-width: 100%' class='img-responsive' srcset='examples/images/art-medium.jpg' alt='…'>";
                         echo "</picture>";
                    echo "</a>";
                     echo "<div class='text00' style='position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;text-align: left; line-height: 60px; text-transform: uppercase; color: #FFFFFF;'>$ColumnaSlideshow[Titulo]</div>";
@@ -463,17 +463,14 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
             <p class="text-uppercase" style="font-size: 17px;color: #ffffff">La cerámica de Mata Ortiz es un estilo de artesanías, principalmente vasijas y ollas, iniciada en el poblado de Juan Mata Ortiz,
                 Chihuahua. Toma su inspiración de la cerámica aridoamericana originada en Casas Grandes, para convertirse en cuatro décadas en un estilo artesanal de
                 gran reconocimiento, expuesto en galerías de arte y celebrado internacionalmente. Actualmente son más de 300 los artesanos dedicados a la producción de
-                esta cerámica en Mata Ortiz.</p>
+                esta cerámica en Mata Ortiz.
+            </p>
             <p class="text-uppercase hidden-xs hidden-sm hidden-md" style="font-size: 17px;color: #ffffff">
                 A la edad de 20 años, Juan Quezada Celado emprendía largas caminatas con su burro para colectar leña, fruta
                 y miel de agave en las cercanías de su poblado natal, Juan Mata Ortiz. En estos viajes, Quezada recolectaba piezas y pedacería
                 prehispánica proveniente de la cultura Casas Grandes. Durante varios años, resultado de la observación
                 de los colores y los patrones geométricos de la cerámica aridoamericana, fue perfeccionando su técnica, añadiendo un poco de arena en la mezcla
                 para evitar que se fragmentara.
-            <p class="text-uppercase hidden-xs hidden-sm Desaparece84" style="font-size: 17px;color: #ffffff">Alrededor de 1974 Quezada concentró todos sus esfuerzos en la producción
-                de cerámica, seguido por sus hermanos Nicolás, Reynaldo, Lidia, Consolación, Reynalda, Jesús y Genoveva, y fue así como toda la familia comenzó
-                a involucrarse en la incipiente producción de este tipo de artesanía.
-            </p>
             </p>
         </div>
         <div class="col-xs-12 col-sm-4 pull-right" style="background-color: #FFB74D">

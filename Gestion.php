@@ -317,19 +317,19 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
                     <label class="text-muted" style="margin-top: 15px;margin-bottom: 15px" for = "name">Link a: </label>
 
                     <select  onchange="show()" id="TxtSelect" name="txtselect" class="form-control btn btn-primary"  required style="margin-top: -3px;max-width: 300px;">
-                        <option>Cesteria tarahumara</option>
-                        <option>Alfareria tarahumara</option>
-                        <option>Textiles tarahumara</option>
-                        <option>Artesanias tarahumara de cuero</option>
-                        <option>Instrumentos musicales</option>
-                        <option>Articulos varios</option>
-                        <option>Olla de mata ortiz economica</option>
-                        <option>Olla de mata ortiz comercial</option>
-                        <option>Olla de mata ortiz fina</option>
-                        <option>Galeria de ceramica de Mata Ortiz</option>
+                        <option>Cesteria Tarahumara</option>
+                        <option>Alfareria Tarahumara</option>
+                        <option>Textiles Tarahumara</option>
+                        <option>Artesanias Tarahumara De Cuero</option>
+                        <option>Instrumentos Musicales Tarahumara</option>
+                        <option>Articulos Varios</option>
+                        <option>Olla Economica</option>
+                        <option>Olla Mata Ortiz Comercial</option>
+                        <option>Olla Mata Ortiz Fina</option>
+                        <option>Galeria De Ceramica De Mata Ortiz</option>
                         <option>Productos Chihuahuenses</option>
                         <option>Arcones</option>
-                        <option>Artesania regional</option>
+                        <option>Artesania Regional</option>
                     </select>
                 </div>
                 <button type = "submit" class = "btn btn-primary">Agregar</button>
