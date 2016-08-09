@@ -309,7 +309,7 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
 <div class="container estilos2561">
     <div class="jumbotron estilos2562">
 
-        <a href='PanelLogin'><h2>Artesanías Mexicanas Tradicionales</h2></a>
+        <a href='PanelLogin'><h2 class="tamano">Artesanías Mexicanas Tradicionales</h2></a>
 
         <hr class="divisor365">
 
@@ -321,7 +321,7 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
 <!--PANEL MOSAICO-->
 <div class="container-fluid" style="padding-right: 0;padding-left: 0">
 
-    <hr  style="height: 6px;width: 100%;;background-color: #FF9800;border-color: #FF9800;margin-bottom: 0">
+    <hr  style="margin-top: 0px; height: 6px;width: 100%;background-color: #FF9800;border-color: #FF9800;margin-bottom: 0">
 
     <div class="x2  col-lg-3 col-md-4 col-sm-6 col-xs-12" style="overflow: hidden;padding-left: 0;padding-right: 0">
         <div id="color1">
