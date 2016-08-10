@@ -206,7 +206,7 @@ $filas=mysqli_query($conexiondb,$consulta);
                                         obtención de premios en concursos nacionales, tanto en la artesanía tarahumara como en la mestiza, durante los últimos cinco años.</p>
 								</div>
 								<div class="4u$ 12u$(medium)">
-									<p>El Gobierno del Estado de Chihuahua, a través del la Secretaria de Desarrollo Comercial y Turístico y la Casa de las Artesanías,
+									<p>El Gobierno del Estado de Chihuahua, a través del la Secretaria de economia y la casa de las artesanías, han
                                         organizan cada año importantes concursos como Concurso Regional del Arte Popular de la Sierra Tarahumara, Concurso de Artesanía
                                         Chihuahuense y Concurso de Cerámica de Paquimé, entre otros. </p>
 								</div>
@@ -270,7 +270,7 @@ $filas=mysqli_query($conexiondb,$consulta);
 					<div class="container" >
 						<header class="major">
 							<h2 style="margin: 0;color: #FF9800">Casa de las Artesanías del Estado de Chihuahua</h2>
-							<p>La casa de la artesanía chihuahuense desde 1980.</p>
+							<p>La casa de la artesanía chihuahuense desde 1994.</p>
 						</header>
 						<div class="box alt">
 							<div class="row uniform">

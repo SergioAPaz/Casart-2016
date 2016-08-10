@@ -4,12 +4,12 @@ include ("BloqueDeSeguridadCatalogo.php");
 if(isset($_GET['id']))
 {
 
-include('../conexion.php');
+include('conexion.php');
 $id=$_GET['id'];
 
     /*BORRAR REGISTRO DE LA BASE DE DATOS*/
  $consulta=<<<SQL
-DELETE  FROM Comentarios0013 WHERE id='$id' 
+DELETE  FROM comentarios0013 WHERE id='$id' 
 SQL;
 
     mysqli_query($conexiondb, $consulta);
