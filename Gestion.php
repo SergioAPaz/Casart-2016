@@ -245,7 +245,7 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
                                 <div class="form-group">
                                     <label for="recipient-name" class="control-label">Correo:</label>
                                     <input type="text" name="Email" class="form-control" id="recipient-name"
-                                           maxlength="40" pattern="^\s*[a-zA-Z0-9@_.\s]+\s* required>
+                                           maxlength="40" pattern="^\s*[a-zA-Z0-9@_.\s]+\s*" required>
                                 </div>
                                 <div class="table-responsive">
                                     <table class="table table-striped">
