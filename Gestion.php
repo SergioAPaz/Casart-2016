@@ -41,7 +41,7 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
-    <title>Casart Chihuahua</title>
+     <title>Casa de las Artesanías del Estado de Chihuahua</title>
     <link rel="shortcut icon" href="images/logopagina.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--CSS'S-->
@@ -240,12 +240,12 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
                                 <div class="form-group">
                                     <label for="recipient-name" class="control-label">Nombre:</label>
                                     <input type="text" name="Name" class="form-control" id="recipient-name"
-                                           maxlength="30" pattern="^\s*[a-zA-Z0-9ñÑ_.\s]+\s*" required>
+                                           maxlength="30" pattern="^\s*[a-zA-Z0-9ñÑáéíóú_.\s]+\s*" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="recipient-name" class="control-label">Correo:</label>
                                     <input type="text" name="Email" class="form-control" id="recipient-name"
-                                           maxlength="40" pattern="^\s*[a-zA-Z0-9ñÑ@_.\s]+\s*" required>
+                                           maxlength="40" pattern="^\s*[a-zA-Z0-9@_.\s]+\s* required>
                                 </div>
                                 <div class="table-responsive">
                                     <table class="table table-striped">
@@ -303,10 +303,10 @@ $FilasSlideshow =mysqli_query($conexiondb,$ConsultaSlideshow);
             <form role = "form" method="post" action="PHPCatalogo/Carousel.php"   enctype="multipart/form-data" >
                 <div class = "form-group">
                     <label class="text-muted" for = "name">Titulo:</label>
-                    <input type="text" name="TxtTitulo" class="form-control" placeholder="Titulo..." maxlength="30"  pattern="^\s*[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ-_.,\s]+\s*" required>
+                    <input type="text" name="TxtTitulo" class="form-control" placeholder="Titulo..." maxlength="30"  pattern="^\s*[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ_.\s]+\s*" required>
                     <br/>
                     <label class="text-muted" for = "name">Descripcion:</label>
-                    <input  class = "form-control" name="TxtDesc" placeholder = "Descripcion..."  maxlength="80"        pattern="^\s*[a-zA-Z0-9ñÑÁÉÍÓÚ-_.,\s]+\s*" required>
+                    <input  class = "form-control" name="TxtDesc" placeholder = "Descripcion..."  maxlength="80" pattern="^\s*[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ_.\s]+\s*" required>
                     <br/>
                     <label class="text-muted" for = "name">Imagen grande:</label>
                     <input type="file" class="form-control" accept="image/*" name="ImagenBig" required/>
