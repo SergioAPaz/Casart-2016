@@ -48,10 +48,10 @@ $columnas= mysqli_fetch_assoc($filas);
             <form role = "form" method="post" action="PHPCatalogo/EditarGaleriaPHP" >
                 <div class = "form-group">
                     <label class="text-muted" for = "name">Titulo del producto:</label>
-                    <input type="text" name="txttitulo" id=tit class="form-control" placeholder="Titulo..." maxlength="200"  pattern="^\s*[a-zA-Z0-9ñÑ-_,.,\s]+\s*" required value="<?php echo $columnas['Titulo']; ?>"/>
+                    <input type="text" name="txttitulo" id=tit class="form-control" placeholder="Titulo..." maxlength="200"  pattern="^\s*[a-zA-Z0-9-_,.,\s]+\s*" required value="<?php echo $columnas['Titulo']; ?>"/>
                     <br/>
                     <label class="text-muted" for = "name">Descripcion del producto:</label>
-                    <textarea rows="3" id="desc" class = "form-control" name="txtdesc" placeholder = "Descripcion..." maxlength="500"  pattern="^\s*[a-zA-Z0-9ñÑ-_,.,\s]+\s*" required><?php echo $columnas['Descripcion']; ?></textarea>
+                    <textarea rows="3" id="desc" class = "form-control" name="txtdesc" placeholder = "Descripcion..." maxlength="500"  pattern="^\s*[a-zA-Z0-9-_,.,\s]+\s*" required><?php echo $columnas['Descripcion']; ?></textarea>
                     <input type="hidden" name="idgaleria" value="<?php echo $id; ?>"/>
                     <!--BOTON NUEVO PRODUCTO-->
                     <?php
