@@ -1,25 +1,15 @@
 /*PANEL MOSAICO*/
 
-
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (max-width: 420px) {
-    .tamano{
-    font-size: 20px;
+    .tamano {
+        font-size: 20px;
     }
 }
 
+
 /*SOMBRAS*/
-.shadow0{
+
+.shadow0 {
     width: 100%;
     top: 0%;
     height: 100%;
@@ -27,7 +17,15 @@
     position: absolute;
     opacity: .6;
 }
-.shadow, .shadow2, .shadow3, .shadow4, .shadow5, .shadow6, .shadow7, .shadow8{
+
+.shadow,
+.shadow2,
+.shadow3,
+.shadow4,
+.shadow5,
+.shadow6,
+.shadow7,
+.shadow8 {
     width: 100%;
     top: 100%;
     height: 100%;
@@ -36,311 +34,359 @@
     opacity: .8;
 }
 
-#color2{
-    background-color: #5D4037;
-}
-#color3{
-    background-color: #5D4037;
-}
-#color4{
-    background-color: #5D4037;
-}
-#color5{
-    background-color: #5D4037;
-}
-#color6{
-    background-color: #5D4037;
-}
-#color7{
-    background-color: #5D4037;
-}
-#color8{
+#color2 {
     background-color: #5D4037;
 }
 
+#color3 {
+    background-color: #5D4037;
+}
 
-.x2{
+#color4 {
+    background-color: #5D4037;
+}
+
+#color5 {
+    background-color: #5D4037;
+}
+
+#color6 {
+    background-color: #5D4037;
+}
+
+#color7 {
+    background-color: #5D4037;
+}
+
+#color8 {
+    background-color: #5D4037;
+}
+
+.x2 {
     height: 300px;
 }
 
 @media screen and (max-width: 993px) {
-    .x2{
+    .x2 {
         height: 230px;
     }
 }
 
-#hover1, #hover3, #hover5, #hover7,#hover9,#hover11,#hover13,#hover15{
+#hover1,
+#hover3,
+#hover5,
+#hover7,
+#hover9,
+#hover11,
+#hover13,
+#hover15 {
     font-size: 30px;
 }
 
-#hover2{
+#hover2 {
     top: 43%;
 }
 
 @media (min-width: 993px) and (max-width: 1500px) {
-    #hover1, #hover3, #hover5, #hover7,#hover9,#hover11,#hover13,#hover15{
+    #hover1,
+    #hover3,
+    #hover5,
+    #hover7,
+    #hover9,
+    #hover11,
+    #hover13,
+    #hover15 {
         font-size: 25px;
     }
-    #hover2, #hover4, #hover6, #hover8,#hover10,#hover12,#hover14,#hover16{
+    #hover2,
+    #hover4,
+    #hover6,
+    #hover8,
+    #hover10,
+    #hover12,
+    #hover14,
+    #hover16 {
         top: 39%;
     }
-
 }
+
 @media (min-width: 1px) and (max-width: 693px) {
-    #hover1, #hover3, #hover5, #hover7,#hover9,#hover11,#hover13,#hover15{
+    #hover1,
+    #hover3,
+    #hover5,
+    #hover7,
+    #hover9,
+    #hover11,
+    #hover13,
+    #hover15 {
         font-size: 25px;
     }
-    #hover2, #hover4, #hover6, #hover8,#hover10,#hover12,#hover14,#hover16{
+    #hover2,
+    #hover4,
+    #hover6,
+    #hover8,
+    #hover10,
+    #hover12,
+    #hover14,
+    #hover16 {
         top: 31%;
     }
 }
 
+
 /* FIN PANEL MOSAICO*/
 
-
 @media screen and (max-width: 1370px) {
-    .Desaparece84{
+    .Desaparece84 {
         display: none;
     }
 }
 
-.hol{
+.hol {
     -moz-box-shadow: 0px 1px 10px #212121;
     -webkit-box-shadow: 0px 1px 10px #212121;
     box-shadow: 0px 1px 10px #212121;
 }
 
-.hol2{
+.hol2 {
     -moz-box-shadow: 0px 5px 15px #212121;
     -webkit-box-shadow: 0px 5px 15px #212121;
     box-shadow: 0px 5px 15px #212121;
 }
-.edit516{
-   /* -moz-box-shadow: 0px 0px 15px #FF9800;
+
+.edit516 {
+    /* -moz-box-shadow: 0px 0px 15px #FF9800;
     -webkit-box-shadow: 0px 0px 15px #FF9800;
     box-shadow: 0px 0px 15px #FF9800;*/
 }
-.estilos2561 .estilos2562{
+
+.estilos2561 .estilos2562 {
     text-align: center;
-   padding-top: 0;
+    padding-top: 0;
     padding-bottom: 0;
     background-color: #795548;
 }
-.estilos2562>h2, .estilos2562>p{
+
+.estilos2562>h2,
+.estilos2562>p {
     color: #ffffff;
 }
-.estilos2562>p{
+
+.estilos2562>p {
     font-size: 18px;
 }
 
-
 @media screen and (max-width: 992px) {
-    .estilos2562>h2{
+    .estilos2562>h2 {
         font-size: 25px;
     }
-    .estilos2562>p{
+    .estilos2562>p {
         font-size: 15px;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .estilos2562>h2{
+    .estilos2562>h2 {
         font-size: 20px;
     }
-    .estilos2562>p{
+    .estilos2562>p {
         font-size: 15px;
     }
 }
 
 @media screen and (max-width: 650px) {
-    .estilos2562>h2{
+    .estilos2562>h2 {
         font-size: 18px;
     }
-    .estilos2562>p{
+    .estilos2562>p {
         font-size: 14px;
     }
 }
-.edit516{
+
+.edit516 {
     background-color: #ffa726;
     padding: 5px;
     border-radius: 5px;
     border: 0px solid #ffa726;
-    -webkit-box-shadow: 0px 38px 19px -24px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 38px 19px -24px rgba(0,0,0,0.75);
-    box-shadow: 0px 38px 19px -24px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 38px 19px -24px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 38px 19px -24px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 38px 19px -24px rgba(0, 0, 0, 0.75);
 }
-.chico125{
+
+.chico125 {
     padding: 0;
 }
-.color54{
+
+.color54 {
     background-color: #5D4037;
     border: 0px;
-
 }
-.color651{
+
+.color651 {
     color: #FAFAFA;
-
 }
-.parrafo516{
+
+.parrafo516 {
     vertical-align: middle;
     font-size: 25px;
     margin-top: .5%;
     color: #ffffff;
-
 }
-.texto651{
- color: #ffffff;
+
+.texto651 {
+    color: #ffffff;
 }
 
 @media screen and (max-width: 550px) {
-    .parrafo516{
-
+    .parrafo516 {
         font-size: 20px;
-
     }
 }
 
 @media screen and (max-width: 789px) {
-    .margintop{
-
-      /*  margin-top: 60px;*/
-
+    .margintop {
+        /*  margin-top: 60px;*/
     }
 }
 
 @media screen and (max-width: 570px) {
-    .texto651{
-
+    .texto651 {
         font-size: 230%;
-
     }
 }
 
 @media screen and (min-width: 571px) {
-    .texto651{
-
+    .texto651 {
         font-size: 320%;
-
     }
 }
 
 @media screen and (max-width: 365px) {
-    .texto651{
-
+    .texto651 {
         font-size: 150%;
-
     }
 }
 
-
-
-
-
-
 .ir-arriba {
     z-index: 1;
-    display:none;
-    padding:15px;
+    display: none;
+    padding: 15px;
     /*margin: 10px;*/
-    background:#4E342E;
-    font-size:20px;
-    color:#fff;
-    cursor:pointer;
+    background: #4E342E;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
     position: fixed;
-    bottom:20px;
-    right:10px;
-    box-shadow: 5px 7px 7px rgba(0,0,0,0.5);
+    bottom: 20px;
+    right: 10px;
+    box-shadow: 5px 7px 7px rgba(0, 0, 0, 0.5);
 }
 
 
 /*CSS DE CATALOGO*/
-.img152{
+
+.img152 {
     position: absolute;
     top: 0;
     bottom: 0;
-    right:0;
-    left:0;
-    margin:auto;
+    right: 0;
+    left: 0;
+    margin: auto;
     /*border: 2px solid #FFA000;*/
 }
-.x{
+
+.x {
     background-color: #4E342E;
     -moz-box-shadow: 0px 5px 0px #FF9800;
     -webkit-box-shadow: 0px 5px 0px #FF9800;
     box-shadow: 0px 5px 0px #FF9800;
     border: 2px solid #4E342E;
 }
-.x:hover{
-    border-color:  #ff9800;
+
+.x:hover {
+    border-color: #ff9800;
 }
-.x .caption{
+
+.x .caption {
     color: #ffffff;
     text-align: center;
-
 }
-.x{
+
+.x {
     overflow: hidden;
 }
-.x>.caption>h3{
+
+.x>.caption>h3 {
     margin-top: 0px;
     font-size: 18px;
 }
-.styleimg{
+
+.styleimg {
     border-radius: 5px;
 }
-.divhide{
+
+.divhide {
     display: none;
 }
-@media screen and (min-width:350px) and (max-width: 768px){
-    .divhide{
+
+@media screen and (min-width:350px) and (max-width: 768px) {
+    .divhide {
         display: inherit;
     }
-
 }
-/*/CSS DE CATALOGO*/
 
+
+/*/CSS DE CATALOGO*/
 
 
 /*FOOTER*/
 
-.posytam0{
+.posytam0 {
     margin-top: 20px;
     margin-left: 10px;
     float: left;
     max-width: 155px;
     height: auto;
 }
-.lefts{
+
+.lefts {
     margin-left: 25px;
 }
-.posytam{
+
+.posytam {
     margin-top: 20px;
     margin-left: -10px;
     float: left;
     width: 430px;
     height: auto;
 }
-.posytam0>img{
+
+.posytam0>img {
     max-width: 80%;
 }
-.posytam>img{
+
+.posytam>img {
     max-width: 80%;
 }
+
 @media screen and (max-width: 870px) {
     .ocultarmq {
         display: none;
     }
 }
+
 @media screen and (max-width: 1290px) {
     #ocultarmq2 {
         display: none;
     }
 }
+
 @media screen and (max-width: 1080px) {
     #ocultarmq3 {
         display: none;
     }
 }
+
 @media screen and (max-width: 860px) {
     #ocultarmq4 {
         display: none;
@@ -352,7 +398,8 @@
         max-width: 100%;
         padding: 15px;
         margin-left: 5px;
-
     }
 }
+
+
 /*FOOTER*/

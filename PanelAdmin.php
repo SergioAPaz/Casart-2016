@@ -261,7 +261,7 @@ $filas =mysqli_query($conexiondb,$consulta);
                     <input type="text" name="txttitulo" class="form-control" placeholder="Titulo..." maxlength="200"  pattern="^\s*[a-zA-Z0-9-_.,\s]+\s*" required>
                     <br/>
                     <label class="text-muted" for = "name">Descripcion del producto:</label>
-                    <input  class = "form-control" name="txtdesc" placeholder = "Descripcion..."  maxlength="500"        pattern="^\s*[a-zA-Z0-9-_.,\s]+\s*" required>
+                    <input  class = "form-control" name="txtdesc" placeholder = "Descripcion..."  maxlength="500"     pattern="^\s*[a-zA-Z0-9-_.,\s]+\s*" required>
                     <br/>
                     <label class="text-muted" for = "name">Imagen del producto:</label>
                     <input type="file" class="form-control" accept="image/*" name="archivo" required/>
